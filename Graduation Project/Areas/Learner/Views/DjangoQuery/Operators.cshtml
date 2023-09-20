@@ -1,0 +1,42 @@
+﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
+    <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Operators</h1>
+    <br>
+    <hr/>
+    <h2 class="my-5 custom-title">Model</h2>
+    <div class="rounded p-4 mt-4 mb-5 custom-div">
+        <p class="mb-1">class Person(models.Model):</p>
+        <p class="mb-1 mr-25">name = models.CharField(max_length=100)</p>
+        <p class="mb-1 mr-25">age = models.PositiveIntegerField()</p>
+    </div>
+    <hr />
+    <h2 class="my-5 custom-title">AND</h2>
+    <h5 class="mt-4 mb-1">2 conditions must be True.</h5>
+    <h5 class="mt-2 mb-3">
+        Looking for a person whose name is khaled and he is 22 years old. if there is a person whose name is khaled, but he is not 22 years old. otherwise If there is a person who is 22 years old but whose name is not Khaled. one of the two conditions is True and the other is False. that means the result will be, found 0.
+        otherwise If there is a person who is 22 years old and whose name is Khaled. both conditions are True. that means the result will not be, found 0.
+    </h5>
+    <div class="d-flex justify-content-start mt-0">
+        <h5 class="rounded mt-2 mb-2 p-3 custom-back">
+            Person.objects.filter(name="khaled") & Person.objects.filter(age=22)
+        </h5>
+    </div>
+    <div class="d-flex justify-content-start mt-0">
+        <h5 class="rounded mt-2 mb-5 p-3 custom-back">
+            Person.objects.filter(name="khaled").filter(age=22)
+        </h5>
+    </div>
+    <br>
+    <hr/>
+    <h2 class="my-5 custom-title">OR</h2>
+    <h5 class="mt-4 mb-1">At least 1 of conditions must be True.</h5>
+    <h5 class="mt-2 mb-1">
+        Looking for a person whose name is khaled or he is 22 years old. If there is a person whose name is khaled, but he is not 22 years old Or vice versa.
+        One of conditions is True. that means the result will not be, found 0. if there is no person named khaled and he is not 22 years old.
+        Both conditions are False. that means the result will be, found 0.
+    </h5>
+    <h5 class="mt-2 mb-3">Use Q when you want to use OR condition</h5>
+    <div class="rounded p-4 mt-4 mb-5 custom-div">
+        <p class="mb-1">from django.db.models import Q</p>
+        <p class="mb-1">Model.objects.filter(Q(name="khaled") | Q(age=22))</p>
+    </div>
+</div>

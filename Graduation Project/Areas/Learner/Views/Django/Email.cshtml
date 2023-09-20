@@ -1,0 +1,97 @@
+﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
+    <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Send Email</h1>
+    <h4 class="mt-4 mb-0">Config Your email data in .env file.</h4>
+    <h4 class="mt-4 mb-0">Create .env file in same level with project root to create Environment Variables.</h4>
+    <h4 class="mt-4 mb-0">Inside .env file put that code and insert your email data.</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">EMAIL_HOST = 'smtp.gmail.com'</p>
+        <p class="mb-1">EMAIL_PORT = "Your Email Port"</p>
+        <p class="mb-1">EMAIL_USE_TLS = "True"</p>
+        <p class="mb-1">EMAIL_HOST_USER = "Your Email"</p>
+        <p class="mb-1">EMAIL_HOST_PASSWORD = "Your Email Password"</p>
+    </div>
+    <h4 class="mt-4 mb-0">Why to create .env file?</h4>
+    <h4 class="mt-4 mb-0">Because when we want to deploy the code. we want the to keep sensitive information hidden. Before deploying the codes. don't forget to put .env file in .gitignore file.</h4>
+    <h4 class="mt-4 mb-0">In settings.py insert the following steps:</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">import os</p>
+        <p class="mb-1">EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'</p>
+        <p class="mb-1">EMAIL_HOST = config('EMAIL_HOST')</p>
+        <p class="mb-1">EMAIL_PORT = config('EMAIL_PORT',cast=int)</p>
+        <p class="mb-1">EMAIL_USE_TLS = config('EMAIL_USE_TLS',cast=bool)</p>
+        <p class="mb-1">EMAIL_HOST_USER = config('EMAIL_HOST_USER')</p>
+        <p class="mb-1">EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')</p>
+    </div>
+    <h4 class="mt-4 mb-0">To send an email you have 2 ways</h4>
+
+    <hr />
+    <h2 class="my-5 custom-title">First way</h2>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">from django.core.mail import EmailMessage</p>
+        <p class="mb-1">email = EmailMessage(</p>
+        <p class="mb-1 mr-25">'Subject',</p>
+        <p class="mb-1 mr-25">'Message',</p>
+        <p class="mb-1 mr-25">'from@example.com',</p>
+        <p class="mb-1 mr-25">['to@example.com'],</p>
+        <p class="mb-1 mr-25">reply_to=['another@example.com'], #optional</p>
+        <p class="mb-1 mr-25">fail_silently=False, # determines whether exceptions during sending should be raised or not</p>
+        <p class="mb-1">)</p>
+        <p class="mb-1">email.attach() #optional</p>
+        <p class="mb-1">email.send()</p>
+        <p class="mb-1">Example:</p>
+        <p class="mb-1">email = EmailMessage(</p>
+        <p class="mb-1 mr-25">'Test Email',</p>
+        <p class="mb-1 mr-25">'Hello world',</p>
+        <p class="mb-1 mr-25">'from@example.com',</p>
+        <p class="mb-1 mr-25">['to@example.com', 'to@example.com'],</p>
+        <p class="mb-1 mr-25">reply_to=['another@example.com'],</p>
+        <p class="mb-1 mr-25">fail_silently=False,</p>
+        <p class="mb-1">)</p>
+        <p class="mb-1"># Attach a file to the email</p>
+        <p class="mb-1">with open('path/to/attachment.pdf', 'rb') as attachment_file:</p>
+        <p class="mb-1 mr-25">email.attach('attachment.pdf', attachment_file.read(), 'application/pdf')</p>
+        <p class="mb-1">email.send()</p>
+    </div>
+
+    <hr />
+    <h2 class="my-5 custom-title">Second way</h2>
+    <h4 class="mt-4 mb-0">Get the data from html form.</h4>
+    <h4 class="mt-4 mb-0">Html:</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">&lt;form method="post" enctype="multipart/form-data" action="{% url 'send_email' %}"&gt;</p>
+        <p class="mb-1 mr-25">{% csrf_token %}</p>
+        <p class="mb-1 mr-25">&lt;label for="subject"&gt;Subject:&lt;/label&gt;</p>
+        <p class="mb-1 mr-25">&lt;input type="text" name="subject" required&gt;&lt;br&gt;&lt;br&gt;</p>
+        <p class="mb-1 mr-25">&lt;label for="message"&gt;Message:&lt;/label&gt;</p>
+        <p class="mb-1 mr-25">&lt;textarea name="message" rows="4" required&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;</p>
+        <p class="mb-1 mr-25">&lt;label for="attachment"&gt;Attachment:&lt;/label&gt;</p>
+        <p class="mb-1 mr-25">&lt;input type="file" name="attachment"&gt;&lt;br&gt;&lt;br&gt;</p>
+        <p class="mb-1 mr-25">&lt;label for="email"&gt;Your Email:&lt;/label&gt;</p>
+        <p class="mb-1 mr-25">&lt;input name="email" rows="4" required&gt;&lt;/input&gt;&lt;br&gt;&lt;br&gt;</p>
+        <p class="mb-1 mr-25">&lt;input type="submit" value="Send Email"&gt;</p>
+        <p class="mb-1">&lt;/form&gt;</p>
+    </div>
+    <h4 class="mt-4 mb-0">View:</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">def send_email(request):</p>
+        <p class="mb-1 mr-25">if request.method == 'POST':</p>
+        <p class="mb-1 mr-50">subject = request.POST['subject']</p>
+        <p class="mb-1 mr-50">message = request.POST['message']</p>
+        <p class="mb-1 mr-50">from = request.POST['email']</p>
+        <p class="mb-1 mr-50">attachment = request.FILES.get('attachment')</p>
+        <p class="mb-1 mr-50">email = EmailMessage(</p>
+        <p class="mb-1 mr-75">subject,</p>
+        <p class="mb-1 mr-75">message,</p>
+        <p class="mb-1 mr-75">from,</p>
+        <p class="mb-1 mr-75">['to@example.com'],</p>
+        <p class="mb-1 mr-50">)</p>
+        <p class="mb-1 mr-50">if attachment:</p>
+        <p class="mb-1 mr-75">email.attach(attachment.name, attachment.read(), attachment.content_type)</p>
+        <p class="mb-1 mr-50">try:</p>
+        <p class="mb-1 mr-75">email.send()</p>
+        <p class="mb-1 mr-75">return HttpResponse("Email sent successfully!")</p>
+        <p class="mb-1 mr-50">except:</p>
+        <p class="mb-1 mr-75">return HttpResponse("An error occurred while sending the email.")</p>
+        <p class="mb-1 mr-25">return render(request, 'index.html')</p>
+    </div>
+</div>

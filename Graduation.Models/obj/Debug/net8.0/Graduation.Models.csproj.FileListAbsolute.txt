@@ -1,0 +1,12 @@
+C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation.Models\obj\Debug\net8.0\Graduation.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation.Models\obj\Debug\net8.0\Graduation.Models.AssemblyInfoInputs.cache
+C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation.Models\obj\Debug\net8.0\Graduation.Models.AssemblyInfo.cs
+C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation.Models\obj\Debug\net8.0\Graduation.Models.csproj.CoreCompileInputs.cache
+C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation.Models\bin\Debug\net8.0\Graduation.Models.deps.json
+C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation.Models\bin\Debug\net8.0\Graduation.Models.dll
+C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation.Models\bin\Debug\net8.0\Graduation.Models.pdb
+C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation.Models\obj\Debug\net8.0\Graduation.Models.csproj.AssemblyReference.cache
+C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation.Models\obj\Debug\net8.0\Graduation.Models.dll
+C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation.Models\obj\Debug\net8.0\refint\Graduation.Models.dll
+C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation.Models\obj\Debug\net8.0\Graduation.Models.pdb
+C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation.Models\obj\Debug\net8.0\ref\Graduation.Models.dll

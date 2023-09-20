@@ -1,0 +1,73 @@
+﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
+    <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Search</h1>
+    <h4 class="mb-1 mt-4">Create your model.</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">class Book(models.Model):</p>
+        <p class="mb-1 mr-25">title = models.CharField(max_length=100)</p>
+    </div>
+    <h4 class="mb-1 mt-4">Create forms.py in your app.</h4>
+    <h4 class="mb-1 mt-4">Give a name to your input to receive the input value by that name.</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">from django import forms</p>
+        <p class="mb-1">class SearchForm(forms.Form):</p>
+        <p class="mb-1 mr-25">search_query = forms.CharField(label='Search', max_length=100, widget=forms.TextInput(attrs={'name': 'search_query'}))</p>
+    </div>
+    <h4 class="mb-1 mt-4">Navigate to your view.</h4>
+    <h4 class="mb-1 mt-4">Add those lines in views file.</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">from django.shortcuts import render</p>
+        <p class="mb-1">from .models import Book</p>
+        <p class="mb-1">from .forms import SearchForm</p>
+        <p class="mb-1">def search_view(request):</p>
+        <p class="mb-1 mr-25">form = SearchForm()</p>
+        <p class="mb-1 mr-25">search_results = []</p>
+        <p class="mb-1 mr-25">if request.method == 'POST':</p>
+        <p class="mb-1 mr-50">search_query = request.POST.get('search_query')</p>
+        <p class="mb-1 mr-50">if search_query:</p>
+        <p class="mb-1 mr-75">search_results = Book.objects.filter(title__icontains=search_query)</p>
+        <p class="mb-1 mr-75">context = {'form': form, 'search_results': search_results}    </p>
+        <p class="mb-1 mr-75">return render(request, 'blogs/search_results.html', context)</p>
+        <p class="mb-1 mr-25">context = {'form': form}</p>
+        <p class="mb-1 mr-25">return render(request, 'blogs/search_results.html', context)</p>
+    </div>
+    <hr>
+    <h2 class="my-5 custom-title">Explanation</h2>
+    <h4 class="mb-1 mt-4">
+        Create an instance of the SearchForm. Check if the HTTP request method is a POST request.
+        Get the input value by passing the input name between the get function.
+        Check if the search query was provided (not empty).
+        If it provided will loop through the books object to check if book contains or match the search value.
+        render template search_results with context that contais the form and search results.
+        if not provided. render template search_results with context that contais just the form.
+    </h4>
+    <h4 class="mb-1 mt-4">Create urls.py in your app.</h4>
+    <h4 class="mb-1 mt-4">Add those lines in urls file.</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">from django.urls import path</p>
+        <p class="mb-1">from . import views</p>
+        <p class="mb-1">urlpatterns = [</p>
+        <p class="mb-1 mr-25">path('search/', views.search_view, name='search_view'),</p>
+        <p class="mb-1">]</p>
+    </div>
+    <h4 class="mb-1 mt-4">In your app create a templates folder then create a app folder name then insert the search_results file.</h4>
+    <h4 class="mb-1 mt-4">Insert the following codes in the search_results file.</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">&lt;form method="post" action="{% url 'search_view' %}"&gt;</p>
+        <p class="mb-1 mr-25">{% csrf_token %}</p>
+        <p class="mb-1 mr-25">{{ form.as_p }}</p>
+        <p class="mb-1 mr-25">&lt;button type="submit"&gt;Search&lt;/button&gt;</p>
+        <p class="mb-1">&lt;/form&gt;</p>
+    </div>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">{% if search_results %}</p>
+        <p class="mb-1 mr-25">&lt;h2&gt;Search Results:&lt;/h2&gt;</p>
+        <p class="mb-1 mr-25">&lt;ul&gt;</p>
+        <p class="mb-1 mr-50">{% for item in search_results %}</p>
+        <p class="mb-1 mr-75">&lt;li&gt;{{ item.title }}&lt;/li&gt;</p>
+        <p class="mb-1 mr-50">{% endfor %}</p>
+        <p class="mb-1 mr-25">&lt;/ul&gt;</p>
+        <p class="mb-1">{% endif %}</p>
+    </div>
+    <figure class="figure my-4">
+        <video src="~/images/project_images/vid/search.mp4" class="img-border" type="video" controls></video>
+    </figure>

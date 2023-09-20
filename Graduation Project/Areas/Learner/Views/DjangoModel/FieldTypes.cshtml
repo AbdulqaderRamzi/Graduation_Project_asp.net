@@ -1,0 +1,153 @@
+﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
+    <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Field Types</h1>
+
+    <hr />
+    <h2 class="my-5 custom-title">Boolean</h2>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">above_20 = models.BooleanField()</h5>
+    </div>
+    <h4 class="mb-1 mt-4">Accept two value True or False.</h4>
+
+    <hr />
+    <h2 class="my-5 custom-title">Date</h2>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">event_date = models.DateField()</h5>
+    </div>
+    <h4 class="mb-1 mt-4">Store date like year-month-day without time.</h4>
+    <div class="rounded p-4 mt-4 custom-inout">
+        <p class="mb-1">// Example</p>
+        <p class="mb-1">Stored: event_date = "2023-08-24"</p>
+        <p class="mb-1">Display: August 24, 2023</p>
+    </div>
+
+    <hr />
+    <h2 class="my-5 custom-title">DateTime</h2>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">appointment_datetime = models.DateTimeField()</h5>
+    </div>
+    <h4 class="mb-1 mt-4">Store date and time like year-month-day-hours-minutes-seconds.</h4>
+    <div class="rounded p-4 mt-4 custom-inout">
+        <p class="mb-1">// Example</p>
+        <p class="mb-1">Stored: appointment_datetime = "2023-08-24 15:30:00"</p>
+        <p class="mb-1">Display: August 24, 2023, 3:30 PM</p>
+    </div>
+
+    <hr />
+    <h2 class="my-5 custom-title">Time</h2>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">scheduled_time = models.TimeField()</h5>
+    </div>
+    <h4 class="mb-1 mt-4">Store time like hours-minutes-seconds without date.</h4>
+    <div class="rounded p-4 mt-4 custom-inout">
+        <p class="mb-1">// Example</p>
+        <p class="mb-1">Stored: scheduled_time = "15:30:00"</p>
+        <p class="mb-1">Display: 3:30 PM</p>
+    </div>
+
+    <hr />
+    <h2 class="my-5 custom-title">Char</h2>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">name = models.CharField(max_length=200)</h5>
+    </div>
+    <h4 class="mb-1 mt-4">Used for short to medium length with predefined maximum length. name will be short for that we used Char.</h4>
+
+    <hr />
+    <h2 class="my-5 custom-title">Text</h2>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">description = models.TextField()</h5>
+    </div>
+    <h4 class="mb-1 mt-4">Used for long text without predefined maximum length. description will be long for that we used Text.</h4>
+
+    <hr />
+    <h2 class="my-5 custom-title">Email</h2>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">email = models.EmailField()</h5>
+    </div>
+    <h4 class="mb-1 mt-4">Used when you want the field to accept just email input.</h4>
+
+    <hr />
+    <h2 class="my-5 custom-title">URL</h2>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">class Website(models.Model):</p>
+        <p class="mb-1 mr-25">url = models.URLField()</p>
+    </div>
+    <h4 class="mb-1 mt-4">Used to store url link.</h4>
+    <h4 class="mb-1 mt-4">Store data like https://www.example.com/</h4>
+
+    <hr />
+    <h2 class="my-5 custom-title">Decimal</h2>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">total_amount = models.DecimalField(max_digits=7, decimal_places=2)</h5>
+    </div>
+    <h4 class="mb-1 mt-4">Predefined max digits and decimal places.</h4>
+    <div class="rounded p-4 mt-4 custom-inout">
+        <p class="mb-1">// Example about decimal_places</p>
+        <p class="mb-1">decimal_places=2 could be 00.00</p>
+        <p class="mb-1">decimal_places=3 could be 00.000</p>
+    </div>
+    <div class="rounded p-4 mt-4 custom-inout">
+        <p class="mb-1">// Example about max_digits</p>
+        <p class="mb-1">max_digits=7 max value could be 1234567.00</p>
+        <p class="mb-1">max_digits=4 max value could be 1234.00</p>
+    </div>
+
+    <hr />
+    <h2 class="my-5 custom-title">Float</h2>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">price = models.FloatField()</h5>
+    </div>
+    <h4 class="mb-1 mt-4">Doesn't have predefined max digits and decimal places, but you can give it max_digits if you want.</h4>
+    <div class="rounded p-4 mt-4 custom-inout">
+        <p class="mb-1">// Example</p>
+        <p class="mb-1">1452.32324</p>
+    </div>
+    <h4 class="mb-1 mt-4">The difference between float and decimal is Float doesn't have decimal places.</h4>
+
+    <hr />
+    <h2 class="my-5 custom-title">Integer</h2>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">points = models.IntegerField()</h5>
+    </div>
+    <h4 class="mb-1 mt-4">Store Positive and Negative Integer value that refer to integers greater than or less than or equal to zero.</h4>
+
+    <hr />
+    <h2 class="my-5 custom-title">PositiveInteger</h2>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">age = models.PositiveIntegerField()</h5>
+    </div>
+    <h4 class="mb-1 mt-4">Store Positive Integer value that refer to integers greater than or equal to zero.</h4>
+
+    <hr />
+    <h2 class="my-5 custom-title">File</h2>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">document = models.FileField(upload_to='documents/')</p>
+        <p class="mb-1">image = models.FileField(upload_to='images/')</p>
+        <p class="mb-1">video = models.FileField(upload_to='videos/')</p>
+    </div>
+    <h4 class="mb-1 mt-4">You can use it to store image, video, document, excel, and pdf etc.</h4>
+    <h4 class="mb-1 mt-4">upload_to is required. it used to define folder name that will be used to store the file.</h4>
+
+    <hr />
+    <h2 class="my-5 custom-title">Image</h2>
+    <h4 class="mb-1 mt-4">Same as FileField but it just used to store image not all file types.</h4>
+    <h4 class="mb-1 mt-4">upload_to is required. it used to define folder name that will be used to store the image.</h4>
+
+    <hr />
+    <h2 class="my-5 custom-title">JSON</h2>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">user_data = JSONField()</h5>
+    </div>
+    <div class="rounded p-4 mt-4 custom-inout">
+        <p class="mb-1">// Example</p>
+        <p class="mb-1">{"age": 30, "email": "user@example.com", "location": "City"}</p>
+    </div>
+    <h4 class="mb-1 mt-4">Store dictionary of data.</h4>
+
+    <hr />
+    <h2 class="my-5 custom-title">Slug</h2>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">product_code = models.SlugField()</h5>
+    </div>
+    <h4 class="mb-1 mt-4">Doesn't accept spaces in the field.</h4>
+    <h4 class="mb-1 mt-4">You can't store p 123, you can store it as p-123 or p_123 so, you can use underscores or hyphens.</h4>
+</div>

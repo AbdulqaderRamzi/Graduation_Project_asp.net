@@ -1,0 +1,102 @@
+﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
+    <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Custom Filter</h1>
+    <h4 class="mt-4 mb-0">Create templatetags folder in your app.</h4>
+    <h4 class="mt-4 mb-0">Create file there and name it whatever you want.</h4>
+    <h4 class="mt-4 mb-0">For example: blog_filters.py</h4>
+    <h4 class="mt-4 mb-0">Insert the following lines at the top.</h4>
+    <div class="rounded p-4 mt-4 custom-div">
+        <p class="mb-1">from django import template</p>
+        <p class="mb-1">register = template.Library()</p>
+    </div>
+
+    <hr />
+    <h2 class="my-5 custom-title">First Filter</h2>
+    <h3 class="custom-title text-start mb-0 mt-5">1</h3>
+    <h4 class="mt-4 mb-0">Register your filter name.</h4>
+    <h3 class="custom-title text-start mb-0 mt-5">2</h3>
+    <h4 class="mt-4 mb-0">Add your filter function.</h4>
+
+    <hr />
+    <h2 class="my-5 custom-title">Examples</h2>
+    <h4 class="mt-4 mb-0">Upper the first letter.</h4>
+    <div class="rounded p-4 mt-4 custom-div">
+        <p class="mb-1">@@register.filter(name="uppercase_first_letter")</p>
+        <p class="mb-1">def uppercase_first_letter(value):</p>
+        <p class="mb-1 mr-25">return value[0].upper() + value[1:]</p>
+    </div>
+    <h4 class="mt-4 mb-0">Use it in your Templates.</h4>
+    <h4 class="mt-4 mb-0">{% load blog_filters %}</h4>
+    <h4 class="mt-4 mb-0">{{ name|uppercase_first_letter }}</h4>
+    <div class="rounded p-4 mt-4 custom-inout">
+        <p class="mb-1">input: khaled</p>
+        <p class="mb-1">output: Khaled</p>
+    </div>
+
+    <hr />
+    <h4 class="mt-4 mb-0">Reverse the list or string.</h4>
+    <div class="rounded p-4 mt-4 custom-div">
+        <p class="mb-1">@@register.filter(name="reverse")</p>
+        <p class="mb-1">def reverse(value):</p>
+        <p class="mb-1 mr-25">return value[::-1]</p>
+    </div>
+    <h4 class="mt-4 mb-0">Use it in your Templates.</h4>
+    <h4 class="mt-4 mb-0">{% load blog_filters %}</h4>
+    <h4 class="mt-4 mb-0">{{ name|reverse }}</h4>
+    <div class="rounded p-4 mt-4 custom-inout">
+        <p class="mb-1">input: khaled</p>
+        <p class="mb-1">output: delahk</p>
+    </div>
+
+    <hr />
+    <h4 class="mt-4 mb-0">Truncates a string to a specified length and adds ellipsis if it's longer.</h4>
+    <div class="rounded p-4 mt-4 custom-div">
+        <p class="mb-1">@@register.filter(name="truncate_string")</p>
+        <p class="mb-1">def truncate_string(value, length):</p>
+        <p class="mb-1 mr-25">if len(value) > length:</p>
+        <p class="mb-1 mr-50">return value[:length] + '.....'</p>
+        <p class="mb-1 mr-25">return value</p>
+    </div>
+    <h4 class="mt-4 mb-0">Use it in your Templates.</h4>
+    <h4 class="mt-4 mb-0">{% load blog_filters %}</h4>
+    <h4 class="mt-4 mb-0">{{ description|truncate_string:10 }}</h4>
+    <div class="rounded p-4 mt-4 custom-inout">
+        <p class="mb-1">input: hello this is khaled alshammi</p>
+        <p class="mb-1">output: hello this.....</p>
+    </div>
+    <div class="rounded p-4 mt-4 custom-inout">
+        <p class="mb-1">input: hello</p>
+        <p class="mb-1">output: hello</p>
+    </div>
+
+    <hr />
+    <h4 class="mt-4 mb-0">Calculates the difference between two dates and returns it in days.</h4>
+    <div class="rounded p-4 mt-4 custom-div">
+        <p class="mb-1">@@register.filter(name="date_difference")</p>
+        <p class="mb-1">def date_difference(value, date):</p>
+        <p class="mb-1 mr-25">delta = value - date</p>
+        <p class="mb-1 mr-25">return delta.days</p>
+    </div>
+    <h4 class="mt-4 mb-0">Use it in your Templates.</h4>
+    <h4 class="mt-4 mb-0">{% load blog_filters %}</h4>
+    <h4 class="mt-4 mb-0">Number of days between today and last seen {{ last_login_date|date_difference:date.today }}</h4>
+    <h4 class="mt-4 mb-0">Current data is 2023-08-25</h4>
+    <div class="rounded p-4 mt-4 custom-inout">
+        <p class="mb-1">input: 2023-08-20</p>
+        <p class="mb-1">output: 5 days</p>
+    </div>
+
+    <hr />
+    <h4 class="mt-4 mb-0">Subtracts a value from the input.</h4>
+    <div class="rounded p-4 mt-4 custom-div">
+        <p class="mb-1">@@register.filter(name="subtract")</p>
+        <p class="mb-1">def subtract(value, arg):</p>
+        <p class="mb-1 mr-25">return value - arg</p>
+    </div>
+    <h4 class="mt-4 mb-0">Use it in your Templates.</h4>
+    <h4 class="mt-4 mb-0">{% load blog_filters %}</h4>
+    <h4 class="mt-4 mb-0">{{ review|subtract:5 }}</h4>
+    <div class="rounded p-4 mt-4 custom-inout">
+        <p class="mb-1">input: 7</p>
+        <p class="mb-1">output: 2</p>
+    </div>
+</div>

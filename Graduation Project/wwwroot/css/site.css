@@ -1,0 +1,71 @@
+html {
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+html {
+    font-family: 'Inter', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+    min-height: 100%;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 60px;
+    background-color: #ededed;
+}
+
+.mr-25{
+  margin-left:25px;
+}
+.mr-50{
+  margin-left:50px;
+}
+.mr-75{
+  margin-left:75px;
+}
+.mr-100{
+  margin-left:100px;
+}
+.mr-125{
+  margin-left:125px;
+}
+.mr-150{
+  margin-left:150px;
+}
+.custom-back{
+  background: #417690;
+  color:white;
+  border: 5px solid white;
+}
+.custom-div {
+    background: #417690;
+    color: white;
+    width: fit-content;
+    text-align: start;
+    border: 5px solid white;
+}
+.custom-inout{
+  background: #6e6e6e;
+  color: white;
+  width: fit-content;
+  text-align: start;
+  border: 5px solid white;
+}
+.custom-title {
+    font-weight: bold;
+    text-align: center;
+    color: #417690;
+}
+.img-border {
+    border: 5px solid white;
+}

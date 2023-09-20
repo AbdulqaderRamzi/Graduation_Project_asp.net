@@ -1,0 +1,37 @@
+﻿<form method="post" asp-area="Customer" asp-controller="ContactUs" asp-action="Contactus">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Create Inquiry</h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+            <label for="content">Your Email</label>
+            <input required name="from" id="from" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label for="fullname">FullName</label>
+            <input required name="fullname" id="fullname" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label for="phonenumber">PhoneNumber</label>
+            <input required name="phonenumber" id="phonenumber" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label for="subject">Subject</label>
+            <input required name="subject" id="subject" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label for="content">Content</label>
+            <textarea required name="content" id="content" class="form-control"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:150px">
+            Send
+        </button>
+    </div>
+</form>
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

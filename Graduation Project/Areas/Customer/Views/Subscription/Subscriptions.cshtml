@@ -1,0 +1,19 @@
+﻿@model List<SubscriptionType>
+
+<div class="card-group mb-4">
+    @foreach (SubscriptionType subscriptionType in Model.OrderBy(i => i.Price))
+    {
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title text-center text-primary">@subscriptionType.Title</h5>
+                <p class="card-text text-center">@subscriptionType.Description</p>
+                <h6 class="card-text text-center">$@subscriptionType.Price</h6>
+            </div>
+            <div class="card-footer d-flex justify-content-center">
+                <a class="btn btn-success text-center" asp-route-id=@subscriptionType.Id asp-action="Subscription" asp-controller="Subscription" asp-area="Customer">
+                    Subscribe
+                </a>
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,22 @@
+﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
+    <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Static Files</h1>
+    <h5 class="mt-5 mb-4">In project root go to settings. Add those lines.</h5>
+    <div class="rounded p-4 mb-4 custom-div">
+        <p class="mb-1">STATIC_URL = 'static/'</p>
+        <p class="mb-1">STATICFILES_DIRS = [</p>
+        <p class="mb-1 mr-25">BASE_DIR / "static",</p>
+        <p class="mb-1">]</p>
+        <p class="mb-1">STATIC_ROOT = BASE_DIR / "staticfiles"</p>
+    </div>
+    <figure class="figure mb-4">
+        <img src="~/images/project_images/model/file.png" class="figure-img img-fluid rounded img-border">
+    </figure>
+    <h5 class="mb-4 mt-5">Create static folder that will contain your css, js, images and fonts. It should be in same level with project root.</h5>
+    <figure class="figure mb-4">
+        <img src="~/images/project_images/model/stativf.png" class="figure-img img-fluid rounded img-border">
+    </figure>
+    <h5 class="mb-4 mt-5">If you will use css, js, images or fonts you should insert the following line at the top of html file in each file that includes static stuff.</h5>
+    <div class="d-flex justify-content-start mb-4">
+        <h5 class="rounded mb-5 p-3 custom-back">{% load static %}</h5>
+    </div>
+</div>

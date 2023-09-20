@@ -1,0 +1,54 @@
+﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
+    <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Register</h1>
+    <br>
+    <hr />
+    <h2 class="my-5 custom-title">Defaul user model</h2>
+    <h5 class="mt-4 mb-5">username - password - email - first_name - last_name</h5>
+    <hr />
+    <h2 class="my-5 custom-title">Create user</h2>
+    <h5 class="mt-5 mb-3">Create user by using: create_user(username, email, password)</h5>
+    <div class="d-flex justify-content-start mt-0">
+        <h5 class="rounded mt-2 mb-2 p-3 custom-back">python manage.py shell</h5>
+    </div>
+    <div class="d-flex justify-content-start mt-0">
+        <h5 class="rounded mt-2 mb-2 p-3 custom-back">from django.contrib.auth.models import User</h5>
+    </div>
+    <div class="d-flex justify-content-start mt-0">
+        <h5 class="rounded mt-2 mb-5 p-3 custom-back">user = User.objects.create_user('KhaledDotNet', 'khalod.zeko@gmail.com', 'kchdmejcma2d')</h5>
+    </div>
+    <hr />
+    <h2 class="my-5 custom-title">Update user</h2>
+    <div class="d-flex justify-content-start mt-0">
+        <h5 class="rounded mt-5 mb-2 p-3 custom-back">user.first_name = "khaled"</h5>
+    </div>
+    <div class="d-flex justify-content-start mt-0">
+        <h5 class="rounded mt-2 mb-2 p-3 custom-back">user.last_name = "alshammi"</h5>
+    </div>
+    <div class="d-flex justify-content-start mt-0">
+        <h5 class="rounded mt-2 mb-5 p-3 custom-back">user.save()</h5>
+    </div>
+    <hr />
+    <h2 class="my-5 custom-title">Register view</h2>
+    <div class="rounded p-4 mt-4 mb-5 custom-div">
+        <p class="mb-1">from django.contrib.auth import authenticate, login</p>
+        <p class="mb-1">from django.contrib.auth.models import User  # Import User model</p>
+        <p class="mb-1">from django.shortcuts import render, redirect</p>
+        <p class="mb-1">from .forms import CustomRegisterForm</p>
+        <p class="mb-1">def register_view(request):</p>
+        <p class="mb-1 mr-25">if request.method == 'POST':</p>
+        <p class="mb-1 mr-50">form = CustomRegisterForm(request.POST)</p>
+        <p class="mb-1 mr-50">if form.is_valid():</p>
+        <p class="mb-1 mr-75">username = form.cleaned_data['username']</p>
+        <p class="mb-1 mr-75">email = form.cleaned_data['email']</p>
+        <p class="mb-1 mr-75">password = form.cleaned_data['password']</p>
+        <p class="mb-1 mr-75">user = User.objects.create_user(username=username, email=email, password=password)  # Specify field names</p>
+        <p class="mb-1 mr-75">user = authenticate(username=username, password=password)  # Provide username and password</p>
+        <p class="mb-1 mr-75">if user is not None:</p>
+        <p class="mb-1 mr-100"># Log in the user</p>
+        <p class="mb-1 mr-100">login(request, user)</p>
+        <p class="mb-1 mr-100">return redirect('dashboard')  # Redirect to a dashboard or any other page</p>
+        <p class="mb-1 mr-25">else:</p>
+        <p class="mb-1 mr-50">form = CustomRegisterForm()</p>
+        <p class="mb-1 mr-25">return render(request, 'register.html', {'form': form})</p>
+    </div>
+</div>

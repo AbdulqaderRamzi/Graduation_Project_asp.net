@@ -1,0 +1,81 @@
+﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
+    <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Aggregation</h1>
+
+    <hr />
+    <h2 class="my-5 custom-title">Count</h2>
+    <h4 class="mb-1 mt-4">Calculates the number of records in a queryset.</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">class Book(models.Model):</p>
+        <p class="mb-1 mr-25">title = models.CharField(max_length=100)</p>
+    </div>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">from django.db.models import Count</p>
+        <p class="mb-1">num_books = Book.objects.aggregate(total_books=Count('id'))</p>
+    </div>
+    <h4 class="mb-1 mt-4">Call it: num_books["total_books"]</h4>
+    <h4 class="mb-1 mt-4">It counts the records in id column.</h4>
+
+    <hr />
+    <h2 class="my-5 custom-title">Sum</h2>
+    <h4 class="mb-1 mt-4">Calculates the sum of a numeric field in a queryset.</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">class Order(models.Model):</p>
+        <p class="mb-1 mr-25">amount = models.DecimalField(max_digits=10, decimal_places=2)</p>
+    </div>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">from django.db.models import Sum</p>
+        <p class="mb-1">total_order_amount = Order.objects.aggregate(total_amount=Sum('amount'))</p>
+    </div>
+    <h4 class="mb-1 mt-4">Call it:total_order_amount["total_amount"]</h4>
+    <h4 class="mb-1 mt-4">It sum the records in amount column.</h4>
+
+    <hr />
+    <h2 class="my-5 custom-title">Avg</h2>
+    <h4 class="mb-1 mt-4">Calculates the average value of a numeric field in a queryset.</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">class Review(models.Model):</p>
+        <p class="mb-1 mr-25">rating = models.DecimalField(max_digits=3, decimal_places=1)</p>
+    </div>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">from django.db.models import Avg</p>
+        <p class="mb-1">average_rating = Review.objects.aggregate(avg_rating=Avg('rating'))</p>
+    </div>
+    <h4 class="mb-1 mt-4">Call it: average_rating["avg_rating"]</h4>
+    <h4 class="mb-1 mt-4">It sum the records in rating column then divide it on records counts.</h4>
+
+    <hr />
+    <h2 class="my-5 custom-title">Min</h2>
+    <h4 class="mb-1 mt-4">Calculates the minimum value of a field in a queryset.</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">class Product(models.Model):</p>
+        <p class="mb-1 mr-25">price = models.DecimalField(max_digits=10, decimal_places=2)</p>
+    </div>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">from django.db.models import Min</p>
+        <p class="mb-1">cheapest_product_price = Product.objects.aggregate(min_price=Min('price'))</p>
+    </div>
+    <h4 class="mb-1 mt-4">Call it: cheapest_product_price["min_price"]</h4>
+    <h4 class="mb-1 mt-4">It search about minimum value in price column.</h4>
+
+    <hr />
+    <h2 class="my-5 custom-title">Max</h2>
+    <h4 class="mb-1 mt-4">Calculates the maximum value of a field in a queryset.</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">class Sale(models.Model):</p>
+        <p class="mb-1 mr-25">amount = models.DecimalField(max_digits=10, decimal_places=2)</p>
+    </div>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">from django.db.models import Max</p>
+        <p class="mb-1">highest_sale_amount = Sale.objects.aggregate(max_amount=Max('amount'))</p>
+    </div>
+    <h4 class="mb-1 mt-4">Call it: highest_sale_amount["max_amount"]</h4>
+    <h4 class="mb-1 mt-4">It search about maximum value in amount column.</h4>
+
+    <hr />
+    <h2 class="my-5 custom-title">Notes</h2>
+    <h4 class="mb-1 mt-4">highest_sale_amount = Sale.objects.aggregate(max_amount=Max('amount'))</h4>
+    <h4 class="mb-1 mt-4">highest_sale_amount = Sale.objects.aggregate(Max('amount'))</h4>
+    <h4 class="mb-1 mt-4">If you didn't give it a name how you will call it in second example?</h4>
+    <h4 class="mb-1 mt-4">By default Django will create the name in this convention:</h4>
+    <h4 class="mb-1 mt-4">column__aggregation so, the answer will be amount__max.</h4>
+</div>

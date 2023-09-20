@@ -1,0 +1,110 @@
+﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
+    <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Response Types</h1>
+
+    <hr />
+    <br>
+    <div class="my-5">
+        <h2 class="mb-5 custom-title">HttpResponse</h2>
+        <h5>Can be used to return text, even if you pass html, it will interpret it.</h5>
+        <div class="d-flex justify-content-start">
+            <h5 class="rounded my-4 p-3 custom-back">HttpResponse("Hello world")</h5>
+        </div>
+        <div class="d-flex justify-content-start">
+            <h5 class="rounded my-4 p-3 custom-back">HttpResponse('&lt;h1&gt;Page not found&lt;/h1&gt;')</h5>
+        </div>
+    </div>
+
+    <hr />
+    <br>
+    <div class="my-5">
+        <h2 class="mb-5 custom-title">HttpResponseNotFound</h2>
+        <h5>Used to return html error.</h5>
+        <div class="d-flex justify-content-start">
+            <h5 class="rounded my-4 p-3 custom-back">error = '&lt;h1&gt;Page not found&lt;/h1&gt;'</h5>
+        </div>
+        <div class="d-flex justify-content-start">
+            <h5 class="rounded my-4 p-3 custom-back">HttpResponseNotFound(error)</h5>
+        </div>
+    </div>
+
+    <hr />
+    <br>
+    <div class="my-5">
+        <h2 class="mb-5 custom-title">Http404</h2>
+        <h5>Used to return text error.</h5>
+        <div class="d-flex justify-content-start">
+            <h5 class="rounded my-4 p-3 custom-back">Http404("Magazine does not exist")</h5>
+        </div>
+    </div>
+
+    <hr />
+    <br>
+    <div class="my-5">
+        <h2 class="mb-5 custom-title">render</h2>
+        <h5>Used to return template and its context.</h5>
+        <h5>Context used to store data that we want to display in template.</h5>
+        <div class="d-flex justify-content-start">
+            <h5 class="rounded my-4 p-3 custom-back">render(request, "blogs/blogs.html", {"name":"khaled"})</h5>
+        </div>
+    </div>
+
+    <hr />
+    <br>
+    <div class="my-5">
+        <h2 class="mb-5 custom-title">redirect</h2>
+        <h5>Redirect to another view url.</h5>
+        <div class="rounded p-4 my-4 custom-div">
+            <p class="mb-1">urlpatterns = [</p>
+            <p class="mb-1 mr-25">path("blogs/", views.blogs, name="blogs"),</p>
+            <p class="mb-1 mr-25">path("blog/&lt;int:id&gt;/", views.blog_by_id, name="blog_by_id"),</p>
+            <p class="mb-1">]</p>
+        </div>
+        <div class="d-flex justify-content-start">
+            <h5 class="rounded my-4 p-3 custom-back">redirect('blogs')</h5>
+        </div>
+        <div class="d-flex justify-content-start">
+            <h5 class="rounded my-4 p-3 custom-back">redirect('blog_by_id', id=2)</h5>
+        </div>
+        <div class="d-flex justify-content-start">
+            <h5 class="rounded my-4 p-3 custom-back">redirect('/blogs/blogs/')</h5>
+        </div>
+    </div>
+
+    <hr />
+    <br>
+    <div class="my-5">
+        <h2 class="mb-5 custom-title">get_object_or_404</h2>
+        <h5>It will return object if it's not null, otherwise it will return error.</h5>
+        <div class="d-flex justify-content-start">
+            <h5 class="rounded my-4 p-3 custom-back">get_object_or_404(Blog, rating__gt=4, pk=2)</h5>
+        </div>
+        <div class="d-flex justify-content-start">
+            <h5 class="rounded my-4 p-3 custom-back">get_object_or_404(Model, filter, primaryKey)</h5>
+        </div>
+        <div class="d-flex justify-content-start">
+            <h5 class="rounded my-4 p-3 custom-back">get_object_or_404(Blog, pk=4)</h5>
+        </div>
+        <h4 class="mb-2 mt-5">Instead of</h4>
+        <div class="rounded p-4 my-4 custom-div">
+            <p class="mb-1">object = Blog.objects.get(pk=4)</p>
+            <p class="mb-1">if not object:</p>
+            <p class="mb-1 mr-25">raise Http404("No Blog matches the given Id.")</p>
+        </div>
+    </div>
+
+    <hr />
+    <br>
+    <div class="my-5">
+        <h2 class="mb-5 custom-title">get_list_or_404</h2>
+        <h5>It will return list if it's not null, otherwise it will return error.</h5>
+        <div class="d-flex justify-content-start">
+            <h5 class="rounded my-4 p-3 custom-back">get_list_or_404(Blog, available=True)</h5>
+        </div>
+        <h4 class="mb-2 mt-5">Instead of</h4>
+        <div class="rounded p-4 my-4 custom-div">
+            <p class="mb-1">objects = list(Blog.objects.filter(available=True))</p>
+            <p class="mb-1">if not objects:</p>
+            <p class="mb-1 mr-25">raise Http404("There are no blogs available.")</p>
+        </div>
+    </div>
+</div>

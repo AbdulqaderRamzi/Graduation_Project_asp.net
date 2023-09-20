@@ -1,0 +1,121 @@
+﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
+    <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Relationships</h1>
+
+    <hr />
+    <h2 class="my-5 custom-title">OnToOne</h2>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">OneToOneField(Model Name, on_delete logic)</h5>
+    </div>
+    <h4 class="mt-4 mb-5">Each instance of the model on one side of the relationship is associated with, at most, one instance on the other side.</h4>
+    <h4 class="mt-4 mb-5">Examples:</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">from django.contrib.auth.models import User</p>
+        <p class="mb-1">from django.db import models</p>
+        <p class="mb-1">class Profile(models.Model):</p>
+        <p class="mb-1 mr-25">user = models.OneToOneField(User, on_delete=models.CASCADE)</p>
+        <p class="mb-1 mr-25">bio = models.TextField()</p>
+        <p class="mb-1 mr-25">avatar = models.ImageField(upload_to='avatars/')</p>
+    </div>
+    <h4 class="mt-4 mb-5">Each User can be related to one Profile otherwise, each Profile can be related to at most one User.</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">class Passport(models.Model):</p>
+        <p class="mb-1 mr-25">passport_number = models.CharField(max_length=20)</p>
+        <p class="mb-1 mr-25">expiration_date = models.DateField()</p>
+        <br>
+        <p class="mb-1">class Visa(models.Model):</p>
+        <p class="mb-1 mr-25">passport = models.OneToOneField(Passport, on_delete=models.CASCADE)</p>
+        <p class="mb-1 mr-25">country = models.CharField(max_length=50)</p>
+        <p class="mb-1 mr-25">entry_date = models.DateField()</p>
+        <p class="mb-1 mr-25">expiration_date = models.DateField()</p>
+    </div>
+    <h4 class="mt-4 mb-5">Each Passport can be related to one Visa otherwise, each Visa can be related to at most one Passport.</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">class Student(models.Model):</p>
+        <p class="mb-1 mr-25">first_name = models.CharField(max_length=50)</p>
+        <p class="mb-1 mr-25">last_name = models.CharField(max_length=50)</p>
+        <p class="mb-1 mr-25">date_of_birth = models.DateField()</p>
+        <br>
+        <p class="mb-1">class StudentRecord(models.Model):</p>
+        <p class="mb-1 mr-25">student = models.OneToOneField(Student, on_delete=models.CASCADE)</p>
+        <p class="mb-1 mr-25">grade_point_average = models.DecimalField(max_digits=4, decimal_places=2)</p>
+        <p class="mb-1 mr-25">attendance_percentage = models.DecimalField(max_digits=5, decimal_places=2)</p>
+    </div>
+    <h4 class="mt-4 mb-5">Each Student can be related to one StudentRecord otherwise, each StudentRecord can be related to at most one Student.</h4>
+
+    <hr />
+    <h2 class="my-5 custom-title">ManyToOne</h2>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">ForeignKey(Model Name, on_delete logic)</h5>
+    </div>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">class Blog(models.Model):</p>
+        <p class="mb-1 mr-25">name = models.CharField(max_length=100)</p>
+        <p class="mb-1 mr-25">description = models.TextField()</p>
+        <br>
+        <p class="mb-1">class Post(models.Model):</p>
+        <p class="mb-1 mr-25">blog = models.ForeignKey(Blog, on_delete=models.CASCADE)</p>
+        <p class="mb-1 mr-25">title = models.CharField(max_length=200)</p>
+        <p class="mb-1 mr-25">content = models.TextField()</p>
+    </div>
+    <h4 class="mt-4 mb-5">Each Blog can be related to many Posts otherwise, each Post can be related to at most one Blog.</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">class Category(models.Model):</p>
+        <p class="mb-1 mr-25">name = models.CharField(max_length=100)</p>
+        <p class="mb-1 mr-25">description = models.TextField()</p>
+        <br>
+        <p class="mb-1">class Product(models.Model):</p>
+        <p class="mb-1 mr-25">category = models.ForeignKey(Category, on_delete=models.CASCADE)</p>
+        <p class="mb-1 mr-25">name = models.CharField(max_length=200)</p>
+        <p class="mb-1 mr-25">price = models.DecimalField(max_digits=10, decimal_places=2)</p>
+    </div>
+    <h4 class="mt-4 mb-5">Each Category can be related to many Products otherwise, each Product can be related to at most one Category.</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">class University(models.Model):</p>
+        <p class="mb-1 mr-25">name = models.CharField(max_length=100)</p>
+        <p class="mb-1 mr-25">location = models.CharField(max_length=100)</p>
+        <br>
+        <p class="mb-1">class Student(models.Model):</p>
+        <p class="mb-1 mr-25">university = models.ForeignKey(University, on_delete=models.CASCADE)</p>
+        <p class="mb-1 mr-25">name = models.CharField(max_length=100)</p>
+        <p class="mb-1 mr-25">major = models.CharField(max_length=100)</p>
+    </div>
+    <h4 class="mt-4 mb-5">Each University can be related to many Students otherwise, each Student can be related to at most one University.</h4>
+
+    <hr />
+    <h2 class="my-5 custom-title">ManyToMany</h2>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">ManyToManyField(Model Name)</h5>
+    </div>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">class Playlist(models.Model):</p>
+        <p class="mb-1 mr-25">name = models.CharField(max_length=100)</p>
+        <p class="mb-1 mr-25">songs = models.ManyToManyField(Song)</p>
+        <br>
+        <p class="mb-1">class Song(models.Model):</p>
+        <p class="mb-1 mr-25">title = models.CharField(max_length=200)</p>
+        <p class="mb-1 mr-25">artist = models.CharField(max_length=100)</p>
+        <p class="mb-1 mr-25">duration = models.DurationField()</p>
+    </div>
+    <h4 class="mt-4 mb-5">Each Playlist can be related to many Songs otherwise, each Song can be related to many Playlists.</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">class Author(models.Model):</p>
+        <p class="mb-1 mr-25">name = models.CharField(max_length=100)</p>
+        <p class="mb-1 mr-25">biography = models.TextField()</p>
+        <br>
+        <p class="mb-1">class Book(models.Model):</p>
+        <p class="mb-1 mr-25">title = models.CharField(max_length=200)</p>
+        <p class="mb-1 mr-25">authors = models.ManyToManyField(Author)</p>
+        <p class="mb-1 mr-25">publication_date = models.DateField()</p>
+    </div>
+    <h4 class="mt-4 mb-5">Each Author can be related to many Books otherwise, each Book can be related to many Authors.</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">class Actor(models.Model):</p>
+        <p class="mb-1 mr-25">name = models.CharField(max_length=100)</p>
+        <p class="mb-1 mr-25">birthdate = models.DateField()</p>
+        <br>
+        <p class="mb-1">class Movie(models.Model):</p>
+        <p class="mb-1 mr-25">title = models.CharField(max_length=100)</p>
+        <p class="mb-1 mr-25">actors = models.ManyToManyField(Actor)</p>
+    </div>
+    <h4 class="mt-4 mb-5">Each Actor can be related to many Movies otherwise, each Movie can be related to many Actors.</h4>
+</div>

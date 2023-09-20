@@ -1,0 +1,46 @@
+﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
+    <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">CreateView</h1>
+    <h4 class="text-center mt-4 mb-5">Built in class used to create model object.</h4>
+    <br>
+    <hr />
+    <h2 class="my-5 custom-title">Model</h2>
+    <div class="rounded p-4 mb-5 mt-4 custom-div">
+        <p class="mb-1">class Book(models.Model):</p>
+        <p class="mb-1 mr-25">title = models.CharField(max_length=100)</p>
+        <p class="mb-1 mr-25">available = models.BooleanField(default=False)</p>
+    </div>
+    <br>
+    <hr />
+    <h2 class="my-5 custom-title">View</h2>
+    <div class="rounded p-4 mb-5 mt-4 custom-div">
+        <p class="mb-1">from django.views.generic.edit import CreateView</p>
+        <p class="mb-1">from django.urls import reverse</p>
+        <p class="mb-1">from app.models import Book</p>
+        <p class="mb-1">from app.forms import CreateForm</p>
+        <p class="mb-1">class BookCreateView(CreateView):</p>
+        <p class="mb-1 mr-25">model = Book # create object of Book</p>
+        <p class="mb-1 mr-25">fields = ['title', 'available'] # define required fields</p>
+        <p class="mb-1 mr-25">form_class = CreateForm</p>
+        <p class="mb-1 mr-25">success_url = reverse('home')</p>
+    </div>
+    <br>
+    <hr />
+    <h2 class="my-5 custom-title">Url</h2>
+    <div class="rounded p-4 mb-5 mt-4 custom-div">
+        <p class="mb-1">from django.urls import path</p>
+        <p class="mb-1">from app.views import BookCreateView</p>
+        <p class="mb-1">urlpatterns = [</p>
+        <p class="mb-1 mr-25">path('create/', BookCreateView.as_view(), name='book-create'),</p>
+        <p class="mb-1">]</p>
+    </div>
+    <br>
+    <hr />
+    <h2 class="my-5 custom-title">Explanation</h2>
+    <h5 class="mt-4 mb-5">
+        You don't need to explicitly check whether the form is valid or invalid.
+        before saving the object.
+        Django's CreateView handles form validation for you automatically.
+        If the form is valid, it will save the object to the database and then redirect to the success_url.
+        If the form is invalid, it will redisplay the form with validation errors.
+    </h5>
+</div>

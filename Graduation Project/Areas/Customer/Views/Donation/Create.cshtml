@@ -1,0 +1,30 @@
+﻿@model Donation
+<form method="post" asp-action="Donate">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Donate</h2>
+            <hr/>
+        </div>
+        <div class="mb-3">
+            <label for="donate">Donate</label>
+            @if (ViewBag.Amount != null)
+            {
+                <input type="number" name="donate" id="donate" value="@ViewBag.Amount" class="form-control" />
+            }
+            else
+            {
+                <input type="number" name="donate" id="donate" class="form-control" />
+            }
+            <span asp-validation-for="Amount" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:150px">
+            Create
+        </button>
+    </div>
+</form>
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

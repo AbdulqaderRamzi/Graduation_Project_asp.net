@@ -1,0 +1,62 @@
+﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
+    <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">ListView</h1>
+    <h4 class="text-center mt-4 mb-5">Built in class used to display multiple model objects.</h4>
+    <br>
+    <hr />
+    <h2 class="my-5 custom-title">Model</h2>
+    <div class="rounded p-4 mb-5 mt-4 custom-div">
+        <p class="mb-1">class Book(models.Model):</p>
+        <p class="mb-1 mr-25">title = models.CharField(max_length=100)</p>
+        <p class="mb-1 mr-25">available = models.BooleanField(default=False)</p>
+    </div>
+
+    <br>
+    <hr />
+    <h2 class="my-5 custom-title">View</h2>
+    <div class="rounded p-4 mb-5 mt-4 custom-div">
+        <p class="mb-1">from django.views.generic import ListView</p>
+        <p class="mb-1">from books.models import Book</p>
+        <p class="mb-1">class BookListView(ListView):</p>
+        <p class="mb-1 mr-25">model = Book # Book.objects.all()</p>
+        <p class="mb-1 mr-25">context_object_name = 'books' # {'books':model}</p>
+    </div>
+
+    <br>
+    <hr />
+    <h2 class="my-5 custom-title">Url</h2>
+    <div class="rounded p-4 mb-5 mt-4 custom-div">
+        <p class="mb-1">from books.views import BookListView</p>
+        <p class="mb-1">urlpatterns = [</p>
+        <p class="mb-1 mr-25">path('books/', BookListView.as_view()),</p>
+        <p class="mb-1">]</p>
+    </div>
+    
+    <h5 class="mt-4 mb-5">It has 3 features.</h5>
+    <hr />
+
+    <h2 class="my-5 custom-title">get_context_data</h2>
+    <h5 class="mt-4 mb-5">Used to add more context data and change default context name.</h5>
+    <h5 class="mt-4 mb-5">Example</h5>
+    <div class="rounded p-4 mb-5 mt-4 custom-div">
+        <p class="mb-1">def get_context_data(self, **kwargs):</p>
+        <p class="mb-1 mr-25">context = super().get_context_data(**kwargs)</p>
+        <p class="mb-1 mr-25">context['books_list'] = Book.objects.all()</p>
+        <p class="mb-1 mr-25">return context</p>
+    </div>
+
+    <hr />
+    <h2 class="my-5 custom-title">queryset</h2>
+    <h5 class="mt-4 mb-5">Used to define which objects to return.</h5>
+    <h5 class="mt-4 mb-5">Example</h5>
+    <div class="d-flex justify-content-start mt-0 mb-4">
+        <h5 class="rounded mt-2 mb-4 p-3 custom-back">queryset = Book.objects.filter(available=True)</h5>
+    </div>
+
+    <hr />
+    <h2 class="my-5 custom-title">template_name</h2>
+    <h5 class="mt-4 mb-5">Used to define template name that will be used to display the data.</h5>
+    <h5 class="mt-4 mb-5">Example</h5>
+    <div class="d-flex justify-content-start mt-0 mb-4">
+        <h5 class="rounded mt-2 mb-4 p-3 custom-back">template_name = 'books/books.html'</h5>
+    </div>
+</div>

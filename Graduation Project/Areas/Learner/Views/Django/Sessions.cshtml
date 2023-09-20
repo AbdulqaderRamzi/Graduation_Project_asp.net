@@ -1,0 +1,41 @@
+﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
+    <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Sessions</h1>
+    <h4 class="text-center mt-4 mb-5">Sessions are the way to store and retrieve user data on the server side between different requests.</h4>
+    <h4 class="mb-1 mt-4">
+        You can use sessions to store user-specific information such as login credentials, shopping cart contents, and more.
+        when you store data in session. it will not be deleted until you deleted through clearing the session from browser or code logic.
+        Even if you refresh or close the browser. session data will still there.
+    </h4>
+
+    <hr />
+    <h2 class="my-5 custom-title">Examples</h2>
+    <h4 class="mb-1 mt-4">Create Session</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">request.session['username'] = 'example_user'</p>
+        <p class="mb-1">request.session['cart'] = ['item1', 'item2', 'item3']</p>
+    </div>
+    <h4 class="mb-1 mt-4">Update Session</h4>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">request.session['cart'].append('item4')</h5>
+    </div>
+    <h4 class="mb-1 mt-4">Adding a new item to the cart.</h4>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">request.session['username'] = 'new_username'</h5>
+    </div>
+    <h4 class="mb-1 mt-4">Changing the username.</h4>
+    <h4 class="mb-1 mt-4">Delete Session</h4>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">del request.session['cart']</h5>
+    </div>
+    <h4 class="mb-1 mt-4">Remove the cart from the session.</h4>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">request.session.clear()</h5>
+    </div>
+    <h4 class="mb-1 mt-4">Clear all session data.</h4>
+    <h4 class="mb-1 mt-4">Get Session</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">username = request.session.get('username', 'default_username')</p>
+        <p class="mb-1">cart_items = request.session.get('cart', [])</p>
+    </div>
+    <h4 class="mb-1 mt-4">Note: second parameter is default value. that means if username is null or not exist, username will equal 'default_username'.</h4>
+</div>

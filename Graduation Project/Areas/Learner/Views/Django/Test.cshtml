@@ -1,0 +1,188 @@
+﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
+    <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Test</h1>
+    <h4 class="mt-0 mb-5">
+        Use test to test your app before run the app. test will help you to find the error before that error occur with user.
+        helps to identify bugs, errors, and unexpected behavior in your code before it's deployed to a production environment.
+        created data in test. will not be exists in database. it's dummy data.
+    </h4>
+    <h4 class="mt-0 mb-5">Create class for each test case. for example, view, url, template name, model etc.</h4>
+    <h4 class="mt-0 mb-5">Each function has its data.</h4>
+    <h4 class="mt-0 mb-5">Each test case could has multiple tests.</h4>
+    <h4 class="mt-0 mb-5">Test should start with test word (test_).</h4>
+    <hr />
+    <h2 class="mb-5 custom-title">Model</h2>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">class Client(models.Model):</p>
+        <p class="mb-1 mr-25">name = models.CharField(max_length=100, verbose_name='Name')</p>
+        <p class="mb-1 mr-25">email = models.EmailField(unique=True)</p>
+    </div>
+
+    <hr />
+    <h2 class="mb-5 custom-title">First class test</h2>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">from django.test import TestCase</p>
+        <p class="mb-1">from cars.models import Client</p>
+        <p class="mb-1">class Client(TestCase)</p>
+        <p class="mb-1 mr-25"># first test</p>
+        <p class="mb-1 mr-25">def test_client_zero(self):</p>
+        <p class="mb-1 mr-50"># get all clients related to user function</p>
+        <p class="mb-1 mr-50"># clients model has 0 objects</p>
+        <p class="mb-1 mr-50">self.assertEquals(Client.objects.count(), 0)</p>
+        <p class="mb-1 mr-50"># create client object</p>
+        <p class="mb-1 mr-50">Client.objects.create(name="khaled", email="khaled@gmail.com")</p>
+        <p class="mb-1 mr-50"># we have 1 client now.</p>
+        <p class="mb-1 mr-50">self.assertEquals(Client.objects.count(), 1)</p>
+        <p class="mb-1 mr-50">first_client = Client.objects.get(id=1)</p>
+        <p class="mb-1 mr-50"># client name is khaled.</p>
+        <p class="mb-1 mr-50">self.assertEquals(first_client.name, "khaled")</p>
+        <p class="mb-1 mr-50"># "@@gmail.com" in first client email.</p>
+        <p class="mb-1 mr-50">self.assertTrue("@@gmail.com" in first_client.email)</p>
+        <p class="mb-1 mr-50"># "@@gmail.com" in first client email.</p>
+        <p class="mb-1 mr-50">self.assertFalse("@@gmail.com" not in first_client.email)</p>
+    </div>
+    <h4 class="mt-0 mb-5">Second test</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1 mr-25">def test_multiple_clients(self):</p>
+        <p class="mb-1 mr-50">Client.objects.create(name="ahmed", email="ahmed@gmail.com")</p>
+        <p class="mb-1 mr-50">Client.objects.create(name="esraa", email="esraa@gmail.com")</p>
+        <p class="mb-1 mr-50">Client.objects.create(name="ehsan", email="ehsan@gmail.com")</p>
+        <p class="mb-1 mr-50">Client.objects.create(name="noor", email="noor@gmail.com")</p>
+        <p class="mb-1 mr-50"># 4 clients</p>
+        <p class="mb-1 mr-50">self.assertEquals(Client.objects.count(), 4)</p>
+    </div>
+
+    <hr />
+    <h2 class="my-5 custom-title">Run your tests</h2>
+    <h4 class="mt-0 mb-5">Run all test files in your project:</h4>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">python manage.py test</h5>
+    </div>
+    <h4 class="mt-0 mb-5">Run specific test file:</h4>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">python manage.py test appname</h5>
+    </div>
+
+    <hr />
+    <h2 class="mb-5 custom-title">Test view</h2>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">from django.test import TestCase</p>
+        <p class="mb-1">from django.template import TemplateDoesNotExist</p>
+        <p class="mb-1">from django.template.loader import select_template</p>
+        <p class="mb-1">from django.urls import reverse</p>
+        <p class="mb-1">class ViewTestCase(TestCase):</p>
+        <p class="mb-1 mr-25"># test view request</p>
+        <p class="mb-1 mr-25">def test_view_handles_post_get_request(self):</p>
+        <p class="mb-1 mr-50"># Define the URL for your view (replace 'my-view-url' with the actual URL)</p>
+        <p class="mb-1 mr-50">url = reverse('search_view')</p>
+        <p class="mb-1 mr-50"># Send a POST request to the view</p>
+        <p class="mb-1 mr-50">post_response = self.client.post(url)</p>
+        <p class="mb-1 mr-50"># Check if the post_response status code is 200 OK, indicating a successful POST request</p>
+        <p class="mb-1 mr-50">self.assertEqual(post_response.status_code, 200)</p>
+        <p class="mb-1 mr-50"># Send a GET request to the view</p>
+        <p class="mb-1 mr-50">get_response = self.client.get(url)</p>
+        <p class="mb-1 mr-50"># Check if the get_response status code is 200 OK, indicating a successful GET request</p>
+        <p class="mb-1 mr-50">self.assertEqual(get_response.status_code, 200)</p>
+    </div>
+    <h4 class="mt-0 mb-5">Test view context</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1 mr-25">def test_view_context(self):</p>
+        <p class="mb-1 mr-50"># Define the URL for the view you want to test</p>
+        <p class="mb-1 mr-50">url = reverse('search_view')  # Replace with your actual view name</p>
+        <p class="mb-1 mr-50"># Send a GET request to the view</p>
+        <p class="mb-1 mr-50">response = self.client.get(url)</p>
+        <p class="mb-1 mr-50"># Check if the response status code is 200 (OK)</p>
+        <p class="mb-1 mr-50">self.assertEqual(response.status_code, 200)</p>
+        <p class="mb-1 mr-50"># Check if specific data is present in the context</p>
+        <p class="mb-1 mr-50">self.assertIn('name', response.context)</p>
+        <p class="mb-1 mr-50"># Check the values of the context data</p>
+        <p class="mb-1 mr-50">self.assertEqual(response.context['name'], 'khaled')</p>
+    </div>
+    <h4 class="mt-0 mb-5">Test view template name</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1 mr-25">def test_template_name(self):</p>
+        <p class="mb-1 mr-50"># Define the URL for the view you want to test</p>
+        <p class="mb-1 mr-50">url = reverse('search_view')  # Replace with your actual view name</p>
+        <p class="mb-1 mr-50"># Get the response by sending a GET request to the view</p>
+        <p class="mb-1 mr-50">response = self.client.get(url)</p>
+        <p class="mb-1 mr-50"># Check if the response status code is 200 (OK)</p>
+        <p class="mb-1 mr-50">self.assertEqual(response.status_code, 200)</p>
+        <p class="mb-1 mr-50"># Define the expected template name</p>
+        <p class="mb-1 mr-50">expected_template_name = 'blogs/search_results.html'  # Replace with the expected template name</p>
+        <p class="mb-1 mr-50">try:</p>
+        <p class="mb-1 mr-75"># Attempt to load the template with the expected name</p>
+        <p class="mb-1 mr-75">template = select_template([expected_template_name])</p>
+        <p class="mb-1 mr-50">except TemplateDoesNotExist:</p>
+        <p class="mb-1 mr-75"># If the template does not exist, it will raise TemplateDoesNotExist</p>
+        <p class="mb-1 mr-75">template = None</p>
+        <p class="mb-1 mr-50">#Check if the template object is not None, indicating that the template exists</p>
+        <p class="mb-1 mr-50">self.assertIsNotNone(template)</p>
+    </div>
+
+    <hr />
+    <h2 class="mb-5 custom-title">Test URL</h2>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">from django.test import TestCase</p>
+        <p class="mb-1">from django.urls import reverse</p>
+        <p class="mb-1">class URLTestCase(TestCase):</p>
+        <p class="mb-1 mr-25">def test_url_path_by_name(self):</p>
+        <p class="mb-1 mr-50"># Define the name of the URL pattern you want to test</p>
+        <p class="mb-1 mr-50">pattern_name = 'update'  # Replace with your actual pattern name</p>
+        <p class="mb-1 mr-50"># Use the reverse function to get the URL path by name</p>
+        <p class="mb-1 mr-50">url_path = reverse(pattern_name)</p>
+        <p class="mb-1 mr-50"># Define the expected URL path</p>
+        <p class="mb-1 mr-50">expected_url_path = '/en/update/1/'  # Replace with the expected URL path</p>
+        <p class="mb-1 mr-50"># Check if the resolved URL path matches the expected URL path</p>
+        <p class="mb-1 mr-50">self.assertEqual(url_path, expected_url_path)</p>
+    </div>
+
+    <hr />
+    <h2 class="mb-5 custom-title">Test User</h2>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">from django.test import TestCase</p>
+        <p class="mb-1">from django.urls import reverse</p>
+        <p class="mb-1">from django.contrib.auth.models import User</p>
+        <p class="mb-1">class LoginTestCase(TestCase):</p>
+        <p class="mb-1 mr-25">/*</p>
+        <p class="mb-1 mr-50">This is a custom setup method.</p>
+        <p class="mb-1 mr-50">You can use it to perform any necessary setup for your test cases.</p>
+        <p class="mb-1 mr-50">For example, you might create database records, set up test data, etc.</p>
+        <p class="mb-1 mr-50">Use setUp function to setup the data that will be used in many test related to class.</p>
+        <p class="mb-1 mr-50">To create variable use self.name = ...</p>
+        <p class="mb-1 mr-50">To access it use self.name</p>
+        <p class="mb-1 mr-25">*/</p>
+        <p class="mb-1 mr-25">def setUp(self):</p>
+        <p class="mb-1 mr-50"># Create a test user with a known password</p>
+        <p class="mb-1 mr-50">self.username = 'testuser'</p>
+        <p class="mb-1 mr-50">self.password = 'testpassword'</p>
+        <p class="mb-1 mr-50">self.user = User.objects.create_user(username=self.username, password=self.password)</p>
+        <p class="mb-1 mr-25">def test_login_valid_password(self):</p>
+        <p class="mb-1 mr-50"># Define the URL for the login view</p>
+        <p class="mb-1 mr-50">login_url = reverse('login')  # Replace with your actual view name</p>
+        <p class="mb-1 mr-50"># Simulate a POST request to the login view with valid username and password</p>
+        <p class="mb-1 mr-50">login_data = {</p>
+        <p class="mb-1 mr-75">'username': self.username,</p>
+        <p class="mb-1 mr-75">'password': self.password,</p>
+        <p class="mb-1 mr-50">}</p>
+        <p class="mb-1 mr-50">response = self.client.post(login_url, login_data, follow=True)</p>
+        <p class="mb-1 mr-50"># Check if the response status code is 200 (OK) after successful login</p>
+        <p class="mb-1 mr-50">self.assertEqual(response.status_code, 200)</p>
+        <p class="mb-1 mr-50"># Check if the user is authenticated</p>
+        <p class="mb-1 mr-50">self.assertTrue(response.context['user'].is_authenticated)</p>
+    </div>
+    <h4 class="mt-0 mb-5">Test Login Password</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1 mr-25">def test_login_invalid_password(self):</p>
+        <p class="mb-1 mr-50"># Define the URL for the login view</p>
+        <p class="mb-1 mr-50">login_url = reverse('login')  # Replace with your actual view name</p>
+        <p class="mb-1 mr-50"># Simulate a POST request to the login view with an invalid password</p>
+        <p class="mb-1 mr-50">login_data = {</p>
+        <p class="mb-1 mr-75">'username': self.username,</p>
+        <p class="mb-1 mr-75">'password': 'incorrect_password',</p>
+        <p class="mb-1 mr-50">}</p>
+        <p class="mb-1 mr-50">response = self.client.post(login_url, login_data, follow=True)</p>
+        <p class="mb-1 mr-50"># Check if the response status code is 200 (OK) after login attempt</p>
+        <p class="mb-1 mr-50">self.assertEqual(response.status_code, 200)</p>
+        <p class="mb-1 mr-50"># Check if the user is not authenticated (invalid password)</p>
+        <p class="mb-1 mr-50">self.assertFalse(response.context['user'].is_authenticated)</p>
+    </div>
+</div>

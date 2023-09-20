@@ -1,0 +1,60 @@
+﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
+    <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">On Delete</h1>
+    <h4 class="mb-1 mt-4">Models</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">class Author(models.Model):</p>
+        <p class="mb-1 mr-25">name = models.CharField(max_length=100)</p>
+    </div>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">class Book(models.Model):</p>
+        <p class="mb-1 mr-25">title = models.CharField(max_length=100)</p>
+        <p class="mb-1 mr-25">author = models.ForeignKey(Author, on_delete)</p>
+    </div>
+    <h4 class="mb-1 mt-4">Each author could have multiple books, each book could be related to one author.</h4>
+    <h4 class="mb-1 mt-4">What will happen if author is deleted?</h4>
+    <h4 class="mb-1 mt-4">Will the books be deleted with author or it will not be related to the author or it will be bind with another author?</h4>
+    <h4 class="mb-1 mt-4">Your are the one who can decide what will happen.</h4>
+    <h4 class="mb-1 mt-4">You have 5 approaches.</h4>
+
+    <hr />
+    <h2 class="my-5 custom-title">CASCADE</h2>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">author = models.ForeignKey(Author, on_delete=models.CASCADE)</h5>
+    </div>
+    <h4 class="mb-1 mt-4">If the author is deleted. the related books will also be deleted.</h4>
+
+    <hr />
+    <h2 class="my-5 custom-title">SET_NULL</h2>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">author = models.ForeignKey(Author, on_delete=models.SET_NULL, null=True, blank=True)</h5>
+    </div>
+    <h4 class="mb-1 mt-4">If the author is deleted. the related books will not be binded to that author so the author field in book will be null.</h4>
+
+    <hr />
+    <h2 class="my-5 custom-title">PROTECT and RESTRICT</h2>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">author = models.ForeignKey(Author, on_delete=models.PROTECT)</h5>
+    </div>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">author = models.ForeignKey(Author, on_delete=models.RESTRICT)</h5>
+    </div>
+    <h4 class="mb-1 mt-4">If the author has related books. author can't be deleated until it become unrelated to any book so, You won't be able to delete a Author as long as it has associated books objects.</h4>
+
+    <hr />
+    <h2 class="my-5 custom-title">DO_NOTHING</h2>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">author = models.ForeignKey(Author, on_delete=models.DO_NOTHING)</h5>
+    </div>
+    <h4 class="mb-1 mt-4">If author is deleted. the related books will still have the deleted author ForeignKey reference.</h4>
+    <h4 class="mb-1 mt-4">Example: if the book related to author id = 1, if author is deleted. the ForeignKey reference still equal 1.</h4>
+
+    <hr />
+    <h2 class="my-5 custom-title">SET_DEFAULT</h2>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">author = models.ForeignKey(Author, on_delete=models.SET_DEFAULT, default=1)</h5>
+    </div>
+    <h4 class="mb-1 mt-4">If the author is deleted. the related books will be bind with default id author.</h4>
+    <h4 class="mb-1 mt-4">Example: if the book related to author id = 2, if author id = 2 is deleted. the ForeignKey reference will equal 1, so it will be binded with author id = 1.</h4>
+    <h4 class="mb-1 mt-4">CASCADE - SET_NULL - PROTECT and RESTRICT - DO_NOTHING - SET_DEFAULT</h4>
+    <h4 class="mb-1 mt-4">Can be used with all relationships.</h4>
+</div>

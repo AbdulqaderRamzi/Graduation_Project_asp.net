@@ -1,0 +1,135 @@
+﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
+    <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Field Lookups</h1>
+    <h4 class="text-center mt-4 mb-5">Lookups enable you to retrieve data that matches certain criteria.</h4>
+
+    <hr />
+    <h2 class="my-5 custom-title">exact</h2>
+    <h4 class="mb-1 mt-4">Matche the field value exactly.</h4>
+    <h4 class="mb-1 mt-4">Example: Laptop not equal laptop.</h4>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">Product.objects.get(name__exact="Laptop")</h5>
+    </div>
+
+    <hr />
+    <h2 class="my-5 custom-title">iexact</h2>
+    <h4 class="mb-1 mt-4">Matche the field value exactly, case-insensitively.</h4>
+    <h4 class="mb-1 mt-4">Example: Laptop equal laptop.</h4>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">Product.objects.filter(name__iexact="laptop")</h5>
+    </div>
+
+    <hr />
+    <h2 class="my-5 custom-title">contains</h2>
+    <h4 class="mb-1 mt-4">Filter objects with a field containing the specified substring.</h4>
+    <h4 class="mb-1 mt-4">Example: Django not equal django.</h4>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">Article.objects.filter(title__contains="Django")</h5>
+    </div>
+
+    <hr />
+    <h2 class="my-5 custom-title">icontains</h2>
+    <h4 class="mb-1 mt-4">Similar to contains, but it's case-insensitive.</h4>
+    <h4 class="mb-1 mt-4">Example: Django equal django.</h4>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">Article.objects.filter(title__icontains="django")</h5>
+    </div>
+
+    <hr />
+    <h2 class="my-5 custom-title">in</h2>
+    <h4 class="mb-1 mt-4"><Check if a field value is in a specified list./h4>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">Product.objects.filter(category__in=["Electronics", "Books"])</h5>
+    </div>
+
+    <hr />
+    <h2 class="my-5 custom-title">gt</h2>
+    <h4 class="mb-1 mt-4"><</h4>
+    <h4 class="mb-1 mt-4">Retrieve objects with a field value greater than the specifiedvalue.</h4>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">Order.objects.filter(total_amount__gt=100)</h5>
+    </div>
+
+    <hr />
+    <h2 class="my-5 custom-title">gte</h2>
+    <h4 class="mb-1 mt-4"><=</h4>
+    <h4 class="mb-1 mt-4">Retrieve objects with a field value greater than or equal to the specified value.</h4>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">Order.objects.filter(total_amount__gte=100)</h5>
+    </div>
+
+    <hr />
+    <h2 class="my-5 custom-title">lt</h2>
+    <h4 class="mb-1 mt-4">></h4>
+    <h4 class="mb-1 mt-4">Retrieve objects with a field value less than the specified value.</h4>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">Event.objects.filter(start_date__lt=date.today())</h5>
+    </div>
+
+    <hr />
+    <h2 class="my-5 custom-title">lte</h2>
+    <h4 class="mb-1 mt-4">>=</h4>
+    <h4 class="mb-1 mt-4">Retrieve objects with a field value less than or equal to the specified value.</h4>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">Event.objects.filter(start_date__lte=date.today())</h5>
+    </div>
+
+    <hr />
+    <h2 class="my-5 custom-title">startswith</h2>
+    <h4 class="mb-1 mt-4">Filter objects with a field value starting with the specified substring.</h4>
+    <h4 class="mb-1 mt-4">Example: J not equal j.</h4>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">Author.objects.filter(name__startswith="J")</h5>
+    </div>
+
+    <hr />
+    <h2 class="my-5 custom-title">istartswith</h2>
+    <h4 class="mb-1 mt-4">Filters objects with a field value starting with the specified substring, but it's case-insensitive.</h4>
+    <h4 class="mb-1 mt-4">Example: J equal j.</h4>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">Author.objects.filter(name__istartswith="j")</h5>
+    </div>
+
+    <hr />
+    <h2 class="my-5 custom-title">endswith</h2>
+    <h4 class="mb-1 mt-4">Filter objects with a field value ending with the specified substring.</h4>
+    <h4 class="mb-1 mt-4">Example: .txt not equal .TXT.</h4>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">File.objects.filter(name__endswith=".txt")</h5>
+    </div>
+
+    <hr />
+    <h2 class="my-5 custom-title">iendswith</h2>
+    <h4 class="mb-1 mt-4">Filter objects with a field value ending with the specified substring, but it's case-insensitive.</h4>
+    <h4 class="mb-1 mt-4">Example: .txt equal .TXT.</h4>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">File.objects.filter(name__iendswith=".TXT")</h5>
+    </div>
+
+    <hr />
+    <h2 class="my-5 custom-title">range</h2>
+    <h4 class="mb-1 mt-4">Retrieve objects within a specified range of values.</h4>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">Product.objects.filter(price__range=(50, 200))</h5>
+    </div>
+
+    <hr />
+    <h2 class="my-5 custom-title">date</h2>
+    <h4 class="mb-1 mt-4">Allow you to filter based on date-related components.</h4>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">Event.objects.filter(start_date__year=2023, start_date__month=8)</h5>
+    </div>
+
+    <hr />
+    <h2 class="my-5 custom-title">time</h2>
+    <h4 class="mb-1 mt-4">Allow you to filter based on time-related components.</h4>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">Event.objects.filter(start_time__hour=15, start_time__minute=30)</h5>
+    </div>
+
+    <hr />
+    <h2 class="my-5 custom-title">isnull</h2>
+    <h4 class="mb-1 mt-4">Check if a field value is NULL or None.</h4>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">Product.objects.filter(description__isnull=True)</h5>
+    </div>
+</div>

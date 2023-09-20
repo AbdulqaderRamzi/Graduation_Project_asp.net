@@ -1,0 +1,91 @@
+﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
+    <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Custom Tag</h1>
+    <h4 class="mt-4 mb-0">Create templatetags folder in your app.</h4>
+    <h4 class="mt-4 mb-0">Create file there and name it whatever you want.</h4>
+    <h4 class="mt-4 mb-0">For example: blog_tags.py</h4>
+    <h4 class="mt-4 mb-0">Insert the following lines at the top.</h4>
+    <div class="rounded p-4 mt-4 custom-div">
+        <p class="mb-1">from django import template</p>
+        <p class="mb-1">register = template.Library()</p>
+    </div>
+
+    <hr />
+    <h2 class="my-5 custom-title">First Tag</h2>
+    <h3 class="custom-title text-start mb-0 mt-5">1</h3>
+    <h4 class="mt-4 mb-0">Register your filter name.</h4>
+    <h3 class="custom-title text-start mb-0 mt-5">2</h3>
+    <h4 class="mt-4 mb-0">Add your filter function.</h4>
+
+    <hr />
+    <h2 class="my-5 custom-title">Examples</h2>
+
+    <h4 class="mt-4 mb-0">Calculates the sum of a list of numbers.</h4>
+    <div class="rounded p-4 mt-4 custom-div">
+        <p class="mb-1">@@register.simple_tag(name="sum_list")</p>
+        <p class="mb-1">def sum_list(my_list):</p>
+        <p class="mb-1 mr-25">return sum(my_list)</p>
+    </div>
+    <h4 class="mt-4 mb-0">Use it in your Templates.</h4>
+    <h4 class="mt-4 mb-0">{% load blog_tags %}</h4>
+    <h4 class="mt-4 mb-0">{% sum_list my_numbers_list %}</h4>
+    <div class="rounded p-4 mt-4 custom-inout">
+        <p class="mb-1">input: [1, 3, 5, 7, 9] # 1+3+5+7+9</p>
+        <p class="mb-1">output: 25</p>
+    </div>
+
+    <hr />
+    <h4 class="mt-4 mb-0">Multiplies two numbers.</h4>
+    <div class="rounded p-4 mt-4 custom-div">
+        <p class="mb-1">@@register.simple_tag(name="multiply")</p>
+        <p class="mb-1">def multiply(a, b):</p>
+        <p class="mb-1 mr-25">return a * b</p>
+    </div>
+    <h4 class="mt-4 mb-0">Use it in your Templates.</h4>
+    <h4 class="mt-4 mb-0">{% load blog_tags %}</h4>
+    <h4 class="mt-4 mb-0">{% multiply 5 3 %} # 5*3</h4>
+    <div class="rounded p-4 mt-4 custom-inout">
+        <p class="mb-1">output: 15</p>
+    </div>
+
+    <hr />
+    <h4 class="mt-4 mb-0">Capitalizes the first letter of each word in a string.</h4>
+    <div class="rounded p-4 mt-4 custom-div">
+        <p class="mb-1">@@register.simple_tag(name="capitalize_words")</p>
+        <p class="mb-1">def capitalize_words(value):</p>
+        <p class="mb-1 mr-25">return ' '.join([word.capitalize() for word in value.split()])</p>
+    </div>
+    <h4 class="mt-4 mb-0">Use it in your Templates.</h4>
+    <h4 class="mt-4 mb-0">{% load blog_tags %}</h4>
+    <h4 class="mt-4 mb-0">{% capitalize_words "hello world" %}</h4>
+    <div class="rounded p-4 mt-4 custom-inout">
+        <p class="mb-1">output: Hello World</p>
+    </div>
+
+    <hr />
+    <h4 class="mt-4 mb-0">Generates a random number within a specified range.</h4>
+    <div class="rounded p-4 mt-4 custom-div">
+        <p class="mb-1">@@register.simple_tag(name="simple_tag")</p>
+        <p class="mb-1">def random_number(min_value, max_value):</p>
+        <p class="mb-1 mr-25">return random.randint(min_value, max_value)</p>
+    </div>
+    <h4 class="mt-4 mb-0">Use it in your Templates.</h4>
+    <h4 class="mt-4 mb-0">{% load blog_tags %}</h4>
+    <h4 class="mt-4 mb-0">{% random_number 1 4 %} </h4>
+    <div class="rounded p-4 mt-4 custom-inout">
+        <p class="mb-1">output: could be 1, 2, 3, 4</p>
+    </div>
+
+    <hr />
+    <h4 class="mt-4 mb-0">Gets the full name of a user from their first and last names.</h4>
+    <div class="rounded p-4 mt-4 custom-div">
+        <p class="mb-1">@@register.simple_tag(name="user_full_name")</p>
+        <p class="mb-1">def user_full_name(user):</p>
+        <p class="mb-1 mr-25">return f"{user.first_name} {user.last_name}"</p>
+    </div>
+    <h4 class="mt-4 mb-0">Use it in your Templates.</h4>
+    <h4 class="mt-4 mb-0">{% load blog_tags %}</h4>
+    <h4 class="mt-4 mb-0">{% user_full_name user_object %} # user.first_name = khaled, user.last_name = alshami</h4>
+    <div class="rounded p-4 mt-4 custom-inout">
+        <p class="mb-1">output: khaled alshami</p>
+    </div>
+</div>

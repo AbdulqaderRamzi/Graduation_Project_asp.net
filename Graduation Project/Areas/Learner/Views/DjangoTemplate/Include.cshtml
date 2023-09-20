@@ -1,0 +1,33 @@
+﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
+    <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Include</h1>
+    <h4 class="mt-4 mb-0">
+        If you have a code that you want to use it in many places.
+        instead of duplication and retyping the code you can put it.
+        in html file then you can include it as much you want.
+    </h4>
+
+    <hr />
+    <h2 class="my-5 custom-title">Example</h2>
+    <h4 class="mt-4 mb-0">If you want hello world to appear in home.html, index.html, details.html</h4>
+    <h4 class="mt-4 mb-0">Create includes folder inside templates folder.</h4>
+    <h4 class="mt-4 mb-0">Create an html and name it whatever you want, for example hello.html</h4>
+    <h4 class="mt-4 mb-0">Insert the following code in hello.html file.</h4>
+    <div class="d-flex justify-content-start">
+        <h5 class="rounded my-4 p-3 custom-back">&lt;h1&gt;Hello World&lt;/h1&gt;</h5>
+    </div>
+    <h4 class="mt-4 mb-0">To include this file in home, index and details files.</h4>
+    <h4 class="mt-4 mb-0">Follow the following steps in each file:</h4>
+    <div class="d-flex justify-content-start">
+        <h5 class="rounded my-4 p-3 custom-back">{% include 'includes/hello.html' %}</h5>
+    </div>
+    <h4 class="mt-4 mb-0">You can pass parameter with include.</h4>
+    <h4 class="mt-4 mb-0">Let's change hello.html file content.</h4>
+    <div class="d-flex justify-content-start">
+        <h5 class="rounded my-4 p-3 custom-back">&lt;h1&gt;hello {{name}}&lt;/h1&gt;</h5>
+    </div>
+    <h4 class="mt-4 mb-0">To include this file in home, index and details files.</h4>
+    <h4 class="mt-4 mb-0">Follow the following steps in each file:</h4>
+    <div class="d-flex justify-content-start">
+        <h5 class="rounded my-4 p-3 custom-back">{% include 'includes/hello.html' with name="khaled" %}</h5>
+    </div>
+</div>

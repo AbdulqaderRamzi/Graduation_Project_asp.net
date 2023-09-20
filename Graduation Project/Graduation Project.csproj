@@ -1,0 +1,86 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Graduation_Project</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\images\project_images\admin\a1.png" />
+    <None Include="wwwroot\images\project_images\admin\a2.png" />
+    <None Include="wwwroot\images\project_images\admin\a3.png" />
+    <None Include="wwwroot\images\project_images\admin\a4.png" />
+    <None Include="wwwroot\images\project_images\admin\a5.png" />
+    <None Include="wwwroot\images\project_images\admin\a6.png" />
+    <None Include="wwwroot\images\project_images\admin\a7.png" />
+    <None Include="wwwroot\images\project_images\admin\admin.png" />
+    <None Include="wwwroot\images\project_images\admin\after.png" />
+    <None Include="wwwroot\images\project_images\admin\before.png" />
+    <None Include="wwwroot\images\project_images\command.png" />
+    <None Include="wwwroot\images\project_images\command2.png" />
+    <None Include="wwwroot\images\project_images\command3.png" />
+    <None Include="wwwroot\images\project_images\FBV\fbv1.png" />
+    <None Include="wwwroot\images\project_images\FBV\fbv3.png" />
+    <None Include="wwwroot\images\project_images\FBV\fbv4.png" />
+    <None Include="wwwroot\images\project_images\FBV\fbvid.png" />
+    <None Include="wwwroot\images\project_images\FBV\fbvid2.png" />
+    <None Include="wwwroot\images\project_images\install_django\activate.png" />
+    <None Include="wwwroot\images\project_images\install_django\app.png" />
+    <None Include="wwwroot\images\project_images\install_django\django.png" />
+    <None Include="wwwroot\images\project_images\install_django\env.png" />
+    <None Include="wwwroot\images\project_images\install_django\folder.png" />
+    <None Include="wwwroot\images\project_images\install_django\magazine.png" />
+    <None Include="wwwroot\images\project_images\install_django\migrate.png" />
+    <None Include="wwwroot\images\project_images\install_django\terminal.png" />
+    <None Include="wwwroot\images\project_images\install_django\terminal2.png" />
+    <None Include="wwwroot\images\project_images\install_django\url.png" />
+    <None Include="wwwroot\images\project_images\install_python\python.png" />
+    <None Include="wwwroot\images\project_images\install_python\python2.png" />
+    <None Include="wwwroot\images\project_images\model\file.png" />
+    <None Include="wwwroot\images\project_images\model\file2.png" />
+    <None Include="wwwroot\images\project_images\model\imfi.png" />
+    <None Include="wwwroot\images\project_images\model\stativf.png" />
+    <None Include="wwwroot\images\project_images\model\verbose.png" />
+    <None Include="wwwroot\images\project_images\model\verbose2.png" />
+    <None Include="wwwroot\images\project_images\model\__str__.png" />
+    <None Include="wwwroot\images\project_images\model\__str__1.png" />
+    <None Include="wwwroot\images\project_images\third_party\before.png" />
+    <None Include="wwwroot\images\project_images\third_party\jaz.png" />
+    <None Include="wwwroot\images\project_images\third_party\phonenumber1.png" />
+    <None Include="wwwroot\images\project_images\third_party\phonenumber2.png" />
+    <None Include="wwwroot\images\project_images\third_party\rich_before.png" />
+    <None Include="wwwroot\images\project_images\third_party\rich_text.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Graduation.DataAccess\Graduation.DataAccess.csproj" />
+    <ProjectReference Include="..\Graduation.Models\Graduation.Models.csproj" />
+    <ProjectReference Include="..\Graduation.Utility\Graduation.Utility.csproj" />
+  </ItemGroup>
+	
+	<ItemGroup>
+		<PackageReference Include="Abp.Web.Common" Version="8.3.1" />
+		<PackageReference Include="MailKit" Version="4.1.0" />
+		<PackageReference Include="Microsoft.AspNet.WebPages" Version="3.3.0-preview1" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.Facebook" Version="8.0.0-preview.7.23375.9" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="8.0.0-preview.7.23375.9" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.MicrosoftAccount" Version="8.0.0-preview.7.23375.9" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.0-preview.7.23375.9" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.0-preview.7.23375.9" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.0-preview.7.23375.9" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="8.0.0-preview.7.23375.9" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0-preview.7.23375.4" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.0-preview.7.23375.4" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0-preview.7.23375.4" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0-preview.7.23375.4">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.0-preview.7.23408.2" />
+		<PackageReference Include="OrchardCore.Localization.Core" Version="1.6.0" />
+		<PackageReference Include="Rick.Docs.Samples.RouteInfo" Version="1.0.0.8" />
+		<PackageReference Include="Stripe.net" Version="42.1.0" />
+	</ItemGroup>
+</Project>

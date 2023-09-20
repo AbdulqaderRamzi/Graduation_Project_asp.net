@@ -1,0 +1,154 @@
+﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
+    <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">How to Query</h1>
+    <h4 class="text-center mt-4 mb-5">Learn how to implement CRUD, traverse, search and how to link models with each other.</h4>
+    <h4 class="mb-1 mt-4">We will work on the following models.</h4>
+    <h4 class="mb-1 mt-4">I will put this model in cars app.</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">class Person(models.Model):</p>
+        <p class="mb-1 mr-25">name = models.CharField(max_length=100)</p>
+        <p class="mb-1 mr-25">age = models.PositiveIntegerField()</p>
+        <p class="mb-1 mr-25">def __str__(self) -> str:</p>
+        <p class="mb-1 mr-50">return self.name</p>
+        <p class="mb-1"></p>
+        <p class="mb-1">class Car(models.Model):</p>
+        <p class="mb-1 mr-25">car_number = models.CharField(max_length=100, unique=True)</p>
+        <p class="mb-1 mr-25">person = models.ForeignKey(Person, on_delete=models.SET_NULL, null=True, blank=True)</p>
+        <p class="mb-1 mr-25">def __str__(self) -> str:</p>
+        <p class="mb-1 mr-50">return self.car_number</p>
+        <p class="mb-1"></p>
+        <p class="mb-1">class Cleaner(models.Model):</p>
+        <p class="mb-1 mr-25">cars = models.ManyToManyField(Car)</p>
+        <p class="mb-1 mr-25">name = models.CharField(max_length=100)</p>
+        <p class="mb-1 mr-25">def __str__(self) -> str:</p>
+        <p class="mb-1 mr-50">return self.name</p>
+    </div>
+    <h4 class="mb-1 mt-4">Open your terminal. Use the following command.</h4>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">python manage.py shell</h5>
+    </div>
+    <h4 class="mb-1 mt-4">Import classes:</h4>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">from cars.models import Person,Car,Cleaner</h5>
+    </div>
+    <h4 class="mb-1 mt-4">Creation</h4>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">Person(define field data)</h5>
+    </div>
+    <h4 class="mb-1 mt-4">Save it into database.</h4>
+    <h4 class="mb-1 mt-4">If you don't implement save function, data will not be created in database.</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">person1 = Person(name="Khaled",age=21)    </p>
+        <p class="mb-1">person1.save()</p>
+    </div>
+    <h4 class="mb-1 mt-4">Another way of creation:</h4>
+    <h4 class="mb-1 mt-4">Create Person object without defining the data. Then update the Person object.</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">person2 = Person()</p>
+        <p class="mb-1">person2.name = "Zakaria"</p>
+        <p class="mb-1">person2.age = 68</p>
+        <p class="mb-1">person2.save()</p>
+    </div>
+    <h4 class="mb-1 mt-4">Create and Save at same time.</h4>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">Person.objects.create(name="Alshammi", age=25)</h5>
+    </div>
+    <h4 class="mb-1 mt-4">Retrieving single object.</h4>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">Person.objects.get(pk=1)</h5>
+    </div>
+    <h4 class="mb-1 mt-4">Retrieving all objects.</h4>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">Person.objects.all()</h5>
+    </div>
+    <h4 class="mb-1 mt-4">Updating</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">person = Person.objects.get(pk=1)</p>
+        <p class="mb-1">person.name = "Khlaed Z"</p>
+        <p class="mb-1">person.save()</p>
+    </div>
+    <h4 class="mb-1 mt-4">Retrieve single object and update it.</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">update_person1 = Person.objects.get(pk=1)</p>
+        <p class="mb-1">update_person1.age = 22</p>
+        <p class="mb-1">update_person1.save()</p>
+    </div>
+    <h4 class="mb-1 mt-4">Deleting</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">person1.delete()</p>
+        <p class="mb-1">person2.delete()</p>
+    </div>
+    <h4 class="mb-1 mt-4">Relationship</h4>
+    <hr />
+    <h2 class="my-5 custom-title">ForeignKey</h2>
+    <h4 class="mb-1 mt-4">Creation</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">person = Person.objects.get(pk=1)</p>
+        <p class="mb-1">car = Car.objects.create(car_number="A1", person = person)</p>
+    </div>
+    <h4 class="mb-1 mt-4">Updating</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">person = Person.objects.get(pk=1)</p>
+        <p class="mb-1">car = Car.objects.create(car_number="A1")</p>
+    </div>
+    <h4 class="mb-1 mt-4">Bind car with person.</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">car.person = person</p>
+        <p class="mb-1">person.save()</p>
+    </div>
+    <h4 class="mb-1 mt-4">Retrieving</h4>
+    <h4 class="mb-1 mt-4">Retrieve all cars related to user has car number equal to "A1".</h4>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">Car.objects.filter(person__car_number="A1")</h5>
+    </div>
+    <h4 class="mb-1 mt-4">Retrieve all cars related to user name equal to "Khaled".</h4>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">Car.objects.filter(person__name="Khaled")</h5>
+    </div>
+    <h4 class="mb-1 mt-4">Removing related data:</h4>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">my_car = Car.objects.get(pk=1)</h5>
+    </div>
+    <h4 class="mb-1 mt-4">Make car not related to user.</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">my_car.person = None</p>
+        <p class="mb-1">my_car.save()</p>
+    </div>
+    <hr />
+    <h2 class="my-5 custom-title">ManyToMany</h2>
+    <h4 class="mb-1 mt-4">Creation</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">me = Person.objects.create(name="Khaled Alshammi", age=22)</p>
+        <p class="mb-1">car1 = Car.objects.create(car_number="B1", person=me)</p>
+        <p class="mb-1">car2 = Car.objects.create(car_number="B2", person=me)</p>
+        <p class="mb-1">car3 = Car.objects.create(car_number="B3", person=me)</p>
+        <p class="mb-1">car4 = Car.objects.create(car_number="B4", person=me)</p>
+        <p class="mb-1">cleaner = Cleaner.objects.create(name="Ahmed")</p>
+        <p class="mb-1">cleaner.cars.add(car1,car2,car3,car4)</p>
+    </div>
+    <h4 class="mb-1 mt-4">Updating</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">car6 = Car.objects.get(id=6)</p>
+        <p class="mb-1">cleaner3 = Cleaner.objects.get(id=3)</p>
+        <p class="mb-1">cleaner3.cars.add(car6)</p>
+        <p class="mb-1">cleaner3.save()</p>
+    </div>
+    <h4 class="mb-1 mt-4">Retrieving:</h4>
+    <h4 class="mb-1 mt-4">Retrieve all cleaners related to the car has a car number equal to "A1".</h4>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">Cleaner.objects.filter(cars__car_number="A1")</h5>
+    </div>
+    <h4 class="mb-1 mt-4">Retrieve all cleaners related to person car id equal to 1.</h4>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">Cleaner.objects.filter(cars__person__id=1)</h5>
+    </div>
+    <h4 class="mb-1 mt-4">Removing related data:</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">car6 = Car.objects.get(id=6)</p>
+        <p class="mb-1">cleaner3 = Cleaner.objects.get(id=3)</p>
+        <p class="mb-1">cleaner3.cars.remove(car6)</p>
+    </div>
+    <h4 class="mb-1 mt-4">Remove all the associated cars.</h4>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">cleaner3.cars.clear()</h5>
+    </div>
+</div>

@@ -1,0 +1,148 @@
+﻿@model ChatRoom
+
+<div>
+    <div class="mt-4">
+        <section style="background-color: #eee;">
+            <h1 class="text-center pt-3">
+                Chat Room
+            </h1>
+            <div class="container my-3 py-3">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-md-12 col-lg-10 col-xl-8">
+                        <div class="card">
+                            @if (Model != null)
+                            {
+                            @foreach (ChatRoomMessage c in Model.ChatRoomMessages.OrderBy(e => e.SendAt))
+                                {
+                                    <div class="card-body">
+                                        <p class="mt-4 mb-2 pb-2">
+                                            Sent By: @c.User.Name
+                                        </p>
+                                        @if (c.Content != null)
+                                        {
+                                            <p class="mt-1 mb-1 pb-2">
+                                                @c.Content
+                                            </p>
+                                        }
+                                        @if (c.Images != null || c.Images.Count() > 0)
+                                        {
+                                            <div class="row">
+                                                @foreach (Image ci in c.Images)
+                                                {
+                                                    <div class="border col-3 p-1 m-2 text-center">
+                                                        <img src="@ci.ImageUrl" class="card-img-top rounded" />
+                                                    </div>
+                                                }
+                                            </div>
+                                        }
+                                        @if (c.Video != null)
+                                        {
+                                            <div class="p-1 m-2 text-center">
+                                                <video src="~/@c.Video" type="video" width="90%" height="60%" class="img-fluid card-video-top rounded" controls />
+                                            </div>
+                                        }
+                                        <div class="row d-flex align-items-center">
+                                            <div class="row d-flex justify-content-between">
+                                                <p class="text-muted small mb-0">
+                                                    Sent in @c.SendAt.Year-@c.SendAt.Month-@c.SendAt.Day
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            }
+                            <div class="row d-flex">
+                                <div class="row d-flex justify-content-center">
+                                    <p class="text-center text-muted small mb-3 mt-3">
+                                        @Model.User.Explanation Explanations / @Model.User.Solution Solution
+                                    </p>
+                                </div>
+                            </div>
+
+                            @if(Model.User.Explanation>0 || Model.User.Solution>0){
+                                <form method="post" asp-action="Ask" enctype="multipart/form-data" class="pb-3 bt-3">
+                                    <div class="card-footer py-3 border-0" style="background-color: #f8f9fa;">
+                                        <label for="type">Select The Type:</label>
+                                        <select required name="type" id="type" class="form-control">
+                                            <option value="" disabled selected>~~Select~~</option>
+                                            @if (Model.User.Explanation > 0)
+                                            {
+                                                <option value="Explanation">Explanation</option>
+                                            }
+                                            else
+                                            {
+                                                <option disabled value="Explanation">Explanation</option>
+                                            }
+                                            @if (Model.User.Solution > 0)
+                                            {
+                                                <option value="Solution">Solution</option>
+                                            }
+                                            else
+                                            {
+                                                <option disabled value="Solution">Solution</option>
+                                            }
+                                            @if (Model.User.Solution > 0 && Model.User.Explanation > 0)
+                                            {
+                                                <option value="Both">Solution/Explanation</option>
+                                            }
+                                            else
+                                            {
+                                                <option disabled value="Both">Solution/Explanation</option>
+                                            }
+                                        </select>
+                                        <div class="d-flex flex-start w-100">
+                                            <div class="form-outline w-100">
+                                                <label for="content">Content</label>
+                                                <textarea class="form-control" name="content" id="content" rows="4" style="background: #fff;" spellcheck="false" data-ms-editor="true"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-outline w-100">
+                                            <label for="images">Images</label>
+                                            <input type="file" id="images" name="images" class="form-control" multiple />
+                                        </div>
+                                        <div class="form-outline w-100">
+                                            <label for="video">Video</label>
+                                            <input type="file" id="video" name="video" class="form-control" multiple />
+                                        </div>
+                                        <div class="float-end mt-2 pt-1">
+                                            <button type="submit" id="Btn" class="disabled btn btn-primary btn-sm">Ask</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            }
+                            else{
+                                <div>
+                                    <a class="btn btn-primary" asp-area="Customer" asp-controller="Subscription" asp-action="Subscriptions">
+                                        Subscribe Now
+                                    </a>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<script>
+    function updateButtonState() {
+        var type = document.getElementById("type").value.trim();
+        var files = document.getElementById("images").files.length > 0;
+        var video = document.getElementById("video").files.length > 0;
+        var content = document.getElementById("content").value.trim();
+
+        if (type && (files || content || video)) {
+            document.getElementById("Btn").classList.remove("disabled");
+        } else {
+            document.getElementById("Btn").classList.add("disabled");
+        }
+
+    }
+    updateButtonState();
+
+    document.getElementById("type").addEventListener("change", updateButtonState);
+    document.getElementById("images").addEventListener("change", updateButtonState);
+    document.getElementById("video").addEventListener("change", updateButtonState);
+    document.getElementById("content").addEventListener("input", updateButtonState);
+</script>

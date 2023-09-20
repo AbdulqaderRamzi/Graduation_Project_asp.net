@@ -1,0 +1,114 @@
+﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
+    <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Tag</h1>
+    <h4 class="text-center mt-4 mb-5">Use {{}} with variable.</h4>
+
+    <br>
+    <hr />
+    <h2 class="my-5 custom-title">if </h2>
+    <div class="rounded p-4 mt-4 custom-div">
+        <p class="mb-1">{% if published %}</p>
+        <p class="mb-1 mr-25">{{blog.name}}</p>
+        <p class="mb-1">{% endif %}</p>
+    </div>
+
+    <hr />
+    <h2 class="my-5 custom-title">for</h2>
+    <div class="rounded p-4 mt-4 custom-div">
+        <p class="mb-1">{% for author in authors %}</p>
+        <p class="mb-1 mr-25">&lt;h1&gt;{{ author.name }}&lt;/h1&gt;</p>
+        <p class="mb-1">{% endfor %}</p>
+    </div>
+
+    <hr />
+    <h2 class="my-5 custom-title">csrf_token</h2>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">{% csrf_token %}</h5>
+    </div>
+    <h4 class="mt-4 mb-0">Used for CSRF protection in form method (POST).</h4>
+
+    <hr />
+    <h2 class="my-5 custom-title">Include</h2>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">{% include 'navbar' %}</h5>
+    </div>
+    <h4 class="mt-4 mb-0">Include partial template.</h4>
+
+    <hr />
+    <h2 class="my-5 custom-title">Extend</h2>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">{% extends 'base.html' %}</h5>
+    </div>
+    <h4 class="mt-4 mb-0">Extend base template (inheritance).</h4>
+
+    <hr />
+    <h2 class="my-5 custom-title">comment</h2>
+    <div class="rounded p-4 mt-4 custom-div">
+        <p class="mb-1">{% comment %}</p>
+        <p class="mb-1 mr-25">comment</p>
+        <p class="mb-1">{% endcomment %}</p>
+    </div>
+
+    <hr />
+    <h2 class="my-5 custom-title">filter</h2>
+    <div class="rounded p-4 mt-4 custom-div">
+        <p class="mb-1">{% filter truncatewords:10|lower %}</p>
+        <p class="mb-1 mr-25">{{description}}</p>
+        <p class="mb-1">{% endfilter %}</p>
+    </div>
+    <h4 class="mt-4 mb-0">Used to implement multiple filters.</h4>
+
+    <hr />
+    <h2 class="my-5 custom-title">firstof</h2>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">{% firstof name first_name last_name "Not find" %}</h5>
+    </div>
+    <h4 class="mt-4 mb-0">Instead of:</h4>
+    <div class="rounded p-4 mt-4 custom-div">
+        <p class="mb-1">{% if name %}</p>
+        <p class="mb-1 mr-25">{{ name }}</p>
+        <p class="mb-1">{% elif first_name %}</p>
+        <p class="mb-1 mr-25">{{ first_name }}</p>
+        <p class="mb-1">{% elif last_name %}</p>
+        <p class="mb-1 mr-25">{{ last_name }}</p>
+        <p class="mb-1">{% else %}</p>
+        <p class="mb-1 mr-25">Not find</p>
+        <p class="mb-1">{% endif %}</p>
+    </div>
+
+    <hr />
+    <h2 class="my-5 custom-title">forloop.counter</h2>
+    <div class="rounded p-4 mt-4 custom-div">
+        <p class="mb-1">{% for author in authors %}</p>
+        <p class="mb-1 mr-25">&lt;h1&gt;{{forloop.counter}}. {{ author.name }}&lt;/h1&gt;</p>
+        <p class="mb-1">{% endfor %}</p>
+    </div>
+    <div class="rounded p-4 mt-4 custom-inout">
+        <p class="mb-1">output:</p>
+        <p class="mb-1">1. khaled</p>
+        <p class="mb-1">2. alshammi</p>
+    </div>
+
+    <hr />
+    <h2 class="my-5 custom-title">url</h2>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">path('article/&lt;int:article_id&gt;/', views.article_detail, name='article_detail')</h5>
+    </div>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">&lt;a href="{% url 'article_detail' article_id=1 %}"&gt;Read Article 1&lt;/a&gt;</h5>
+    </div>
+    <h4 class="mt-4 mb-0">Used to navigate to particular view.</h4>
+
+    <hr />
+    <h2 class="my-5 custom-title">i18n</h2>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">{% load i18n %}</h5>
+    </div>
+    <h4 class="mt-4 mb-0">Used in the top to enable translation.</h4>
+
+    <hr />
+    <h2 class="my-5 custom-title">static</h2>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">{% load static %}</h5>
+    </div>
+    <h4 class="mt-4 mb-0">Used in the top to use static items like css, js, fonts and images.</h4>
+</div>

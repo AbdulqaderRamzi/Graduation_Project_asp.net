@@ -1,0 +1,112 @@
+﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
+    <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Function-Based View</h1>
+    <h4 class="text-center mt-4 mb-5">Build your first view function.</h4>
+    <h4 class="mt-1">Function should always return response as view, text, JSON etc.</h4>
+    <div class="rounded p-4 my-3 custom-div">
+        <p class="mb-1">from django.http import HttpResponse</p>
+        <p class="mb-1">def start(request):</p>
+        <p class="mb-1 mr-25">return HttpResponse("Hello world")</p>
+    </div>
+    <h4 class="mt-1">Don't forget to create a path for each function.</h4>
+    <figure class="figure mb-5 mt-3">
+        <img src="~/images/project_images/FBV/fbv1.png" class="figure-img img-fluid rounded img-border">
+    </figure>
+    <div class="rounded p-4 my-3 custom-div">
+        <p class="mb-1">def display_id(request, id):</p>
+        <p class="mb-1 mr-25">return HttpResponse("ID: "+str(id))</p>
+    </div>
+    <figure class="figure mb-5 mt-3">
+        <img src="~/images/project_images/FBV/fbvid.png" class="figure-img img-fluid rounded img-border">
+    </figure>
+    <figure class="figure mb-5 mt-3">
+        <img src="~/images/project_images/FBV/fbvid2.png" class="figure-img img-fluid rounded img-border">
+    </figure>
+
+    <hr />
+    <h2 class="mb-5 custom-title">Handle form</h2>
+    <h4 class="mt-1">Import your form.</h4>
+    <div class="rounded p-4 my-3 custom-div">
+        <p class="mb-1">from django.shortcuts import render</p>
+        <p class="mb-1">from .forms import FormName</p>
+        <p class="mb-1">def user_form_view(request):</p>
+        <p class="mb-1 mr-25"># if form is submitted</p>
+        <p class="mb-1 mr-25">if request.method == 'POST':</p>
+        <p class="mb-1 mr-50"># request.POST has form data</p>
+        <p class="mb-1 mr-50">form = FormName(request.POST)</p>
+        <p class="mb-1 mr-50"># pass form data to form then check if form is valid</p>
+        <p class="mb-1 mr-50">if form.is_valid():</p>
+        <p class="mb-1 mr-75"># get data value from form by cleaning it</p>
+        <p class="mb-1 mr-75">field = form.cleaned_data['FieldName']</p>
+        <p class="mb-1 mr-75"># after you clean the data. you can use it to create, update and send emails etc.</p>
+        <p class="mb-1 mr-75">return redirect()</p>
+        <p class="mb-1 mr-25"># if form is not submitted that means form is null</p>
+        <p class="mb-1 mr-25">else:</p>
+        <p class="mb-1 mr-50">form = UserForm()</p>
+        <p class="mb-1 mr-25">return render(request, 'user_form.html', {'form': form})</p>
+    </div>
+    <h4 class="mt-1">Model</h4>
+    <div class="rounded p-4 my-3 custom-div">
+        <p class="mb-1">class Car(models.Model):</p>
+        <p class="mb-1 mr-25">name = models.CharField(max_length=150)</p>
+    </div>
+
+    <hr />
+    <h2 class="mb-5 custom-title">Create</h2>
+    <div class="rounded p-4 my-3 custom-div">
+        <p class="mb-1">from django.shortcuts import render, redirect</p>
+        <p class="mb-1">from .forms import CreateForm</p>
+        <p class="mb-1">from .models import Car</p>
+        <p class="mb-1">def create_car(request):</p>
+        <p class="mb-1 mr-25">if request.method == 'POST':</p>
+        <p class="mb-1 mr-50">form = UpdateForm(request.POST, instance=car)</p>
+        <p class="mb-1 mr-50">if form.is_valid():</p>
+        <p class="mb-1 mr-75">name = form.cleaned_data['name']</p>
+        <p class="mb-1 mr-75">Car.objects.create(name=name)</p>
+        <p class="mb-1 mr-75">return redirect("home")</p>
+        <p class="mb-1 mr-25">else:</p>
+        <p class="mb-1 mr-50">form = CreateForm()</p>
+        <p class="mb-1 mr-25">return render(request, 'create_form.html', {'form': form})</p>
+    </div>
+
+    <hr />
+    <h2 class="mb-5 custom-title">Update</h2>
+    <div class="rounded p-4 my-3 custom-div">
+        <p class="mb-1">from django.shortcuts import render, redirect</p>
+        <p class="mb-1">from .forms import UpdateForm</p>
+        <p class="mb-1">from .models import Car</p>
+        <p class="mb-1">def update_car(request, id):</p>
+        <p class="mb-1 mr-25">car = get_object_or_404(Car, id=id)</p>
+        <p class="mb-1 mr-25">if request.method == 'POST':</p>
+        <p class="mb-1 mr-50">form = UpdateForm(request.POST, instance=car)</p>
+        <p class="mb-1 mr-50">if form.is_valid():</p>
+        <p class="mb-1 mr-75">name = form.cleaned_data['name']</p>
+        <p class="mb-1 mr-75">car.name = name</p>
+        <p class="mb-1 mr-75">car.save()</p>
+        <p class="mb-1 mr-75">return redirect("home")</p>
+        <p class="mb-1 mr-25">else:</p>
+        <p class="mb-1 mr-50">form = UpdateForm(instance=car)</p>
+        <p class="mb-1 mr-25">return render(request, 'update_form.html', {'form': form})</p>
+    </div>
+    <h3 class="mt-1">Why to pass instance?</h3>
+    <h4 class="mt-1">It will give the input a default value by current car value.</h4>
+
+    <hr />
+    <h2 class="my-5 custom-title">Example</h2>
+    <h4 class="mt-1">With instance</h4>
+    <figure class="figure mb-5 mt-3">
+        <img src="~/images/project_images/FBV/fbv3.png" class="figure-img img-fluid rounded img-border">
+    </figure>
+    <h4 class="mt-1">Without instance</h4>
+    <figure class="figure mb-5 mt-3">
+        <img src="~/images/project_images/FBV/fbv4.png" class="figure-img img-fluid rounded img-border">
+    </figure>
+    <h2 class="mb-5 custom-title">Delete</h2>
+    <div class="rounded p-4 my-3 custom-div">
+        <p class="mb-1">from django.shortcuts import redirect</p>
+        <p class="mb-1">from .models import Car</p>
+        <p class="mb-1">def delete_car(request, id):</p>
+        <p class="mb-1 mr-25">car = get_object_or_404(Car, id=id)</p>
+        <p class="mb-1 mr-25">car.delete()</p>
+        <p class="mb-1 mr-25">return redirect("home")</p>
+    </div>
+</div>

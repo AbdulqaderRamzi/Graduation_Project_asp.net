@@ -1,0 +1,192 @@
+﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
+    <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Admin</h1>
+    <h4 class="text-center mt-4 mb-5">We use admin to customize admin layout, display data and accessability.</h4>
+    <br>
+    <hr />
+    <h2 class="my-5 custom-title">Create admin user</h2>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">python manage.py createsuperuser</h5>
+    </div>
+    <h5 class="mb-1 mt-5">Navigate to localhost/admin/ to run the website.</h5>
+    <h5 class="mb-2">for example: http://127.0.0.1:8000/admin/</h5>
+    <br>
+    <br>
+    <figure class="figure my-4">
+        <img src="~/images/project_images/admin/admin22.png" class="figure-img img-fluid rounded img-border">
+    </figure>
+    <br>
+    <h4 class="mb-1 mt-4">model</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">class Client(models.Model):</p>
+        <p class="mb-1 mr-25">name = models.CharField(max_length=100, verbose_name='Name')</p>
+        <p class="mb-1 mr-25">email = models.EmailField(unique=True)</p>
+        <p class="mb-1 mr-25">created_at = models.DateTimeField(auto_now_add=True)</p>
+    </div>
+    <br>
+    <h4 class="mb-1 mt-4">Create class in admin</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">class ClientAdmin(admin.ModelAdmin):</p>
+        <p class="mb-1 mr-25">list_display = ["name", "email"]</p>
+        <p class="mb-1 mr-25">admin.site.register(Client, ClientAdmin)</p>
+    </div>
+
+    <br>
+    <hr/>
+    <br>
+
+    <div class="my-5">
+        <h2 class="mb-5 custom-title">list_display</h2>
+        <div class="d-flex justify-content-start">
+            <h5 class="rounded my-4 p-3 custom-back">list_display = ["name", "email"]</h5>
+        </div>
+        <h5>Used to define which columns to be displayed in model objects.</h5>
+        <figure class="figure my-4">
+            <img src="~/images/project_images/admin/a1.png" class="figure-img img-fluid rounded img-border">
+        </figure>
+    </div>
+
+    <br>
+    <hr/>
+    <br>
+
+    <div class="my-5">
+        <h2 class="mb-5 custom-title">list_display_links</h2>
+        <div class="d-flex justify-content-start">
+            <h5 class="rounded my-4 p-3 custom-back">list_display_links = ("name", "email")</h5>
+        </div>
+        <h5>Use it with list_display, enables fields to be clickable, when you click it, it will enter the object.</h5>
+        <figure class="figure my-4">
+            <img src="~/images/project_images/admin/a2.png" class="figure-img img-fluid rounded img-border">
+        </figure>
+    </div>
+
+    <br>
+    <hr/>
+    <br>
+
+    <div class="my-5">
+        <h2 class="mb-5 custom-title">exclude</h2>
+        <div class="d-flex justify-content-start">
+            <h5 class="rounded my-4 p-3 custom-back">exclude = ("id", "email")</h5>
+        </div>
+        <h5>Use it to edit all columns except the excluded fields.</h5>
+        <figure class="figure my-4">
+            <img src="~/images/project_images/admin/a3.png" class="figure-img img-fluid rounded img-border">
+        </figure>
+    </div>
+
+    <br>
+    <hr/>
+    <br>
+
+    <div class="my-5">
+        <h2 class="mb-5 custom-title">date_hierarchy</h2>
+        <div class="d-flex justify-content-start">
+            <h5 class="rounded my-4 p-3 custom-back">date_hierarchy = 'created_at'</h5>
+        </div>
+        <h5>Use it to filter objects depend on date.</h5>
+        <figure class="figure my-4">
+            <img src="~/images/project_images/admin/a4.png" class="figure-img img-fluid rounded img-border">
+        </figure>
+    </div>
+
+    <br>
+    <hr/>
+    <br>
+
+    <div class="my-5">
+        <h2 class="mb-5 custom-title">search_fields</h2>
+        <div class="d-flex justify-content-start">
+            <h5 class="rounded my-4 p-3 custom-back">search_fields = ['email']</h5>
+        </div>
+        <h5>Use it to search about specific fields.</h5>
+        <figure class="figure my-4">
+            <img src="~/images/project_images/admin/a5.png" class="figure-img img-fluid rounded img-border">
+        </figure>
+    </div>
+
+    <br>
+    <hr/>
+    <br>
+
+    <div class="my-5">
+        <h2 class="mb-5 custom-title">list_filter</h2>
+        <div class="d-flex justify-content-start">
+            <h5 class="rounded my-4 p-3 custom-back">list_filter = ['name']</h5>
+        </div>
+        <h5>Use it to display filters depend on specific fields.</h5>
+        <figure class="figure my-4">
+            <img src="~/images/project_images/admin/a6.png" class="figure-img img-fluid rounded img-border">
+        </figure>
+    </div>
+
+    <br>
+    <hr/>
+    <br>
+    
+    <div class="my-5">
+        <h2 class="mb-5 custom-title">readonly_fields</h2>
+        <div class="d-flex justify-content-start">
+            <h5 class="rounded my-4 p-3 custom-back">readonly_fields = ("id",)</h5>
+        </div>
+        <h5>Use it to define which fields are just for read.</h5>
+        <figure class="figure my-4">
+            <img src="~/images/project_images/admin/a7.png" class="figure-img img-fluid rounded img-border">
+        </figure>
+    </div>
+
+    <br>
+    <hr/>
+    <br>
+
+    <h2 class="mb-4 mt-4 custom-title">Add action</h2>
+    <h4 class="mb-2 mt-5">Model</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">class Message(models.Model):</p>
+        <p class="mb-1 mr-25">content = models.TextField()</p>
+        <p class="mb-1 mr-25">read = models.BooleanField(default=False)</p>
+    </div>
+    
+    <h4 class="mb-2 mt-5">Admin</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">from django.contrib import admin</p>
+        <p class="mb-1">from .models import Message</p>
+        <p class="mb-1">class MessageAdmin(admin.ModelAdmin):</p>
+        <p class="mb-1 mr-25">list_display = ["content", "read"]</p>
+        <p class="mb-1 mr-25">actions = ['close_message']</p>
+        <p class="mb-1 mr-25"># when click on action. all selected messages will be read</p>
+        <p class="mb-1 mr-25">def close_message(self, request, queryset):</p>
+        <p class="mb-1 mr-50">for obj in queryset:</p>
+        <p class="mb-1 mr-75">obj.read = True</p>
+        <p class="mb-1 mr-75">obj.save()</p>
+        <p class="mb-1 mr-25"># define how action will be display</p>
+        <p class="mb-1 mr-25">close_message.short_description = 'Close Message'</p>
+        <p class="mb-1">admin.site.register(Message, MessageAdmin)</p>
+    </div>
+
+    <br>
+    <hr />
+    <br />
+
+    <h2 class="my-5 custom-title">Customize permissions</h2>
+    <h5 class="mt-5 mb-1">Define who can add, remove, edit and view model.</h5>
+    <div class="rounded p-4 my-5 custom-div">
+        <p class="mb-1">class MessageAdmin(admin.ModelAdmin):</p>
+
+        <p class="mb-1 mr-25">def has_add_permission(self, request):</p>
+        <p class="mb-1 mr-50"># all super user can add message data.</p>
+        <p class="mb-1 mr-50">return True</p>
+
+        <p class="mb-1 mr-25">def has_delete_permission(self, request, obj=None):</p>
+        <p class="mb-1 mr-50"># no one can delete message data.</p>
+        <p class="mb-1 mr-50">return False</p>
+
+        <p class="mb-1 mr-25">def has_change_permission(self, request, obj=None):</p>
+        <p class="mb-1 mr-50"># all super user who has change permission can edit message data.</p>
+        <p class="mb-1 mr-50">return False if obj else super().has_change_permission(request, obj)</p>
+
+        <p class="mb-1 mr-25">def has_view_permission(self, request, obj=None):</p>
+        <p class="mb-1 mr-50"># all super user can view message data.</p>
+        <p class="mb-1 mr-50">return True</p>
+    </div>
+</div>

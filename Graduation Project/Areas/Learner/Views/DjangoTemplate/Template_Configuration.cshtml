@@ -1,0 +1,58 @@
+﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
+    <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Template Configuration</h1>
+    <h4 class="text-center mt-4 mb-5">Template will consist of html files.</h4>
+    <h4 class="mb-1 mt-4">To create a template for your view. you have tow ways</h4>
+
+    <hr />
+    <h2 class="my-5 custom-title">First way</h2>
+    <h4 class="mb-1 mt-4">Create templates folder in you app then create inside that templates folder. create folde by app name.</h4>
+    <h4 class="mb-1 mt-4">Example</h4>
+    <h4 class="mb-1 mt-4">Return render(request, 'blogs/search_results.html', context)</h4>
+    <h4 class="mb-1 mt-4">Search_results.html should exists in blogs/templates/blogs/search_results.html</h4>
+
+    <hr />
+    <h2 class="my-5 custom-title">Second</h2>
+    <h4 class="mb-1 mt-4">Create folder in same level with project root.</h4>
+    <h4 class="mb-1 mt-4">Structure should be like that.</h4>
+    <h4 class="mb-1 mt-4">Project root</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">--urls.py</p>
+        <p class="mb-1">--settings.py</p>
+        <p class="mb-1">app</p>
+        <p class="mb-1">app</p>
+        <p class="mb-1">templates</p>
+    </div>
+    <h4 class="mb-1 mt-4">In project root > settings.py</h4>
+    <h4 class="mb-1 mt-4">Change TEMPLATES list into that codes.</h4>
+    <div class="rounded p-4 my-4 custom-div">
+        <p class="mb-1">import os</p>
+        <p class="mb-1">TEMPLATES = [</p>
+        <p class="mb-1 mr-25">{</p>
+        <p class="mb-1 mr-50">'BACKEND': 'django.template.backends.django.DjangoTemplates',</p>
+        <p class="mb-1 mr-50">'DIRS': [BASE_DIR / 'templates']</p>
+        <p class="mb-1 mr-50">,</p>
+        <p class="mb-1 mr-50">'APP_DIRS': True,</p>
+        <p class="mb-1 mr-50">'OPTIONS': {</p>
+        <p class="mb-1 mr-75">'context_processors': [</p>
+        <p class="mb-1 mr-100">'django.template.context_processors.i18n',</p>
+        <p class="mb-1 mr-100">'django.template.context_processors.debug',</p>
+        <p class="mb-1 mr-100">'django.template.context_processors.request',</p>
+        <p class="mb-1 mr-100">'django.contrib.auth.context_processors.auth',</p>
+        <p class="mb-1 mr-100">'django.contrib.messages.context_processors.messages',</p>
+        <p class="mb-1 mr-75">],</p>
+        <p class="mb-1 mr-50">},</p>
+        <p class="mb-1 mr-25">},</p>
+        <p class="mb-1">]</p>
+    </div>
+
+    <hr />
+    <h2 class="my-5 custom-title">Example</h2>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">return render(request, 'blogs/search_results.html', context)</h5>
+    </div>
+    <h4 class="mb-1 mt-4">search_results.html should exists in templates/blogs/search_results.html</h4>
+    <div class="d-flex justify-content-start mt-5">
+        <h5 class="rounded my-4 p-3 custom-back">return render(request, 'search_results.html', context)</h5>
+    </div>
+    <h4 class="mb-1 mt-4">search_results.html should exists in templates/search_results.html</h4>
+</div>
