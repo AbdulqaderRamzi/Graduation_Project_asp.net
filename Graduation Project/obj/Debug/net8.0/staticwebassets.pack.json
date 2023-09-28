@@ -5,8 +5,24 @@
       "PackagePath": "staticwebassets\\Graduation Project.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\css\\default.css",
+      "PackagePath": "staticwebassets\\css\\default.css"
+    },
+    {
+      "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\css\\ok.css",
+      "PackagePath": "staticwebassets\\css\\ok.css"
+    },
+    {
       "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\css\\t1.css",
+      "PackagePath": "staticwebassets\\css\\t1.css"
+    },
+    {
+      "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\css\\twil.css",
+      "PackagePath": "staticwebassets\\css\\twil.css"
     },
     {
       "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\favicon.ico",
@@ -21,12 +37,28 @@
       "PackagePath": "staticwebassets\\files\\cvs\\0fee4162-da28-49a8-bbae-428b83dea9d9.pdf"
     },
     {
+      "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\files\\cvs\\7eb46cba-764f-4f0a-8a23-53213243b030.pdf",
+      "PackagePath": "staticwebassets\\files\\cvs\\7eb46cba-764f-4f0a-8a23-53213243b030.pdf"
+    },
+    {
+      "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\files\\cvs\\907ec452-9ee8-4447-97ea-3b076381de5f.pdf",
+      "PackagePath": "staticwebassets\\files\\cvs\\907ec452-9ee8-4447-97ea-3b076381de5f.pdf"
+    },
+    {
       "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\files\\cvs\\b1021168-6698-4440-9b8b-18a400a4c5f6.pdf",
       "PackagePath": "staticwebassets\\files\\cvs\\b1021168-6698-4440-9b8b-18a400a4c5f6.pdf"
     },
     {
+      "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\images\\ChatRoomMessage\\message-1\\478e53aa-3ddb-4c7a-a60f-d0cf8abbda2a.png",
+      "PackagePath": "staticwebassets\\images\\ChatRoomMessage\\message-1\\478e53aa-3ddb-4c7a-a60f-d0cf8abbda2a.png"
+    },
+    {
       "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\images\\ChatRoomMessage\\message-3\\0b66ed07-b33f-4edf-99ff-3d3ac9d04e7f.png",
       "PackagePath": "staticwebassets\\images\\ChatRoomMessage\\message-3\\0b66ed07-b33f-4edf-99ff-3d3ac9d04e7f.png"
+    },
+    {
+      "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\images\\ChatRoomMessage\\message-3\\4f02413b-73d3-4328-a660-7d3f7d65c8e2.png",
+      "PackagePath": "staticwebassets\\images\\ChatRoomMessage\\message-3\\4f02413b-73d3-4328-a660-7d3f7d65c8e2.png"
     },
     {
       "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\images\\ChatRoomMessage\\message-4\\0a2dc00b-d2d4-4417-9334-2c953786d9c3.png",
@@ -45,12 +77,36 @@
       "PackagePath": "staticwebassets\\images\\ChatRoomMessage\\videos\\247feb36-d050-4487-9007-87f28299bd3a.mp4"
     },
     {
+      "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\images\\ChatRoomMessage\\videos\\62872318-3042-4c8c-bbf9-2b8caf750376.mp4",
+      "PackagePath": "staticwebassets\\images\\ChatRoomMessage\\videos\\62872318-3042-4c8c-bbf9-2b8caf750376.mp4"
+    },
+    {
+      "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\images\\ChatRoomMessage\\videos\\83382856-ebda-4329-b5bd-62b8df1d67a4.mp4",
+      "PackagePath": "staticwebassets\\images\\ChatRoomMessage\\videos\\83382856-ebda-4329-b5bd-62b8df1d67a4.mp4"
+    },
+    {
       "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\images\\Community\\message\\1\\38697ea8-dd77-42df-8849-ab2f7909088c.jpg",
       "PackagePath": "staticwebassets\\images\\Community\\message\\1\\38697ea8-dd77-42df-8849-ab2f7909088c.jpg"
     },
     {
+      "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\images\\Community\\message\\1\\7f64f5ed-9c70-4170-a2a9-2988afd4b42d.png",
+      "PackagePath": "staticwebassets\\images\\Community\\message\\1\\7f64f5ed-9c70-4170-a2a9-2988afd4b42d.png"
+    },
+    {
+      "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\images\\Community\\message\\1\\984a0c00-dd7e-436a-b9c0-a0bd9f9e8670.png",
+      "PackagePath": "staticwebassets\\images\\Community\\message\\1\\984a0c00-dd7e-436a-b9c0-a0bd9f9e8670.png"
+    },
+    {
+      "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\images\\Community\\message\\1\\a29b847e-d09a-450d-8195-30b970464dc0.png",
+      "PackagePath": "staticwebassets\\images\\Community\\message\\1\\a29b847e-d09a-450d-8195-30b970464dc0.png"
+    },
+    {
       "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\images\\Community\\message\\1\\a7983b71-bb73-49a6-97c6-ab63110ee8b9.jpg",
       "PackagePath": "staticwebassets\\images\\Community\\message\\1\\a7983b71-bb73-49a6-97c6-ab63110ee8b9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\images\\Community\\message\\1\\c02bff9b-7791-4f35-ab3f-adb490eef9af.png",
+      "PackagePath": "staticwebassets\\images\\Community\\message\\1\\c02bff9b-7791-4f35-ab3f-adb490eef9af.png"
     },
     {
       "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\images\\Community\\message\\1\\d7175a7e-d96a-47e3-b913-d082060becd8.png",
@@ -241,8 +297,24 @@
       "PackagePath": "staticwebassets\\images\\project_images\\vid\\search.mp4"
     },
     {
+      "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\js\\default.js",
+      "PackagePath": "staticwebassets\\js\\default.js"
+    },
+    {
+      "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\js\\ok.js",
+      "PackagePath": "staticwebassets\\js\\ok.js"
+    },
+    {
       "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\js\\t1.js",
+      "PackagePath": "staticwebassets\\js\\t1.js"
+    },
+    {
+      "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\js\\twil.js",
+      "PackagePath": "staticwebassets\\js\\twil.js"
     },
     {
       "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\LICENSE",

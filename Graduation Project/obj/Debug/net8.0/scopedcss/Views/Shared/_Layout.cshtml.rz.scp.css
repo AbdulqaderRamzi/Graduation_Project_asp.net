@@ -7,8 +7,11 @@ a.navbar-brand[b-e1cqen20uj] {
   word-break: break-all;
 }
 
-a[b-e1cqen20uj] {
+/*a {
   color: #0077cc;
+}*/
+.custom-color[b-e1cqen20uj] {
+    color: #417690 !important;
 }
 
 .btn-primary[b-e1cqen20uj] {

@@ -12,8 +12,6 @@ namespace Graduation.Models
     {
         [Key]
         public int Id { get; set; }
-        public int ChatRoomMessageId { get; set; }
-        [ForeignKey(nameof(ChatRoomMessageId))]
         public ChatRoomMessage ChatRoomMessage { get; set; }
         public string ImageUrl { get; set; }
     }

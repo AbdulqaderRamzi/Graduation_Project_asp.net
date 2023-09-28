@@ -1,25 +1,26 @@
 ﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
     <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Test</h1>
-    <h4 class="mt-0 mb-5">
+    <h5 class="mt-4 mb-0">
         Use test to test your app before run the app. test will help you to find the error before that error occur with user.
         helps to identify bugs, errors, and unexpected behavior in your code before it's deployed to a production environment.
         created data in test. will not be exists in database. it's dummy data.
-    </h4>
-    <h4 class="mt-0 mb-5">Create class for each test case. for example, view, url, template name, model etc.</h4>
-    <h4 class="mt-0 mb-5">Each function has its data.</h4>
-    <h4 class="mt-0 mb-5">Each test case could has multiple tests.</h4>
-    <h4 class="mt-0 mb-5">Test should start with test word (test_).</h4>
+    </h5>
+    <h5 class="mb-0 mt-5">- Create class for each test case. for example, view, url, template name, model etc.</h5>
+    <h5 class="mb-0 mt-2">- Each function has its data.</h5>
+    <h5 class="mb-0 mt-2">- Each test case could has multiple tests.</h5>
+    <h5 class="mb-5 mt-2">- Test should start with test word (test_).</h5>
+
     <hr />
-    <h2 class="mb-5 custom-title">Model</h2>
-    <div class="rounded p-4 my-4 custom-div">
+    <h2 class="my-5 custom-title">Model</h2>
+    <div class="rounded p-4 mb-5 mt-4 custom-div">
         <p class="mb-1">class Client(models.Model):</p>
         <p class="mb-1 mr-25">name = models.CharField(max_length=100, verbose_name='Name')</p>
         <p class="mb-1 mr-25">email = models.EmailField(unique=True)</p>
     </div>
 
     <hr />
-    <h2 class="mb-5 custom-title">First class test</h2>
-    <div class="rounded p-4 my-4 custom-div">
+    <h2 class="my-5 custom-title">First class test</h2>
+    <div class="rounded p-4 mt-4 custom-div">
         <p class="mb-1">from django.test import TestCase</p>
         <p class="mb-1">from cars.models import Client</p>
         <p class="mb-1">class Client(TestCase)</p>
@@ -40,8 +41,7 @@
         <p class="mb-1 mr-50"># "@@gmail.com" in first client email.</p>
         <p class="mb-1 mr-50">self.assertFalse("@@gmail.com" not in first_client.email)</p>
     </div>
-    <h4 class="mt-0 mb-5">Second test</h4>
-    <div class="rounded p-4 my-4 custom-div">
+    <div class="rounded p-4 mb-5 mt-4 custom-div">
         <p class="mb-1 mr-25">def test_multiple_clients(self):</p>
         <p class="mb-1 mr-50">Client.objects.create(name="ahmed", email="ahmed@gmail.com")</p>
         <p class="mb-1 mr-50">Client.objects.create(name="esraa", email="esraa@gmail.com")</p>
@@ -53,18 +53,18 @@
 
     <hr />
     <h2 class="my-5 custom-title">Run your tests</h2>
-    <h4 class="mt-0 mb-5">Run all test files in your project:</h4>
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">python manage.py test</h5>
+    <h5 class="mb-3 mt-4">Run all test files in your project:</h5>
+    <div class="d-flex justify-content-start">
+        <h5 class="rounded p-3 custom-back">python manage.py test</h5>
     </div>
-    <h4 class="mt-0 mb-5">Run specific test file:</h4>
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">python manage.py test appname</h5>
+    <h5 class="mb-3 mt-5">Run specific test file:</h5>
+    <div class="d-flex justify-content-start">
+        <h5 class="rounded mb-5 p-3 custom-back">python manage.py test appname</h5>
     </div>
 
     <hr />
-    <h2 class="mb-5 custom-title">Test view</h2>
-    <div class="rounded p-4 my-4 custom-div">
+    <h2 class="my-5 custom-title">Test view</h2>
+    <div class="rounded p-4 mt-4 custom-div">
         <p class="mb-1">from django.test import TestCase</p>
         <p class="mb-1">from django.template import TemplateDoesNotExist</p>
         <p class="mb-1">from django.template.loader import select_template</p>
@@ -83,8 +83,8 @@
         <p class="mb-1 mr-50"># Check if the get_response status code is 200 OK, indicating a successful GET request</p>
         <p class="mb-1 mr-50">self.assertEqual(get_response.status_code, 200)</p>
     </div>
-    <h4 class="mt-0 mb-5">Test view context</h4>
-    <div class="rounded p-4 my-4 custom-div">
+    <h4 class="mb-3 mt-5">Test view context</h4>
+    <div class="rounded p-4 custom-div">
         <p class="mb-1 mr-25">def test_view_context(self):</p>
         <p class="mb-1 mr-50"># Define the URL for the view you want to test</p>
         <p class="mb-1 mr-50">url = reverse('search_view')  # Replace with your actual view name</p>
@@ -97,8 +97,8 @@
         <p class="mb-1 mr-50"># Check the values of the context data</p>
         <p class="mb-1 mr-50">self.assertEqual(response.context['name'], 'khaled')</p>
     </div>
-    <h4 class="mt-0 mb-5">Test view template name</h4>
-    <div class="rounded p-4 my-4 custom-div">
+    <h4 class="mb-3 mt-5">Test view template name</h4>
+    <div class="rounded p-4 mb-5 custom-div">
         <p class="mb-1 mr-25">def test_template_name(self):</p>
         <p class="mb-1 mr-50"># Define the URL for the view you want to test</p>
         <p class="mb-1 mr-50">url = reverse('search_view')  # Replace with your actual view name</p>
@@ -119,8 +119,8 @@
     </div>
 
     <hr />
-    <h2 class="mb-5 custom-title">Test URL</h2>
-    <div class="rounded p-4 my-4 custom-div">
+    <h2 class="my-5 custom-title">Test URL</h2>
+    <div class="rounded p-4 mb-5 mt-4 custom-div">
         <p class="mb-1">from django.test import TestCase</p>
         <p class="mb-1">from django.urls import reverse</p>
         <p class="mb-1">class URLTestCase(TestCase):</p>
@@ -136,8 +136,8 @@
     </div>
 
     <hr />
-    <h2 class="mb-5 custom-title">Test User</h2>
-    <div class="rounded p-4 my-4 custom-div">
+    <h2 class="my-5 custom-title">Test User</h2>
+    <div class="rounded p-4 mt-4 custom-div">
         <p class="mb-1">from django.test import TestCase</p>
         <p class="mb-1">from django.urls import reverse</p>
         <p class="mb-1">from django.contrib.auth.models import User</p>
@@ -169,8 +169,8 @@
         <p class="mb-1 mr-50"># Check if the user is authenticated</p>
         <p class="mb-1 mr-50">self.assertTrue(response.context['user'].is_authenticated)</p>
     </div>
-    <h4 class="mt-0 mb-5">Test Login Password</h4>
-    <div class="rounded p-4 my-4 custom-div">
+    <h4 class="mb-3 mt-5">Test Login Password</h4>
+    <div class="rounded p-4 mb-5 custom-div">
         <p class="mb-1 mr-25">def test_login_invalid_password(self):</p>
         <p class="mb-1 mr-50"># Define the URL for the login view</p>
         <p class="mb-1 mr-50">login_url = reverse('login')  # Replace with your actual view name</p>

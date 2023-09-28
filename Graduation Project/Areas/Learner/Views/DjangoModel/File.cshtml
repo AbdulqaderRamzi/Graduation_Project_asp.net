@@ -1,14 +1,14 @@
 ﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
     <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">File</h1>
     <h4 class="text-center mt-4 mb-5">Used to upload image, video, and documents you have to follow the following steps.</h4>
-    <div class="rounded p-4 mb-4 custom-div">
+    <div class="rounded p-4 custom-div mt-3">
         <p class="mb-1">class Files(models.Model):</p>
         <p class="mb-1 mr-25">document = models.FileField(upload_to='documents/')</p>
         <p class="mb-1 mr-25">image = models.FileField(upload_to='images/')</p>
         <p class="mb-1 mr-25">video = models.FileField(upload_to='videos/')</p>
     </div>
-    <h4 class="mt-4 mb-5">In project root go to settings. Add those lines.</h4>
-    <div class="rounded p-4 mb-4 custom-div">
+    <h5 class="mt-5 mb-3">In project root go to settings. Add those lines.</h5>
+    <div class="rounded p-4 mb-3 custom-div">
         <p class="mb-1">STATIC_URL = 'static/'</p>
         <p class="mb-1">STATICFILES_DIRS = [</p>
         <p class="mb-1 mr-25">BASE_DIR / "static",</p>
@@ -17,11 +17,11 @@
         <p class="mb-1">MEDIA_URL = '/media/'</p>
         <p class="mb-1">MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')</p>
     </div>
-    <figure class="figure mb-4">
+    <figure class="figure">
         <img src="~/images/project_images/model/imfi.png" class="figure-img img-fluid rounded img-border">
     </figure>
-    <h4 class="mt-4 mb-5">In project root go to urls. Add those lines.</h4>
-    <div class="rounded p-4 mb-4 custom-div">
+    <h5 class="mt-3 mb-3">In project root go to urls. Add those lines.</h5>
+    <div class="rounded p-4 mb-3 custom-div">
         <p class="mb-1">from django.conf.urls.static import static</p>
         <p class="mb-1">from django.conf import settings</p>
         <p class="mb-1">urlpatterns = [</p>
@@ -29,7 +29,7 @@
         <p class="mb-1 mr-25">path()</p>
         <p class="mb-1">]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)</p>
     </div>
-    <figure class="figure mb-4">
+    <figure class="figure mb-5">
         <img src="~/images/project_images/model/file2.png" class="figure-img img-fluid rounded img-border">
     </figure>
 </div>

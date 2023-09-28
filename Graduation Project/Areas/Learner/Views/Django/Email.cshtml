@@ -1,8 +1,8 @@
 ﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
     <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Send Email</h1>
-    <h4 class="mt-4 mb-0">Config Your email data in .env file.</h4>
-    <h4 class="mt-4 mb-0">Create .env file in same level with project root to create Environment Variables.</h4>
-    <h4 class="mt-4 mb-0">Inside .env file put that code and insert your email data.</h4>
+    <h5 class="mt-5 mb-0">Config Your email data in .env file.</h5>
+    <h5 class="mt-3 mb-0">Create .env file in same level with project root to create Environment Variables.</h5>
+    <h5 class="mt-3 mb-1">Inside .env file put that code and insert your email data.</h5>
     <div class="rounded p-4 my-4 custom-div">
         <p class="mb-1">EMAIL_HOST = 'smtp.gmail.com'</p>
         <p class="mb-1">EMAIL_PORT = "Your Email Port"</p>
@@ -10,9 +10,9 @@
         <p class="mb-1">EMAIL_HOST_USER = "Your Email"</p>
         <p class="mb-1">EMAIL_HOST_PASSWORD = "Your Email Password"</p>
     </div>
-    <h4 class="mt-4 mb-0">Why to create .env file?</h4>
-    <h4 class="mt-4 mb-0">Because when we want to deploy the code. we want the to keep sensitive information hidden. Before deploying the codes. don't forget to put .env file in .gitignore file.</h4>
-    <h4 class="mt-4 mb-0">In settings.py insert the following steps:</h4>
+    <h4 class="mt-5 mb-0">Why to create .env file?</h4>
+    <h5 class="mt-3 mb-4">Because when we want to deploy the code. we want the to keep sensitive information hidden. Before deploying the codes. don't forget to put .env file in .gitignore file.</h5>
+    <h5 class="mt-4 mb-0">In settings.py insert the following steps:</h5>
     <div class="rounded p-4 my-4 custom-div">
         <p class="mb-1">import os</p>
         <p class="mb-1">EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'</p>
@@ -22,11 +22,11 @@
         <p class="mb-1">EMAIL_HOST_USER = config('EMAIL_HOST_USER')</p>
         <p class="mb-1">EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')</p>
     </div>
-    <h4 class="mt-4 mb-0">To send an email you have 2 ways</h4>
+    <h4 class="mt-5 mb-5">To send an email you have 2 ways.</h4>
 
     <hr />
     <h2 class="my-5 custom-title">First way</h2>
-    <div class="rounded p-4 my-4 custom-div">
+    <div class="rounded p-4 mt-4 mb-5 custom-div">
         <p class="mb-1">from django.core.mail import EmailMessage</p>
         <p class="mb-1">email = EmailMessage(</p>
         <p class="mb-1 mr-25">'Subject',</p>
@@ -55,8 +55,8 @@
 
     <hr />
     <h2 class="my-5 custom-title">Second way</h2>
-    <h4 class="mt-4 mb-0">Get the data from html form.</h4>
-    <h4 class="mt-4 mb-0">Html:</h4>
+    <h5 class="mt-4 mb-0">Get the data from html form.</h5>
+    <h4 class="mt-5 mb-0">Html:</h4>
     <div class="rounded p-4 my-4 custom-div">
         <p class="mb-1">&lt;form method="post" enctype="multipart/form-data" action="{% url 'send_email' %}"&gt;</p>
         <p class="mb-1 mr-25">{% csrf_token %}</p>
@@ -72,7 +72,7 @@
         <p class="mb-1">&lt;/form&gt;</p>
     </div>
     <h4 class="mt-4 mb-0">View:</h4>
-    <div class="rounded p-4 my-4 custom-div">
+    <div class="rounded p-4 mt-4 mb-5 custom-div">
         <p class="mb-1">def send_email(request):</p>
         <p class="mb-1 mr-25">if request.method == 'POST':</p>
         <p class="mb-1 mr-50">subject = request.POST['subject']</p>

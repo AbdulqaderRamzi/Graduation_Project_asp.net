@@ -11,8 +11,6 @@ namespace Graduation.Models
         [Required]
         public string Type { get; set; }
         public string Content { get; set; }
-        public string UserId { get; set; }
-        [ForeignKey("UserId")]
         [ValidateNever]
         public User User { get; set; }
         public DateTimeOffset CreatedAt { get; set; }

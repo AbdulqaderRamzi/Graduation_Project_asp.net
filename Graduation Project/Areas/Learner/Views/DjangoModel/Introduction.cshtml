@@ -1,46 +1,49 @@
 ﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
     <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Introduction</h1>
-    <h4 class="mt-4 mb-5">
+    <h4 class="mt-4">
         In the models file you will be able to design your database tables.
         Instead of typying row database code. Django facilitate that by using models.
         Models file will take your code then it will interpret it to database language.
     </h4>
-    <h4 class="mt-4 mb-5">We will explain this process in Migration section.</h4>
-    <h4 class="mt-4 mb-5">To build your model you will need to implement the following steps always.</h4>
+    <h4 class="mt-3 mb-0">We will explain this process in Migration section.</h4>
+    <h4 class="mt-3 mb-5">To build your model you will need to implement the following steps always.</h4>
 
     <hr />
     <h2 class="my-5 custom-title">First step</h2>
-    <h4 class="mt-4 mb-5">Give your table name and invoke the Model package to enable django read it and interpret it into database Table.</h4>
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">Class Table name (models.Model)</h5>
+    <h5 class="mt-3 mb-3">Give your table name and invoke the Model package to enable django read it and interpret it into database Table.</h5>
+    <div class="d-flex justify-content-start mb-5">
+        <h5 class="rounded p-3 custom-back">Class Table name (models.Model)</h5>
     </div>
 
     <hr />
     <h2 class="my-5 custom-title">Second step</h2>
-    <h4 class="mt-4 mb-5">Insert your field name, define its type and restrict it (validation).</h4>
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">field name = models.type(validation)</h5>
+    <h5 class="mt-3 mb-3">Insert your field name, define its type and restrict it (validation).</h5>
+    <div class="d-flex justify-content-start mb-5">
+        <h5 class="rounded p-3 custom-back">field name = models.type(validation)</h5>
     </div>
-    <h4 class="mt-4 mb-5">Example</h4>
-    <div class="rounded p-4 my-4 custom-div">
+    <hr />
+    <h4 class="mt-5 mb-3">Example</h4>
+    <div class="rounded p-4 custom-div mb-1">
         <p class="mb-1">class Person(models.Model):</p>
         <p class="mb-1 mr-25">first_name = models.CharField(max_length=30)</p>
         <p class="mb-1 mr-25">last_name = models.CharField(max_length=30)</p>
     </div>
-    <h4 class="mt-4 mb-5">Explanation</h4>
-    <h4 class="mt-4 mb-5">
+    <h4 class="mt-4 mb-3">Explanation</h4>
+    <h5 class="mt-0 mb-5">
         first_name and last_name will be string for that we used CharField type. we want it to be at most 30 letters.
         Users can't exceed the max length. if that happen they will get an error.
-    </h4>
-    <h4 class="mt-4 mb-5">Example</h4>
-    <div class="rounded p-4 my-4 custom-div">
+    </h5>
+    <hr />
+    <h4 class="mt-5 mb-4">Example</h4>
+    <div class="rounded p-4 custom-div">
         <p class="mb-1">class Category(models.Model):</p>
         <p class="mb-1 mr-25">name = models.CharField(max_length=100)</p>
         <p class="mb-1 mr-25">description = models.TextField()</p>
     </div>
-    <h4 class="mt-4 mb-5">Note: we will explain field types and validation in separated section.</h4>
-    <h4 class="mt-4 mb-5">Example</h4>
-    <div class="rounded p-4 my-4 custom-div">
+    <h5 class="mt-3 mb-5">Note: we will explain field types and validation in separated section.</h5>
+    <hr />
+    <h4 class="mt-5 mb-4">Example</h4>
+    <div class="rounded p-4 custom-div">
         <p class="mb-1">class Product(models.Model):</p>
         <p class="mb-1 mr-25">name = models.CharField(max_length=200)</p>
         <p class="mb-1 mr-25">description = models.TextField()</p>
@@ -48,31 +51,31 @@
         <p class="mb-1 mr-25">image = models.ImageField(upload_to='products/')</p>
         <p class="mb-1 mr-25">created_at = models.DateTimeField()</p>
     </div>
-    <h4 class="mt-4 mb-5">Why some fields have validation and required restriction?</h4>
-    <h4 class="mt-4 mb-5">The answer will be in field types section.</h4>
+    <h4 class="mt-3 mb-0">Why some fields have validation and required restriction?</h4>
+    <h5 class="mt-3 mb-5">The answer will be in field types section.</h5>
 
     <hr />
     <h2 class="my-5 custom-title">__str__ function</h2>
-    <h4 class="mt-4 mb-5">
+    <h5 class="mt-3 mb-0">
         When you create an object the display result will be Model name object(number).
         To change it, you can use __str__ function that enables you to change display format.
-    </h4>
-    <h4 class="mt-4 mb-5">Before</h4>
-    <div class="rounded p-4 my-4 custom-div">
+    </h5>
+    <h4 class="mt-5 mb-4">Before</h4>
+    <div class="rounded p-4 mb-3 custom-div">
         <p class="mb-1">class User(models.Model):</p>
         <p class="mb-1 mr-25">name = models.CharField(max_length=100)</p>
     </div>
-    <figure class="figure mb-4">
+    <figure class="figure">
         <img src="~/images/project_images/model/__str__.png" class="figure-img img-fluid rounded img-border">
     </figure>
-    <h4 class="mt-4 mb-5">After</h4>
-    <div class="rounded p-4 my-4 custom-div">
+    <h4 class="mt-5 mb-4">After</h4>
+    <div class="rounded p-4 custom-div">
         <p class="mb-1">class User(models.Model):</p>
         <p class="mb-1 mr-25">name = models.CharField(max_length=100)</p>
         <p class="mb-1 mr-25">def __str__(self):</p>
         <p class="mb-1 mr-50">return self.name</p>
     </div>
-    <figure class="figure mb-4">
+    <figure class="figure mb-5 mt-3">
         <img src="~/images/project_images/model/__str__1.png" class="figure-img img-fluid rounded img-border">
     </figure>
 </div>

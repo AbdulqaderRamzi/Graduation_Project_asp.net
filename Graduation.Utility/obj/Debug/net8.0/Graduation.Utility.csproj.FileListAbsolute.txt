@@ -1,11 +1,12 @@
+C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation.Utility\bin\Debug\net8.0\Graduation.Utility.deps.json
+C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation.Utility\bin\Debug\net8.0\Graduation.Utility.dll
+C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation.Utility\bin\Debug\net8.0\Graduation.Utility.pdb
+C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation.Utility\obj\Debug\net8.0\Graduation.Utility.csproj.AssemblyReference.cache
 C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation.Utility\obj\Debug\net8.0\Graduation.Utility.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation.Utility\obj\Debug\net8.0\Graduation.Utility.AssemblyInfoInputs.cache
 C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation.Utility\obj\Debug\net8.0\Graduation.Utility.AssemblyInfo.cs
 C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation.Utility\obj\Debug\net8.0\Graduation.Utility.csproj.CoreCompileInputs.cache
-C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation.Utility\obj\Debug\net8.0\Graduation.Utility.csproj.AssemblyReference.cache
-C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation.Utility\bin\Debug\net8.0\Graduation.Utility.deps.json
-C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation.Utility\bin\Debug\net8.0\Graduation.Utility.dll
-C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation.Utility\bin\Debug\net8.0\Graduation.Utility.pdb
+C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation.Utility\obj\Debug\net8.0\Graduation.Utility.sourcelink.json
 C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation.Utility\obj\Debug\net8.0\Graduation.Utility.dll
 C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation.Utility\obj\Debug\net8.0\refint\Graduation.Utility.dll
 C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation.Utility\obj\Debug\net8.0\Graduation.Utility.pdb

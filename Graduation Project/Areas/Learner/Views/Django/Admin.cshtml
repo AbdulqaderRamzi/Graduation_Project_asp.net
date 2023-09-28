@@ -141,6 +141,13 @@
 
     <h2 class="mb-4 mt-4 custom-title">Add action</h2>
     <h4 class="mb-2 mt-5">Model</h4>
+    <pre>
+        <code class="language-Django">
+            class Message(models.Model):
+                content = models.TextField()
+                read = models.BooleanField(default=False)
+        </code>
+    </pre>
     <div class="rounded p-4 my-4 custom-div">
         <p class="mb-1">class Message(models.Model):</p>
         <p class="mb-1 mr-25">content = models.TextField()</p>

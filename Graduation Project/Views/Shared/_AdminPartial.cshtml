@@ -1,0 +1,57 @@
+﻿﻿@using Microsoft.AspNetCore.Http
+@using Microsoft.AspNetCore.Identity
+
+<style>
+    .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show > .nav-link {
+        color: #417690;
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+        color: #417690;
+    }
+    .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show > .nav-link {
+        color: #417690;
+    }
+    .navbar-light .navbar-nav .nav-link.active{
+        color: #417690;
+    }
+    .navbar-light .navbar-nav .show > .nav-link {
+        color: #417690;
+    }
+    .navbar-light .navbar-nav .nav-link:hover {
+        color: #417690;
+    }
+    .dropdown-item:active {
+        text-decoration: none;
+        background-color: #41769033;
+    }
+</style>
+
+@if (User.IsInRole("Admin"))
+{
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle custom-color" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Content Managment
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="nav-link dropdown-item" asp-area="Admin" asp-controller="ReplyToChatRoom" asp-action="Index">Reply To Chats</a>
+            <a class="nav-link dropdown-item" asp-area="Admin" asp-controller="ReplyToInquiry" asp-action="Index">Reply To Inquiries</a>
+            <div class="dropdown-divider"></div>
+            <a class="nav-link dropdown-item" asp-area="Admin" asp-controller="SubscriptionType" asp-action="Index">Subscription Types</a>
+            <a class="nav-link dropdown-item" asp-area="Admin" asp-controller="User" asp-action="Index">Manage Users</a>
+        </div>
+    </li>
+}
+@if (User.IsInRole("Supporter"))
+{
+    <li class="nav-item dropdown">
+        <a class="nav-link text-dark dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Content Managment
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="nav-link text-dark dropdown-item" asp-area="Admin" asp-controller="ReplyToChatRoom" asp-action="Index">Reply To Chats</a>
+            <div class="dropdown-divider"></div>
+            <a class="nav-link text-dark dropdown-item" asp-area="Admin" asp-controller="ReplyToInquiry" asp-action="Index">Reply To Inquiries</a>
+        </div>
+    </li>
+}

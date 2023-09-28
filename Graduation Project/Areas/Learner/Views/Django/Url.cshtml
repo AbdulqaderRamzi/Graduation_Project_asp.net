@@ -1,9 +1,9 @@
 ﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
     <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Url</h1>
-    <h4 class="mb-1 mt-4">In urls.py you will configure your url for each view.</h4>
-    <h4 class="mb-1 mt-4">Import following codes</h4>
-    <h4 class="mb-1 mt-4">Project root urls.py:</h4>
-    <div class="rounded p-4 mb-4 custom-div">
+    <h5 class="mb-0 mt-4">In urls.py you will configure your url for each view.</h5>
+    <h5 class="mb-0 mt-2">Import following codes</h5>
+    <h4 class="mb-3 mt-5">Project root urls.py:</h4>
+    <div class="rounded p-4 custom-div">
         <p class="mb-1">from django.urls import path</p>
         <p class="mb-1">from . import views</p>
         <p class="mb-1">urlpatterns = [</p>
@@ -11,8 +11,8 @@
         <p class="mb-1 mr-25">path("blogs/", include("blogs.urls")),</p>
         <p class="mb-1">]</p>
     </div>
-    <h4 class="mb-1 mt-4">blogs app urls.py:</h4>
-    <div class="rounded p-4 mb-4 custom-div">
+    <h4 class="mb-3 mt-5">blogs app urls.py:</h4>
+    <div class="rounded p-4 mb-5 custom-div">
         <p class="mb-1">from django.urls import path</p>
         <p class="mb-1">from . import views</p>
         <p class="mb-1">app_name = 'blogs' # optional</p>
@@ -25,105 +25,98 @@
     </div>
 
     <hr />
-    <h2 class="mb-5 custom-title">First path</h2>
-    <h4 class="mb-1 mt-4">Example: blogs</h4>
-    <div class="rounded p-4 mb-4 custom-div">
+    <h2 class="my-5 custom-title">First path</h2>
+    <h4 class="mb-3 mt-3">Example: blogs</h4>
+    <div class="rounded p-4 mb-5 custom-div">
         <p class="mb-1">def blogs(request):</p>
         <p class="mb-1 mr-25">return</p>
     </div>
 
     <hr />
-    <h2 class="mb-5 custom-title">Second path</h2>
-    <h4 class="mb-1 mt-4">Example: blog/1</h4>
-    <div class="rounded p-4 mb-4 custom-div">
+    <h2 class="my-5 custom-title">Second path</h2>
+    <h4 class="mb-3 mt-3">Example: blog/1</h4>
+    <div class="rounded p-4 mb-5 custom-div">
         <p class="mb-1">def blog_by_id(request, id): # &lt;int:id&gt; parameter</p>
         <p class="mb-1 mr-25">return</p>
     </div>
 
     <hr />
-    <h2 class="mb-5 custom-title">Third path</h2>
-    <h4 class="mb-1 mt-4">Example: blog/sport</h4>
-    <div class="rounded p-4 mb-4 custom-div">
+    <h2 class="my-5 custom-title">Third path</h2>
+    <h4 class="mb-4 mt-3">Example: blog/sport</h4>
+    <div class="rounded p-4 mb-5 custom-div">
         <p class="mb-1">def blog_by_name(request, name): # &lt;str:name&gt; parameter</p>
         <p class="mb-1 mr-25">return</p>
     </div>
 
     <hr />
-    <h2 class="mb-5 custom-title">Fourth path</h2>
-    <h4 class="mb-1 mt-4">Example: blog/sport-magazine</h4>
-    <div class="rounded p-4 mb-4 custom-div">
+    <h2 class="my-5 custom-title">Fourth path</h2>
+    <h4 class="mb-3 mt-3">Example: blog/sport-magazine</h4>
+    <div class="rounded p-4 mb-5 custom-div">
         <p class="mb-1">def blog_by_slug_name(request, slug_name): # &lt;slug:slug_name&gt; parameter</p>
         <p class="mb-1 mr-25">return</p>
     </div>
-    <h4 class="mb-1 mt-4">Why to put name in the each path, what's its benefit?</h4>
-    <h4 class="mb-1 mt-4">Instead of using:</h4>
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">&lt;a href="blogs/blogs"&gt; &lt;/a&gt;</h5>
-    </div>
-    <h4 class="mb-1 mt-4">name will enable you to use the following logic:</h4>
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">&lt;a href="{% url 'path name' parameters %}"&gt; &lt;/a&gt;</h5>
-    </div>
-    <h4 class="mb-1 mt-4">Examples</h4>
 
-    <hr />
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">&lt;a href="{% url 'blogs' %}"&gt; &lt;/a&gt;</h5>
+    <hr>
+    <h4 class="mb-0 mt-5">Why to put name in the each path, what's its benefit?</h4>
+    <h5 class="mb-3 mt-5">Instead of using:</h5>
+    <div class="d-flex justify-content-start">
+        <h5 class="rounded p-3 custom-back">&lt;a href="blogs/blogs"&gt; &lt;/a&gt;</h5>
+    </div>
+    <h5 class="mb-3 mt-4">name will enable you to use the following logic:</h5>
+    <div class="d-flex justify-content-start mb-5">
+        <h5 class="rounded p-3 custom-back">&lt;a href="{% url 'path name' parameters %}"&gt; &lt;/a&gt;</h5>
     </div>
 
     <hr />
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">&lt;a href="{% url 'blog_by_id' 1 %}"&gt; &lt;/a&gt;</h5>
+    <h2 class="my-5 custom-title">Examples</h2>
+    <div class="d-flex justify-content-start mt-3 mb-3">
+        <h5 class="rounded p-3 custom-back">&lt;a href="{% url 'blogs' %}"&gt; &lt;/a&gt;</h5>
+    </div>
+    <div class="d-flex justify-content-start mt-0 mb-3">
+        <h5 class="rounded p-3 custom-back">&lt;a href="{% url 'blog_by_id' 1 %}"&gt; &lt;/a&gt;</h5>
+    </div>
+    <div class="d-flex justify-content-start mt-0 mb-3">
+        <h5 class="rounded p-3 custom-back">&lt;a href="{% url 'blog_by_name' sport %}"&gt; &lt;/a&gt;</h5>
+    </div>
+    <div class="d-flex justify-content-start mt-0 mb-5">
+        <h5 class="rounded p-3 custom-back">&lt;a href="{% url 'blog_by_slug_name' sport-blog %}"&gt; &lt;/a&gt;</h5>
     </div>
 
     <hr />
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">&lt;a href="{% url 'blog_by_name' sport %}"&gt; &lt;/a&gt;</h5>
-    </div>
 
-    <hr />
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">&lt;a href="{% url 'blog_by_slug_name' sport-blog %}"&gt; &lt;/a&gt;</h5>
-    </div>
-    <h4 class="mb-1 mt-4">Why to insert app name before urlpatterns, what's its benefit?</h4>
-    <h4 class="mb-1 mt-4">To differentiate between same path name in different apps.</h4>
-    <h4 class="mb-1 mt-4">For examples:</h4>
-    <div class="rounded p-4 mb-4 custom-div">
+    <h4 class="mb-0 mt-5">Why to insert app name before urlpatterns, what's its benefit?</h4>
+    <h5 class="mb-0 mt-5">To differentiate between same path name in different apps.</h5>
+    <h5 class="mb-3 mt-2">For examples:</h5>
+    <div class="rounded p-4 mb-2 custom-div">
         <p class="mb-1">// blogs app > urls</p>
         <p class="mb-1">urlpatterns = [</p>
         <p class="mb-1 mr-25">path("blogs/", views.blogs, name="blogs"),</p>
         <p class="mb-1">]</p>
     </div>
-    <div class="rounded p-4 mb-4 custom-div">
+    <div class="rounded p-4 custom-div">
         <p class="mb-1">// magazines app > urls</p>
         <p class="mb-1">urlpatterns = [</p>
         <p class="mb-1 mr-25">path("blogs/", views.blogs, name="blogs"),</p>
         <p class="mb-1">]</p>
     </div>
-    <h4 class="mb-1 mt-4">To prevent that error use app name before urlpatterns.</h4>
-    <h4 class="mb-1 mt-4">How to use app name with navigation.</h4>
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">&lt;a href="{% url 'app name : path name' parameters %}"&gt; &lt;/a&gt;</h5>
-    </div>
-    <h4 class="mb-1 mt-4">Examples</h4>
-
-    <hr />
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">&lt;a href="{% url 'blogs:blogs' %}"&gt; &lt;/a&gt;</h5>
+    <h5 class="mb-0 mt-4">To prevent that error use app name before urlpatterns.</h5>
+    <h5 class="mb-3 mt-2">How to use app name with navigation.</h5>
+    <div class="d-flex justify-content-start mb-5">
+        <h5 class="rounded p-3 custom-back">&lt;a href="{% url 'app name : path name' parameters %}"&gt; &lt;/a&gt;</h5>
     </div>
 
     <hr />
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">&lt;a href="{% url 'blogs:blog_by_id' 1 %}"&gt; &lt;/a&gt;</h5>
+    <h2 class="my-5 custom-title">Examples</h2>
+    <div class="d-flex justify-content-start mt-3 mb-3">
+        <h5 class="rounded p-3 custom-back">&lt;a href="{% url 'blogs:blogs' %}"&gt; &lt;/a&gt;</h5>
     </div>
-
-    <hr />
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">&lt;a href="{% url 'blogs:blog_by_name' sport %}"&gt; &lt;/a&gt;</h5>
+    <div class="d-flex justify-content-start mt-0 mb-3">
+        <h5 class="rounded p-3 custom-back">&lt;a href="{% url 'blogs:blog_by_id' 1 %}"&gt; &lt;/a&gt;</h5>
     </div>
-
-    <hr />
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">&lt;a href="{% url 'blogs:blog_by_slug_name' sport-blog %}"&gt; &lt;/a&gt;</h5>
+    <div class="d-flex justify-content-start mt-0 mb-3">
+        <h5 class="rounded p-3 custom-back">&lt;a href="{% url 'blogs:blog_by_name' sport %}"&gt; &lt;/a&gt;</h5>
+    </div>
+    <div class="d-flex justify-content-start mt-0 mb-5">
+        <h5 class="rounded p-3 custom-back">&lt;a href="{% url 'blogs:blog_by_slug_name' sport-blog %}"&gt; &lt;/a&gt;</h5>
     </div>
 </div>

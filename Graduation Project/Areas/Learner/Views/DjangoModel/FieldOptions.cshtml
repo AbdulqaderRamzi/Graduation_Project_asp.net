@@ -3,14 +3,14 @@
 
     <hr />
     <h2 class="my-5 custom-title">null and blank</h2>
-    <h4 class="mb-1 mt-4">By default all fields are required to make it nullable use null and blank together.</h4>
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">name = models.CharField(max_length=30, null=True, blank=True)</h5>
+    <h4 class="mb-3 mt-4">By default all fields are required to make it nullable use null and blank together.</h4>
+    <div class="d-flex justify-content-start mb-5">
+        <h5 class="rounded p-3 custom-back">name = models.CharField(max_length=30, null=True, blank=True)</h5>
     </div>
 
     <hr />
     <h2 class="my-5 custom-title">choices</h2>
-    <div class="rounded p-4 my-4 custom-div">
+    <div class="rounded p-4 mt-3 custom-div">
         <p class="mb-1">class User(models.Model):</p>
         <p class="mb-1 mr-25">PEPPERONI = "PEP"</p>
         <p class="mb-1 mr-25">CHEESE = "CHE"</p>
@@ -25,63 +25,63 @@
         <p class="mb-1 mr-50">choices=PIZZA_LIST,</p>
         <p class="mb-1 mr-50">)</p>
     </div>
-    <h4 class="mb-1 mt-4">The favorite_pizza is choices so, user have to choose from those 3 types.</h4>
-    <h4 class="mb-1 mt-4">(PEPPERONI, "Pepperoni") the display value is Pepperoni otherwise, the stored value in database is PEP.</h4>
+    <h4 class="mb-0 mt-4">The favorite_pizza is choices so, user have to choose from those 3 types.</h4>
+    <h4 class="mb-5 mt-2">(PEPPERONI, "Pepperoni") the display value is Pepperoni otherwise, the stored value in database is PEP.</h4>
 
     <hr />
     <h2 class="my-5 custom-title">default</h2>
-    <div class="rounded p-4 my-4 custom-div">
+    <div class="rounded p-4 custom-div mt-3">
         <p class="mb-1">favorite_pizza = models.CharField(</p>
         <p class="mb-1 mr-25">max_length=3,</p>
         <p class="mb-1 mr-25">choices=PIZZA_LIST,</p>
         <p class="mb-1 mr-25">default = PEPPERONI</p>
         <p class="mb-1">)</p>
     </div>
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">name = models.CharField(max_length=30, null=True, blank=True, default="khaled")</h5>
+    <div class="d-flex justify-content-start mt-2">
+        <h5 class="rounded p-3 custom-back">name = models.CharField(max_length=30, null=True, blank=True, default="khaled")</h5>
     </div>
-    <h4 class="mb-1 mt-4">Default will give the column a initial value that can be changed.</h4>
+    <h4 class="mb-5 mt-4">Default will give the column a initial value that can be changed.</h4>
 
     <hr />
     <h2 class="my-5 custom-title">db_index</h2>
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">name = models.CharField(max_length=100, db_index=True)</h5>
+    <div class="d-flex justify-content-start mt-3">
+        <h5 class="rounded p-3 custom-back">name = models.CharField(max_length=100, db_index=True)</h5>
     </div>
-    <h4 class="mb-1 mt-4">
+    <h4 class="mb-5 mt-4">
         If you have a huge database and you will call that field constantly, you can use it to make the calling done quickly.
         index will be created on the name column. This index will improve the performance of queries involving the name field.
     </h4>
 
     <hr />
     <h2 class="my-5 custom-title">help_text</h2>
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">email = models.EmailField(help_text="Enter valid email")</h5>
+    <div class="d-flex justify-content-start mt-3">
+        <h5 class="rounded p-3 custom-back">email = models.EmailField(help_text="Enter valid email")</h5>
     </div>
-    <h4 class="mb-1 mt-4">Help text will help user to understand the field or what should enter.</h4>
+    <h5 class="mb-5 mt-4">Help text will help user to understand the field or what should enter.</h5>
 
     <hr />
     <h2 class="my-5 custom-title">unique</h2>
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">email = models.EmailField(unique=True)</h5>
+    <div class="d-flex justify-content-start mt-3">
+        <h5 class="rounded p-3 custom-back">email = models.EmailField(unique=True)</h5>
     </div>
-    <h4 class="mb-1 mt-4">unique will prevent data from being repeated.</h4>
-    <h4 class="mb-1 mt-4">
+    <h5 class="mb-0 mt-4">Prevent data from being repeated.</h5>
+    <h5 class="mb-5 mt-3">
         If user register with example@gmail.com then other user try to register with the same email.
         it will appear error like email is already exists.
-    </h4>
+    </h5>
 
     <hr />
     <h2 class="my-5 custom-title">verbose_name</h2>
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">favorite_pizza = models.CharField(verbose_name="Your Favorite Pizza", max_length=3, choices=PIZZA_LIST)</h5>
+    <div class="d-flex justify-content-start mt-3">
+        <h5 class="rounded p-3 custom-back">favorite_pizza = models.CharField(verbose_name="Your Favorite Pizza", max_length=3, choices=PIZZA_LIST)</h5>
     </div>
-    <h4 class="mb-1 mt-4">How the field will be display for people and admin page.</h4>
-    <h4 class="mb-1 mt-4">Before</h4>
+    <h5 class="mb-0 mt-4">How the field will be display for people and admin page.</h5>
+    <h4 class="mb-3 mt-5">Before</h4>
     <figure class="figure mb-4">
         <img src="~/images/project_images/model/verbose.png" class="figure-img img-fluid rounded img-border">
     </figure>
-    <h4 class="mb-1 mt-4">After</h4>
-    <figure class="figure mb-4">
+    <h4 class="mb-3 mt-5">After</h4>
+    <figure class="figure mb-5">
         <img src="~/images/project_images/model/verbose2.png" class="figure-img img-fluid rounded img-border">
     </figure>
 </div>

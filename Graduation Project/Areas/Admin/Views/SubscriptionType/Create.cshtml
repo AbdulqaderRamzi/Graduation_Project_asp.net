@@ -1,43 +1,49 @@
 ﻿@model SubscriptionType
+<div class="container mt-5">
+    <a asp-controller="SubscriptionType" asp-action="Index">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#417690" class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
+            <path d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1z" />
+        </svg>
+    </a>
+</div>
 
-<form method="post">
-    <div class="border p-3 mt-4">
+<form method="post" class="mt-4 mb-5">
+    <div class="border-b p-3 mt-4" style="background:white;">
         <div class="row pb-2">
-            <h2 class="text-primary">Create Subscription Type</h2>
+            <h1 class="mt-3 mb-4 text-center" style="color: #417690;">Create Subscription Type</h1>
             <hr/>
         </div>
 
         <div class="mb-3">
-            <label asp-for="Title"></label>
-            <input asp-for="Title" class="form-control" />
+            <label asp-for="Title" class="mb-2 custom-color"></label>
+            <input asp-for="Title" class="form-control bottom-border" />
             <span asp-validation-for="Title" class="text-danger"></span>
         </div>
         <div class="mb-3">
-            <label asp-for="Description"></label>
-            <input asp-for="Description" class="form-control" />
+            <label asp-for="Description" class="mb-2 custom-color"></label>
+            <input asp-for="Description" class="form-control bottom-border" />
             <span asp-validation-for="Description" class="text-danger"></span>
         </div>
         <div class="mb-3">
-            <label asp-for="Price"></label>
-            <input asp-for="Price" class="form-control" />
+            <label asp-for="Price" class="mb-2 custom-color"></label>
+            <input asp-for="Price" class="form-control bottom-border" />
             <span asp-validation-for="Price" class="text-danger"></span>
         </div>
         <div class="mb-3">
-            <label asp-for="Solution"></label>
-            <input asp-for="Solution" class="form-control" />
+            <label asp-for="Solution" class="mb-2 custom-color"></label>
+            <input asp-for="Solution" class="form-control bottom-border" />
             <span asp-validation-for="Solution" class="text-danger"></span>
         </div>
         <div class="mb-3">
-            <label asp-for="Explanation"></label>
-            <input asp-for="Explanation" class="form-control" />
+            <label asp-for="Explanation" class="mb-2 custom-color"></label>
+            <input asp-for="Explanation" class="form-control bottom-border" />
             <span asp-validation-for="Explanation" class="text-danger"></span>
         </div>
-        <button type="submit" class="btn btn-primary" style="width:150px">
-            Create
-        </button>
-        <a asp-controller="SubscriptionType" asp-action="Index" class="btn btn-secondary" style="width:150px">
-            Back To List
-        </a>
+        <div class="d-flex justify-content-center custom-opacity">
+            <button style="background-color:#417690; color: white;" type="submit" class="btn mb-3 mt-4 py-2 px-5">
+                Create
+            </button>
+        </div>
     </div>
 </form>
 

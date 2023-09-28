@@ -2,6 +2,7 @@
 
 namespace Graduation_Project.Areas.Learner.Controllers
 {
+    [Area("Learner")]
     public class DjangoViewController : Controller
     {
         public IActionResult FBV()

@@ -1,50 +1,52 @@
 ﻿@model List<Inquiry>
 <div class="container p-3">
-    <div class="row pt-4">
+    <div class="row pt-4 justify-content-center">
         <div class="col-6">
-            <h2 class="text-primary">Inquiries</h2>
+            <h1 class="text-center" style="color: #417690; font-weight:900;">Inquiries</h1>
         </div>
     </div>
     <br />
-    <h1>
-        <a asp-action="Index">
-            All
-        </a>
-    </h1>
-    <h1>
-        <a asp-action="Index" asp-route-unreplied=true>
-            Unreplied
-        </a>
-    </h1>
+    <div class="d-flex justify-content-start mb-4 mt-5">
+        <div>
+            <a asp-action="Index" class="btn custom-opacity mx-2" style="background: #417690; color: white;">
+                All
+            </a>
+        </div>
+        <div>
+            <a asp-action="Index" asp-route-unreplied=true class="btn custom-opacity mx-2" style="background: #417690; color: white;">
+                Unreplied
+            </a>
+        </div>
+    </div>
 
-    <table class="table table-bordered table-striped" style="width:100%">
-        <thead>
+    <table class="table table-bordered table-striped border-b" style="width:100%">
+        <thead style="background: gray; color: white;">
             <tr>
-                <th>
+                <th class="text-center">
                     Type
                 </th>
-                <th>
+                <th class="text-center">
                     User
                 </th>
                 <th></th>
             </tr>
         </thead>
-        <tbody>
+        <tbody style="background: white; color: #417690; vertical-align: middle;">
             @foreach (var obj in Model.OrderByDescending(i => i.CreatedAt))
             {
-                <tr>
-                    <td>
+                <tr style="color: #417690; background: white;">
+                    <td class="text-center">
                         @obj.Type
                     </td>
-                    <td>
+                    <td class="text-center">
                         @obj.User.Name
                     </td>
                     @if (obj.Reply == false)
                     {
-                        <td>
+                        <td class="text-center">
                             <div class="w-75 btn-group" role="group">
                                 <a asp-route-id=@obj.Id asp-action="Reply"
-                                   class="btn btn-primary mx-2">
+                                   class="btn custom-opacity mx-2" style="background: #417690; color: white;">
                                     <i class="bi bi-reply"></i>Reply
                                 </a>
                             </div>
@@ -52,7 +54,7 @@
                     }
                     else
                     {
-                        <td class="text-success">
+                        <td class="text-success text-center">
                             Replied
                         </td>
                     }

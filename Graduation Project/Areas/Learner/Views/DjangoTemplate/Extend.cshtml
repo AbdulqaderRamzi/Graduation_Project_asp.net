@@ -1,16 +1,19 @@
 ﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
     <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Extend</h1>
-    <h4 class="mt-4 mb-0">Imagine that your homepage has navbar and footer, but when you navigate to another page navbar and footer are not displayed</h4>
-    <h4 class="mt-4 mb-0">how to solve that?</h4>
-    <h4 class="mt-4 mb-0">Will you type your navbar and footer in each page?</h4>
-    <h4 class="mt-4 mb-0">Is it make sense? No</h4>
-    <h4 class="mt-4 mb-0">
+    <hr />
+    <h5 class="mt-5 mb-5">Imagine that your homepage has navbar and footer, but when you navigate to another page navbar and footer are not displayed</h5>
+    <hr />
+    <h4 class="mt-5 mb-0">how to solve that?</h4>
+    <h4 class="mt-2 mb-0">Will you type your navbar and footer in each page?</h4>
+    <h4 class="mt-2 mb-0">Is it make sense? No</h4>
+    <h5 class="mt-4 mb-5">
         By retyping the navbar and footer codes you will need to imports required files.
         to shorten these steps and all this effort we will use extend logic.
         in extent file we will create a blocks for needed logic like content and title.
-    </h4>
-    <h4 class="mt-4 mb-0">Create base.html in templates that exists in the same level with project root.</h4>
-    <div class="rounded p-4 mt-4 custom-div">
+    </h5>
+    <hr />
+    <h5 class="mt-5 mb-0">Create base.html in templates that exists in the same level with project root.</h5>
+    <div class="rounded p-4 mt-3 custom-div">
         <p class="mb-1">&lt;html lang="en"&gt;</p>
         <p class="mb-1">&lt;head&gt;</p>
         <p class="mb-1 mr-25">&lt;meta charset="UTF-8"&gt;</p>
@@ -25,9 +28,9 @@
         <p class="mb-1">&lt;/body&gt;</p>
         <p class="mb-1">&lt;/html&gt;</p>
     </div>
-    <h4 class="mt-4 mb-0">Extend base.html file in wherever you want for example in home.html and in details.html</h4>
-    <h4 class="mt-4 mb-0">Home</h4>
-    <div class="rounded p-4 mt-4 custom-div">
+    <h5 class="mt-5 mb-2">Extend base.html file in wherever you want for example in home.html and in details.html</h5>
+    <h4 class="mt-3 mb-0">Home</h4>
+    <div class="rounded p-4 mt-3 custom-div">
         <p class="mb-1">{% extends 'base.html' %}</p>
         <p class="mb-1">{% block title %}</p>
         <p class="mb-1 mr-25">"Home"</p>
@@ -37,8 +40,8 @@
         <p class="mb-1">{% endblock %}</p>
     </div>
 
-    <h4 class="mt-4 mb-0">Details</h4>
-    <div class="rounded p-4 mt-4 custom-div">
+    <h4 class="mt-3 mb-0">Details</h4>
+    <div class="rounded p-4 mt-3 custom-div">
         <p class="mb-1">{% extends 'base.html' %}</p>
         <p class="mb-1">{% block title %}</p>
         <p class="mb-1 mr-25">"Details"</p>
@@ -47,5 +50,5 @@
         <p class="mb-1 mr-25">&lt;h1&gt;Details Page&lt;/h1&gt;</p>
         <p class="mb-1">{% endblock %}</p>
     </div>
-    <h4 class="mt-4 mb-0">In previous examples home and details will have nav and footer without retyping the code.</h4>
+    <h5 class="mt-3 mb-5">In previous examples home and details will have nav and footer without retyping the code.</h5>
 </div>

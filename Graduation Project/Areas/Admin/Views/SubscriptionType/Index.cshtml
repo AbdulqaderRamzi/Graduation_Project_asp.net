@@ -3,66 +3,60 @@
 <div class="container p-3">
     <div class="row pt-4">
         <div class="col-6">
-            <h2 class="text-primary">Subscription Types</h2>
+            <h1 style="color: #417690; font-weight:900;">Subscription Types</h1>
         </div>
-        <div class="col-6 text-end">
-            <a asp-controller="SubscriptionType" asp-action="Create" class="btn btn-primary">
+        <div class="col-6 text-end d-flex align-items-end justify-content-end">
+            <a class="btn btn-success" href="/Admin/SubscriptionType/Create">
                 <i class="bi bi-plus-circle"></i> &nbsp; Create New Subscription Type
             </a>
         </div>
     </div>
     <br />
 
-    <table class="table table-bordered table-striped" style="width:100%">
-        <thead>
+    <table class="table table-bordered table-striped border-b" style="width:100%">
+        <thead style="background: gray; color: white;">
             <tr>
-                <th>
+                <th class="text-center">
                     Title
                 </th>
-                <th>
-                    Description
-                </th>
-                <th>
+                <th class="text-center">
                     Price
                 </th>
-                <th>
+                <th class="text-center">
                     Solutions
                 </th>
-                <th>
+                <th class="text-center">
                     Explanations
                 </th>
                 <th></th>
                 <th></th>
             </tr>
         </thead>
-        <tbody>
+        <tbody style="background: white; color: #417690; vertical-align: middle;">
             @foreach (var obj in Model.OrderBy(i => i.Price))
             {
-                <tr>
-                    <td>
+                <tr style="color: #417690; background: white;">
+                    <td class="text-center">
                         @obj.Title
                     </td>
-                    <td>
-                        @obj.Description
-                    </td>
-                    <td>
+                    <td class="text-center">
                         @obj.Price
                     </td>
-                    <td>
+                    <td class="text-center">
                         @obj.Solution
                     </td>
-                    <td>
+                    <td class="text-center">
                         @obj.Explanation
                     </td>
-                    <td>
-                        <div class="w-75 btn-group" role="group">
+                    <td class="text-center">
+                        <div class="w-75 btn-group custom-opacity" role="group">
                             <a asp-route-id="@obj.Id" asp-controller="SubscriptionType" asp-action="Edit"
-                                class="btn btn-primary mx-2">
+                                class="btn mx-2" style="background: #417690; color: white;">
                                 <i class="bi bi-pencil-square"></i>Edit
                             </a>
                         </div>
                     </td>
-                    <td>
+                    <td class="text-center">
                         <div class="w-75 btn-group" role="group">
                             <a asp-route-id="@obj.Id" asp-controller="SubscriptionType" asp-action="Delete"
                                 class="btn btn-danger mx-2">

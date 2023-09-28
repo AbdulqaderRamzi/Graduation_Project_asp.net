@@ -1,7 +1,7 @@
 ﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
     <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Pagination</h1>
     <h4 class="mb-1 mt-4">You will follow always those steps:</h4>
-    <h4 class="mb-1 mt-4">Pagingation is fixed code you can just change the number of how many item in the paginator.</h4>
+    <h5 class="mb-2 mt-2">Pagingation is fixed code you can just change the number of how many item in the paginator.</h5>
     <div class="rounded p-4 my-4 custom-div">
         <p class="mb-1">from django.core.paginator import Paginator</p>
         <p class="mb-1">def products(request):</p>
@@ -11,12 +11,12 @@
         <p class="mb-1 mr-25">paged_products = paginator.get_page(page)</p>
         <p class="mb-1 mr-25">return render(request,'products/products.html',{'products':paged_products})</p>
     </div>
-    <h4 class="mb-1 mt-4">Add view to the app urls:</h4>
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">path('products/', views.products, name='products'),</h5>
+    <h4 class="mb-1 mt-1">Add view to the app urls:</h4>
+    <div class="d-flex justify-content-start mt-2">
+        <h5 class="rounded mb-4 p-3 custom-back">path('products/', views.products, name='products'),</h5>
     </div>
-    <h4 class="mb-1 mt-4">Enable and display paginator in products.html.</h4>
-    <h4 class="mb-1 mt-4">Insert the following codes in products.html:</h4>
+    <h5 class="mb-1 mt-2">Enable and display paginator in products.html.</h5>
+    <h5 class="mb-0 mt-1">Insert the following codes in products.html:</h5>
     <div class="rounded p-4 my-4 custom-div">
         <p class="mb-1">{% if products.has_other_pages %}</p>
         <p class="mb-1 mr-25">&lt;ul class="pagination"&gt;</p>
@@ -40,7 +40,7 @@
         <p class="mb-1 mr-25">&lt;/ul&gt;</p>
         <p class="mb-1">{% endif %}</p>
     </div>
-    <figure class="figure my-4">
-        <video src="~/images/project_images/vid/pag.mp4" class="img-border" type="video" controls></video>
+    <figure class="figure my-5">
+        <video src="/images/project_images/vid/pag.mp4" class="img-border" type="video" width="100%" autoplay="" loop="" controls=""></video>
     </figure>
 </div>

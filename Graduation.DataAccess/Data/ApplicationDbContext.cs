@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection.Emit;
 
 namespace Graduation.DataAccess.Data
 {
@@ -20,5 +21,13 @@ namespace Graduation.DataAccess.Data
         public DbSet<Subscription> Subscriptions { get; set; }
         public DbSet<SubscriptionType> SubscriptionTypes { get; set; }
         public DbSet<Applicant> Applicants { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Message>()
+                .HasOne(m => m.ReplyTo)
+                .WithMany().HasForeignKey(m => m.ReplyToId)
+                .OnDelete(DeleteBehavior.ClientCascade);
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

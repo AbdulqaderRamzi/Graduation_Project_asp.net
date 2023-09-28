@@ -1,14 +1,14 @@
 ﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
     <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Signal</h1>
-    <h4 class="mt-4 mb-5">Signals provide way to allow decoupled applications to get notified when certain actions occur elsewhere in the application.</h4>
-    <h4 class="mt-4 mb-5">Signal has pre and post save.</h4>
-    <h4 class="mt-4 mb-5">pre: signal will implement before saving the object</h4>
-    <h4 class="mt-4 mb-5">post: signal will implement after saving the object</h4>
+    <h5 class="mt-4 mb-0">Signals provide way to allow decoupled applications to get notified when certain actions occur elsewhere in the application.</h5>
+    <h5 class="mt-3 mb-0">Signal has pre and post save.</h5>
+    <h5 class="mt-3 mb-0">pre: signal will implement before saving the object</h5>
+    <h5 class="mt-3 mb-5">post: signal will implement after saving the object</h5>
 
     <hr />
     <h2 class="my-5 custom-title">Example</h2>
-    <h4 class="mt-4 mb-5">In the following example, don't forget to configure your email in settings.</h4>
-    <div class="rounded p-4 my-4 custom-div">
+    <h5 class="mt-3">In the following example, don't forget to configure your email in settings.</h5>
+    <div class="rounded p-4 mt-3 custom-div">
         <p class="mb-1">from django.db import models</p>
         <p class="mb-1">from django.contrib.auth.models import User</p>
         <p class="mb-1">from django.db.models.signals import post_save</p>
@@ -23,14 +23,14 @@
         <p class="mb-1 mr-50">recipient_list = [instance.email]</p>
         <p class="mb-1 mr-50">send_mail(subject, message, from_email, recipient_list)</p>
     </div>
-    <h4 class="mt-4 mb-5">
+    <h5 class="mt-3 mb-5">
         Signal will send email to the users after they registered.
         It doesn'is not suitable to make it pre_signal because it doesn't make sense to send email to users before they register.
-    </h4>
+    </h5>
 
     <hr />
     <h2 class="my-5 custom-title">Example</h2>
-    <div class="rounded p-4 my-4 custom-div">
+    <div class="rounded p-4 mt-3 custom-div">
         <p class="mb-1">from django.db import models</p>
         <p class="mb-1">from django.contrib.auth.models import User</p>
         <p class="mb-1">from django.db.models.signals import post_save</p>
@@ -44,11 +44,11 @@
         <p class="mb-1 mr-25">UserActivityLog.objects.create(user=instance.user, activity=activity)</p>
         <p class="mb-1">post_save.connect(log_user_activity, sender=UserActivityLog)</p>
     </div>
-    <h4 class="mt-4 mb-5">
+    <h5 class="mt-3 mb-3">
         Signal will be implemented after creating instance of UserActivityLog.
         It's possible to use pre_save to modify the log entry just before it's saved.
-    </h4>
-    <div class="rounded p-4 my-4 custom-div">
+    </h5>
+    <div class="rounded p-4 mb-5 custom-div">
         <p class="mb-1">@@receiver(pre_save, sender=UserActivityLog)</p>
         <p class="mb-1">def update_activity_message(sender, instance, **kwargs):</p>
         <p class="mb-1 mr-25">instance.activity = f"User {instance.user.username} is about to perform {instance.activity}."</p>
@@ -56,7 +56,7 @@
 
     <hr />
     <h2 class="my-5 custom-title">Example</h2>
-    <div class="rounded p-4 my-4 custom-div">
+    <div class="rounded p-4 mt-3 custom-div">
         <p class="mb-1">from django.db import models</p>
         <p class="mb-1">from django.contrib.auth.models import User</p>
         <p class="mb-1">from django.db.models.signals import post_save</p>
@@ -71,15 +71,15 @@
         <p class="mb-1">def save_user_profile(sender, instance, **kwargs):</p>
         <p class="mb-1 mr-25">instance.userprofile.save()</p>
     </div>
-    <h4 class="mt-4 mb-5">
+    <h5 class="mt-3 mb-5">
         Automatically create a user profile when a new user registers.
         pre_save is not suitable because it's generally used to modify the fields of the current instance being saved.
         To create a related profile automatically, post_save is more appropriate.
-    </h4>
+    </h5>
 
     <hr />
     <h2 class="my-5 custom-title">Example</h2>
-    <div class="rounded p-4 my-4 custom-div">
+    <div class="rounded p-4 mt-3 custom-div">
         <p class="mb-1">class Client(models.Model):</p>
         <p class="mb-1 mr-25">full_name = models.CharField(max_length=200, verbose_name="Full Name")</p>
         <p class="mb-1 mr-25">slug_name = models.SlugField(max_length=222, verbose_name="Slug Name", blank=True, null=True)</p>
@@ -90,7 +90,7 @@
         <p class="mb-1 mr-25">instance = kwargs['instance']</p>
         <p class="mb-1 mr-25">instance.slug_name = slugify(instance.slug_name)</p>
     </div>
-    <h4 class="mt-4 mb-5">
+    <h5 class="mt-3 mb-5">
         Slugify the name before saving the instance.
-    </h4>
+    </h5>
 </div>

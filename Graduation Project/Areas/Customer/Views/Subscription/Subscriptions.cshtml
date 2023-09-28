@@ -1,19 +1,65 @@
 ﻿@model List<SubscriptionType>
-
-<div class="card-group mb-4">
+@* <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/pricing/"> *@
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="check" viewBox="0 0 16 16">
+        <title>Check</title>
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+    </symbol>
+</svg>
+<div class="mb-4 row mt-5">
     @foreach (SubscriptionType subscriptionType in Model.OrderBy(i => i.Price))
     {
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title text-center text-primary">@subscriptionType.Title</h5>
-                <p class="card-text text-center">@subscriptionType.Description</p>
-                <h6 class="card-text text-center">$@subscriptionType.Price</h6>
-            </div>
-            <div class="card-footer d-flex justify-content-center">
-                <a class="btn btn-success text-center" asp-route-id=@subscriptionType.Id asp-action="Subscription" asp-controller="Subscription" asp-area="Customer">
-                    Subscribe
-                </a>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+            <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm border-b2">
+                    <div class="py-3 text-white border-b3" style="background: #417690">
+                        <h4 class="my-0 fw-normal">@subscriptionType.Title</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">$@subscriptionType.Price</h1>
+                        <p>
+                            @subscriptionType.Description
+                        </p>
+                        <a asp-route-id=@subscriptionType.Id asp-action="Subscription" asp-controller="Subscription" asp-area="Customer" class="custom-opacity">
+                            <button type="button" class="w-100 btn btn-lg text-white" style="background: #417690">
+                                Buy                            
+                            </button>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     }
+</div>
+<h1 class="display-6 text-center mb-5" style="margin-top:75px">Compare plans</h1>
+<div class="table-responsive">
+    <table class="table text-center mb-5">
+        <thead>
+            <tr>
+                <th style="width: 28%;"></th>
+                <th class="custom-color" style="width: 18%;">Free</th>
+                <th class="custom-color" style="width: 18%;">Pro</th>
+                <th class="custom-color" style="width: 18%;">Enterprise</th>
+                <th class="custom-color" style="width: 18%;">Magic</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row" class="text-start custom-color">Solutions</th>
+                <td></td>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                <td></td>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start custom-color">Explanations</th>
+                <td></td>
+                <td></td>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+            </tr>
+        </tbody>
+    </table>
+    <hr />
 </div>

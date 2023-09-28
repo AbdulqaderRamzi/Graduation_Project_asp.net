@@ -4,153 +4,153 @@
 
     <hr />
     <h2 class="my-5 custom-title">filter</h2>
-    <h4 class="mb-1 mt-4">Get all books with a rating more than 4.5.</h4>
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">Book.objects.filter(rating__gt=4.5)</h5>
+    <h5 class="mb-3 mt-4">Get all books with a rating more than 4.5</h5>
+    <div class="d-flex justify-content-start mb-5">
+        <h5 class="rounded p-3 custom-back">Book.objects.filter(rating__gt=4.5)</h5>
     </div>
-    <h4 class="mb-1 mt-4">Get all users over 19 and whose name is ahmed.</h4>
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">User.objects.filter(name="ahmed", age__gt=19)</h5>
+    <h5 class="mb-3 mt-5">Get all users over 19 and whose name is ahmed.</h5>
+    <div class="d-flex justify-content-start mb-5">
+        <h5 class="rounded p-3 custom-back">User.objects.filter(name="ahmed", age__gt=19)</h5>
     </div>
 
     <hr />
     <h2 class="my-5 custom-title">all</h2>
-    <h4 class="mb-1 mt-4">Get all books.</h4>
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">Book.objects.all()</h5>
+    <h4 class="mb-3 mt-3">Get all books</h4>
+    <div class="d-flex justify-content-start mb-5">
+        <h5 class="rounded p-3 custom-back">Book.objects.all()</h5>
     </div>
 
     <hr />
     <h2 class="my-5 custom-title">get</h2>
-    <h4 class="mb-1 mt-4">Used with unique or primary fields.</h4>
-    <h4 class="mb-1 mt-4">Get single book.</h4>
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">Book.objects.get(id=1)</h5>
+    <h5 class="mb-0 mt-3">Used with unique or primary fields.</h5>
+    <h4 class="mb-3 mt-4">Get single book</h4>
+    <div class="d-flex justify-content-start mb-5">
+        <h5 class="rounded p-3 custom-back">Book.objects.get(id=1)</h5>
     </div>
 
     <hr />
     <h2 class="my-5 custom-title">exclude</h2>
-    <h4 class="mb-1 mt-4">Get all books with a rating less than 4.6.</h4>
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">Book.objects.exclude()(rating__gt=4.5)</h5>
+    <h5 class="mb-3 mt-4">Get all books with a rating less than 4.6</h5>
+    <div class="d-flex justify-content-start">
+        <h5 class="rounded p-3 custom-back">Book.objects.exclude()(rating__gt=4.5)</h5>
     </div>
-    <h4 class="mb-1 mt-4">Get all users under 19 and whose name is not ahmed.</h4>
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">User.objects.exclude()(name="ahmed", age__gt=19)</h5>
+    <h5 class="mb-3 mt-5">Get all users under 19 and whose name is not ahmed.</h5>
+    <div class="d-flex justify-content-start mb-5">
+        <h5 class="rounded p-3 custom-back">User.objects.exclude()(name="ahmed", age__gt=19)</h5>
     </div>
 
     <hr />
     <h2 class="my-5 custom-title">order_by</h2>
-    <h4 class="mb-1 mt-4">Ascending</h4>
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">Product.objects.order_by('price')</h5>
+    <h4 class="mb-3 mt-4">Ascending</h4>
+    <div class="d-flex justify-content-start">
+        <h5 class="rounded p-3 custom-back">Product.objects.order_by('price')</h5>
     </div>
-    <h4 class="mb-1 mt-4">Descending</h4>
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">Product.objects.order_by('-price')</h5>
+    <h4 class="mb-3 mt-5">Descending</h4>
+    <div class="d-flex justify-content-start mb-5">
+        <h5 class="rounded p-3 custom-back">Product.objects.order_by('-price')</h5>
     </div>
 
     <hr />
     <h2 class="my-5 custom-title">values</h2>
-    <h4 class="mb-1 mt-4">Retrieve Model with specific fields.</h4>
-    <h4 class="mb-1 mt-4">In the following example product_data will contains 2 products with their name and price without other fields like id description etc.</h4>
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">Product.objects.values('name', 'price')</h5>
+    <h4 class="mb-3 mt-3">Retrieve Model with specific fields.</h4>
+    <h5 class="mb-3 mt-4">In the following example product_data will contains 2 products with their name and price without other fields like id description etc.</h5>
+    <div class="d-flex justify-content-start mb-3">
+        <h5 class="rounded p-3 custom-back">Product.objects.values('name', 'price')</h5>
     </div>
-    <h4 class="mb-1 mt-4">Result will be a list of dictionary.</h4>
-    <h4 class="mb-1 mt-4">[{'name':'shirt', 'price':20.23}, {'name':'Tshirt', 'price':24.00}]</h4>
+    <h4 class="mb-0 mt-4">Result will be a list of dictionary.</h4>
+    <h4 class="mb-5 mt-2">[{'name':'shirt', 'price':20.23}, {'name':'Tshirt', 'price':24.00}]</h4>
 
     <hr />
     <h2 class="my-5 custom-title">values_list</h2>
-    <h4 class="mb-1 mt-4">Retrieve Model with specific fields.</h4>
-    <h4 class="mb-1 mt-4">In the following example product_data will contains 2 products with their name and price without other fields like id description etc.</h4>
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">Product.objects.values_list('name', 'price')</h5>
+    <h4 class="mb-3 mt-3">Retrieve Model with specific fields.</h4>
+    <h5 class="mb-3 mt-4">In the following example product_data will contains 2 products with their name and price without other fields like id description etc.</h5>
+    <div class="d-flex justify-content-start mb-3">
+        <h5 class="rounded p-3 custom-back">Product.objects.values_list('name', 'price')</h5>
     </div>
-    <h4 class="mb-1 mt-4">Result will be a list of tuples.</h4>
-    <h4 class="mb-1 mt-4">[('name'='shirt', 'price'=20.23), ('name'='Tshirt', 'price'=24.00)]</h4>
+    <h4 class="mb-0 mt-4">Result will be a list of tuples.</h4>
+    <h4 class="mb-5 mt-2">[('name'='shirt', 'price'=20.23), ('name'='Tshirt', 'price'=24.00)]</h4>
 
     <hr />
     <h2 class="my-5 custom-title">distinct</h2>
-    <h4 class="mb-1 mt-4">Book names will be distinct in the list of dictionary.</h4>
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">Book.objects.values("name").distinct()</h5>
+    <h5 class="mb-3 mt-3">Book names will be distinct in the list of dictionary.</h5>
+    <div class="d-flex justify-content-start mb-5">
+        <h5 class="rounded p-3 custom-back">Book.objects.values("name").distinct()</h5>
     </div>
 
     <hr />
     <h2 class="my-5 custom-title">Create</h2>
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">Person.objects.create()</h5>
+    <div class="d-flex justify-content-start mb-5 mt-3">
+        <h5 class="rounded p-3 custom-back">Person.objects.create()</h5>
     </div>
 
     <hr />
     <h2 class="my-5 custom-title">get_or_create</h2>
-    <h4 class="mb-1 mt-4">Created is boolean, if new author is created. The created flag will be True. otherwise it will be False.</h4>
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">author, created = Author.objects.get_or_create(name="J.K. Rowling")</h5>
+    <h5 class="mb-3 mt-3">Created is boolean, if new author is created. The created flag will be True. otherwise it will be False.</h5>
+    <div class="d-flex justify-content-start mb-5">
+        <h5 class="rounded p-3 custom-back">author, created = Author.objects.get_or_create(name="J.K. Rowling")</h5>
     </div>
 
     <hr />
     <h2 class="my-5 custom-title">update_or_create</h2>
-    <h4 class="mb-1 mt-4">If an author with the name "mousa" exists, the field specified in the defaults dictionary will be updated with the new values. The created flag will be False.</h4>
-    <h4 class="mb-1 mt-4">If no author with the name "mousa" exists, a new author will be created with the field from the defaults dictionary. The created flag will be True.</h4>
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">author, created = Author.objects.update_or_create(name="mousa", defaults={name="ahmed"})</h5>
+    <h5 class="mb-0 mt-3">If an author with the name "mousa" exists, the field specified in the defaults dictionary will be updated with the new values. The created flag will be False.</h5>
+    <h5 class="mb-5 mt-4">If no author with the name "mousa" exists, a new author will be created with the field from the defaults dictionary. The created flag will be True.</h5>
+    <div class="d-flex justify-content-start mb-5">
+        <h5 class="rounded p-3 custom-back">author, created = Author.objects.update_or_create(name="mousa", defaults={name="ahmed"})</h5>
     </div>
 
     <hr />
     <h2 class="my-5 custom-title">count</h2>
-    <h4 class="mb-1 mt-4">Return the number of objects that match a given query.</h4>
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">Book.objects.count()</h5>
+    <h5 class="mb-3 mt-3">Return the number of objects that match a given query.</h5>
+    <div class="d-flex justify-content-start mb-5">
+        <h5 class="rounded p-3 custom-back">Book.objects.count()</h5>
     </div>
 
     <hr />
     <h2 class="my-5 custom-title">latest</h2>
-    <h4 class="mb-1 mt-4">Retrieve the latest object based on a specified field, usually a date-related field.</h4>
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">BlogPost.objects.latest('publish_date')</h5>
+    <h5 class="mb-3 mt-3">Retrieve the latest object based on a specified field, usually a date-related field.</h5>
+    <div class="d-flex justify-content-start mb-5">
+        <h5 class="rounded p-3 custom-back">BlogPost.objects.latest('publish_date')</h5>
     </div>
 
     <hr />
     <h2 class="my-5 custom-title">earliest</h2>
-    <h4 class="mb-1 mt-4">Retrieves the earliest object based on a specified field, usually a date-related field.</h4>
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">Event.objects.earliest('start_date')</h5>
+    <h5 class="mb-3 mt-3">Retrieves the earliest object based on a specified field, usually a date-related field.</h5>
+    <div class="d-flex justify-content-start mb-5">
+        <h5 class="rounded p-3 custom-back">Event.objects.earliest('start_date')</h5>
     </div>
 
     <hr />
     <h2 class="my-5 custom-title">first</h2>
-    <h4 class="mb-1 mt-4">Retrieve the first object in the QuerySet.</h4>
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">Product.objects.first()</h5>
+    <h5 class="mb-3 mt-3">Retrieve the first object in the QuerySet.</h5>
+    <div class="d-flex justify-content-start mb-5">
+        <h5 class="rounded p-3 custom-back">Product.objects.first()</h5>
     </div>
 
     <hr />
     <h2 class="my-5 custom-title">last</h2>
-    <h4 class="mb-1 mt-4">Retrieves the last object in the QuerySet.</h4>
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">Order.objects.last()</h5>
+    <h5 class="mb-3 mt-3">Retrieves the last object in the QuerySet.</h5>
+    <div class="d-flex justify-content-start mb-5">
+        <h5 class="rounded p-3 custom-back">Order.objects.last()</h5>
     </div>
 
     <hr />
     <h2 class="my-5 custom-title">exists</h2>
-    <h4 class="mb-1 mt-4">Checks if there are any objects in the QuerySet.</h4>
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">UserProfile.objects.exists()</h5>
+    <h5 class="mb-3 mt-3">Checks if there are any objects in the QuerySet.</h5>
+    <div class="d-flex justify-content-start mb-5">
+        <h5 class="rounded p-3 custom-back">UserProfile.objects.exists()</h5>
     </div>
 
     <hr />
     <h2 class="my-5 custom-title">update</h2>
-    <h4 class="mb-1 mt-4">Update one or more fields of objects that match a given query.</h4>
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">Customer.objects.filter(premium=True).update(discount=0.15)</h5>
+    <h5 class="mb-3 mt-3">Update one or more fields of objects that match a given query.</h5>
+    <div class="d-flex justify-content-start mb-5">
+        <h5 class="rounded p-3 custom-back">Customer.objects.filter(premium=True).update(discount=0.15)</h5>
     </div>
 
     <hr />
     <h2 class="my-5 custom-title">delete</h2>
-    <h4 class="mb-1 mt-4">Remove objects that match a given query from the database.</h4>
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">Event.objects.filter(start_date__lt=date.today()).delete()</h5>
+    <h5 class="mb-3 mt-3">Remove objects that match a given query from the database.</h5>
+    <div class="d-flex justify-content-start mb-5">
+        <h5 class="rounded p-3 custom-back">Event.objects.filter(start_date__lt=date.today()).delete()</h5>
     </div>
 </div>

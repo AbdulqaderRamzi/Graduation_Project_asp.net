@@ -7,8 +7,6 @@ namespace Graduation.Models
     {
         [Key]
         public int Id { get; set; }
-        public string UserId { get; set; }
-        [ForeignKey("UserId")]
         public User User { get; set; }
         public List<ChatRoomMessage>? ChatRoomMessages { get; set; } = new List<ChatRoomMessage>();
     }

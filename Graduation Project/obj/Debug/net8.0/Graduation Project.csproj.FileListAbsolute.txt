@@ -1,12 +1,14 @@
+C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation Project\obj\Debug\net8.0\Graduation Project.csproj.AssemblyReference.cache
+C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation Project\obj\Debug\net8.0\MvcTestingAppManifest.json
 C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation Project\obj\Debug\net8.0\Graduation Project.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation Project\obj\Debug\net8.0\Graduation Project.AssemblyInfoInputs.cache
 C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation Project\obj\Debug\net8.0\Graduation Project.AssemblyInfo.cs
 C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation Project\obj\Debug\net8.0\Graduation Project.csproj.CoreCompileInputs.cache
+C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation Project\obj\Debug\net8.0\Graduation Project.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation Project\obj\Debug\net8.0\Graduation Project.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation Project\obj\Debug\net8.0\Graduation Project.RazorAssemblyInfo.cache
 C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation Project\obj\Debug\net8.0\Graduation Project.RazorAssemblyInfo.cs
-C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation Project\obj\Debug\net8.0\Graduation Project.csproj.AssemblyReference.cache
-C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation Project\obj\Debug\net8.0\MvcTestingAppManifest.json
+C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation Project\obj\Debug\net8.0\Graduation Project.sourcelink.json
 C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation Project\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation Project\bin\Debug\net8.0\appsettings.json
 C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation Project\bin\Debug\net8.0\MvcTestingAppManifest.json
@@ -609,7 +611,6 @@ C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduatio
 C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation Project\bin\Debug\net8.0\Graduation.DataAccess.pdb
 C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation Project\bin\Debug\net8.0\Graduation.Models.pdb
 C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation Project\bin\Debug\net8.0\Graduation.Utility.pdb
-C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation Project\obj\Debug\net8.0\Graduation Project.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation Project\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation Project\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation Project\obj\Debug\net8.0\staticwebassets\msbuild.Graduation Project.Microsoft.AspNetCore.StaticWebAssets.props

@@ -3,146 +3,146 @@
 
     <hr />
     <h2 class="my-5 custom-title">add</h2>
-    <h4 class="mt-4 mb-0">Add argument to the value.</h4>
+    <h4 class="mt-3 mb-4">Add argument to the value.</h4>
     <div class="d-flex justify-content-start">
-        <h5 class="rounded my-4 p-3 custom-back">{{ comment|add:"3" }}</h5>
+        <h5 class="rounded p-3 custom-back">{{ comment|add:"3" }}</h5>
     </div>
-    <div class="rounded p-4 mt-4 custom-inout">
+    <div class="rounded p-4 mb-5 mt-2 custom-inout">
         <p class="mb-1">output: if comment equal 1, the display value will be 4</p>
     </div>
 
     <hr />
     <h2 class="my-5 custom-title">capfirst</h2>
-    <h4 class="mt-4 mb-0">Capitalizes the first letter of the value.</h4>
+    <h4 class="mt-3 mb-4">Capitalizes the first letter of the value.</h4>
     <div class="d-flex justify-content-start">
-        <h5 class="rounded my-4 p-3 custom-back">{{ name|capfirst }}</h5>
+        <h5 class="rounded p-3 custom-back">{{ name|capfirst }}</h5>
     </div>
-    <div class="rounded p-4 mt-4 custom-inout">
+    <div class="rounded p-4 mb-5 mt-2 custom-inout">
         <p class="mb-1">output: if name equal khaled, the display value will be Khaled</p>
     </div>
 
     <hr />
     <h2 class="my-5 custom-title">lower</h2>
-    <h4 class="mt-4 mb-0">Convert name to lower case.</h4>
+    <h4 class="mt-3 mb-4">Convert name to lower case.</h4>
     <div class="d-flex justify-content-start">
-        <h5 class="rounded my-4 p-3 custom-back">{{ name|lower }}</h5>
+        <h5 class="rounded p-3 custom-back">{{ name|lower }}</h5>
     </div>
-    <div class="rounded p-4 mt-4 custom-inout">
+    <div class="rounded p-4 mb-5 mt-2 custom-inout">
         <p class="mb-1">output: if name equal KHaled, the display value will be khaled</p>
     </div>
 
     <hr />
     <h2 class="my-5 custom-title">upper</h2>
-    <h4 class="mt-4 mb-0">Convert name to upper case.</h4>
+    <h4 class="mt-3 mb-4">Convert name to upper case.</h4>
     <div class="d-flex justify-content-start">
-        <h5 class="rounded my-4 p-3 custom-back">{{ name|upper }}</h5>
+        <h5 class="rounded p-3 custom-back">{{ name|upper }}</h5>
     </div>
-    <div class="rounded p-4 mt-4 custom-inout">
+    <div class="rounded p-4 mb-5 mt-2 custom-inout">
         <p class="mb-1">output: if name equal khaled, the display value will be KHaled</p>
     </div>
 
     <hr />
     <h2 class="my-5 custom-title">truncatewords</h2>
-    <h4 class="mt-4 mb-0">Display defined number of words.</h4>
-    <h4 class="mt-4 mb-0">Get the first 2 words.</h4>
-    <div class="d-flex justify-content-start">
-        <h5 class="rounded my-4 p-3 custom-back">{{ description|truncatewords:2 }}</h5>
+    <h4 class="mt-3 mb-0">Display defined number of words.</h4>
+    <h5 class="mt-4 mb-4">Get the first 2 words.</h5>
+    <div class="d-flex justify-content-start mb-2">
+        <h5 class="rounded p-3 custom-back">{{ description|truncatewords:2 }}</h5>
     </div>
-    <div class="rounded p-4 mt-4 custom-inout">
+    <div class="rounded p-4 mb-5 custom-inout">
         <p class="mb-1">output: if description equal hello this is khaled, the display value will be hello this</p>
     </div>
 
     <hr />
     <h2 class="my-5 custom-title">truncatechars</h2>
-    <h4 class="mt-4 mb-0">Display defined number of letters.</h4>
-    <h4 class="mt-4 mb-0">Get the first 4 letters of khaled name.</h4>
+    <h4 class="mt-3 mb-0">Display defined number of letters.</h4>
+    <h5 class="mt-4 mb-4">Get the first 4 letters of khaled name.</h5>
     <div class="d-flex justify-content-start">
-        <h5 class="rounded my-4 p-3 custom-back">{{ name||truncatechars:4 }}</h5>
+        <h5 class="rounded p-3 custom-back">{{ name||truncatechars:4 }}</h5>
     </div>
-    <div class="rounded p-4 mt-4 custom-inout">
+    <div class="rounded p-4 mt-2 custom-inout">
         <p class="mb-1">output: khal...</p>
     </div>
-    <h4 class="mt-4 mb-0">default: if name is null, default value will display.</h4>
+    <h4 class="mt-5 mb-3">default: if the name is null, the default value will be displayed.</h4>
     <div class="d-flex justify-content-start">
-        <h5 class="rounded my-4 p-3 custom-back">{{ name|default:"None" }}</h5>
+        <h5 class="rounded mb-5 p-3 custom-back">{{ name|default:"None" }}</h5>
     </div>
 
     <hr />
     <h2 class="my-5 custom-title">length</h2>
-    <h4 class="mt-4 mb-0">Return length of string and list.</h4>
+    <h4 class="mt-3 mb-4">Return length of string and list.</h4>
     <div class="d-flex justify-content-start">
-        <h5 class="rounded my-4 p-3 custom-back">{{ authors|length }} # [author1, author2, author3]</h5>
+        <h5 class="rounded p-3 custom-back">{{ authors|length }} # [author1, author2, author3]</h5>
     </div>
-    <div class="rounded p-4 mt-4 custom-inout">
+    <div class="rounded p-4 mt-2 mb-5 custom-inout">
         <p class="mb-1">output: 3</p>
     </div>
-    <div class="d-flex justify-content-start">
-        <h5 class="rounded my-4 p-3 custom-back">{{ name|length }} # khaled</h5>
+    <div class="d-flex justify-content-start mb-2">
+        <h5 class="rounded p-3 custom-back">{{ name|length }} # khaled</h5>
     </div>
-    <div class="rounded p-4 mt-4 custom-inout">
+    <div class="rounded p-4 mb-5 custom-inout">
         <p class="mb-1">output: 6</p>
     </div>
 
     <hr />
     <h2 class="my-5 custom-title">cut</h2>
-    <h4 class="mt-4 mb-0">Remove define argument.</h4>
-    <div class="d-flex justify-content-start">
-        <h5 class="rounded my-4 p-3 custom-back">{{ name|cut:"a" }}</h5>
+    <h4 class="mt-3 mb-4">Remove define argument.</h4>
+    <div class="d-flex justify-content-start mb-2">
+        <h5 class="rounded p-3 custom-back">{{ name|cut:"a" }}</h5>
     </div>
-    <div class="rounded p-4 mt-4 custom-inout">
+    <div class="rounded p-4 mb-5 custom-inout">
         <p class="mb-1">output: if name equal khaled alshami. the display name will be khled lshami</p>
     </div>
 
     <hr />
     <h2 class="my-5 custom-title">first</h2>
-    <h4 class="mt-4 mb-0">Return the first item in the list.</h4>
-    <div class="d-flex justify-content-start">
-        <h5 class="rounded my-4 p-3 custom-back">{{ author_ids|first }} #[1, 2, 3]</h5>
+    <h4 class="mt-3 mb-4">Return the first item in the list.</h4>
+    <div class="d-flex justify-content-start mb-2">
+        <h5 class="rounded p-3 custom-back">{{ author_ids|first }} #[1, 2, 3]</h5>
     </div>
-    <div class="rounded p-4 mt-4 custom-inout">
+    <div class="rounded p-4 mb-5 custom-inout">
         <p class="mb-1">output: the display value is 1</p>
     </div>
 
     <hr />
     <h2 class="my-5 custom-title">last</h2>
-    <h4 class="mt-4 mb-0">Return the last item in the list.</h4>
-    <div class="d-flex justify-content-start">
-        <h5 class="rounded my-4 p-3 custom-back">{{ author_ids|last }} #[1, 2, 3]</h5>
+    <h4 class="mt-3 mb-4">Return the last item in the list.</h4>
+    <div class="d-flex justify-content-start mb-2">
+        <h5 class="rounded p-3 custom-back">{{ author_ids|last }} #[1, 2, 3]</h5>
     </div>
-    <div class="rounded p-4 mt-4 custom-inout">
+    <div class="rounded p-4 mb-5 custom-inout">
         <p class="mb-1">output: the display value is 3</p>
     </div>
 
     <hr />
     <h2 class="my-5 custom-title">get_digit</h2>
-    <h4 class="mt-4 mb-0">Return digit depends on given value. count will be from right.</h4>
+    <h4 class="mt-3 mb-4">Return digit depends on given value. count will be from right.</h4>
     <div class="d-flex justify-content-start">
-        <h5 class="rounded my-4 p-3 custom-back">{{ points|get_digit:"3" }} #2435</h5>
+        <h5 class="rounded p-3 custom-back mb-2">{{ points|get_digit:"3" }} #2435</h5>
     </div>
-    <div class="rounded p-4 mt-4 custom-inout">
+    <div class="rounded p-4 mb-5 custom-inout">
         <p class="mb-1">output: the display value is 4</p>
     </div>
 
     <hr />
     <h2 class="my-5 custom-title">join</h2>
-    <h4 class="mt-4 mb-0">Convert list to string by specific spacing.</h4>
+    <h4 class="mt-3 mb-4">Convert list to string by specific spacing.</h4>
     <div class="d-flex justify-content-start">
-        <h5 class="rounded my-4 p-3 custom-back">{{ my_list|join:"..." }} ["hello", "world"]</h5>
+        <h5 class="rounded p-3 custom-back mb-2">{{ my_list|join:"..." }} ["hello", "world"]</h5>
     </div>
-    <div class="rounded p-4 mt-4 custom-inout">
+    <div class="rounded p-4 mb-5 custom-inout">
         <p class="mb-1">output: hello...world</p>
     </div>
     <div class="d-flex justify-content-start">
-        <h5 class="rounded my-4 p-3 custom-back">{{ my_list|join:" - " }}</h5>
+        <h5 class="rounded p-3 custom-back mb-2">{{ my_list|join:" - " }}</h5>
     </div>
-    <div class="rounded p-4 mt-4 custom-inout">
+    <div class="rounded p-4 mb-5 custom-inout">
         <p class="mb-1">output: hello - world</p>
     </div>
 
     <hr />
     <h2 class="my-5 custom-title">length_is</h2>
-    <h4 class="mt-4 mb-0">Check if length is equal to given length.</h4>
-    <div class="rounded p-4 mb-5 mt-4 custom-div">
+    <h4 class="mt-3 mb-4">Check if length is equal to given length.</h4>
+    <div class="rounded p-4 mb-5 custom-div">
         <p class="mb-1">{% if name|length_is:"6" %} # khaled</p>
         <p class="mb-1 mr-25">{{name}}</p>
         <p class="mb-1">{% endif %}</p>
@@ -150,49 +150,49 @@
 
     <hr />
     <h2 class="my-5 custom-title">pluralize</h2>
-    <h4 class="mt-4 mb-0">Return a plural suffix if value is not single. plural suffix is s letter.</h4>
+    <h4 class="mt-3 mb-4">Return a plural suffix if value is not single. plural suffix is s letter.</h4>
     <div class="d-flex justify-content-start">
-        <h5 class="rounded my-4 p-3 custom-back">You have {{ num_messages }} message{{ num_messages|pluralize }}.</h5>
+        <h5 class="rounded p-3 custom-back">You have {{ num_messages }} message{{ num_messages|pluralize }}.</h5>
     </div>
-    <div class="rounded p-4 mt-4 custom-inout">
+    <div class="rounded p-4 mt-2 custom-inout">
         <p class="mb-1">output: if messages > 1. the display value will be You have 3 messages</p>
     </div>
-    <h4 class="mt-4 mb-0">Change default pluralize value (s).</h4>
-    <div class="d-flex justify-content-start">
-        <h5 class="rounded my-4 p-3 custom-back">{{ num_categories }} category{{ num_categories|pluralize:"ies" }}.</h5>
+    <h5 class="mt-5 mb-3">Change the default pluralize value (s).</h5>
+    <div class="d-flex justify-content-start mb-2">
+        <h5 class="rounded p-3 custom-back">{{ num_categories }} category{{ num_categories|pluralize:"ies" }}.</h5>
     </div>
-    <div class="rounded p-4 mt-4 custom-inout">
+    <div class="rounded p-4 mb-5 custom-inout">
         <p class="mb-1">output: if categories > 1. the display value will be 3 categories</p>
     </div>
 
     <hr />
     <h2 class="my-5 custom-title">slice</h2>
-    <h4 class="mt-4 mb-0">Get specific elements of list.</h4>
+    <h4 class="mt-3 mb-4">Get specific elements of list.</h4>
     <div class="d-flex justify-content-start">
-        <h5 class="rounded my-4 p-3 custom-back">{{ names|slice:":3" }} # ["ahmed", "naser", "raghad", "ehsan"]</h5>
+        <h5 class="rounded p-3 custom-back">{{ names|slice:":3" }} # ["ahmed", "naser", "raghad", "ehsan"]</h5>
     </div>
-    <h4 class="mt-4 mb-0">return the first elements of list</h4>
-    <div class="rounded p-4 mt-4 custom-inout">
+    <h4 class="mt-5 mb-0">return the first elements of list</h4>
+    <div class="rounded p-4 mt-3 mb-5 custom-inout">
         <p class="mb-1">result: ["ahmed", "naser", "raghad"]</p>
     </div>
 
     <hr />
     <h2 class="my-5 custom-title">slugify</h2>
-    <h4 class="mt-4 mb-0">Convert spaces in specific value into hyphens.</h4>
+    <h5 class="mt-3 mb-4">Convert spaces in specific value into hyphens.</h5>
     <div class="d-flex justify-content-start">
-        <h5 class="rounded my-4 p-3 custom-back">{{ name|slugify }} # khaled zakaria alshammi</h5>
+        <h5 class="rounded p-3 custom-back">{{ name|slugify }} # khaled zakaria alshammi</h5>
     </div>
-    <div class="rounded p-4 mt-4 custom-inout">
+    <div class="rounded p-4 mt-3 mb-5 custom-inout">
         <p class="mb-1">output: the display value will be khaled-zakaria-alshammi</p>
     </div>
 
     <hr />
     <h2 class="my-5 custom-title">wordcount</h2>
-    <h4 class="mt-4 mb-0">Return how many words in specific value.</h4>
+    <h5 class="mt-3 mb-4">Return how many words in specific value.</h5>
     <div class="d-flex justify-content-start">
-        <h5 class="rounded my-4 p-3 custom-back">{{ name|wordcount }} # khaled zakaria alshammi</h5>
+        <h5 class="rounded p-3 custom-back">{{ name|wordcount }} # khaled zakaria alshammi</h5>
     </div>
-    <div class="rounded p-4 mt-4 custom-inout">
+    <div class="rounded p-4 mt-3 mb-5 custom-inout">
         <p class="mb-1">output: the display value will be 3</p>
     </div>
 </div>

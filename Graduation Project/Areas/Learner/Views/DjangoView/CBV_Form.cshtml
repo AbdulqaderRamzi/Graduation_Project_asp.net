@@ -1,11 +1,10 @@
 ﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
     <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">FormView</h1>
     <h4 class="text-center mt-4 mb-5">Built in class used to handle the form.</h4>
-    <br>
-    <hr />
     
+    <hr />
     <h2 class="my-5 custom-title">Form</h2>
-    <div class="rounded p-4 mb-5 mt-4 custom-div">
+    <div class="rounded p-4 mb-5 mt-3 custom-div">
         <p class="mb-1">from django import forms</p>
         <p class="mb-1">class ContactForm(forms.Form):</p>
         <p class="mb-1 mr-25">subject = forms.CharField()</p>
@@ -13,11 +12,9 @@
         <p class="mb-1 mr-25">from = forms.EmailField()</p>
     </div>
 
-
-    <br>
     <hr />
     <h2 class="my-5 custom-title">View</h2>
-    <div class="rounded p-4 mb-5 mt-4 custom-div">
+    <div class="rounded p-4 mb-5 mt-3 custom-div">
         <p class="mb-1">from app.forms import ContactUsForm</p>
         <p class="mb-1">from django.views.generic.edit import FormView</p>
         <p class="mb-1">class ContactFormView(FormView):</p>
@@ -46,10 +43,10 @@
         <p class="mb-1 mr-50"># Render the form on the same page with errors.</p>
         <p class="mb-1 mr-50">return self.render_to_response(self.get_context_data(form=form))</p>
     </div>
-    <br>
+
     <hr />
     <h2 class="my-5 custom-title">Url</h2>
-    <div class="rounded p-4 mb-5 mt-4 custom-div">
+    <div class="rounded p-4 mb-5 mt-3 custom-div">
         <p class="mb-1">from django.urls import path</p>
         <p class="mb-1">from app.views import ContactFormView</p>
         <p class="mb-1">urlpatterns = [</p>

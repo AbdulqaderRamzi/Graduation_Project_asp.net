@@ -1,32 +1,34 @@
-﻿<form method="post" asp-area="Customer" asp-controller="ContactUs" asp-action="Contactus">
-    <div class="border p-3 mt-4">
+﻿<form method="post" class="mt-5 mb-5 col-5" asp-area="Customer" asp-controller="ContactUs" asp-action="Contactus" style="margin-left:auto; margin-right:auto;">
+    <div class="border-b p-3 mt-5" style="background:white;">
         <div class="row pb-2">
-            <h2 class="text-primary">Create Inquiry</h2>
+            <h1 style="color: #417690;" class="text-center my-3">Contact Us</h1>
             <hr />
         </div>
-        <div class="mb-3">
-            <label for="content">Your Email</label>
-            <input required name="from" id="from" class="form-control" />
+        <div class="mb-3 mx-1">
+            <label for="content" class="mb-2 custom-color">Your Email</label>
+            <input required name="from" id="from" class="form-control bottom-border" />
         </div>
-        <div class="mb-3">
-            <label for="fullname">FullName</label>
-            <input required name="fullname" id="fullname" class="form-control" />
+        <div class="mb-3 mx-1">
+            <label for="fullname" class="mb-2 custom-color">FullName</label>
+            <input required name="fullname" id="fullname" class="form-control bottom-border" />
         </div>
-        <div class="mb-3">
-            <label for="phonenumber">PhoneNumber</label>
-            <input required name="phonenumber" id="phonenumber" class="form-control" />
+        <div class="mb-3 mx-1">
+            <label for="phonenumber" class="mb-2 custom-color">PhoneNumber</label>
+            <input required name="phonenumber" id="phonenumber" class="form-control bottom-border" />
         </div>
-        <div class="mb-3">
-            <label for="subject">Subject</label>
-            <input required name="subject" id="subject" class="form-control" />
+        <div class="mb-3 mx-1">
+            <label for="subject" class="mb-2 custom-color">Subject</label>
+            <input required name="subject" id="subject" class="form-control bottom-border" />
         </div>
-        <div class="mb-3">
-            <label for="content">Content</label>
-            <textarea required name="content" id="content" class="form-control"></textarea>
+        <div class="mb-3 mx-1">
+            <label for="content" class="mb-2 mt-2 custom-color">Content</label>
+            <textarea required name="content" id="content" class="form-control bottom-border"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary" style="width:150px">
-            Send
-        </button>
+        <div class="d-flex justify-content-center custom-opacity">
+            <button style="background-color:#417690; color: white; padding-left: 80px; padding-right: 80px; padding-top:10px; padding-bottom:10px;" type="submit" class="btn mb-3 mt-4" placeholder="Your message.">
+                Send
+            </button>
+        </div>
     </div>
 </form>
 

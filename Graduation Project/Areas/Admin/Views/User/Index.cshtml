@@ -1,61 +1,68 @@
 ﻿@model List<User>
 
+<style>
+    .btn:hover {
+        color: #417690;
+    }
+</style>
+
 <div class="container p-3">
-    <div class="row pt-4">
+    <div class="row pt-4 justify-content-center">
         <div class="col-6">
-            <h2 class="text-primary">Users</h2>
+            <h1 class="text-center" style="color: #417690; font-weight:900;">Users</h1>
         </div>
     </div>
     <br />
-    <table class="table table-bordered table-striped" style="width:100%">
-        <thead>
+
+    <table class="table table-bordered table-striped border-white2" style="width:100%">
+        <thead style="background: white; color: #417690;">
             <tr>
-                <th>
+                <th class="text-center">
                     Name
                 </th>
-                <th>
+                <th class="text-center">
                     Email
                 </th>
-                <th>
+                <th class="text-center">
                     Role
                 </th>
-                <th></th>
-                <th></th>
-                <th></th>
+                <th class="text-center"></th>
+                <th class="text-center"></th>
+                <th class="text-center"></th>
             </tr>
         </thead>
-        <tbody>
-            @foreach (var obj in Model.OrderBy(i => i.Role))
+        <tbody style="background: #417690; color: white; vertical-align: middle;">
+            @foreach (var obj in Model.OrderBy(i => i.Email))
             {
-                <tr>
-                    <td>
+                <tr style="background: #417690; color: white;">
+                    <td class="text-center">
                         @obj.Name
                     </td>
-                    <td>
+                    <td class="text-center">
                         @obj.Email
                     </td>
-                    <td>
+                    <td class="text-center">
                         @obj.Role
                     </td>
-                    <td>
-                        <div class="w-75 btn-group" role="group">
+                    <td class="text-center">
+                        <div class="w-75 btn-group custom-opacity" role="group">
                             <a asp-route-id="@obj.Id" asp-route-admin="true" asp-controller="User" asp-action="UserRole"
-                               class="btn btn-primary mx-2">
+                               class="btn custom-table mx-2 custom-botton">
                                 <i class="bi bi-pencil-square"></i>Admin
                             </a>
                         </div>
                     </td>
-                    <td>
-                        <div class="w-75 btn-group" role="group">
+                    <td class="text-center">
+                        <div class="w-75 btn-group custom-opacity" role="group">
                             <a asp-route-id="@obj.Id" asp-route-supporter="true" asp-controller="User" asp-action="UserRole"
-                               class="btn btn-danger mx-2">
+                               class="btn custom-table mx-2 custom-botton">
                                 <i class="bi bi-trash-fill"></i>Supporter
                             </a>
                         </div>
                     </td>
-                    <td>
-                        <div class="w-75 btn-group" role="group">
-                            <a asp-route-id="@obj.Id" asp-route-learner="true" asp-controller="User" asp-action="UserRole" class="btn btn-success mx-2">
+                    <td class="text-center">
+                        <div class="w-75 btn-group custom-opacity" role="group">
+                            <a asp-route-id="@obj.Id" asp-route-learner="true" asp-controller="User" asp-action="UserRole" class="btn custom-table mx-2 custom-botton">
                                 <i class="bi"></i>Learner
                             </a>
                         </div>

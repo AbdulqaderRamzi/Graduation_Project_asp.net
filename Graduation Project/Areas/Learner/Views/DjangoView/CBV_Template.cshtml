@@ -2,10 +2,9 @@
     <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">TemplateView</h1>
     <h4 class="text-center mt-4 mb-5">Built in class used to display template.</h4>
 
-    <br>
     <hr />
     <h2 class="my-5 custom-title">First way</h2>
-    <div class="rounded p-4 mb-5 mt-4 custom-div">
+    <div class="rounded p-4 mb-5 mt-3 custom-div">
         <p class="mb-1">from django.urls import path</p>
         <p class="mb-1">from django.views.generic import TemplateView</p>
         <p class="mb-1">urlpatterns = [</p>
@@ -13,13 +12,12 @@
         <p class="mb-1 mr-25">...</p>
         <p class="mb-1">]</p>
     </div>
-
-    <br>
+    
     <hr />
     <h2 class="my-5 custom-title">Second way</h2>
-    <h5 class="mt-4 mb-5">Used to pass context data.</h5>
-    <h5 class="mt-4 mb-5">View</h5>
-    <div class="rounded p-4 mb-5 mt-4 custom-div">
+    <h5 class="mt-3">Used to pass context data.</h5>
+    <h5 class="mt-4">View</h5>
+    <div class="rounded p-4 mt-3 custom-div">
         <p class="mb-1">from django.views.generic import TemplateView</p>
         <p class="mb-1">class AboutUsView(TemplateView):</p>
         <p class="mb-1 mr-25">template_name = "about.html"</p>
@@ -30,8 +28,8 @@
         <p class="mb-1 mr-50">context['hi'] = 'Hello World'</p>
         <p class="mb-1 mr-50">return context</p>
     </div>
-    <h5 class="mt-4 mb-5">Url</h5>
-    <div class="rounded p-4 mb-5 mt-4 custom-div">
+    <h5 class="mt-5 mb-3">Url</h5>
+    <div class="rounded p-4 mb-5 custom-div">
         <p class="mb-1">from django.urls import path</p>
         <p class="mb-1">from app.views import AboutUsView</p>
         <p class="mb-1">urlpatterns = [</p>

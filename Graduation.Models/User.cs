@@ -10,7 +10,9 @@ namespace Graduation.Models
         public string Name { get; set; }
         [Required]
         public string Role { get; set; }
-        public ChatRoom ChatRoom { get; set; }
+        public int? ChatRoomId { get; set; }
+        [ForeignKey(nameof(ChatRoomId))]
+        public ChatRoom? ChatRoom { get; set; }
         public List<Message>? Messages { get; set; } = new List<Message>();
         public Community? Community { get; set; }
         public List<Subscription> Subscriptions { get; set; } = new List<Subscription>();

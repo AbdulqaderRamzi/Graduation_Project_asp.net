@@ -8,17 +8,17 @@
         Layout = "/Views/Shared/_Layout.cshtml";
     }
 }
-
-<h1>Manage your account</h1>
+<br />
+<h1 class="mt-5 mb-3" style="color: #417690;">Manage your account</h1>
 
 <div>
-    <h2>Change your account settings</h2>
+    <h2 class="mb-4" style="color: #417690;">Change your account settings</h2>
     <hr />
-    <div class="row">
+    <div class="row mt-4">
         <div class="col-md-3">
             <partial name="_ManageNav" />
         </div>
-        <div class="col-md-9">
+        <div class="col-md-9 mt-4">
             @RenderBody()
         </div>
     </div>

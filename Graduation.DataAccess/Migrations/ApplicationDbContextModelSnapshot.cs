@@ -55,14 +55,7 @@ namespace Graduation.DataAccess.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("UserId")
-                        .IsUnique();
 
                     b.ToTable("ChatRooms");
                 });
@@ -188,7 +181,6 @@ namespace Graduation.DataAccess.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
@@ -247,7 +239,6 @@ namespace Graduation.DataAccess.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("UserId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
@@ -500,6 +491,9 @@ namespace Graduation.DataAccess.Migrations
                 {
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
 
+                    b.Property<int?>("ChatRoomId")
+                        .HasColumnType("int");
+
                     b.Property<int?>("CommunityId")
                         .HasColumnType("int");
 
@@ -517,6 +511,10 @@ namespace Graduation.DataAccess.Migrations
                     b.Property<int>("Solution")
                         .HasColumnType("int");
 
+                    b.HasIndex("ChatRoomId")
+                        .IsUnique()
+                        .HasFilter("[ChatRoomId] IS NOT NULL");
+
                     b.HasIndex("CommunityId");
 
                     b.HasDiscriminator().HasValue("User");
@@ -527,17 +525,6 @@ namespace Graduation.DataAccess.Migrations
                     b.HasOne("Graduation.Models.User", "User")
                         .WithMany("Applicants")
                         .HasForeignKey("UserId");
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("Graduation.Models.ChatRoom", b =>
-                {
-                    b.HasOne("Graduation.Models.User", "User")
-                        .WithOne("ChatRoom")
-                        .HasForeignKey("Graduation.Models.ChatRoom", "UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
 
                     b.Navigation("User");
                 });
@@ -572,9 +559,7 @@ namespace Graduation.DataAccess.Migrations
                 {
                     b.HasOne("Graduation.Models.User", "User")
                         .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UserId");
 
                     b.Navigation("User");
                 });
@@ -587,7 +572,8 @@ namespace Graduation.DataAccess.Migrations
 
                     b.HasOne("Graduation.Models.Message", "ReplyTo")
                         .WithMany()
-                        .HasForeignKey("ReplyToId");
+                        .HasForeignKey("ReplyToId")
+                        .OnDelete(DeleteBehavior.ClientCascade);
 
                     b.HasOne("Graduation.Models.User", "User")
                         .WithMany("Messages")
@@ -610,9 +596,7 @@ namespace Graduation.DataAccess.Migrations
 
                     b.HasOne("Graduation.Models.User", "User")
                         .WithMany("Subscriptions")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UserId");
 
                     b.Navigation("SubscriptionType");
 
@@ -672,9 +656,15 @@ namespace Graduation.DataAccess.Migrations
 
             modelBuilder.Entity("Graduation.Models.User", b =>
                 {
+                    b.HasOne("Graduation.Models.ChatRoom", "ChatRoom")
+                        .WithOne("User")
+                        .HasForeignKey("Graduation.Models.User", "ChatRoomId");
+
                     b.HasOne("Graduation.Models.Community", "Community")
                         .WithMany("Users")
                         .HasForeignKey("CommunityId");
+
+                    b.Navigation("ChatRoom");
 
                     b.Navigation("Community");
                 });
@@ -682,6 +672,9 @@ namespace Graduation.DataAccess.Migrations
             modelBuilder.Entity("Graduation.Models.ChatRoom", b =>
                 {
                     b.Navigation("ChatRoomMessages");
+
+                    b.Navigation("User")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Graduation.Models.ChatRoomMessage", b =>
@@ -704,9 +697,6 @@ namespace Graduation.DataAccess.Migrations
             modelBuilder.Entity("Graduation.Models.User", b =>
                 {
                     b.Navigation("Applicants");
-
-                    b.Navigation("ChatRoom")
-                        .IsRequired();
 
                     b.Navigation("Messages");
 

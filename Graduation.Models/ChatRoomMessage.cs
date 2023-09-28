@@ -13,9 +13,7 @@ namespace Graduation.Models
         public string? Video { get; set; }
         public DateTimeOffset SendAt { get; set; }
         [DisplayName("Sent by")]
-        public User User { get; set; }
-/*        public int? ChatRoomId { get; set; }
-        [ForeignKey(nameof(ChatRoomId))]*/
+        public User? User { get; set; }
         public ChatRoom? ChatRoom { get; set; }
         public bool Explanation { get; set; } = false;
         public bool Solution { get; set; } = false;

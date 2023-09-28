@@ -25,7 +25,7 @@ namespace Graduation_Project.Areas.Customer.Controllers
             var userId = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier).Value;
             User user = _unitOfWork.User.Get(u => u.Id == userId);
             Community community = _unitOfWork.Community.Get(i => i.Id == 1, includeProperties: "Users,Messages");
-            List<Message> messages = _unitOfWork.Message.GetAll(i=> i.Community.Id == community.Id, includeProperties: "User").ToList();
+            List<Message> messages = _unitOfWork.Message.GetAll(i => i.Community.Id == community.Id, includeProperties: "User").ToList();
             CommunityVM communityVM = new CommunityVM()
             {
                 Community = community,
@@ -49,7 +49,7 @@ namespace Graduation_Project.Areas.Customer.Controllers
             };
             if (replyTo != 0)
             {
-                Message replyMessage = _unitOfWork.Message.Get(i => i.Id == replyTo, includeProperties:"User");
+                Message replyMessage = _unitOfWork.Message.Get(i => i.Id == replyTo, includeProperties: "User");
                 message.ReplyTo = replyMessage;
             }
             _unitOfWork.Message.Add(message);
@@ -90,25 +90,28 @@ namespace Graduation_Project.Areas.Customer.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult DeleteCommunityMessage(int id)
+        /*public IActionResult DeleteCommunityMessage(int id)
         {
             var claimsIdentity = (ClaimsIdentity)User.Identity;
             var userId = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier).Value;
             User user = _unitOfWork.User.Get(u => u.Id == userId);
             Community community = _unitOfWork.Community.Get(i => i.Id == 1);
-            Message message = _unitOfWork.Message.Get(i=>i.Id == id && i.User == user);
+            Message message = _unitOfWork.Message.Get(i => i.Id == id && i.User == user);
             if (message != null)
             {
-                var ImagePath = Path.Combine(_webHostEnvironment.WebRootPath, message.Image.TrimStart('\\'));
-                if (System.IO.File.Exists(ImagePath))
+                if(message.Image != null)
                 {
-                    System.IO.File.Delete(ImagePath);
-                }
+                    var MainImagePath = Path.Combine(_webHostEnvironment.WebRootPath, message.Image.TrimStart('\\'));
+                    if (System.IO.File.Exists(MainImagePath))
+                    {
+                        System.IO.File.Delete(MainImagePath);
+                    }
+                }                
                 _unitOfWork.Message.Remove(message);
                 _unitOfWork.Save();
                 return RedirectToAction("Index");
             }
             return RedirectToAction("Index");
-        }
+        }*/
     }
 }

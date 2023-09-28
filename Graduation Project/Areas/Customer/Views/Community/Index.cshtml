@@ -2,39 +2,40 @@
 
 <div class="mt-4">
     <section style="background-color: #eee;">
-        <h1 class="text-center pt-3">
+        <h1 class="text-center pt-3 mt-5" style="color: #417690; font-weight:900;">
             Community
         </h1>
         <div class="container my-3 py-3">
             <div class="row d-flex justify-content-center">
-                <div class="col-md-12 col-lg-10 col-xl-8">
-                    <div class="card">
-                        <form method="post" asp-action="CommunityMessage" enctype="multipart/form-data" class="pb-3">
-                            <div class="card-footer py-3 border-0" style="background-color: #f8f9fa;">
-                                <div class="d-flex flex-start w-100">
+                <div class="col-11">
+                    <div class="card border-b p-1">
+                        <form method="post" asp-action="CommunityMessage" enctype="multipart/form-data" class="pb-4">
+                            <div class="card-footer py-3 border-0" style="background-color: white;">
+                                <div class="d-flex flex-start w-100 mt-2">
                                     <div class="form-outline w-100">
-                                        <textarea class="form-control" name="content" id="message" rows="4" style="background: #fff;" spellcheck="false" data-ms-editor="true"></textarea>
+                                        <textarea class="form-control pt-2" placeholder="Message..." name="content" id="message" rows="4" style="color: #417690; background: #fff;" spellcheck="false" data-ms-editor="true"></textarea>
                                     </div>
                                 </div>
                                 <div class="form-outline w-100">
                                     <label for="image"></label>
-                                    <input type="file" id="image" name="image" class="form-control" />
+                                    <input type="file" id="image" name="image" class="form-control" style="color: #417690;" />
                                 </div>
                                 <div class="float-end mt-2 pt-1">
-                                    <button type="submit" id="MessageBtn" class="disabled btn btn-primary btn-sm">Post comment</button>
+                                    <button type="submit" id="MessageBtn" style="background-color:#417690; color: white;" class="disabled btn btn-sm">Post Message</button>
                                 </div>
                             </div>
                         </form>
                         @if (Model.Community.Messages != null)
                         {
-                            @foreach (Message message in Model.Community.Messages.OrderBy(e => e.SendAt))
+                            @foreach (Message message in Model.Community.Messages.OrderByDescending(e => e.SendAt))
                             {
+                                <hr />
                                 <div class="card-body">
-                                    <div class="row d-flex align-items-center">
+                                    <div class="row d-flex align-items-center mt-5">
                                         <div class="row d-flex justify-content-between">
                                             <div class="row d-flex justify-content-between">
-                                                <h6 class="col fw-bold text-primary mb-1">@message.User.Name</h6>
-                                                @if (Model.User != null)
+                                                <h6 class="col fw-bold mb-1" style="color: #417690;">@message.User.Name</h6>
+@*                                                 @if (Model.User != null)
                                                 {
                                                     @if (Model.User.Id == message.User.Id)
                                                     {
@@ -44,22 +45,26 @@
                                                             </svg>
                                                         </a>
                                                     }
-                                                }
+                                                } *@
                                             </div>
-                                            <h3 id="reply">
+                                            <h3 class="reply">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-reply" viewBox="0 0 16 16">
                                                     <path d="M6.598 5.013a.144.144 0 0 1 .202.134V6.3a.5.5 0 0 0 .5.5c.667 0 2.013.005 3.3.822.984.624 1.99 1.76 2.595 3.876-1.02-.983-2.185-1.516-3.205-1.799a8.74 8.74 0 0 0-1.921-.306 7.404 7.404 0 0 0-.798.008h-.013l-.005.001h-.001L7.3 9.9l-.05-.498a.5.5 0 0 0-.45.498v1.153c0 .108-.11.176-.202.134L2.614 8.254a.503.503 0 0 0-.042-.028.147.147 0 0 1 0-.252.499.499 0 0 0 .042-.028l3.984-2.933zM7.8 10.386c.068 0 .143.003.223.006.434.02 1.034.086 1.7.271 1.326.368 2.896 1.202 3.94 3.08a.5.5 0 0 0 .933-.305c-.464-3.71-1.886-5.662-3.46-6.66-1.245-.79-2.527-.942-3.336-.971v-.66a1.144 1.144 0 0 0-1.767-.96l-3.994 2.94a1.147 1.147 0 0 0 0 1.946l3.994 2.94a1.144 1.144 0 0 0 1.767-.96v-.667z" />
                                                 </svg>
                                             </h3>
-                                            <p class="text-muted small mb-0">
-                                                Shared in @message.SendAt.Year-@message.SendAt.Month-@message.SendAt.Day
-                                            </p>
                                             @if (message.ReplyTo != null)
                                             {
-                                                <div>
-                                                    <h5>Replied to: @message.ReplyTo.User.Name</h5>
-                                                    <p>@message.ReplyTo.Content</p>
+                                                <div class="row d-flex justify-content-between">
+                                                    <p class="text-muted small mb-0 col text-start">
+                                                        Shared in @message.SendAt.Year-@message.SendAt.Month-@message.SendAt.Day
+                                                    </p>
+                                                    <h6 class="col text-end" style="color: #417690;">Replied to: @message.ReplyTo.User.Name</h6>
+                                                    <p class="text-muted">@message.ReplyTo.Content</p>
                                                 </div>
+                                            }else{
+                                                <p class="text-muted small mb-0">
+                                                    Shared in @message.SendAt.Year-@message.SendAt.Month-@message.SendAt.Day
+                                                </p>
                                             }
                                         </div>
                                     </div>
@@ -77,21 +82,21 @@
                                             </div>
                                         </div>
                                     }
-                                    <div id="reply_form" style="display:none">
-                                        <form method="post" asp-action="CommunityMessage" asp-route-replyTo="@message.Id" enctype="multipart/form-data" class="pb-3">
-                                            <p class="text-primary">Reply</p>
-                                            <div class="card-footer py-3 border-0" style="background-color: #f8f9fa;">
-                                                <div class="d-flex flex-start w-100">
+                                    <div class="reply_form" style="display:none">
+                                        <form method="post" asp-action="CommunityMessage" asp-route-replyTo="@message.Id" enctype="multipart/form-data" class="pb-4">
+                                            <p style="color: #417690;" class="mt-4">Reply</p>
+                                            <div class="card-footer py-3 border-0" style="background-color: white;">
+                                                <div class="d-flex flex-start w-100 mt-2">
                                                     <div class="form-outline w-100">
-                                                        <textarea class="form-control" name="reply_content" id="message" rows="4" style="background: #fff;" spellcheck="false" data-ms-editor="true"></textarea>
+                                                        <textarea class="form-control" placeholder="Reply..." name="content" id="message" rows="4" style="color: #417690; background: #fff;" spellcheck="false" data-ms-editor="true"></textarea>
                                                     </div>
                                                 </div>
                                                 <div class="form-outline w-100">
                                                     <label for="image"></label>
-                                                    <input type="file" id="reply_image" name="image" class="form-control" />
+                                                    <input type="file" id="reply_image" name="image" class="form-control" style="color: #417690;" />
                                                 </div>
                                                 <div class="float-end mt-2 pt-1">
-                                                    <button type="submit" id="reply_CommentBtn" class="btn btn-primary btn-sm">Post comment</button>
+                                                    <button type="submit" id="reply_CommentBtn" class="btn btn-sm" style="background-color:#417690; color: white;">Reply</button>
                                                 </div>
                                             </div>
                                         </form>
@@ -127,22 +132,12 @@
     document.getElementById("message").addEventListener("input", updateButtonState);
     document.getElementById("image").addEventListener("change", updateButtonState);
 </script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // Get references to the form and the reply button
-        var replyForm = document.getElementById("reply_form");
-        var replyButton = document.getElementById("reply");
-
-        // Initially hide the form
-        replyForm.style.display = "none";
-
-        // Toggle the form when the "Reply" button is clicked
-        replyButton.addEventListener("click", function () {
-            if (replyForm.style.display === "none") {
-                replyForm.style.display = "block";
-            } else {
-                replyForm.style.display = "none";
-            }
+    $(document).ready(function () {
+        $(".reply").click(function () {
+            // Toggle the display property of the nearest reply form
+            $(this).closest(".card-body").find(".reply_form").toggle();
         });
     });
 </script>

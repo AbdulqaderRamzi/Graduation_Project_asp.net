@@ -1,16 +1,17 @@
 ﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
     <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Manager</h1>
     <h4 class="text-center mt-4 mb-5">Encapsulate database query at the model level that allows you to define methods that retrieve specific sets of data.</h4>
-    <h4 class="mt-4 mb-5">The most popular manager in django that's objects => Model_name.objects so, we can build more managers.</h4>
-    <h4 class="mt-4 mb-5">Two types of managers that are Custom QuerySets and Managers.</h4>
-    <h4 class="mt-4 mb-5">The Differences Between them are the way of calling (invoking).</h4>
-    <h4 class="mt-4 mb-5">Custom Manager: querying and managing objects at the model level.</h4>
-    <h4 class="mt-4 mb-5">Custom QuerySet: methods are accessible via the model's manager.</h4>
+    <hr />
+    <h5 class="mt-5 mb-0">- The most popular manager in django that's objects => Model_name.objects so, we can build more managers.</h5>
+    <h5 class="mt-2 mb-0">- Two types of managers that are Custom QuerySets and Managers.</h5>
+    <h5 class="mt-2 mb-0">- The Differences Between them are the way of calling (invoking).</h5>
+    <h5 class="mt-2 mb-0">- Custom Manager: querying and managing objects at the model level.</h5>
+    <h5 class="mt-2 mb-5">- Custom QuerySet: methods are accessible via the model's manager.</h5>
 
     <hr />
     <h2 class="my-5 custom-title">Examples about Custom QuerySet</h2>
-    <h4 class="mt-4 mb-5">First Example:</h4>
-    <div class="rounded p-4 my-4 custom-div">
+    <h4 class="mb-4 mt-2">First Example:</h4>
+    <div class="rounded p-4 custom-div">
         <p class="mb-1">class BookQuerySet(models.QuerySet):</p>
         <p class="mb-1 mr-25">def published_books(self):</p>
         <p class="mb-1 mr-50">return self.filter(published=True)</p>
@@ -19,13 +20,13 @@
         <p class="mb-1 mr-25">published = models.BooleanField(default=False)</p>
         <p class="mb-1 mr-25">objects = BookQuerySet.as_manager()</p>
     </div>
-    <h4 class="mt-4 mb-5">How to call it?</h4>
-    <div class="rounded p-4 mt-4 custom-inout">
+    <h4 class="mb-3 mt-3">How to call it?</h4>
+    <div class="rounded p-4 custom-inout">
         <p class="mb-1">// Answer:</p>
         <p class="mb-1">Book.objects.published_books()</p>
     </div>
-    <h4 class="mt-4 mb-5">Second Example:</h4>
-    <div class="rounded p-4 my-4 custom-div">
+    <h4 class="mb-4 mt-5">Second Example:</h4>
+    <div class="rounded p-4 custom-div">
         <p class="mb-1">class ProductQuerySet(models.QuerySet):</p>
         <p class="mb-1 mr-25">def price_sorted(self):</p>
         <p class="mb-1 mr-50">return self.order_by('price')</p>
@@ -36,8 +37,8 @@
         <p class="mb-1 mr-25">price = models.DecimalField(max_digits=10, decimal_places=2)</p>
         <p class="mb-1 mr-25">objects = ProductQuerySet.as_manager()</p>
     </div>
-    <h4 class="mt-4 mb-5">How to call them?</h4>
-    <div class="rounded p-4 mt-4 custom-inout">
+    <h4 class="mb-3 mt-3">How to call them?</h4>
+    <div class="rounded p-4 mb-5 custom-inout">
         <p class="mb-1">// Answer:</p>
         <p class="mb-1">Product.objects.price_sorted()</p>
         <p class="mb-1">Product.objects.expensive()</p>
@@ -45,8 +46,8 @@
 
     <hr />
     <h2 class="my-5 custom-title">Examples about Custom Manager</h2>
-    <h4 class="mt-4 mb-5">First Example:</h4>
-    <div class="rounded p-4 my-4 custom-div">
+    <h4 class="mb-4 mt-2">First Example:</h4>
+    <div class="rounded p-4 mb-3 custom-div">
         <p class="mb-1">class PublishedBookManager(models.Manager):</p>
         <p class="mb-1 mr-25">def published_books(self):</p>
         <p class="mb-1 mr-50">return self.filter(published=True)</p>
@@ -55,8 +56,8 @@
         <p class="mb-1 mr-25">published = models.BooleanField(default=False)</p>
         <p class="mb-1 mr-25">published_objects = PublishedBookManager()</p>
     </div>
-    <h4 class="mt-4 mb-5">How to call it?</h4>
-    <div class="rounded p-4 mt-4 custom-inout">
+    <h4 class="mb-3">How to call it?</h4>
+    <div class="rounded p-4 mb-5 custom-inout">
         <p class="mb-1">// Answer:</p>
         <p class="mb-1">// To retrieve all books.</p>
         <p class="mb-1">Book.published_objects.all()</p>
@@ -64,8 +65,8 @@
         <p class="mb-1">// To retrive books depends on published_books function.</p>
         <p class="mb-1">Book.published_objects.published_books()</p>
     </div>
-    <h4 class="mt-4 mb-5">Second Example:</h4>
-    <div class="rounded p-4 my-4 custom-div">
+    <h4 class="mb-4">Second Example:</h4>
+    <div class="rounded p-4 mb-3 custom-div">
         <p class="mb-1">class CustomFilterManager(models.Manager):</p>
         <p class="mb-1 mr-25">def get_queryset(self):</p>
         <p class="mb-1 mr-50">return super().get_queryset().order_by('price')</p>
@@ -76,8 +77,8 @@
         <p class="mb-1 mr-25">price = models.DecimalField(max_digits=10, decimal_places=2)</p>
         <p class="mb-1 mr-25">custom_filter = CustomFilterManager()</p>
     </div>
-    <h4 class="mt-4 mb-5">How to call it?</h4>
-    <div class="rounded p-4 mt-4 custom-inout">
+    <h4 class="mb-3">How to call it?</h4>
+    <div class="rounded p-4 mb-5 custom-inout">
         <p class="mb-1">// Answer:</p>
         <p class="mb-1">// To retrieve all books order by price because we overridden get_queryset.</p>
         <p class="mb-1">Book.custom_filter.all()</p>
