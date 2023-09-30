@@ -3,300 +3,351 @@
     <h5 class="text-center mb-5 mt-4">The webiste will be about displaying magazines with its blogs. blogs will be created by author.</h5>
     <hr />
     <h4 class="mb-3 mt-5">Create the virtual environment.</h4>
-    <div class="d-flex justify-content-start">
-        <h5 class="rounded p-3 custom-back">python -m venv environment magazinevenv</h5>
-    </div>
+    <pre>
+        <code class="language-Django">
+            python -m venv environment magazinevenv
+            <span></span>
+        </code>
+    </pre>
     <h4 class="mb-3 mt-5">Activate the environment.</h4>
-    <div class="d-flex justify-content-start">
-        <h5 class="rounded p-3 custom-back">magazinevenv\Scripts\activate</h5>
-    </div>
+    <pre>
+        <code class="language-Django">
+            magazinevenv\Scripts\activate
+            <span></span>
+        </code>
+    </pre>
     <h4 class="mb-3 mt-5">Install the Django.</h4>
-    <div class="d-flex justify-content-start">
-        <h5 class="rounded p-3 custom-back">python -m pip install Django</h5>
-    </div>
+    <pre>
+        <code class="language-Django">
+            python -m pip install Django
+            <span></span>
+        </code>
+    </pre>
     <h4 class="mb-3 mt-5">Create magazine project.</h4>
-    <div class="d-flex justify-content-start">
-        <h5 class="rounded p-3 custom-back">django-admin startproject magazine</h5>
-    </div>
+    <pre>
+        <code class="language-Django">
+            django-admin startproject magazine
+            <span></span>
+        </code>
+    </pre>
     <h4 class="mb-3 mt-5">Create blogs app.</h4>
-    <div class="d-flex justify-content-start">
-        <h5 class="rounded p-3 custom-back">python manage.py startapp blogs</h5>
-    </div>
+    <pre>
+        <code class="language-Django">
+            python manage.py startapp blogs
+            <span></span>
+        </code>
+    </pre>
     <h4 class="mb-3 mt-5">Download jazzmin package.</h4>
-    <div class="d-flex justify-content-start">
-        <h5 class="rounded p-3 custom-back">pip install -U django-jazzmin</h5>
-    </div>
+    <pre>
+        <code class="language-Django">
+            pip install -U django-jazzmin
+            <span></span>
+        </code>
+    </pre>
     <h5 class="mb-0 mt-5">Create urls file in blogs app.</h5>
     <h5 class="mb-3 mt-2">Add blogs and jazzmin into INSTALLED_APPS.</h5>
-    <div class="rounded p-4 custom-div">
-        <p class="mb-1">INSTALLED_APPS = [</p>
-        <p class="mb-1 mr-25">'jazzmin',</p>
-        <p class="mb-1 mr-25">'django.contrib.admin',</p>
-        <p class="mb-1 mr-25">...</p>
-        <p class="mb-1 mr-25">'blogs'</p>
-        <p class="mb-1">]</p>
-    </div>
+    <pre>
+        <code class="language-Django">
+            INSTALLED_APPS = [
+                'jazzmin',
+                'django.contrib.admin',
+                ...
+                'blogs'
+            ]
+            <span></span>
+        </code>
+    </pre>
     <h5 class="mb-3 mt-5">Configure the templates by change DIRS in TEMPLATES list into:</h5>
-    <div class="d-flex justify-content-start">
-        <h5 class="rounded p-3 custom-back">'DIRS': [BASE_DIR / 'templates']</h5>
-    </div>
+    <pre>
+        <code class="language-Django">
+            'DIRS': [BASE_DIR / 'templates']
+            <span></span>
+        </code>
+    </pre>
     <h5 class="mb-3 mt-5">Configure static and media files.</h5>
-    <div class="rounded p-4 custom-div">
-        <p class="mb-1">STATIC_URL = 'static/'</p>
-        <p class="mb-1">STATICFILES_DIRS = [</p>
-        <p class="mb-1 mr-25">BASE_DIR / "static",</p>
-        <p class="mb-1">]</p>
-        <p class="mb-1">STATIC_ROOT = BASE_DIR / "staticfiles"</p>
-        <p class="mb-1">MEDIA_URL = '/media/'</p>
-        <p class="mb-1">MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')</p>
-    </div>
+    <pre>
+        <code class="language-Django">
+            STATIC_URL = 'static/'
+            STATICFILES_DIRS = [
+                BASE_DIR / "static",
+            ]
+            STATIC_ROOT = BASE_DIR / "staticfiles"
+            MEDIA_URL = '/media/'
+            MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+            <span></span>
+        </code>
+    </pre>
     <h5 class="mb-3 mt-5">Change magazine urls into following code to include blogs urls, configure static and media files.</h5>
-    <div class="rounded p-4 mb-5 custom-div">
-        <p class="mb-1">from django.contrib import admin</p>
-        <p class="mb-1">from django.urls import include, path</p>
-        <p class="mb-1">from django.conf.urls.static import static</p>
-        <p class="mb-1">from django.conf import settings</p>
-        <p class="mb-1">urlpatterns = [</p>
-        <p class="mb-1 mr-25">path('admin/', admin.site.urls),</p>
-        <p class="mb-1 mr-25">path("", include("blogs.urls")),</p>
-        <p class="mb-1">]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)</p>
-    </div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            from django.contrib import admin
+            from django.urls import include, path
+            from django.conf.urls.static import static
+            from django.conf import settings
+            urlpatterns = [
+                path('admin/', admin.site.urls),
+            path("", include("blogs.urls")),
+            ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+            <span></span>
+        </code>
+    </pre>
 
     <hr />
     <h2 class="my-5 custom-title">Models</h2>
-    <div class="rounded p-4 mt-4 custom-div">
-        <p class="mb-1">from django.db import models</p>
-        <p class="mb-1">from django.contrib.auth.models import User</p>
-        <p class="mb-1">class Author(models.Model):</p>
-        <p class="mb-1 mr-25">name = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name="Name")</p>
-        <p class="mb-1 mr-25">email = models.EmailField(verbose_name="Email", unique=True)</p>
-        <p class="mb-1 mr-25">profile_image = models.ImageField(upload_to='profile_images/', verbose_name="Profile Image")</p>
-        <p class="mb-1 mr-25">bio = models.TextField(verbose_name="Bio")</p>
-        <p class="mb-1 mr-25">def __str__(self):</p>
-        <p class="mb-1 mr-50">return self.email</p>
-        <br>
-        <p class="mb-1">class Magazine(models.Model):</p>
-        <p class="mb-1 mr-25">title = models.CharField(max_length=150, verbose_name="Title")</p>
-        <p class="mb-1 mr-25">publish_date = models.DateTimeField(auto_now_add=True, verbose_name="Publish date")</p>
-        <p class="mb-1 mr-25">description = models.TextField(verbose_name="Description")</p>
-        <p class="mb-1 mr-25">def __str__(self) -> str:</p>
-        <p class="mb-1 mr-50">return self.title</p>
-        <br>
-        <p class="mb-1">class Blog(models.Model):</p>
-        <p class="mb-1 mr-25">STATUS_CHOICES = [</p>
-        <p class="mb-1 mr-50">('d', 'Draft'),</p>
-        <p class="mb-1 mr-50">('p', 'Published'),</p>
-        <p class="mb-1 mr-50">('w', 'Withdrawn'),</p>
-        <p class="mb-1 mr-25">]</p>
-        <p class="mb-1 mr-25">author = models.ForeignKey(Author, on_delete=models.CASCADE, verbose_name="Author")</p>
-        <p class="mb-1 mr-25">title = models.CharField(max_length=150, verbose_name="Title")</p>
-        <p class="mb-1 mr-25">content = models.TextField(verbose_name="Content")</p>
-        <p class="mb-1 mr-25">magazine = models.ForeignKey(Magazine, on_delete=models.CASCADE, verbose_name="Magazine")</p>
-        <p class="mb-1 mr-25">status = models.CharField(max_length=1, choices=STATUS_CHOICES, verbose_name="Status")</p>
-        <p class="mb-1 mr-25">cover_image = models.ImageField(upload_to='blog_covers/', verbose_name="Image")</p>
-        <p class="mb-1 mr-25">publish_date = models.DateTimeField(verbose_name="Publish date", blank=True, null=True)</p>
-        <p class="mb-1 mr-25">def __str__(self) -> str:</p>
-        <p class="mb-1 mr-50">return self.title</p>
-    </div>
+    <div class="mt-4"></div>
+    <pre>
+        <code class="language-Django">
+            from django.db import models
+            from django.contrib.auth.models import User
+            class Author(models.Model):
+                name = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name="Name")
+                email = models.EmailField(verbose_name="Email", unique=True)
+                profile_image = models.ImageField(upload_to='profile_images/', verbose_name="Profile Image")
+                bio = models.TextField(verbose_name="Bio")
+                def __str__(self):
+                    return self.email
+
+            class Magazine(models.Model):
+                title = models.CharField(max_length=150, verbose_name="Title")
+                publish_date = models.DateTimeField(auto_now_add=True, verbose_name="Publish date")
+                description = models.TextField(verbose_name="Description")
+                def __str__(self) -> str:
+                    return self.title
+                
+            class Blog(models.Model):
+                STATUS_CHOICES = [
+                    ('d', 'Draft'),
+                    ('p', 'Published'),
+                    ('w', 'Withdrawn'),
+                ]
+                author = models.ForeignKey(Author, on_delete=models.CASCADE, verbose_name="Author")
+                title = models.CharField(max_length=150, verbose_name="Title")
+                content = models.TextField(verbose_name="Content")
+                magazine = models.ForeignKey(Magazine, on_delete=models.CASCADE, verbose_name="Magazine")
+                status = models.CharField(max_length=1, choices=STATUS_CHOICES, verbose_name="Status")
+                cover_image = models.ImageField(upload_to='blog_covers/', verbose_name="Image")
+                publish_date = models.DateTimeField(verbose_name="Publish date", blank=True, null=True)
+                def __str__(self) -> str:
+                    return self.title
+            <span></span>
+        </code>
+    </pre>
     <h5 class="mb-0 mt-3">Author will have unique email, could have multiple blogs. magazine could have multiple blogs. blog should be binded with magazine and author.</h5>
     <h4 class="mb-3 mt-5">Run:</h4>
-    <div class="rounded p-4 custom-div">
-        <p class="mb-1">python manage.py migrate</p>
-        <p class="mb-1">python manage.py makemigrations</p>
-        <p class="mb-1">python manage.py migrate</p>
-    </div>
+    <pre>
+        <code class="language-Django">
+            python manage.py migrate
+            python manage.py makemigrations
+            python manage.py migrate
+            <span></span>
+        </code>
+    </pre>
     <h4 class="mb-3 mt-5">Register your models in admin.py</h4>
-    <div class="rounded p-4 custom-div">
-        <p class="mb-1">from django.contrib import admin</p>
-        <p class="mb-1">from .models import Blog, Magazine, Author</p>
-        <p class="mb-1">admin.site.register(Blog)</p>
-        <p class="mb-1">admin.site.register(Magazine)</p>
-        <p class="mb-1">admin.site.register(Author)</p>
-    </div>
+    <pre>
+        <code class="language-Django">
+            from django.contrib import admin
+            from .models import Blog, Magazine, Author
+            admin.site.register(Blog)
+            admin.site.register(Magazine)
+            admin.site.register(Author)
+            <span></span>
+        </code>
+    </pre>
     <h4 class="mb-3 mt-5">Run:</h4>
-    <div class="rounded p-4 custom-div">
-        <p class="mb-1">python manage.py createsuperuser</p>
-        <p class="mb-1">python manage.py runserver</p>
-    </div>
+    <pre>
+        <code class="language-Django">
+            python manage.py createsuperuser
+            python manage.py runserver
+            <span></span>
+        </code>
+    </pre>
     <h5 class="mb-0 mt-3">Navigate to /admin/</h5>
     <h5 class="mb-5 mt-2">Example: http://127.0.0.1:8000/admin/</h5>
 
     <hr />
     <h2 class="my-5 custom-title">View</h2>
     <h5 class="mb-2 mt-4">Get all magazines ordered from the latest magazines to the old ones.</h5>
-    <div class="rounded p-4 custom-div">
-        <p class="mb-1">from django.shortcuts import render</p>
-        <p class="mb-1">from .models import *</p>
-        <p class="mb-1">def magazines(request):</p>
-        <p class="mb-1 mr-25">magazines = Magazine.objects.all().order_by("-publish_date")</p>
-        <p class="mb-1 mr-25">return render(request, "blogs/homepage.html", {"magazines":magazines})</p>
-    </div>
+    <pre>
+        <code class="language-Django">
+            from django.shortcuts import render
+            from .models import *
+            def magazines(request):
+                magazines = Magazine.objects.all().order_by("-publish_date")
+                return render(request, "blogs/homepage.html", {"magazines":magazines})
+            <span></span>
+        </code>
+    </pre>
     <h5 class="mb-2 mt-4">Get magazine by its id. get all published blogs related to that magazine.</h5>
-    <div class="rounded p-4 custom-div">
-        <p class="mb-1">def magazine(request, pk):</p>
-        <p class="mb-1 mr-25">magazine = Magazine.objects.get(pk=pk)</p>
-        <p class="mb-1 mr-25">blogs = Blog.objects.filter(magazine_id=pk, status="p").order_by("-publish_date")</p>
-        <p class="mb-1 mr-25">return render(request, "blogs/magazine_details.html", {"magazines":magazine, "blogs":blogs})</p>
-    </div>
+    <pre>
+        <code class="language-Django">
+            def magazine(request, pk):
+                magazine = Magazine.objects.get(pk=pk)
+                blogs = Blog.objects.filter(magazine_id=pk, status="p").order_by("-publish_date")
+                return render(request, "blogs/magazine_details.html", {"magazines":magazine, "blogs":blogs})
+            <span></span>
+        </code>
+    </pre>
     <h5 class="mb-2 mt-4">Get blog by its id.</h5>
-    <div class="rounded p-4 custom-div">
-        <p class="mb-1">def blog(request, pk):</p>
-        <p class="mb-1 mr-25">blog = Blog.objects.get(pk=pk)</p>
-        <p class="mb-1 mr-25">return render(request, "blogs/blog_details.html", {"blog":blog})</p>
-    </div>
+    <pre>
+        <code class="language-Django">
+            def blog(request, pk):
+                blog = Blog.objects.get(pk=pk)
+                return render(request, "blogs/blog_details.html", {"blog":blog})
+            <span></span>
+        </code>
+    </pre>
     <h5 class="mb-2 mt-4">Get author by its id. get all published blogs related to that author.</h5>
-    <div class="rounded p-4 mb-5 custom-div">
-        <p class="mb-1">def author(request, pk):</p>
-        <p class="mb-1 mr-25">author = Author.objects.get(pk=pk)</p>
-        <p class="mb-1 mr-25">blogs = Blog.objects.filter(author=author, status='p')</p>
-        <p class="mb-1 mr-25">return render(request, "blogs/author.html", {"author":author, "blogs":blogs})</p>
-    </div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            def author(request, pk):
+                author = Author.objects.get(pk=pk)
+                blogs = Blog.objects.filter(author=author, status='p')
+                return render(request, "blogs/author.html", {"author":author, "blogs":blogs})
+            <span></span>
+        </code>
+    </pre>
 
     <hr />
     <h2 class="my-5 custom-title">URL</h2>
     <h5 class="mb-3 mt-4">Add previous views into urls file:</h5>
-    <div class="rounded p-4 custom-div">
-        <p class="mb-1">from django.urls import path</p>
-        <p class="mb-1">from . import views</p>
-        <p class="mb-1">app_name = 'blogs'</p>
-        <p class="mb-1">urlpatterns = [</p>
-        <p class="mb-1 mr-25">path('', views.magazines, name="magazines"),</p>
-        <p class="mb-1 mr-25">path('magazine/&lt;int:pk&gt;/', views.magazine, name="magazine-details"),</p>
-        <p class="mb-1 mr-25">path('blog/&lt;int:pk&gt;/', views.blog, name="blog-details"),</p>
-        <p class="mb-1 mr-25">path('author/&lt;int:pk&gt;/', views.author, name="author-details"),</p>
-        <p class="mb-1">]</p>
-    </div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            from django.urls import path
+            from . import views
+            app_name = 'blogs'
+            urlpatterns = [
+                path('', views.magazines, name="magazines"),
+                path('magazine/&lt;int:pk&gt;/', views.magazine, name="magazine-details"),
+                path('blog/&lt;int:pk&gt;/', views.blog, name="blog-details"),
+                path('author/&lt;int:pk&gt;/', views.author, name="author-details"),
+            ]
+            <span></span>
+        </code>
+    </pre>
 
     <hr />
     <h2 class="my-5 custom-title">Template</h2>
     <h5 class="mb-0 mt-4">Base view used as shared view for all views.</h5>
     <h5 class="mb-5 mt-2">Create templates folder inside blogs app. Create blogs folder inside templates folder. Add base.html, homepage.html, magazine_details.html, blog_details.html, author.html</h5>
     <h4 class="mb-3 mt-0">base.html:</h4>
-    <div class="rounded p-4 custom-div">
-        <p class="mb-1">&lt;html lang="en"&gt;</p>
-        <p class="mb-1">&lt;head&gt;</p>
-        <p class="mb-1 mr-25">&lt;meta charset="UTF-8"&gt;</p>
-        <p class="mb-1 mr-25">&lt;title&gt;KDjango&lt;/title&gt;</p>
-        <p class="mb-1">&lt;/head&gt;</p>
-        <p class="mb-1">&lt;body&gt;</p>
-        <p class="mb-1 mr-25">&lt;div class="header"&gt;</p>
-        <p class="mb-1 mr-50">&lt;h1&gt;KDjango Site&lt;/h1&gt;</p>
-        <p class="mb-1 mr-50">&lt;div&gt;</p>
-        <p class="mb-1 mr-75">&lt;h3&gt;</p>
-        <p class="mb-1 mr-100">&lt;a href="{% url 'blogs:magazines' %}"&gt;Magazines&lt;/a&gt;</p>
-        <p class="mb-1 mr-75">&lt;/h3&gt;</p>
-        <p class="mb-1 mr-50">&lt;/div&gt;</p>
-        <p class="mb-1 mr-25">&lt;/div&gt;</p>
-        <p class="mb-1 mr-25">{% block content %}{% endblock %}</p>
-        <p class="mb-1">&lt;/body&gt;</p>
-        <p class="mb-1">&lt;/html&gt;</p>
-    </div>
+    <pre>
+        <code class="language-html">
+            &lt;html lang="en"&gt;
+            &lt;head&gt;
+                &lt;meta charset="UTF-8"&gt;
+                &lt;title&gt;KDjango&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;div class="header"&gt;
+                    &lt;h1&gt;KDjango Site&lt;/h1&gt;
+                    &lt;div&gt;
+                        &lt;h3&gt;
+                            &lt;a href="{% url 'blogs:magazines' %}"&gt;Magazines&lt;/a&gt;
+                        &lt;/h3&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                {% block content %}{% endblock %}
+            &lt;/body&gt;
+            &lt;/html&gt;
+        </code>
+    </pre>
+
     <h4 class="mb-3 mt-5">homepage.html:</h4>
-    <div class="rounded p-4 custom-div">
-        <p class="mb-1">{% include "blogs/base.html" %}</p>
-        <p class="mb-1">{% block content %}</p>
-        <p class="mb-1 mr-25">{% for magazine in magazines %}</p>
-        <p class="mb-1 mr-50">&lt;div&gt;</p>
-        <p class="mb-1 mr-75">&lt;br&gt;</p>
-        <p class="mb-1 mr-75">&lt;a href="{% url 'blogs:magazine-details' magazine.id %}"&gt;</p>
-        <p class="mb-1 mr-100">&lt;p&gt;{{ magazine.title }}&lt;/p&gt;</p>
-        <p class="mb-1 mr-75">&lt;/a&gt;</p>
-        <p class="mb-1 mr-75">&lt;br&gt;</p>
-        <p class="mb-1 mr-75">&lt;hr&gt;</p>
-        <p class="mb-1 mr-50">&lt;/div&gt;</p>
-        <p class="mb-1 mr-25">{% endfor %}</p>
-        <p class="mb-1">{% endblock %}</p>
-    </div>
+    <pre>
+        <code class="language-html">
+            {% include "blogs/base.html" %}
+            {% block content %}
+                {% for magazine in magazines %}
+                    &lt;div&gt;
+                        &lt;a href="{% url 'blogs:magazine-details' magazine.id %}"&gt;
+                            &lt;p&gt;{{ magazine.title }}&lt;/p&gt;
+                        &lt;/a&gt;
+                    &lt;/div&gt;
+                {% endfor %}
+            {% endblock %}
+        </code>
+    </pre>
+
     <h4 class="mb-3 mt-5">magazine_details.html:</h4>
-    <div class="rounded p-4 custom-div">
-        <p class="mb-1">{% include "blogs/base.html" %}</p>
-        <p class="mb-1">{% block content %}</p>
-        <p class="mb-1 mr-25">&lt;div&gt;</p>
-        <p class="mb-1 mr-50">&lt;h3&gt;{{ magazine.title }}&lt;/h3&gt;</p>
-        <p class="mb-1 mr-50">&lt;p&gt;{{ magazine.description }}&lt;/p&gt;</p>
-        <p class="mb-1 mr-50">&lt;p&gt;</p>
-        <p class="mb-1 mr-75">Created on {{ magazine.publish_date }}</p>
-        <p class="mb-1 mr-50">&lt;/p&gt;</p>
-        <p class="mb-1 mr-25">&lt;/div&gt;</p>
-        <p class="mb-1 mr-25">&lt;br&gt;</p>
-        <p class="mb-1 mr-25">&lt;br&gt;</p>
-        <p class="mb-1 mr-25">&lt;br&gt;</p>
-        <p class="mb-1 mr-25">{% if blogs %}</p>
-        <p class="mb-1 mr-50">{{ blogs|length }} Blogs:</p>
-        <p class="mb-1 mr-50">&lt;br&gt;</p>
-        <p class="mb-1 mr-50">&lt;br&gt;</p>
-        <p class="mb-1 mr-50">&lt;br&gt;</p>
-        <p class="mb-1 mr-50">{% for blog in blogs %}</p>
-        <p class="mb-1 mr-75">&lt;div&gt;</p>
-        <p class="mb-1 mr-100">&lt;a href="{% url 'blogs:blog-details' blog.id %}"&gt;</p>
-        <p class="mb-1 mr-125">&lt;img src="{{ blog.cover_image.url }}"&gt;</p>
-        <p class="mb-1 mr-100">&lt;/a&gt;</p>
-        <p class="mb-1 mr-100">&lt;p&gt;Author: {{ blog.author.name }}&lt;/p&gt;</p>
-        <p class="mb-1 mr-100">&lt;a href="{% url 'blogs:blog-details' blog.id %}"&gt;</p>
-        <p class="mb-1 mr-125">&lt;h4&gt;Title: {{ blog.title }}&lt;/h4&gt;</p>
-        <p class="mb-1 mr-100">&lt;/a&gt;</p>
-        <p class="mb-1 mr-75">&lt;/div&gt;</p>
-        <p class="mb-1 mr-75">&lt;br&gt;</p>
-        <p class="mb-1 mr-75">&lt;br&gt;</p>
-        <p class="mb-1 mr-75">&lt;br&gt;</p>
-        <p class="mb-1 mr-50">{% endfor %}</p>
-        <p class="mb-1 mr-25">{% else %}</p>
-        <p class="mb-1 mr-50">&lt;h3&gt;0 blogs... No blogs to display&lt;/h3&gt;</p>
-        <p class="mb-1 mr-25">{% endif %}</p>
-        <p class="mb-1">{% endblock %}</p>
-    </div>
+    <pre>
+        <code class="language-html">
+            {% include "blogs/base.html" %}
+            {% block content %}
+                &lt;div&gt;
+                    &lt;h3&gt;{{ magazine.title }}&lt;/h3&gt;
+                    &lt;p&gt;{{ magazine.description }}&lt;/p&gt;
+                    &lt;p&gt;
+                        Created on {{ magazine.publish_date }}
+                    &lt;/p&gt;
+                &lt;/div&gt;
+                {% if blogs %}
+                    {{ blogs|length }} Blogs:
+                    {% for blog in blogs %}
+                        &lt;div&gt;
+                            &lt;a href="{% url 'blogs:blog-details' blog.id %}"&gt;
+                                &lt;img src="{{ blog.cover_image.url }}"&gt;
+                            &lt;/a&gt;
+                            &lt;p&gt;Author: {{ blog.author.name }}&lt;/p&gt;
+                            &lt;a href="{% url 'blogs:blog-details' blog.id %}"&gt;
+                                &lt;h4&gt;Title: {{ blog.title }}&lt;/h4&gt;
+                            &lt;/a&gt;
+                        &lt;/div&gt;
+                    {% endfor %}
+                {% else %}
+                    &lt;h3&gt;0 blogs... No blogs to display&lt;/h3&gt;
+                {% endif %}
+            {% endblock %}
+        </code>
+    </pre>
+
     <h4 class="mb-3 mt-5">blog_details.html:</h4>
-    <div class="rounded p-4 custom-div">
-        <p class="mb-1">{% include "blogs/base.html" %}</p>
-        <p class="mb-1">{% block content %}</p>
-        <p class="mb-1">&lt;div&gt;</p>
-        <p class="mb-1 mr-25">&lt;div&gt;</p>
-        <p class="mb-1 mr-50">&lt;img src="{{ blog.cover_image.url }}"&gt;</p>
-        <p class="mb-1 mr-25">&lt;/div&gt;</p>
-        <p class="mb-1 mr-25">&lt;div&gt;</p>
-        <p class="mb-1 mr-50">&lt;h4&gt;Magazine: {{ blog.magazine }}&lt;/h4&gt;</p>
-        <p class="mb-1 mr-50">&lt;a href="{% url 'blogs:author-details' blog.author.id %}"&gt;</p>
-        <p class="mb-1 mr-75"> &lt;h4&gt;Author: {{ blog.author.name }}&lt;/h4&gt;</p>
-        <p class="mb-1 mr-50">&lt;/a&gt;</p>
-        <p class="mb-1 mr-50">&lt;h4&gt;Title: {{ blog.title }}&lt;/h4&gt;</p>
-        <p class="mb-1 mr-50">&lt;h4&gt;Created on: {{ blog.publish_date }}&lt;/h4&gt;</p>
-        <p class="mb-1 mr-25">&lt;/div&gt;</p>
-        <p class="mb-1 mr-25">&lt;div&gt;</p>
-        <p class="mb-1 mr-50">&lt;p&gt;{{ blog.content }}&lt;/p&gt;</p>
-        <p class="mb-1 mr-25">&lt;/div&gt;</p>
-        <p class="mb-1">&lt;/div&gt;</p>
-        <p class="mb-1">{% endblock %}</p>
-    </div>
+    <pre>
+        <code class="language-html">
+            {% include "blogs/base.html" %}
+            {% block content %}
+                &lt;div&gt;
+                    &lt;div&gt;
+                        &lt;img src="{{ blog.cover_image.url }}"&gt;
+                    &lt;/div&gt;
+                    &lt;div&gt;
+                        &lt;h4&gt;Magazine: {{ blog.magazine }}&lt;/h4&gt;
+                        &lt;a href="{% url 'blogs:author-details' blog.author.id %}"&gt;
+                            &lt;h4&gt;Author: {{ blog.author.name }}&lt;/h4&gt;
+                        &lt;/a&gt;
+                        &lt;h4&gt;Title: {{ blog.title }}&lt;/h4&gt;
+                        &lt;h4&gt;Created on: {{ blog.publish_date }}&lt;/h4&gt;
+                    &lt;/div&gt;
+                    &lt;div&gt;
+                        &lt;p&gt;{{ blog.content }}&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            {% endblock %}
+        </code>
+    </pre>
     <h4 class="mb-3 mt-5">author.html:</h4>
-    <div class="rounded p-4 mb-5 custom-div">
-        <p class="mb-1">{% include "blogs/base.html" %}</p>
-        <p class="mb-1">{% block content %}</p>
-        <p class="mb-1 mr-25">&lt;div&gt;</p>
-        <p class="mb-1 mr-50">&lt;h3&gt;Name: {{ author.name }}&lt;/h3&gt;</p>
-        <p class="mb-1 mr-50">&lt;p&gt;Email: {{ author.email }}&lt;/p&gt;</p>
-        <p class="mb-1 mr-50">&lt;p&gt;{{ author.bio }}&lt;/p&gt;</p>
-        <p class="mb-1 mr-50">&lt;img src="{{ author.profile_image.url }}"&gt;</p>
-        <p class="mb-1 mr-50">&lt;br&gt;</p>
-        <p class="mb-1 mr-25">&lt;/div&gt;</p>
-        <p class="mb-1 mr-25">&lt;br&gt;</p>
-        <p class="mb-1 mr-25">&lt;br&gt;</p>
-        <p class="mb-1 mr-25">{% if blogs %}</p>
-        <p class="mb-1 mr-50">{{ blogs|length }} Blogs</p>
-        <p class="mb-1 mr-50">&lt;br/&gt;</p>
-        <p class="mb-1 mr-50">&lt;br/&gt;</p>
-        <p class="mb-1 mr-50">&lt;br/&gt;</p>
-        <p class="mb-1 mr-50">{% for blog in blogs %}</p>
-        <p class="mb-1 mr-75">&lt;div&gt;</p>
-        <p class="mb-1 mr-100">&lt;a href="{% url 'blogs:blog-details' blog.id %}"&gt;</p>
-        <p class="mb-1 mr-125">&lt;h4&gt;Title: {{ blog.title }}&lt;/h4&gt;</p>
-        <p class="mb-1 mr-100">&lt;/a&gt;</p>
-        <p class="mb-1 mr-75">&lt;/div&gt;</p>
-        <p class="mb-1 mr-75">&lt;br/&gt;</p>
-        <p class="mb-1 mr-75">&lt;br/&gt;</p>
-        <p class="mb-1 mr-50">{% endfor %}</p>
-        <p class="mb-1 mr-25">{% else %}</p>
-        <p class="mb-1 mr-50">&lt;p&gt;0 Blogs&lt;/p&gt;</p>
-        <p class="mb-1 mr-25">{% endif %}</p>
-        <p class="mb-1">{% endblock %}</p>
-    </div>
+    <pre class="mb-5">
+        <code class="language-html">
+            {% include "blogs/base.html" %}
+            {% block content %}
+                &lt;div&gt;
+                    &lt;h3&gt;Name: {{ author.name }}&lt;/h3&gt;
+                    &lt;p&gt;Email: {{ author.email }}&lt;/p&gt;
+                    &lt;p&gt;{{ author.bio }}&lt;/p&gt;
+                    &lt;img src="{{ author.profile_image.url }}"&gt;
+                &lt;/div&gt;
+                {% if blogs %}
+                    {{ blogs|length }} Blogs
+                    {% for blog in blogs %}
+                        &lt;div&gt;
+                            &lt;a href="{% url 'blogs:blog-details' blog.id %}"&gt;
+                                &lt;h4&gt;Title: {{ blog.title }}&lt;/h4&gt;
+                            &lt;/a&gt;
+                        &lt;/div&gt;
+                    {% endfor %}
+                {% else %}
+                    &lt;p&gt;0 Blogs&lt;/p&gt;
+                {% endif %}
+            {% endblock %}
+        </code>
+    </pre>
 </div>

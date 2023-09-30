@@ -7,74 +7,86 @@
     <h5 class="mt-4 mb-0">Check if app exists in INSTALLED_APPS, if particular middleware exists in MIDDLEWARE.</h5>
     <h5 class="mt-3 mb-3">Create check file in your app to check current app.</h5>
     <h5 class="mt-0 mb-5">Import settings to check if the app exists in INSTALLED_APPS.</h5>
-    <div class="rounded p-4 mb-5 mt-4 custom-div">
-        <p class="mb-1">from django.conf import settings</p>
-        <p class="mb-1">from django.core.checks import Error, register</p>
-        <p class="mb-1">from django.urls import reverse, NoReverseMatch</p>
-        <p class="mb-1"># Register your check function</p>
-        <p class="mb-1">@@register()</p>
-        <p class="mb-1">def fitst_check(app_configs, **kwargs):</p>
-        <p class="mb-1 mr-25"># store the errors</p>
-        <p class="mb-1 mr-25">errors = []</p>
-        <p class="mb-1 mr-25">app = 'app name'</p>
-        <p class="mb-1 mr-25">if app in settings.INSTALLED_APPS:</p>
-        <p class="mb-1 mr-50">try:</p>
-        <p class="mb-1 mr-75"># reverse any url in the app. to make sure it exists</p>
-        <p class="mb-1 mr-75">reverse('list')</p>
-        <p class="mb-1 mr-75">errors.append(</p>
-        <p class="mb-1 mr-100">Error('Looks like there is no app name url',</p>
-        <p class="mb-1 mr-150">hint=f'Create a app name url',</p>
-        <p class="mb-1 mr-150">obj=settings,</p>
-        <p class="mb-1 mr-150">id='app.E002',</p>
-        <p class="mb-1 mr-125">)</p>
-        <p class="mb-1 mr-100">)</p>
-        <p class="mb-1 mr-50">except NoReverseMatch:</p>
-        <p class="mb-1 mr-25">return errors</p>
-    </div>
+    <div class="mt-4"></div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            from django.conf import settings
+            from django.core.checks import Error, register
+            from django.urls import reverse, NoReverseMatch
+            # Register your check function
+            @@register()
+            def fitst_check(app_configs, **kwargs):
+                # store the errors
+                errors = []
+                app = 'app name'
+                if app in settings.INSTALLED_APPS:
+                    try:
+                        # reverse any url in the app. to make sure it exists
+                        reverse('list')
+                    except NoReverseMatch:
+                        errors.append(
+                            Error('Looks like there is no app name url',
+                                hint=f'Create a app name url',
+                                obj=settings,
+                                id='app.E002',
+                            )
+                        )
+                return errors
+            <span></span>
+        </code>
+    </pre>
 
     <hr />
     <h2 class="my-5 custom-title">Check apps</h2>
-    <div class="rounded p-4 mb-5 mt-4 custom-div">
-        <p class="mb-1">@@register()</p>
-        <p class="mb-1">def second_check(app_configs, **kwargs):</p>
-        <p class="mb-1 mr-25">errors = []</p>
-        <p class="mb-1 mr-25">apps_needed = [</p>
-        <p class="mb-1 mr-50">"jazzmin",</p>
-        <p class="mb-1 mr-50">"django.contrib.humanize",</p>
-        <p class="mb-1 mr-50">"admin_custom_menu",</p>
-        <p class="mb-1 mr-50">"tabular_permissions",</p>
-        <p class="mb-1 mr-50">"ckeditor",</p>
-        <p class="mb-1 mr-50">"crispy_forms",</p>
-        <p class="mb-1 mr-50">"django_countries",</p>
-        <p class="mb-1 mr-50">"crispy_bootstrap4",</p>
-        <p class="mb-1 mr-25">]</p>
-        <p class="mb-1 mr-25"># loop through each app in apps_needed. to check that all apps are exist in INSTALLED_APPS.</p>
-        <p class="mb-1 mr-25">for app in apps_needed:</p>
-        <p class="mb-1 mr-50">if app not in settings.INSTALLED_APPS:</p>
-        <p class="mb-1 mr-75">errors.append(</p>
-        <p class="mb-1 mr-100">Error(f'{app} is not in the INSTALLED_APPS',</p>
-        <p class="mb-1 mr-125">hint=f'Add {app} to INSTALLED_APPS .',</p>
-        <p class="mb-1 mr-125">obj=settings,</p>
-        <p class="mb-1 mr-125">id='base.E001',</p>
-        <p class="mb-1 mr-125">)</p>
-        <p class="mb-1 mr-75">)</p>
-        <p class="mb-1 mr-25">return errors</p>
-    </div>
+    <div class="mt-4"></div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            @@register()
+            def second_check(app_configs, **kwargs):
+                errors = []
+                apps_needed = [
+                    "jazzmin",
+                    "django.contrib.humanize",
+                    "admin_custom_menu",
+                    "tabular_permissions",
+                    "ckeditor",
+                    "crispy_forms",
+                    "django_countries",
+                    "crispy_bootstrap4",
+                ]
+                # loop through each app in apps_needed. to check that all apps are exist in INSTALLED_APPS.
+                for app in apps_needed:
+                    if app not in settings.INSTALLED_APPS:
+                        errors.append(
+                            Error(f'{app} is not in the INSTALLED_APPS',
+                                hint=f'Add {app} to INSTALLED_APPS .',
+                                obj=settings,
+                                id='base.E001',
+                                )
+                            )
+                return errors
+            <span></span>
+        </code>
+    </pre>
 
     <hr />
     <h2 class="my-5 custom-title">Check middleware</h2>
-    <div class="rounded p-4 mb-5 mt-4 custom-div">
-        <p class="mb-1">@@register()</p>
-        <p class="mb-1">def check_middleware(app_configs, **kwargs):</p>
-        <p class="mb-1 mr-25">errors = []</p>
-        <p class="mb-1 mr-25">if "django.contrib.auth.middleware.AuthenticationMiddleware" not in settings.MIDDLEWARE:</p>
-        <p class="mb-1 mr-50">errors.append(</p>
-        <p class="mb-1 mr-75">Error('auth is missing',</p>
-        <p class="mb-1 mr-100">hint=f'Add django.contrib.auth.middleware.AuthenticationMiddleware to the MIDDLEWARE',</p>
-        <p class="mb-1 mr-100">obj=settings,</p>
-        <p class="mb-1 mr-100">id='base.E002'</p>
-        <p class="mb-1 mr-100">)</p>
-        <p class="mb-1 mr-75">)</p>
-        <p class="mb-1 mr-25">return errors</p>
-    </div>
+    <div class="mt-4"></div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            @@register()
+            def check_middleware(app_configs, **kwargs):
+                errors = []
+                if "django.contrib.auth.middleware.AuthenticationMiddleware" not in settings.MIDDLEWARE:
+                    errors.append(
+                        Error('auth is missing',
+                                hint=f'Add django.contrib.auth.middleware.AuthenticationMiddleware to the MIDDLEWARE',
+                                obj=settings,
+                                id='base.E002'
+                            )
+                        )
+                return errors
+            <span></span>
+        </code>
+    </pre>
 </div>

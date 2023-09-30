@@ -4,57 +4,77 @@
 
     <hr />
     <h2 class="my-5 custom-title">Model</h2>
-    <div class="rounded p-4 mb-5 mt-3 custom-div">
-        <p class="mb-1">class Book(models.Model):</p>
-        <p class="mb-1 mr-25">title = models.CharField(max_length=100)</p>
-        <p class="mb-1 mr-25">available = models.BooleanField(default=False)</p>
-    </div>
+    <div class="mt-3"></div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            class Book(models.Model):
+                title = models.CharField(max_length=100)
+                available = models.BooleanField(default=False)
+            <span></span>
+        </code>
+    </pre>
 
     <hr />
     <h2 class="my-5 custom-title">View</h2>
-    <div class="rounded p-4 mb-5 mt-3 custom-div">
-        <p class="mb-1">from django.views.generic import ListView</p>
-        <p class="mb-1">from books.models import Book</p>
-        <p class="mb-1">class BookListView(ListView):</p>
-        <p class="mb-1 mr-25">model = Book # Book.objects.all()</p>
-        <p class="mb-1 mr-25">context_object_name = 'books' # {'books':model}</p>
-    </div>
+    <div class="mt-3"></div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            from django.views.generic import ListView
+            from books.models import Book
+            class BookListView(ListView):
+                model = Book # Book.objects.all()
+                context_object_name = 'books' # {'books':model}
+            <span></span>
+        </code>
+    </pre>
 
     <hr />
     <h2 class="my-5 custom-title">Url</h2>
-    <div class="rounded p-4 mb-2 mt-3 custom-div">
-        <p class="mb-1">from books.views import BookListView</p>
-        <p class="mb-1">urlpatterns = [</p>
-        <p class="mb-1 mr-25">path('books/', BookListView.as_view()),</p>
-        <p class="mb-1">]</p>
-    </div>
-    
+    <div class="mt-3"></div>
+    <pre class="mb-2">
+        <code class="language-Django">
+            from books.views import BookListView
+            urlpatterns = [
+                path('books/', BookListView.as_view()),
+            ]
+            <span></span>
+        </code>
+    </pre>
     <h5 class="mt-5 mb-5">It has 3 features.</h5>
-    <hr />
 
+    <hr />
     <h2 class="my-5 custom-title">get_context_data</h2>
     <h5 class="mt-3 mb-4">Used to add more context data and change default context name.</h5>
     <h5 class="mb-3">Example</h5>
-    <div class="rounded p-4 mb-5 custom-div">
-        <p class="mb-1">def get_context_data(self, **kwargs):</p>
-        <p class="mb-1 mr-25">context = super().get_context_data(**kwargs)</p>
-        <p class="mb-1 mr-25">context['books_list'] = Book.objects.all()</p>
-        <p class="mb-1 mr-25">return context</p>
-    </div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            def get_context_data(self, **kwargs):
+                context = super().get_context_data(**kwargs)
+                context['books_list'] = Book.objects.all()
+                return context
+            <span></span>
+        </code>
+    </pre>
 
     <hr />
     <h2 class="my-5 custom-title">queryset</h2>
     <h5 class="mt-3 mb-4">Used to define which objects to return.</h5>
     <h5 class="mb-3">Example</h5>
-    <div class="d-flex justify-content-start mb-5">
-        <h5 class="rounded p-3 custom-back">queryset = Book.objects.filter(available=True)</h5>
-    </div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            queryset = Book.objects.filter(available=True)
+            <span></span>
+        </code>
+    </pre>
 
     <hr />
     <h2 class="my-5 custom-title">template_name</h2>
     <h5 class="mt-3 mb-4">Used to define template name that will be used to display the data.</h5>
     <h5 class="mb-3">Example</h5>
-    <div class="d-flex justify-content-start mb-5">
-        <h5 class="rounded p-3 custom-back">template_name = 'books/books.html'</h5>
-    </div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            template_name = 'books/books.html'
+            <span></span>
+        </code>
+    </pre>
 </div>

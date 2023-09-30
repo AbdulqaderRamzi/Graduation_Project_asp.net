@@ -1,0 +1,13 @@
+﻿body {
+    background-color: #ededed !important;
+}
+.img-sm {
+  width: 46px;
+  height: 46px;
+}
+.mar-top {
+  margin-top: 15px;
+}
+.dis-img{
+    display:none;
+}

@@ -3,11 +3,14 @@
 
     <hr/>
     <h2 class="my-5 custom-title">Model</h2>
-    <div class="rounded p-4 mb-5 custom-div">
-        <p class="mb-1">class Person(models.Model):</p>
-        <p class="mb-1 mr-25">name = models.CharField(max_length=100)</p>
-        <p class="mb-1 mr-25">age = models.PositiveIntegerField()</p>
-    </div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            class Person(models.Model):
+                name = models.CharField(max_length=100)
+                age = models.PositiveIntegerField()
+            <span></span>
+        </code>
+    </pre>
 
     <hr />
     <h2 class="my-5 custom-title">AND</h2>
@@ -16,16 +19,14 @@
         Looking for a person whose name is khaled and he is 22 years old. if there is a person whose name is khaled, but he is not 22 years old. otherwise If there is a person who is 22 years old but whose name is not Khaled. one of the two conditions is True and the other is False. that means the result will be, found 0.
         otherwise If there is a person who is 22 years old and whose name is Khaled. both conditions are True. that means the result will not be, found 0.
     </h5>
-    <div class="d-flex justify-content-start mt-0">
-        <h5 class="rounded p-3 custom-back">
+    <div class="mt-3"></div>
+    <pre class="mb-5">
+        <code class="language-Django">
             Person.objects.filter(name="khaled") & Person.objects.filter(age=22)
-        </h5>
-    </div>
-    <div class="d-flex justify-content-start mt-2 mb-5">
-        <h5 class="rounded p-3 custom-back">
             Person.objects.filter(name="khaled").filter(age=22)
-        </h5>
-    </div>
+            <span></span>
+        </code>
+    </pre>
 
     <hr/>
     <h2 class="my-5 custom-title">OR</h2>
@@ -36,8 +37,11 @@
         Both conditions are False. that means the result will be, found 0.
     </h5>
     <h5 class="mt-4 mb-3">Use Q when you want to use OR condition.</h5>
-    <div class="rounded p-4 mb-5 custom-div">
-        <p class="mb-1">from django.db.models import Q</p>
-        <p class="mb-1">Model.objects.filter(Q(name="khaled") | Q(age=22))</p>
-    </div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            from django.db.models import Q
+            Model.objects.filter(Q(name="khaled") | Q(age=22))
+            <span></span>
+        </code>
+    </pre>
 </div>

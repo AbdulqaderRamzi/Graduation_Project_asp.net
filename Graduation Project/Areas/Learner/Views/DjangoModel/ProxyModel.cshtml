@@ -8,94 +8,122 @@
 
     <hr />
     <h2 class="my-5 custom-title">Examples</h2>
-    <div class="rounded p-4 mb-5 custom-div">
-        <p class="mb-1">class Book(models.Model):</p>
-        <p class="mb-1 mr-25">title = models.CharField(max_length=100)</p>
-        <p class="mb-1 mr-25">price = models.DecimalField(max_digits=5, decimal_places=2)</p>
-    </div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            class Book(models.Model):
+                title = models.CharField(max_length=100)
+                price = models.DecimalField(max_digits=5, decimal_places=2)
+            <span></span>
+        </code>
+    </pre>
 
     <hr/>
-    <div class="rounded p-4 mt-5 custom-div">
-        <p class="mb-1">class DiscountedBook(Book):</p>
-        <p class="mb-1 mr-25">class Meta:</p>
-        <p class="mb-1 mr-50">proxy = True</p>
-        <br>
-        <p class="mb-1 mr-25">def apply_discount(self, discount_percentage):</p>
-        <p class="mb-1 mr-50">discounted_price = self.price * (1 - discount_percentage / 100)</p>
-        <p class="mb-1 mr-50">return discounted_price</p>
-    </div>
+    <div class="mt-5"></div>
+    <pre>
+        <code class="language-Django">
+            class DiscountedBook(Book):
+                class Meta:
+                    proxy = True
+
+                def apply_discount(self, discount_percentage):
+                    discounted_price = self.price * (1 - discount_percentage / 100)
+                    return discounted_price
+            <span></span>
+        </code>
+    </pre>
     <h5 class="mb-3 mt-3">You can use proxy to add new function.</h5>
-    <div class="rounded p-4 mb-5 custom-inout">
-        <p class="mb-1">// Create book object:</p>
-        <p class="mb-1">book = Book.objects.create(title="Sample Book", price=20)</p>
-        <p class="mb-1">discounted_book = DiscountedBook.objects.create(title="Discounted Book", price=30)</p>
-        <p class="mb-1">// The book contains 2 objects.</p>
-        <br>
-        <p class="mb-1">Call the apply_discount function:</p>
-        <p class="mb-1">discounted_book.apply_discount(15)</p>
-    </div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            // Create book object:
+            book = Book.objects.create(title="Sample Book", price=20)
+            discounted_book = DiscountedBook.objects.create(title="Discounted Book", price=30)
+            // The book contains 2 objects.
+
+            Call the apply_discount function:
+            discounted_book.apply_discount(15)
+            <span></span>
+        </code>
+    </pre>
 
     <hr/>
-    <div class="rounded p-4 mt-5 custom-div">
-        <p class="mb-1">class DiscountedBookManager(models.Manager):</p>
-        <p class="mb-1 mr-25">def get_queryset(self):</p>
-        <p class="mb-1 mr-50">return super().get_queryset().filter(price__lt=10)</p>
-        <p class="mb-1 mr-25">def expensive_books(self):</p>
-        <p class="mb-1 mr-50">return self.filter(price__gte=9)</p>
-        <br>
-        <p class="mb-1">class DiscountedBook(Book):</p>
-        <p class="mb-1 mr-25">class Meta:</p>
-        <p class="mb-1 mr-50">proxy = True</p>
-        <p class="mb-1 mr-25">objects = DiscountedBookManager()</p>
-    </div>
+    <div class="mt-5"></div>
+    <pre>
+        <code class="language-Django">
+            class DiscountedBookManager(models.Manager):
+                def get_queryset(self):
+                    return super().get_queryset().filter(price__lt=10)
+                def expensive_books(self):
+                    return self.filter(price__gte=9)
+
+            class DiscountedBook(Book):
+                class Meta:
+                    proxy = True
+                objects = DiscountedBookManager()
+            <span></span>
+        </code>
+    </pre>
     <h5 class="mb-3 mt-3">You can use proxy to change Manager.</h5>
-    <div class="rounded p-4 mb-5 custom-inout">
-        <p class="mb-1">// Create book object:</p>
-        <p class="mb-1">book = Book.objects.create(title="Cheap Book", price=5)</p>
-        <p class="mb-1">discounted_book = DiscountedBook.objects.create(title="Expensive Book", price=15)</p>
-        <br>
-        <p class="mb-1">// Call Managers:</p>
-        <p class="mb-1">DiscountedBook.objects.all()</p>
-        <p class="mb-1">DiscountedBook.objects.expensive_books()</p>
-    </div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            // Create book object:
+            book = Book.objects.create(title="Cheap Book", price=5)
+            discounted_book = DiscountedBook.objects.create(title="Expensive Book", price=15)
+
+            // Call Managers:
+            DiscountedBook.objects.all()
+            DiscountedBook.objects.expensive_books()
+            <span></span>
+        </code>
+    </pre>
 
     <hr/>
-    <div class="rounded p-4 mt-5 custom-div">
-        <p class="mb-1">class DiscountedBook(Book):</p>
-        <p class="mb-1 mr-25">class Meta:</p>
-        <p class="mb-1 mr-50">proxy = True</p>
-        <br>
-        <p class="mb-1 mr-25">def save(self, *args, **kwargs):</p>
-        <p class="mb-1 mr-50">self.price -= 2</p>
-        <p class="mb-1 mr-50">super().save(*args, **kwargs)</p>
-    </div>
+    <div class="mt-5"></div>
+    <pre>
+        <code class="language-Django">
+            class DiscountedBook(Book):
+                class Meta:
+                    proxy = True
+
+                def save(self, *args, **kwargs):
+                    self.price -= 2
+                    super().save(*args, **kwargs)
+            <span></span>
+        </code>
+    </pre>
     <h5 class="mb-3 mt-3">You can use proxy to change save method.</h5>
-    <div class="rounded p-4 mb-5 custom-inout">
-        <p class="mb-1">// Create book object:</p>
-        <p class="mb-1">book = Book.objects.create(title="khaled Book", price=7)</p>
-        <p class="mb-1">discounted_book = DiscountedBook.objects.create(title="Harry Potter", price=12)</p>
-        <p class="mb-1">// Book price will be 7 otherwise, discounted_book price will be 10.</p>
-    </div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            // Create book object:
+            book = Book.objects.create(title="khaled Book", price=7)
+            discounted_book = DiscountedBook.objects.create(title="Harry Potter", price=12)
+            // Book price will be 7 otherwise, discounted_book price will be 10.
+            <span></span>
+        </code>
+    </pre>
 
     <hr/>
-    <div class="rounded p-4 mt-5 custom-div">
-        <p class="mb-1">class FreeBookManager(models.Manager):</p>
-        <p class="mb-1 mr-25">def get_queryset(self):</p>
-        <p class="mb-1 mr-50">return super().get_queryset().filter(price=0)</p>
-        <br>
-        <p class="mb-1">class FreeBook(Book):</p>
-        <p class="mb-1 mr-25">class Meta:</p>
-        <p class="mb-1 mr-50">proxy = True</p>
-        <p class="mb-1 mr-25">objects = FreeBookManager()</p>
-        <br>
-        <p class="mb-1">class ExpensiveBookManager(models.Manager):</p>
-        <p class="mb-1 mr-25">def get_queryset(self):</p>
-        <p class="mb-1 mr-50">return super().get_queryset().filter(price__gt=50)</p>
-        <br>
-        <p class="mb-1">class ExpensiveBook(Book):</p>
-        <p class="mb-1 mr-25">class Meta:</p>
-        <p class="mb-1 mr-50">proxy = True</p>
-        <p class="mb-1 mr-25">objects = ExpensiveBookManager()</p>
-    </div>
+    <div class="mt-5"></div>
+    <pre>
+        <code class="language-Django">
+            class FreeBookManager(models.Manager):
+                def get_queryset(self):
+                    return super().get_queryset().filter(price=0)
+
+            class FreeBook(Book):
+                class Meta:
+                    proxy = True
+                objects = FreeBookManager()
+
+            class ExpensiveBookManager(models.Manager):
+                def get_queryset(self):
+                    return super().get_queryset().filter(price__gt=50)
+
+            class ExpensiveBook(Book):
+                class Meta:
+                    proxy = True
+                objects = ExpensiveBookManager()
+            <span></span>
+        </code>
+    </pre>
     <h5 class="mb-5 mt-3">You can create multiple proxy models for the same original model.</h5>
 </div>

@@ -33,8 +33,8 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 builder.Services.AddAuthentication().AddGoogle(googleOptions => {
-    googleOptions.ClientId = "372542609664-m7jvns7kl2go4u3crigr4201c06egas5.apps.googleusercontent.com";
-    googleOptions.ClientSecret = "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";
+    googleOptions.ClientId = "461108020012-587o0dquc5sbpnom5u3tjfoou8j752is.apps.googleusercontent.com";
+    googleOptions.ClientSecret = "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";
 });
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();

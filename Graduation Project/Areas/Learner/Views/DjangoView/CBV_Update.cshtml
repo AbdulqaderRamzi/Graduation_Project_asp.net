@@ -4,35 +4,47 @@
     
     <hr />
     <h2 class="my-5 custom-title">Model</h2>
-    <div class="rounded p-4 mb-5 mt-3 custom-div">
-        <p class="mb-1">class Book(models.Model):</p>
-        <p class="mb-1 mr-25">title = models.CharField(max_length=100)</p>
-        <p class="mb-1 mr-25">available = models.BooleanField(default=False)</p>
-    </div>
+    <div class="mt-3"></div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            class Book(models.Model):
+                title = models.CharField(max_length=100)
+                available = models.BooleanField(default=False)
+            <span></span>
+        </code>
+    </pre>
 
     <hr />
     <h2 class="my-5 custom-title">View</h2>
-    <div class="rounded p-4 mb-5 mt-3 custom-div">
-        <p class="mb-1">from django.views.generic.edit import UpdateView</p>
-        <p class="mb-1">from django.urls import reverse</p>
-        <p class="mb-1">from app.models import Book</p>
-        <p class="mb-1">from app.forms import UpdateForm</p>
-        <p class="mb-1">class BookUpdateView(UpdateView):</p>
-        <p class="mb-1 mr-25">model = Book # update object of Book</p>
-        <p class="mb-1 mr-25">fields = ['title', 'available'] # define required fields that want to update</p>
-        <p class="mb-1 mr-25">form_class = UpdateForm</p>
-        <p class="mb-1 mr-25">success_url = reverse('home')</p>
-    </div>
+    <div class="mt-3"></div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            from django.views.generic.edit import UpdateView
+            from django.urls import reverse
+            from app.models import Book
+            from app.forms import UpdateForm
+            class BookUpdateView(UpdateView):
+                model = Book # update object of Book
+                fields = ['title', 'available'] # define required fields that want to update
+                form_class = UpdateForm
+                success_url = reverse('home')
+            <span></span>
+        </code>
+    </pre>
 
     <hr />
     <h2 class="my-5 custom-title">Url</h2>
-    <div class="rounded p-4 mb-5 mt-3 custom-div">
-        <p class="mb-1">from django.urls import path</p>
-        <p class="mb-1">from app.views import BookUpdateView</p>
-        <p class="mb-1">urlpatterns = [</p>
-        <p class="mb-1 mr-25">path('update/&lt;int:pk&gt;/', BookUpdateView.as_view(), name='book-update'),</p>
-        <p class="mb-1">]</p>
-    </div>
+    <div class="mt-3"></div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            from django.urls import path
+            from app.views import BookUpdateView
+            urlpatterns = [
+                path('update/&lt;int:pk&gt;/', BookUpdateView.as_view(), name='book-update'),
+            ]
+            <span></span>
+        </code>
+    </pre>
 
     <hr />
     <h2 class="my-5 custom-title">Explanation</h2>

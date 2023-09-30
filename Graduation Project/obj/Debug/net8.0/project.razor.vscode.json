@@ -9,7 +9,7 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
-        "HashCode": 272453485,
+        "HashCode": 391415651,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.CascadingValue<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -96,7 +96,7 @@
         }
       },
       {
-        "HashCode": -408273706,
+        "HashCode": 1896609681,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.CascadingValue<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -184,7 +184,7 @@
         }
       },
       {
-        "HashCode": 1840975461,
+        "HashCode": 252744323,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.CascadingValue<TValue>.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -206,7 +206,7 @@
         }
       },
       {
-        "HashCode": 1580520692,
+        "HashCode": -1082483793,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.CascadingValue<TValue>.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -229,7 +229,7 @@
         }
       },
       {
-        "HashCode": -1576966133,
+        "HashCode": -342295925,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.DynamicComponent",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -274,7 +274,7 @@
         }
       },
       {
-        "HashCode": -1464562692,
+        "HashCode": 385785614,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.DynamicComponent",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -320,7 +320,7 @@
         }
       },
       {
-        "HashCode": 1194876524,
+        "HashCode": -266761594,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.LayoutView",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -365,7 +365,7 @@
         }
       },
       {
-        "HashCode": 1912324144,
+        "HashCode": -235935388,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.LayoutView",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -411,7 +411,7 @@
         }
       },
       {
-        "HashCode": 937335749,
+        "HashCode": -1943004509,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.LayoutView.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -433,7 +433,7 @@
         }
       },
       {
-        "HashCode": -1496737323,
+        "HashCode": -2009138279,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.LayoutView.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -456,7 +456,7 @@
         }
       },
       {
-        "HashCode": 439111545,
+        "HashCode": 166415017,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.RouteView",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -501,7 +501,7 @@
         }
       },
       {
-        "HashCode": 506775129,
+        "HashCode": -1906180167,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.RouteView",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -547,7 +547,7 @@
         }
       },
       {
-        "HashCode": -768523029,
+        "HashCode": -1323229260,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Routing.Router",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -666,7 +666,7 @@
         }
       },
       {
-        "HashCode": 1023945021,
+        "HashCode": 330814285,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Routing.Router",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -786,7 +786,7 @@
         }
       },
       {
-        "HashCode": 1850972555,
+        "HashCode": -1940240775,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Routing.Router.NotFound",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -808,7 +808,7 @@
         }
       },
       {
-        "HashCode": -309704437,
+        "HashCode": 196539169,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Routing.Router.NotFound",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -831,7 +831,7 @@
         }
       },
       {
-        "HashCode": -1452685611,
+        "HashCode": -1224283707,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Routing.Router.Found",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -871,7 +871,7 @@
         }
       },
       {
-        "HashCode": 1986869906,
+        "HashCode": 1291109099,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Routing.Router.Found",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -912,7 +912,7 @@
         }
       },
       {
-        "HashCode": -290345128,
+        "HashCode": -261419193,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Routing.Router.Navigating",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -934,7 +934,7 @@
         }
       },
       {
-        "HashCode": 770065219,
+        "HashCode": -514610297,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Routing.Router.Navigating",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -957,7 +957,7 @@
         }
       },
       {
-        "HashCode": 744488793,
+        "HashCode": 1701418297,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Sections.SectionContent",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1013,7 +1013,7 @@
         }
       },
       {
-        "HashCode": 670051189,
+        "HashCode": -49904863,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Sections.SectionContent",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1070,7 +1070,7 @@
         }
       },
       {
-        "HashCode": -1047837489,
+        "HashCode": -768873792,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Sections.SectionContent.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1092,7 +1092,7 @@
         }
       },
       {
-        "HashCode": 561451556,
+        "HashCode": -455167020,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Sections.SectionContent.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1115,7 +1115,7 @@
         }
       },
       {
-        "HashCode": -892311226,
+        "HashCode": -936380172,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Sections.SectionOutlet",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1159,7 +1159,7 @@
         }
       },
       {
-        "HashCode": -472735209,
+        "HashCode": -1395438845,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Sections.SectionOutlet",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1204,7 +1204,7 @@
         }
       },
       {
-        "HashCode": -654178594,
+        "HashCode": -696527844,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeRouteView",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -1297,7 +1297,7 @@
         }
       },
       {
-        "HashCode": 98920426,
+        "HashCode": 170364855,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeRouteView",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -1391,7 +1391,7 @@
         }
       },
       {
-        "HashCode": -785030720,
+        "HashCode": 1897283563,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeRouteView.NotAuthorized",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -1431,7 +1431,7 @@
         }
       },
       {
-        "HashCode": 1544637323,
+        "HashCode": 1545701012,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeRouteView.NotAuthorized",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -1472,7 +1472,7 @@
         }
       },
       {
-        "HashCode": 775871457,
+        "HashCode": -669536954,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeRouteView.Authorizing",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -1494,7 +1494,7 @@
         }
       },
       {
-        "HashCode": 195534678,
+        "HashCode": 870709101,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeRouteView.Authorizing",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -1517,7 +1517,7 @@
         }
       },
       {
-        "HashCode": 27070325,
+        "HashCode": 582889755,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeView",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -1633,7 +1633,7 @@
         }
       },
       {
-        "HashCode": 1347787185,
+        "HashCode": 2109285449,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeView",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -1750,7 +1750,7 @@
         }
       },
       {
-        "HashCode": 1701544834,
+        "HashCode": 985085068,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeView.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -1790,7 +1790,7 @@
         }
       },
       {
-        "HashCode": -238908679,
+        "HashCode": -1546363734,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeView.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -1831,7 +1831,7 @@
         }
       },
       {
-        "HashCode": 957970848,
+        "HashCode": -36505505,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeView.NotAuthorized",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -1871,7 +1871,7 @@
         }
       },
       {
-        "HashCode": -1260797926,
+        "HashCode": 1938447891,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeView.NotAuthorized",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -1912,7 +1912,7 @@
         }
       },
       {
-        "HashCode": 1851663482,
+        "HashCode": 1202691180,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeView.Authorized",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -1952,7 +1952,7 @@
         }
       },
       {
-        "HashCode": -1820168642,
+        "HashCode": 2108861229,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeView.Authorized",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -1993,7 +1993,7 @@
         }
       },
       {
-        "HashCode": 544072733,
+        "HashCode": -502738009,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeView.Authorizing",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -2015,7 +2015,7 @@
         }
       },
       {
-        "HashCode": -723916375,
+        "HashCode": -909500465,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeView.Authorizing",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -2038,7 +2038,7 @@
         }
       },
       {
-        "HashCode": 1807348054,
+        "HashCode": 1857131679,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Authorization.CascadingAuthenticationState",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -2071,7 +2071,7 @@
         }
       },
       {
-        "HashCode": -1485382682,
+        "HashCode": -1408272693,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Authorization.CascadingAuthenticationState",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -2105,7 +2105,7 @@
         }
       },
       {
-        "HashCode": 2099647967,
+        "HashCode": 1908535009,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.CascadingAuthenticationState.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -2127,7 +2127,7 @@
         }
       },
       {
-        "HashCode": -1424358941,
+        "HashCode": 1822105572,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.CascadingAuthenticationState.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -2150,7 +2150,7 @@
         }
       },
       {
-        "HashCode": 132065023,
+        "HashCode": -1723249893,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.DataAnnotationsValidator",
         "AssemblyName": "Microsoft.AspNetCore.Components.Forms",
@@ -2170,7 +2170,7 @@
         }
       },
       {
-        "HashCode": -674407650,
+        "HashCode": -1356056963,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.DataAnnotationsValidator",
         "AssemblyName": "Microsoft.AspNetCore.Components.Forms",
@@ -2191,7 +2191,7 @@
         }
       },
       {
-        "HashCode": -1914538097,
+        "HashCode": -1279723350,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.AntiforgeryToken",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2211,7 +2211,7 @@
         }
       },
       {
-        "HashCode": 422565594,
+        "HashCode": 1798178522,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.AntiforgeryToken",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2232,7 +2232,7 @@
         }
       },
       {
-        "HashCode": -729268754,
+        "HashCode": 701409656,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.EditForm",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2359,7 +2359,7 @@
         }
       },
       {
-        "HashCode": -938936186,
+        "HashCode": -746219526,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.EditForm",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2487,7 +2487,7 @@
         }
       },
       {
-        "HashCode": -955484959,
+        "HashCode": -399356048,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Forms.EditForm.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2527,7 +2527,7 @@
         }
       },
       {
-        "HashCode": -1519264345,
+        "HashCode": 1730311480,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Forms.EditForm.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2568,7 +2568,7 @@
         }
       },
       {
-        "HashCode": 1296428869,
+        "HashCode": -333892990,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputCheckbox",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2646,7 +2646,7 @@
         }
       },
       {
-        "HashCode": -521911192,
+        "HashCode": -2116686280,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputCheckbox",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2725,7 +2725,7 @@
         }
       },
       {
-        "HashCode": -1073258746,
+        "HashCode": 1604595593,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputDate<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2848,7 +2848,7 @@
         }
       },
       {
-        "HashCode": 1389959685,
+        "HashCode": 1724270951,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputDate<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2972,7 +2972,7 @@
         }
       },
       {
-        "HashCode": -1845959505,
+        "HashCode": 398318426,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputFile",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3017,7 +3017,7 @@
         }
       },
       {
-        "HashCode": 696009590,
+        "HashCode": -1943766122,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputFile",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3063,7 +3063,7 @@
         }
       },
       {
-        "HashCode": 2048433476,
+        "HashCode": 771476803,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputNumber<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3174,7 +3174,7 @@
         }
       },
       {
-        "HashCode": 1024486604,
+        "HashCode": -675967413,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputNumber<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3286,7 +3286,7 @@
         }
       },
       {
-        "HashCode": 1720983478,
+        "HashCode": -1541077322,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputRadio<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3361,7 +3361,7 @@
         }
       },
       {
-        "HashCode": -758617483,
+        "HashCode": -1410159178,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputRadio<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3437,7 +3437,7 @@
         }
       },
       {
-        "HashCode": -2043621968,
+        "HashCode": -891814910,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputRadioGroup<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3560,7 +3560,7 @@
         }
       },
       {
-        "HashCode": -2109926893,
+        "HashCode": -84818952,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputRadioGroup<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3684,7 +3684,7 @@
         }
       },
       {
-        "HashCode": 784897082,
+        "HashCode": -1654947333,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputRadioGroup<TValue>.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3706,7 +3706,7 @@
         }
       },
       {
-        "HashCode": -1363315181,
+        "HashCode": -1628921121,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputRadioGroup<TValue>.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3729,7 +3729,7 @@
         }
       },
       {
-        "HashCode": -1408586127,
+        "HashCode": 1257410608,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputSelect<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3841,7 +3841,7 @@
         }
       },
       {
-        "HashCode": 993931595,
+        "HashCode": 1084039195,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputSelect<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3954,7 +3954,7 @@
         }
       },
       {
-        "HashCode": -1837065722,
+        "HashCode": -1396017465,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputSelect<TValue>.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3976,7 +3976,7 @@
         }
       },
       {
-        "HashCode": 951173279,
+        "HashCode": -1783365249,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputSelect<TValue>.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3999,7 +3999,7 @@
         }
       },
       {
-        "HashCode": -1036000343,
+        "HashCode": 236146349,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputText",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4077,7 +4077,7 @@
         }
       },
       {
-        "HashCode": 1126253134,
+        "HashCode": 1364910976,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputText",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4156,7 +4156,7 @@
         }
       },
       {
-        "HashCode": 1975102056,
+        "HashCode": 2054834387,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputTextArea",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4234,7 +4234,7 @@
         }
       },
       {
-        "HashCode": 1210961866,
+        "HashCode": -931700450,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputTextArea",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4313,7 +4313,7 @@
         }
       },
       {
-        "HashCode": -1713026554,
+        "HashCode": 1032896499,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.FormMappingScope",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4372,7 +4372,7 @@
         }
       },
       {
-        "HashCode": -820369575,
+        "HashCode": 61046850,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.FormMappingScope",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4432,7 +4432,7 @@
         }
       },
       {
-        "HashCode": 1448313335,
+        "HashCode": 689032540,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Forms.FormMappingScope.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4472,7 +4472,7 @@
         }
       },
       {
-        "HashCode": -1264625409,
+        "HashCode": 540131691,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Forms.FormMappingScope.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4513,7 +4513,7 @@
         }
       },
       {
-        "HashCode": 46351761,
+        "HashCode": 376031703,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.ValidationMessage<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4577,7 +4577,7 @@
         }
       },
       {
-        "HashCode": -516432266,
+        "HashCode": 1642893558,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.ValidationMessage<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4642,7 +4642,7 @@
         }
       },
       {
-        "HashCode": 1692064550,
+        "HashCode": 218583539,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.ValidationSummary",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4686,7 +4686,7 @@
         }
       },
       {
-        "HashCode": 1504520182,
+        "HashCode": -410985625,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.ValidationSummary",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4731,7 +4731,7 @@
         }
       },
       {
-        "HashCode": -998866650,
+        "HashCode": 1494969359,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Routing.FocusOnNavigate",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4775,7 +4775,7 @@
         }
       },
       {
-        "HashCode": -719959300,
+        "HashCode": 247051611,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Routing.FocusOnNavigate",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4820,7 +4820,7 @@
         }
       },
       {
-        "HashCode": 623459133,
+        "HashCode": -878248666,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Routing.NavigationLock",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4865,7 +4865,7 @@
         }
       },
       {
-        "HashCode": -1886237524,
+        "HashCode": -1780468622,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Routing.NavigationLock",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4911,7 +4911,7 @@
         }
       },
       {
-        "HashCode": -2091667134,
+        "HashCode": 407478206,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Routing.NavLink",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4979,7 +4979,7 @@
         }
       },
       {
-        "HashCode": 1109428232,
+        "HashCode": -2142444682,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Routing.NavLink",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -5048,7 +5048,7 @@
         }
       },
       {
-        "HashCode": -272367895,
+        "HashCode": -1292718937,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Routing.NavLink.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -5070,7 +5070,7 @@
         }
       },
       {
-        "HashCode": 185577602,
+        "HashCode": -1249104553,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Routing.NavLink.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -5093,7 +5093,7 @@
         }
       },
       {
-        "HashCode": 797553260,
+        "HashCode": -231768937,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Web.HeadContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -5127,7 +5127,7 @@
         }
       },
       {
-        "HashCode": 1471850399,
+        "HashCode": -356613986,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Web.HeadContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -5162,7 +5162,7 @@
         }
       },
       {
-        "HashCode": 129459175,
+        "HashCode": -701158749,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.HeadContent.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -5184,7 +5184,7 @@
         }
       },
       {
-        "HashCode": 41411886,
+        "HashCode": -713378483,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.HeadContent.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -5207,7 +5207,7 @@
         }
       },
       {
-        "HashCode": -1548842810,
+        "HashCode": 903409340,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Web.HeadOutlet",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -5227,7 +5227,7 @@
         }
       },
       {
-        "HashCode": -733656883,
+        "HashCode": -1686405632,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Web.HeadOutlet",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -5248,7 +5248,7 @@
         }
       },
       {
-        "HashCode": 363480044,
+        "HashCode": 1221160641,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Web.PageTitle",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -5282,7 +5282,7 @@
         }
       },
       {
-        "HashCode": 594848518,
+        "HashCode": 656738901,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Web.PageTitle",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -5317,7 +5317,7 @@
         }
       },
       {
-        "HashCode": 1294374057,
+        "HashCode": 1731713678,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.PageTitle.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -5339,7 +5339,7 @@
         }
       },
       {
-        "HashCode": -1701535461,
+        "HashCode": 1358525642,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.PageTitle.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -5362,7 +5362,7 @@
         }
       },
       {
-        "HashCode": -1767989876,
+        "HashCode": 388585462,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Web.ErrorBoundary",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -5432,7 +5432,7 @@
         }
       },
       {
-        "HashCode": 1338818546,
+        "HashCode": 750054137,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Web.ErrorBoundary",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -5503,7 +5503,7 @@
         }
       },
       {
-        "HashCode": -1561276637,
+        "HashCode": 1871816857,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.ErrorBoundary.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -5525,7 +5525,7 @@
         }
       },
       {
-        "HashCode": 2034440421,
+        "HashCode": 2014145261,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.ErrorBoundary.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -5548,7 +5548,7 @@
         }
       },
       {
-        "HashCode": -268246732,
+        "HashCode": -191376106,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.ErrorBoundary.ErrorContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -5588,7 +5588,7 @@
         }
       },
       {
-        "HashCode": 1602358350,
+        "HashCode": 1548805122,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.ErrorBoundary.ErrorContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -5629,7 +5629,7 @@
         }
       },
       {
-        "HashCode": 761269491,
+        "HashCode": -158190396,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Web.Virtualization.Virtualize<TItem>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -5792,7 +5792,7 @@
         }
       },
       {
-        "HashCode": 2043127824,
+        "HashCode": 545387751,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Web.Virtualization.Virtualize<TItem>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -5956,7 +5956,7 @@
         }
       },
       {
-        "HashCode": -724064379,
+        "HashCode": 690543602,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.Virtualization.Virtualize<TItem>.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -5996,7 +5996,7 @@
         }
       },
       {
-        "HashCode": -1415495360,
+        "HashCode": -68191468,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.Virtualization.Virtualize<TItem>.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -6037,7 +6037,7 @@
         }
       },
       {
-        "HashCode": 1094925325,
+        "HashCode": -507635443,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.Virtualization.Virtualize<TItem>.ItemContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -6077,7 +6077,7 @@
         }
       },
       {
-        "HashCode": 225091891,
+        "HashCode": 1589730325,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.Virtualization.Virtualize<TItem>.ItemContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -6118,7 +6118,7 @@
         }
       },
       {
-        "HashCode": 289312629,
+        "HashCode": 1972951348,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.Virtualization.Virtualize<TItem>.Placeholder",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -6158,7 +6158,7 @@
         }
       },
       {
-        "HashCode": -2054761680,
+        "HashCode": -1889127567,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.Virtualization.Virtualize<TItem>.Placeholder",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -6199,7 +6199,7 @@
         }
       },
       {
-        "HashCode": 574307077,
+        "HashCode": 492966827,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.Virtualization.Virtualize<TItem>.EmptyContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -6221,7 +6221,7 @@
         }
       },
       {
-        "HashCode": 1482488740,
+        "HashCode": -908332222,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.Virtualization.Virtualize<TItem>.EmptyContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -6244,7 +6244,7 @@
         }
       },
       {
-        "HashCode": -1126908484,
+        "HashCode": -789369131,
         "Kind": "Components.EventHandler",
         "Name": "onfocus",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -6358,7 +6358,7 @@
         }
       },
       {
-        "HashCode": -1872364343,
+        "HashCode": -293234703,
         "Kind": "Components.EventHandler",
         "Name": "onblur",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -6472,7 +6472,7 @@
         }
       },
       {
-        "HashCode": 744943191,
+        "HashCode": -1594053254,
         "Kind": "Components.EventHandler",
         "Name": "onfocusin",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -6586,7 +6586,7 @@
         }
       },
       {
-        "HashCode": 1692748655,
+        "HashCode": -818330617,
         "Kind": "Components.EventHandler",
         "Name": "onfocusout",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -6700,7 +6700,7 @@
         }
       },
       {
-        "HashCode": 1779381785,
+        "HashCode": 135288085,
         "Kind": "Components.EventHandler",
         "Name": "onmouseover",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -6814,7 +6814,7 @@
         }
       },
       {
-        "HashCode": -933865976,
+        "HashCode": 1022455095,
         "Kind": "Components.EventHandler",
         "Name": "onmouseout",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -6928,7 +6928,7 @@
         }
       },
       {
-        "HashCode": -1112739034,
+        "HashCode": -821306896,
         "Kind": "Components.EventHandler",
         "Name": "onmouseleave",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -7042,7 +7042,7 @@
         }
       },
       {
-        "HashCode": 509667902,
+        "HashCode": 338774069,
         "Kind": "Components.EventHandler",
         "Name": "onmouseenter",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -7156,7 +7156,7 @@
         }
       },
       {
-        "HashCode": -1836415425,
+        "HashCode": 687058810,
         "Kind": "Components.EventHandler",
         "Name": "onmousemove",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -7270,7 +7270,7 @@
         }
       },
       {
-        "HashCode": -1061615935,
+        "HashCode": 865463355,
         "Kind": "Components.EventHandler",
         "Name": "onmousedown",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -7384,7 +7384,7 @@
         }
       },
       {
-        "HashCode": 1588706495,
+        "HashCode": 1462790545,
         "Kind": "Components.EventHandler",
         "Name": "onmouseup",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -7498,7 +7498,7 @@
         }
       },
       {
-        "HashCode": -903032992,
+        "HashCode": -1069781463,
         "Kind": "Components.EventHandler",
         "Name": "onclick",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -7612,7 +7612,7 @@
         }
       },
       {
-        "HashCode": -1388124614,
+        "HashCode": -1386207423,
         "Kind": "Components.EventHandler",
         "Name": "ondblclick",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -7726,7 +7726,7 @@
         }
       },
       {
-        "HashCode": 333453773,
+        "HashCode": -1065900513,
         "Kind": "Components.EventHandler",
         "Name": "onwheel",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -7840,7 +7840,7 @@
         }
       },
       {
-        "HashCode": -1687558576,
+        "HashCode": -2136454876,
         "Kind": "Components.EventHandler",
         "Name": "onmousewheel",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -7954,7 +7954,7 @@
         }
       },
       {
-        "HashCode": 1105887656,
+        "HashCode": -475723226,
         "Kind": "Components.EventHandler",
         "Name": "oncontextmenu",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -8068,7 +8068,7 @@
         }
       },
       {
-        "HashCode": -209690028,
+        "HashCode": -717096084,
         "Kind": "Components.EventHandler",
         "Name": "ondrag",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -8182,7 +8182,7 @@
         }
       },
       {
-        "HashCode": -1226723231,
+        "HashCode": -1076414026,
         "Kind": "Components.EventHandler",
         "Name": "ondragend",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -8296,7 +8296,7 @@
         }
       },
       {
-        "HashCode": 1239438926,
+        "HashCode": 2015163284,
         "Kind": "Components.EventHandler",
         "Name": "ondragenter",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -8410,7 +8410,7 @@
         }
       },
       {
-        "HashCode": -1239945279,
+        "HashCode": -889382642,
         "Kind": "Components.EventHandler",
         "Name": "ondragleave",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -8524,7 +8524,7 @@
         }
       },
       {
-        "HashCode": -517317902,
+        "HashCode": 1482482978,
         "Kind": "Components.EventHandler",
         "Name": "ondragover",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -8638,7 +8638,7 @@
         }
       },
       {
-        "HashCode": 1899438846,
+        "HashCode": -1304151468,
         "Kind": "Components.EventHandler",
         "Name": "ondragstart",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -8752,7 +8752,7 @@
         }
       },
       {
-        "HashCode": -1988602961,
+        "HashCode": 935009879,
         "Kind": "Components.EventHandler",
         "Name": "ondrop",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -8866,7 +8866,7 @@
         }
       },
       {
-        "HashCode": -621935625,
+        "HashCode": -140204816,
         "Kind": "Components.EventHandler",
         "Name": "onkeydown",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -8980,7 +8980,7 @@
         }
       },
       {
-        "HashCode": -824859422,
+        "HashCode": 787907201,
         "Kind": "Components.EventHandler",
         "Name": "onkeyup",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -9094,7 +9094,7 @@
         }
       },
       {
-        "HashCode": 1210588611,
+        "HashCode": 1652265391,
         "Kind": "Components.EventHandler",
         "Name": "onkeypress",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -9208,7 +9208,7 @@
         }
       },
       {
-        "HashCode": -2113793324,
+        "HashCode": 1407074051,
         "Kind": "Components.EventHandler",
         "Name": "onchange",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -9322,7 +9322,7 @@
         }
       },
       {
-        "HashCode": -374180262,
+        "HashCode": -2012998780,
         "Kind": "Components.EventHandler",
         "Name": "oninput",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -9436,7 +9436,7 @@
         }
       },
       {
-        "HashCode": 1265673092,
+        "HashCode": 1955947297,
         "Kind": "Components.EventHandler",
         "Name": "oninvalid",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -9550,7 +9550,7 @@
         }
       },
       {
-        "HashCode": 611079970,
+        "HashCode": -724741461,
         "Kind": "Components.EventHandler",
         "Name": "onreset",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -9664,7 +9664,7 @@
         }
       },
       {
-        "HashCode": -1366362155,
+        "HashCode": 1182804781,
         "Kind": "Components.EventHandler",
         "Name": "onselect",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -9778,7 +9778,7 @@
         }
       },
       {
-        "HashCode": 510236390,
+        "HashCode": 1600697395,
         "Kind": "Components.EventHandler",
         "Name": "onselectstart",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -9892,7 +9892,7 @@
         }
       },
       {
-        "HashCode": -912341318,
+        "HashCode": 809136840,
         "Kind": "Components.EventHandler",
         "Name": "onselectionchange",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -10006,7 +10006,7 @@
         }
       },
       {
-        "HashCode": 1150990592,
+        "HashCode": -521409459,
         "Kind": "Components.EventHandler",
         "Name": "onsubmit",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -10120,7 +10120,7 @@
         }
       },
       {
-        "HashCode": 1589254267,
+        "HashCode": 47204779,
         "Kind": "Components.EventHandler",
         "Name": "onbeforecopy",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -10234,7 +10234,7 @@
         }
       },
       {
-        "HashCode": 1706053864,
+        "HashCode": 792592012,
         "Kind": "Components.EventHandler",
         "Name": "onbeforecut",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -10348,7 +10348,7 @@
         }
       },
       {
-        "HashCode": 583413357,
+        "HashCode": -1556211245,
         "Kind": "Components.EventHandler",
         "Name": "onbeforepaste",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -10462,7 +10462,7 @@
         }
       },
       {
-        "HashCode": -544094303,
+        "HashCode": -1269136145,
         "Kind": "Components.EventHandler",
         "Name": "oncopy",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -10576,7 +10576,7 @@
         }
       },
       {
-        "HashCode": -1512871577,
+        "HashCode": 558307783,
         "Kind": "Components.EventHandler",
         "Name": "oncut",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -10690,7 +10690,7 @@
         }
       },
       {
-        "HashCode": -1248918571,
+        "HashCode": -456675541,
         "Kind": "Components.EventHandler",
         "Name": "onpaste",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -10804,7 +10804,7 @@
         }
       },
       {
-        "HashCode": -202061608,
+        "HashCode": 1491521204,
         "Kind": "Components.EventHandler",
         "Name": "ontouchcancel",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -10918,7 +10918,7 @@
         }
       },
       {
-        "HashCode": 673240695,
+        "HashCode": 75021095,
         "Kind": "Components.EventHandler",
         "Name": "ontouchend",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -11032,7 +11032,7 @@
         }
       },
       {
-        "HashCode": 924316608,
+        "HashCode": -1612906755,
         "Kind": "Components.EventHandler",
         "Name": "ontouchmove",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -11146,7 +11146,7 @@
         }
       },
       {
-        "HashCode": -1224956624,
+        "HashCode": 717041211,
         "Kind": "Components.EventHandler",
         "Name": "ontouchstart",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -11260,7 +11260,7 @@
         }
       },
       {
-        "HashCode": -1178963456,
+        "HashCode": -13250651,
         "Kind": "Components.EventHandler",
         "Name": "ontouchenter",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -11374,7 +11374,7 @@
         }
       },
       {
-        "HashCode": 661479313,
+        "HashCode": -189184752,
         "Kind": "Components.EventHandler",
         "Name": "ontouchleave",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -11488,7 +11488,7 @@
         }
       },
       {
-        "HashCode": 953747329,
+        "HashCode": 1400687285,
         "Kind": "Components.EventHandler",
         "Name": "ongotpointercapture",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -11602,7 +11602,7 @@
         }
       },
       {
-        "HashCode": -1321767418,
+        "HashCode": -664435917,
         "Kind": "Components.EventHandler",
         "Name": "onlostpointercapture",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -11716,7 +11716,7 @@
         }
       },
       {
-        "HashCode": 659392877,
+        "HashCode": -1226652815,
         "Kind": "Components.EventHandler",
         "Name": "onpointercancel",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -11830,7 +11830,7 @@
         }
       },
       {
-        "HashCode": -1778781698,
+        "HashCode": 1437323393,
         "Kind": "Components.EventHandler",
         "Name": "onpointerdown",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -11944,7 +11944,7 @@
         }
       },
       {
-        "HashCode": 1089101688,
+        "HashCode": 65141820,
         "Kind": "Components.EventHandler",
         "Name": "onpointerenter",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -12058,7 +12058,7 @@
         }
       },
       {
-        "HashCode": 1793699684,
+        "HashCode": -1764863791,
         "Kind": "Components.EventHandler",
         "Name": "onpointerleave",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -12172,7 +12172,7 @@
         }
       },
       {
-        "HashCode": 1721556346,
+        "HashCode": 1108238322,
         "Kind": "Components.EventHandler",
         "Name": "onpointermove",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -12286,7 +12286,7 @@
         }
       },
       {
-        "HashCode": 971176402,
+        "HashCode": -1064664224,
         "Kind": "Components.EventHandler",
         "Name": "onpointerout",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -12400,7 +12400,7 @@
         }
       },
       {
-        "HashCode": 1649769950,
+        "HashCode": -1406694415,
         "Kind": "Components.EventHandler",
         "Name": "onpointerover",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -12514,7 +12514,7 @@
         }
       },
       {
-        "HashCode": 1454959786,
+        "HashCode": 1411770351,
         "Kind": "Components.EventHandler",
         "Name": "onpointerup",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -12628,7 +12628,7 @@
         }
       },
       {
-        "HashCode": 690942550,
+        "HashCode": -1930682787,
         "Kind": "Components.EventHandler",
         "Name": "oncanplay",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -12742,7 +12742,7 @@
         }
       },
       {
-        "HashCode": 2049141741,
+        "HashCode": -690800924,
         "Kind": "Components.EventHandler",
         "Name": "oncanplaythrough",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -12856,7 +12856,7 @@
         }
       },
       {
-        "HashCode": -1565486911,
+        "HashCode": -1236684577,
         "Kind": "Components.EventHandler",
         "Name": "oncuechange",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -12970,7 +12970,7 @@
         }
       },
       {
-        "HashCode": 1936093392,
+        "HashCode": 386747086,
         "Kind": "Components.EventHandler",
         "Name": "ondurationchange",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -13084,7 +13084,7 @@
         }
       },
       {
-        "HashCode": -865902793,
+        "HashCode": 2029882516,
         "Kind": "Components.EventHandler",
         "Name": "onemptied",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -13198,7 +13198,7 @@
         }
       },
       {
-        "HashCode": -1764622580,
+        "HashCode": 1886523359,
         "Kind": "Components.EventHandler",
         "Name": "onpause",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -13312,7 +13312,7 @@
         }
       },
       {
-        "HashCode": -1107680607,
+        "HashCode": -606642074,
         "Kind": "Components.EventHandler",
         "Name": "onplay",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -13426,7 +13426,7 @@
         }
       },
       {
-        "HashCode": -1471425866,
+        "HashCode": -375365594,
         "Kind": "Components.EventHandler",
         "Name": "onplaying",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -13540,7 +13540,7 @@
         }
       },
       {
-        "HashCode": -1060791273,
+        "HashCode": 324126690,
         "Kind": "Components.EventHandler",
         "Name": "onratechange",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -13654,7 +13654,7 @@
         }
       },
       {
-        "HashCode": -1891778268,
+        "HashCode": 314481522,
         "Kind": "Components.EventHandler",
         "Name": "onseeked",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -13768,7 +13768,7 @@
         }
       },
       {
-        "HashCode": -1924219272,
+        "HashCode": -661026430,
         "Kind": "Components.EventHandler",
         "Name": "onseeking",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -13882,7 +13882,7 @@
         }
       },
       {
-        "HashCode": 2040442086,
+        "HashCode": 2049658314,
         "Kind": "Components.EventHandler",
         "Name": "onstalled",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -13996,7 +13996,7 @@
         }
       },
       {
-        "HashCode": -1911773952,
+        "HashCode": 2127437901,
         "Kind": "Components.EventHandler",
         "Name": "onstop",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -14110,7 +14110,7 @@
         }
       },
       {
-        "HashCode": -213955741,
+        "HashCode": 857400500,
         "Kind": "Components.EventHandler",
         "Name": "onsuspend",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -14224,7 +14224,7 @@
         }
       },
       {
-        "HashCode": 724970586,
+        "HashCode": -120577031,
         "Kind": "Components.EventHandler",
         "Name": "ontimeupdate",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -14338,7 +14338,7 @@
         }
       },
       {
-        "HashCode": -2075247568,
+        "HashCode": 785764802,
         "Kind": "Components.EventHandler",
         "Name": "onvolumechange",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -14452,7 +14452,7 @@
         }
       },
       {
-        "HashCode": 1696163256,
+        "HashCode": -1165540566,
         "Kind": "Components.EventHandler",
         "Name": "onwaiting",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -14566,7 +14566,7 @@
         }
       },
       {
-        "HashCode": 426976512,
+        "HashCode": 907518401,
         "Kind": "Components.EventHandler",
         "Name": "onloadstart",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -14680,7 +14680,7 @@
         }
       },
       {
-        "HashCode": -1865340279,
+        "HashCode": -379728857,
         "Kind": "Components.EventHandler",
         "Name": "ontimeout",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -14794,7 +14794,7 @@
         }
       },
       {
-        "HashCode": -517235336,
+        "HashCode": -342326895,
         "Kind": "Components.EventHandler",
         "Name": "onabort",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -14908,7 +14908,7 @@
         }
       },
       {
-        "HashCode": -306618302,
+        "HashCode": -1130153083,
         "Kind": "Components.EventHandler",
         "Name": "onload",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -15022,7 +15022,7 @@
         }
       },
       {
-        "HashCode": 1828312903,
+        "HashCode": -1996173071,
         "Kind": "Components.EventHandler",
         "Name": "onloadend",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -15136,7 +15136,7 @@
         }
       },
       {
-        "HashCode": -1027044535,
+        "HashCode": -1057408710,
         "Kind": "Components.EventHandler",
         "Name": "onprogress",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -15250,7 +15250,7 @@
         }
       },
       {
-        "HashCode": 834924265,
+        "HashCode": -1383331654,
         "Kind": "Components.EventHandler",
         "Name": "onerror",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -15364,7 +15364,7 @@
         }
       },
       {
-        "HashCode": 1964914511,
+        "HashCode": -230053033,
         "Kind": "Components.EventHandler",
         "Name": "onactivate",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -15478,7 +15478,7 @@
         }
       },
       {
-        "HashCode": 439865816,
+        "HashCode": -1662824190,
         "Kind": "Components.EventHandler",
         "Name": "onbeforeactivate",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -15592,7 +15592,7 @@
         }
       },
       {
-        "HashCode": -1033822839,
+        "HashCode": -1334347726,
         "Kind": "Components.EventHandler",
         "Name": "onbeforedeactivate",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -15706,7 +15706,7 @@
         }
       },
       {
-        "HashCode": 1690113769,
+        "HashCode": -1728707521,
         "Kind": "Components.EventHandler",
         "Name": "ondeactivate",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -15820,7 +15820,7 @@
         }
       },
       {
-        "HashCode": 1410270707,
+        "HashCode": -257459357,
         "Kind": "Components.EventHandler",
         "Name": "onended",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -15934,7 +15934,7 @@
         }
       },
       {
-        "HashCode": -2121214113,
+        "HashCode": -1729385626,
         "Kind": "Components.EventHandler",
         "Name": "onfullscreenchange",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -16048,7 +16048,7 @@
         }
       },
       {
-        "HashCode": 477701331,
+        "HashCode": 359727143,
         "Kind": "Components.EventHandler",
         "Name": "onfullscreenerror",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -16162,7 +16162,7 @@
         }
       },
       {
-        "HashCode": 1060211758,
+        "HashCode": 470645561,
         "Kind": "Components.EventHandler",
         "Name": "onloadeddata",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -16276,7 +16276,7 @@
         }
       },
       {
-        "HashCode": -1552526396,
+        "HashCode": -258477944,
         "Kind": "Components.EventHandler",
         "Name": "onloadedmetadata",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -16390,7 +16390,7 @@
         }
       },
       {
-        "HashCode": -820673047,
+        "HashCode": 171259086,
         "Kind": "Components.EventHandler",
         "Name": "onpointerlockchange",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -16504,7 +16504,7 @@
         }
       },
       {
-        "HashCode": 1043250333,
+        "HashCode": 421679722,
         "Kind": "Components.EventHandler",
         "Name": "onpointerlockerror",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -16618,7 +16618,7 @@
         }
       },
       {
-        "HashCode": -1629462816,
+        "HashCode": -848052656,
         "Kind": "Components.EventHandler",
         "Name": "onreadystatechange",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -16732,7 +16732,7 @@
         }
       },
       {
-        "HashCode": 709992803,
+        "HashCode": -267600895,
         "Kind": "Components.EventHandler",
         "Name": "onscroll",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -16846,7 +16846,7 @@
         }
       },
       {
-        "HashCode": 43409774,
+        "HashCode": 1138057754,
         "Kind": "Components.EventHandler",
         "Name": "ontoggle",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -16960,7 +16960,7 @@
         }
       },
       {
-        "HashCode": -1917157115,
+        "HashCode": -2139146761,
         "Kind": "Components.Splat",
         "Name": "Attributes",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -17006,7 +17006,7 @@
         }
       },
       {
-        "HashCode": 2019853177,
+        "HashCode": -1817979034,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.Razor",
@@ -17411,7 +17411,7 @@
         }
       },
       {
-        "HashCode": 664781853,
+        "HashCode": -618883156,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.AnchorTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -17665,7 +17665,7 @@
         }
       },
       {
-        "HashCode": -1137748027,
+        "HashCode": -833366380,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.CacheTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -17820,7 +17820,7 @@
         }
       },
       {
-        "HashCode": -1985860649,
+        "HashCode": 1787605481,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.ComponentTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -17888,7 +17888,7 @@
         }
       },
       {
-        "HashCode": 1534796795,
+        "HashCode": -1482091576,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.DistributedCacheTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -18050,7 +18050,7 @@
         }
       },
       {
-        "HashCode": -1957098873,
+        "HashCode": 777011314,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.EnvironmentTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -18106,7 +18106,7 @@
         }
       },
       {
-        "HashCode": -1636501989,
+        "HashCode": -722865339,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.FormActionTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -18660,7 +18660,7 @@
         }
       },
       {
-        "HashCode": 707148136,
+        "HashCode": -2086550930,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.FormTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -18785,7 +18785,7 @@
         }
       },
       {
-        "HashCode": 38803056,
+        "HashCode": 957706433,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.ImageTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -18843,7 +18843,7 @@
         }
       },
       {
-        "HashCode": 1677185143,
+        "HashCode": 1326305246,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -18929,7 +18929,7 @@
         }
       },
       {
-        "HashCode": -1718961144,
+        "HashCode": 1442927836,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.LabelTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -18970,7 +18970,7 @@
         }
       },
       {
-        "HashCode": -212902775,
+        "HashCode": -880621155,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.LinkTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -19218,7 +19218,7 @@
         }
       },
       {
-        "HashCode": 1252971534,
+        "HashCode": -2013363075,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.OptionTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -19252,7 +19252,7 @@
         }
       },
       {
-        "HashCode": 107760329,
+        "HashCode": 1844737845,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -19352,7 +19352,7 @@
         }
       },
       {
-        "HashCode": 576219762,
+        "HashCode": -1993536986,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.PersistComponentStateTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -19387,7 +19387,7 @@
         }
       },
       {
-        "HashCode": -1274371061,
+        "HashCode": -2016036347,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.ScriptTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -19582,7 +19582,7 @@
         }
       },
       {
-        "HashCode": 1473015528,
+        "HashCode": -843116878,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.SelectTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -19656,7 +19656,7 @@
         }
       },
       {
-        "HashCode": -1882195244,
+        "HashCode": 1010329680,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.TextAreaTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -19708,7 +19708,7 @@
         }
       },
       {
-        "HashCode": 506700175,
+        "HashCode": -1890196760,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.ValidationMessageTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -19749,7 +19749,7 @@
         }
       },
       {
-        "HashCode": -1405642119,
+        "HashCode": 1446359428,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.ValidationSummaryTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -19791,7 +19791,7 @@
         }
       },
       {
-        "HashCode": 252004999,
+        "HashCode": -1645494525,
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -19922,7 +19922,7 @@
         }
       },
       {
-        "HashCode": -331535259,
+        "HashCode": 1137052753,
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -20097,7 +20097,7 @@
         }
       },
       {
-        "HashCode": 1663426917,
+        "HashCode": -975250654,
         "Kind": "Components.Bind",
         "Name": "Bind_value",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -20272,7 +20272,7 @@
         }
       },
       {
-        "HashCode": 1645794374,
+        "HashCode": 1862636463,
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -20460,7 +20460,7 @@
         }
       },
       {
-        "HashCode": -1138098606,
+        "HashCode": 640354072,
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -20648,7 +20648,7 @@
         }
       },
       {
-        "HashCode": -2128446669,
+        "HashCode": 1803181758,
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -20836,7 +20836,7 @@
         }
       },
       {
-        "HashCode": 1492550395,
+        "HashCode": 1579253779,
         "Kind": "Components.Bind",
         "Name": "Bind_value",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -21024,7 +21024,7 @@
         }
       },
       {
-        "HashCode": -1425224435,
+        "HashCode": 2128801684,
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -21212,7 +21212,7 @@
         }
       },
       {
-        "HashCode": 1457714044,
+        "HashCode": -1495971819,
         "Kind": "Components.Bind",
         "Name": "Bind_value",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -21400,7 +21400,7 @@
         }
       },
       {
-        "HashCode": -576073196,
+        "HashCode": -115529051,
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -21588,7 +21588,7 @@
         }
       },
       {
-        "HashCode": -958809508,
+        "HashCode": -1446197244,
         "Kind": "Components.Bind",
         "Name": "Bind_value",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -21776,7 +21776,7 @@
         }
       },
       {
-        "HashCode": 1062472636,
+        "HashCode": -782104378,
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -21964,7 +21964,7 @@
         }
       },
       {
-        "HashCode": 1604442029,
+        "HashCode": -558806132,
         "Kind": "Components.Bind",
         "Name": "Bind_value",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -22152,7 +22152,7 @@
         }
       },
       {
-        "HashCode": 649404831,
+        "HashCode": 62477601,
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -22340,7 +22340,7 @@
         }
       },
       {
-        "HashCode": -50441916,
+        "HashCode": 2136618163,
         "Kind": "Components.Bind",
         "Name": "Bind_value",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -22528,7 +22528,7 @@
         }
       },
       {
-        "HashCode": 1208689534,
+        "HashCode": 790632767,
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -22703,7 +22703,7 @@
         }
       },
       {
-        "HashCode": 1166193901,
+        "HashCode": -1270741332,
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -22878,7 +22878,7 @@
         }
       },
       {
-        "HashCode": 1330856827,
+        "HashCode": 633378546,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputCheckbox",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -22994,7 +22994,7 @@
         }
       },
       {
-        "HashCode": 1740940731,
+        "HashCode": -481241541,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputCheckbox",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -23111,7 +23111,7 @@
         }
       },
       {
-        "HashCode": -610766874,
+        "HashCode": -1916303642,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputDate<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -23227,7 +23227,7 @@
         }
       },
       {
-        "HashCode": -2066763775,
+        "HashCode": 1574974311,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputDate<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -23344,7 +23344,7 @@
         }
       },
       {
-        "HashCode": 629390668,
+        "HashCode": 457623969,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputNumber<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -23460,7 +23460,7 @@
         }
       },
       {
-        "HashCode": 1283287471,
+        "HashCode": -650062606,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputNumber<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -23577,7 +23577,7 @@
         }
       },
       {
-        "HashCode": 284378985,
+        "HashCode": 1679172024,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputRadioGroup<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -23693,7 +23693,7 @@
         }
       },
       {
-        "HashCode": 1632144044,
+        "HashCode": 103122439,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputRadioGroup<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -23810,7 +23810,7 @@
         }
       },
       {
-        "HashCode": 484858063,
+        "HashCode": -79057237,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputSelect<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -23926,7 +23926,7 @@
         }
       },
       {
-        "HashCode": -2028247640,
+        "HashCode": 1020160924,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputSelect<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -24043,7 +24043,7 @@
         }
       },
       {
-        "HashCode": -431716808,
+        "HashCode": 622930564,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputText",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -24159,7 +24159,7 @@
         }
       },
       {
-        "HashCode": -1342102227,
+        "HashCode": 452895116,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputText",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -24276,7 +24276,7 @@
         }
       },
       {
-        "HashCode": -999468506,
+        "HashCode": -1003973010,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputTextArea",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -24392,7 +24392,7 @@
         }
       },
       {
-        "HashCode": 772217537,
+        "HashCode": 588730684,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputTextArea",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -24509,7 +24509,7 @@
         }
       },
       {
-        "HashCode": -162574300,
+        "HashCode": -1318323684,
         "Kind": "Components.Ref",
         "Name": "Ref",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -24555,7 +24555,7 @@
         }
       },
       {
-        "HashCode": -1871092978,
+        "HashCode": 1315066912,
         "Kind": "Components.Key",
         "Name": "Key",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -24606,538 +24606,8 @@
   "RootNamespace": "Graduation_Project",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoModel\\ProxyModel.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\DjangoModel\\ProxyModel.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Customer\\Views\\Donation\\DonateConfirmation.cshtml",
-      "TargetPath": "Areas\\Customer\\Views\\Donation\\DonateConfirmation.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Manage\\_ViewStart.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\ResendEmailConfirmation.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\ResendEmailConfirmation.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Customer\\Views\\_ViewStart.cshtml",
-      "TargetPath": "Areas\\Customer\\Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoView\\Response_Types.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\DjangoView\\Response_Types.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoThirdParty\\RichText.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\DjangoThirdParty\\RichText.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoForm\\Forms.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\DjangoForm\\Forms.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Manage\\ExternalLogins.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\ExternalLogins.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\Django\\Install_Django.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\Django\\Install_Django.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\_StatusMessage.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\_StatusMessage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoQuery\\Field_lookups.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\DjangoQuery\\Field_lookups.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Admin\\Views\\SubscriptionType\\Index.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\SubscriptionType\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Error.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoView\\CBV_Delete.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\DjangoView\\CBV_Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\RegisterConfirmation.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\RegisterConfirmation.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoModel\\Introduction.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\DjangoModel\\Introduction.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Admin\\Views\\_ViewStart.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\LoginWith2fa.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\LoginWith2fa.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Manage\\DownloadPersonalData.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\DownloadPersonalData.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\Django\\Test.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\Django\\Test.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Admin\\Views\\ReplyToInquiry\\Reply.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\ReplyToInquiry\\Reply.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\ConfirmEmailChange.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\ConfirmEmailChange.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Admin\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Customer\\Views\\Home\\ApplyTojob.cshtml",
-      "TargetPath": "Areas\\Customer\\Views\\Home\\ApplyTojob.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Lockout.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Lockout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoModel\\Manager.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\DjangoModel\\Manager.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Customer\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Areas\\Customer\\Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Admin\\Views\\ReplyToChatRoom\\Index.cshtml",
       "TargetPath": "Areas\\Admin\\Views\\ReplyToChatRoom\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\_ViewStart.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\Django\\Admin.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\Django\\Admin.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoQuery\\Methods.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\DjangoQuery\\Methods.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Customer\\Views\\Community\\Index.cshtml",
-      "TargetPath": "Areas\\Customer\\Views\\Community\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\ForgotPasswordConfirmation.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\ForgotPasswordConfirmation.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoModel\\File.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\DjangoModel\\File.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Manage\\EnableAuthenticator.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\EnableAuthenticator.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoTemplate\\Custom_Tag.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\DjangoTemplate\\Custom_Tag.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoAuthentication\\Permissions_Authorization.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\DjangoAuthentication\\Permissions_Authorization.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoThirdParty\\Phonenumbers.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\DjangoThirdParty\\Phonenumbers.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoModel\\FieldOptions.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\DjangoModel\\FieldOptions.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\Django\\Url.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\Django\\Url.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Views\\_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\Django\\Install_Python.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\Django\\Install_Python.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoModel\\Inheritance_Abstraction.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\DjangoModel\\Inheritance_Abstraction.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Manage\\Disable2fa.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\Disable2fa.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoTemplate\\Custom_Filter.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\DjangoTemplate\\Custom_Filter.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Manage\\GenerateRecoveryCodes.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\GenerateRecoveryCodes.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Manage\\_StatusMessage.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\_StatusMessage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Manage\\SetPassword.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\SetPassword.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\Django\\Pagination.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\Django\\Pagination.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\Django\\Database.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\Django\\Database.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\Django\\Email.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\Django\\Email.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\Django\\Check.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\Django\\Check.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Admin\\Views\\SubscriptionType\\Create.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\SubscriptionType\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Admin\\Views\\SubscriptionType\\Edit.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\SubscriptionType\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoModel\\Migration.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\DjangoModel\\Migration.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Admin\\Views\\User\\Index.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\User\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoView\\CBV_Update.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\DjangoView\\CBV_Update.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\Django\\Static_Files.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\Django\\Static_Files.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\LoginWithRecoveryCode.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\LoginWithRecoveryCode.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Manage\\PersonalData.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\PersonalData.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoModel\\FieldTypes.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\DjangoModel\\FieldTypes.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoView\\CBV_List.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\DjangoView\\CBV_List.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Manage\\ResetAuthenticator.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\ResetAuthenticator.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoQuery\\Operators.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\DjangoQuery\\Operators.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\Django\\Simple_Website.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\Django\\Simple_Website.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoTemplate\\Extend.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\DjangoTemplate\\Extend.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\ResetPasswordConfirmation.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\ResetPasswordConfirmation.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Customer\\Views\\Home\\Index.cshtml",
-      "TargetPath": "Areas\\Customer\\Views\\Home\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoQuery\\HowToQuery.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\DjangoQuery\\HowToQuery.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Customer\\Views\\Subscription\\SubscriptionConfirmation.cshtml",
-      "TargetPath": "Areas\\Customer\\Views\\Subscription\\SubscriptionConfirmation.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoTemplate\\Template_Configuration.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\DjangoTemplate\\Template_Configuration.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoThirdParty\\Jazzmin.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\DjangoThirdParty\\Jazzmin.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Manage\\_ViewImports.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoModel\\Relationships.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\DjangoModel\\Relationships.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoModel\\Aggregation.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\DjangoModel\\Aggregation.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoTemplate\\Filter.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\DjangoTemplate\\Filter.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoTemplate\\Tag.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\DjangoTemplate\\Tag.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoTemplate\\Include.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\DjangoTemplate\\Include.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoView\\CBV_Template.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\DjangoView\\CBV_Template.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\Django\\OverView.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\Django\\OverView.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoAuthentication\\Register.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\DjangoAuthentication\\Register.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoView\\CBV_Create.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\DjangoView\\CBV_Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Customer\\Views\\Subscription\\Subscriptions.cshtml",
-      "TargetPath": "Areas\\Customer\\Views\\Subscription\\Subscriptions.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Manage\\TwoFactorAuthentication.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\TwoFactorAuthentication.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Customer\\Views\\Inquiry\\Create.cshtml",
-      "TargetPath": "Areas\\Customer\\Views\\Inquiry\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoAuthentication\\Change_Password.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\DjangoAuthentication\\Change_Password.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoAuthentication\\Login.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\DjangoAuthentication\\Login.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Customer\\Views\\Donation\\Create.cshtml",
-      "TargetPath": "Areas\\Customer\\Views\\Donation\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoForm\\Html_Form.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\DjangoForm\\Html_Form.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Views\\Shared\\_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -25146,33 +24616,108 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\Django\\Command.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\Django\\Command.cshtml",
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Views\\Shared\\Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoThirdParty\\Jazzmin.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\DjangoThirdParty\\Jazzmin.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\Django\\Sessions.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\Django\\Sessions.cshtml",
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoModel\\File.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\DjangoModel\\File.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Admin\\Views\\ReplyToChatRoom\\Details.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\ReplyToChatRoom\\Details.cshtml",
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Customer\\Views\\ChatRoom\\UserChatRoom.cshtml",
-      "TargetPath": "Areas\\Customer\\Views\\ChatRoom\\UserChatRoom.cshtml",
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Customer\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Areas\\Customer\\Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Manage\\SetPassword.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\SetPassword.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\Django\\Admin.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\Django\\Admin.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\Django\\Test.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\Django\\Test.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Admin\\Views\\SubscriptionType\\Index.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\SubscriptionType\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoAuthentication\\Login.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\DjangoAuthentication\\Login.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Admin\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\Django\\Pagination.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\Django\\Pagination.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoView\\CBV_Create.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\DjangoView\\CBV_Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\Django\\OverView.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\Django\\OverView.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoTemplate\\Include.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\DjangoTemplate\\Include.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Customer\\Views\\Inquiry\\Create.cshtml",
+      "TargetPath": "Areas\\Customer\\Views\\Inquiry\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoModel\\Inheritance_Abstraction.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\DjangoModel\\Inheritance_Abstraction.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -25181,13 +24726,58 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml",
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Manage\\EnableAuthenticator.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\EnableAuthenticator.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoView\\CBV_Form.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\DjangoView\\CBV_Form.cshtml",
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoForm\\Forms.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\DjangoForm\\Forms.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoView\\CBV_List.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\DjangoView\\CBV_List.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\Django\\Check.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\Django\\Check.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoAuthentication\\Permissions_Authorization.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\DjangoAuthentication\\Permissions_Authorization.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\Django\\Sessions.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\Django\\Sessions.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Admin\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Manage\\PersonalData.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\PersonalData.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoTemplate\\Custom_Filter.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\DjangoTemplate\\Custom_Filter.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoQuery\\HowToQuery.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\DjangoQuery\\HowToQuery.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -25196,38 +24786,48 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Views\\Shared\\Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoModel\\Signal.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\DjangoModel\\Signal.cshtml",
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoView\\CBV_Form.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\DjangoView\\CBV_Form.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Admin\\Views\\ReplyToInquiry\\Index.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\ReplyToInquiry\\Index.cshtml",
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Lockout.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Lockout.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Views\\Shared\\_LoginPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_LoginPartial.cshtml",
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoThirdParty\\Phonenumbers.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\DjangoThirdParty\\Phonenumbers.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoView\\CBV_Detail.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\DjangoView\\CBV_Detail.cshtml",
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoTemplate\\Template_Configuration.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\DjangoTemplate\\Template_Configuration.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Manage\\DeletePersonalData.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\DeletePersonalData.cshtml",
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoView\\Response_Types.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\DjangoView\\Response_Types.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoView\\FBV.cshtml",
-      "TargetPath": "Areas\\Learner\\Views\\DjangoView\\FBV.cshtml",
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\ConfirmEmailChange.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\ConfirmEmailChange.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Customer\\Views\\Subscription\\SubscriptionConfirmation.cshtml",
+      "TargetPath": "Areas\\Customer\\Views\\Subscription\\SubscriptionConfirmation.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -25236,8 +24836,418 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoQuery\\Methods.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\DjangoQuery\\Methods.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoView\\CBV_Template.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\DjangoView\\CBV_Template.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Views\\Shared\\_Sidebar.cshtml",
+      "TargetPath": "Views\\Shared\\_Sidebar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Manage\\ResetAuthenticator.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\ResetAuthenticator.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoModel\\ProxyModel.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\DjangoModel\\ProxyModel.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoModel\\Manager.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\DjangoModel\\Manager.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoModel\\Migration.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\DjangoModel\\Migration.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoForm\\Html_Form.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\DjangoForm\\Html_Form.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\LoginWithRecoveryCode.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\LoginWithRecoveryCode.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\Django\\Command.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\Django\\Command.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Customer\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Areas\\Customer\\Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoModel\\FieldTypes.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\DjangoModel\\FieldTypes.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoAuthentication\\Change_Password.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\DjangoAuthentication\\Change_Password.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Admin\\Views\\ReplyToChatRoom\\Details.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\ReplyToChatRoom\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Admin\\Views\\SubscriptionType\\Edit.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\SubscriptionType\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Views\\Shared\\_LoginPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_LoginPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Admin\\Views\\User\\Index.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\User\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Manage\\GenerateRecoveryCodes.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\GenerateRecoveryCodes.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoAuthentication\\Register.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\DjangoAuthentication\\Register.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoModel\\Signal.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\DjangoModel\\Signal.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Manage\\TwoFactorAuthentication.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\TwoFactorAuthentication.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoQuery\\Operators.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\DjangoQuery\\Operators.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\Django\\Database.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\Django\\Database.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Customer\\Views\\Subscription\\Subscriptions.cshtml",
+      "TargetPath": "Areas\\Customer\\Views\\Subscription\\Subscriptions.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Customer\\Views\\ChatRoom\\UserChatRoom.cshtml",
+      "TargetPath": "Areas\\Customer\\Views\\ChatRoom\\UserChatRoom.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Manage\\_StatusMessage.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\_StatusMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\LoginWith2fa.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\LoginWith2fa.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoView\\CBV_Update.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\DjangoView\\CBV_Update.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoTemplate\\Custom_Tag.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\DjangoTemplate\\Custom_Tag.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoModel\\Relationships.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\DjangoModel\\Relationships.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Manage\\ExternalLogins.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\ExternalLogins.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Manage\\DownloadPersonalData.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\DownloadPersonalData.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\Django\\Simple_Website.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\Django\\Simple_Website.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Customer\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Areas\\Customer\\Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\ResetPasswordConfirmation.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\ResetPasswordConfirmation.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\RegisterConfirmation.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\RegisterConfirmation.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\Django\\Url.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\Django\\Url.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\Django\\Install_Django.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\Django\\Install_Django.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoView\\FBV.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\DjangoView\\FBV.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Customer\\Views\\Home\\ApplyTojob.cshtml",
+      "TargetPath": "Areas\\Customer\\Views\\Home\\ApplyTojob.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\Django\\Static_Files.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\Django\\Static_Files.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\ForgotPasswordConfirmation.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\ForgotPasswordConfirmation.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Customer\\Views\\Donation\\DonateConfirmation.cshtml",
+      "TargetPath": "Areas\\Customer\\Views\\Donation\\DonateConfirmation.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\ResendEmailConfirmation.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\ResendEmailConfirmation.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoTemplate\\Extend.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\DjangoTemplate\\Extend.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoModel\\Aggregation.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\DjangoModel\\Aggregation.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Manage\\Disable2fa.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\Disable2fa.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Error.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Views\\Shared\\_AdminPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_AdminPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoModel\\Introduction.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\DjangoModel\\Introduction.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoTemplate\\Filter.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\DjangoTemplate\\Filter.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Manage\\DeletePersonalData.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\DeletePersonalData.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\Django\\Email.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\Django\\Email.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\_StatusMessage.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\_StatusMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Customer\\Views\\Community\\Index.cshtml",
+      "TargetPath": "Areas\\Customer\\Views\\Community\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Admin\\Views\\ReplyToInquiry\\Index.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\ReplyToInquiry\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoThirdParty\\RichText.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\DjangoThirdParty\\RichText.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Manage\\_ViewImports.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Manage\\_ViewStart.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoQuery\\Field_lookups.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\DjangoQuery\\Field_lookups.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoView\\CBV_Detail.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\DjangoView\\CBV_Detail.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Customer\\Views\\Donation\\Create.cshtml",
+      "TargetPath": "Areas\\Customer\\Views\\Donation\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoModel\\On_Delete.cshtml",
       "TargetPath": "Areas\\Learner\\Views\\DjangoModel\\On_Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\Django\\Install_Python.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\Django\\Install_Python.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoTemplate\\Tag.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\DjangoTemplate\\Tag.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoModel\\FieldOptions.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\DjangoModel\\FieldOptions.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Admin\\Views\\ReplyToInquiry\\Reply.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\ReplyToInquiry\\Reply.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Admin\\Views\\SubscriptionType\\Create.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\SubscriptionType\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Areas\\Learner\\Views\\DjangoView\\CBV_Delete.cshtml",
+      "TargetPath": "Areas\\Learner\\Views\\DjangoView\\CBV_Delete.cshtml",
       "FileKind": "mvc"
     }
   ]

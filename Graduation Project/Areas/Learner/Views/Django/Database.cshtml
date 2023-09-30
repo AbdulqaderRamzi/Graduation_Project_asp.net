@@ -4,50 +4,70 @@
     <hr />
     <h2 class="my-5 custom-title">Install MySQL adapter</h2>
     <h4 class="mt-4 mb-0">Change the database into MySQL.</h4>
-    <div class="d-flex justify-content-start mt-0">
-        <h5 class="rounded my-3 p-3 custom-back">pip install mysqlclient</h5>
-    </div>
+    <pre>
+        <code class="language-Django">
+            pip install mysqlclient
+            <span></span>
+        </code>
+    </pre>
     <h5 class="mt-3 mb-1">Go to project root > settings.py. Update the Database Settings. Change the database configuration.</h5>
-    <div class="rounded p-4 my-3 custom-div">
-        <p class="mb-1">DATABASES = {</p>
-        <p class="mb-1 mr-25">'default': {</p>
-        <p class="mb-1 mr-50">'ENGINE': 'django.db.backends.mysql',</p>
-        <p class="mb-1 mr-50">'NAME': 'your_database_name',</p>
-        <p class="mb-1 mr-50">'USER': 'your_mysql_user',</p>
-        <p class="mb-1 mr-50">'PASSWORD': 'your_mysql_password',</p>
-        <p class="mb-1 mr-50">'HOST': 'localhost', # Set the host if not using the default 'localhost'</p>
-        <p class="mb-1 mr-50">'PORT': '', # Set the port if not using the default MySQL port (3306)</p>
-        <p class="mb-1 mr-25">}</p>
-        <p class="mb-1">}</p>
-    </div>
-
+    <div class="mt-3"></div>
+    <pre class="mb-3">
+        <code class="language-Django">
+            DATABASES = {
+                'default': {
+                    'ENGINE': 'django.db.backends.mysql',
+                    'NAME': 'your_database_name',
+                    'USER': 'your_mysql_user',
+                    'PASSWORD': 'your_mysql_password',
+                    'HOST': 'localhost', # Set the host if not using the default 'localhost'
+                    'PORT': '', # Set the port if not using the default MySQL port (3306)
+                }
+            }
+            <span></span>
+        </code>
+    </pre>
     <h4 class="mt-4 mb-2">Run Migrate.</h4>
-    <div class="d-flex justify-content-start mt-1">
-        <h5 class="rounded mt-1 mb-5 p-3 custom-back">python manage.py migrate</h5>
-    </div>
+    <div class="mt-1"></div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            python manage.py migrate
+            <span></span>
+        </code>
+    </pre>
 
     <hr />
     <h2 class="my-5 custom-title">Install PostgreSQL adapter</h2>
     <h4 class="mt-4 mb-0">Change the database into PostgreSQL.</h4>
-    <div class="d-flex justify-content-start mt-1">
-        <h5 class="rounded my-3 p-3 custom-back">pip install psycopg2</h5>
-    </div>
+    <pre class="mb-5 mt-1">
+        <code class="language-Django">
+            pip install psycopg2
+            <span></span>
+        </code>
+    </pre>
     <h4 class="mt-4 mb-1">Go to the project root > settings.py. Update Database Settings. Change the database configuration.</h4>
+    <div class="mt-2"></div>
+    <pre class="mb-2">
+        <code class="language-Django">
+            DATABASES = {
+                'default': {
+                    'ENGINE': 'django.db.backends.postgresql',
+                    'NAME': 'your_database_name',
+                    'USER': 'your_postgresql_user',
+                    'PASSWORD': 'your_postgresql_password',
+                    'HOST': 'localhost', # Set the host if not using the default 'localhost'
+                    'PORT': '', # Set the port if not using the default MySQL port (3306)
+                }
+            }
+            <span></span>
+        </code>
+    </pre>
 
-    <div class="rounded p-4 my-2 custom-div">
-        <p class="mb-1">DATABASES = {</p>
-        <p class="mb-1 mr-25">'default': {</p>
-        <p class="mb-1 mr-50">'ENGINE': 'django.db.backends.postgresql',</p>
-        <p class="mb-1 mr-50">'NAME': 'your_database_name',</p>
-        <p class="mb-1 mr-50">'USER': 'your_postgresql_user',</p>
-        <p class="mb-1 mr-50">'PASSWORD': 'your_postgresql_password',</p>
-        <p class="mb-1 mr-50">'HOST': 'localhost', # Set the host if not using the default 'localhost'</p>
-        <p class="mb-1 mr-50">'PORT': '', # Set the port if not using the default MySQL port (3306)</p>
-        <p class="mb-1 mr-25">}</p>
-        <p class="mb-1">}</p>
-    </div>
     <h4 class="mt-4 mb-2">Run Migrate.</h4>
-    <div class="d-flex justify-content-start mt-1">
-        <h5 class="rounded mt-1 mb-5 p-3 custom-back">python manage.py migrate</h5>
-    </div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            python manage.py migrate
+            <span></span>
+        </code>
+    </pre>
 </div>

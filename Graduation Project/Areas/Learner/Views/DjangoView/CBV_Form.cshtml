@@ -4,53 +4,66 @@
     
     <hr />
     <h2 class="my-5 custom-title">Form</h2>
-    <div class="rounded p-4 mb-5 mt-3 custom-div">
-        <p class="mb-1">from django import forms</p>
-        <p class="mb-1">class ContactForm(forms.Form):</p>
-        <p class="mb-1 mr-25">subject = forms.CharField()</p>
-        <p class="mb-1 mr-25">message = forms.CharField(widget=forms.Textarea)</p>
-        <p class="mb-1 mr-25">from = forms.EmailField()</p>
-    </div>
+    <div class="mt-3"></div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            from django import forms
+            class ContactForm(forms.Form):
+                subject = forms.CharField()
+                message = forms.CharField(widget=forms.Textarea)
+                from = forms.EmailField()
+            <span></span>
+        </code>
+    </pre>
+
 
     <hr />
     <h2 class="my-5 custom-title">View</h2>
-    <div class="rounded p-4 mb-5 mt-3 custom-div">
-        <p class="mb-1">from app.forms import ContactUsForm</p>
-        <p class="mb-1">from django.views.generic.edit import FormView</p>
-        <p class="mb-1">class ContactFormView(FormView):</p>
-        <p class="mb-1 mr-25">template_name = 'contact_us.html'</p>
-        <p class="mb-1 mr-25">form_class = ContactUsForm</p>
-        <p class="mb-1 mr-25"># if form is valid. it will redirect user to success_url</p>
-        <p class="mb-1 mr-25">success_url = '/successfully/'</p>
-        <p class="mb-1 mr-25">def form_valid(self, form):</p>
-        <p class="mb-1 mr-50"># This method is called when valid form data has been POSTed.</p>
-        <p class="mb-1 mr-50"># It should return an HttpResponse.</p>
-        <p class="mb-1 mr-50"># get data entered by user by using self.cleaned_data</p>
-        <p class="mb-1 mr-50">subject = self.cleaned_data["subject"]</p>
-        <p class="mb-1 mr-50">message = self.cleaned_data["message"]</p>
-        <p class="mb-1 mr-50">from = self.cleaned_data["from"]</p>
-        <p class="mb-1 mr-50">email = EmailMessage(</p>
-        <p class="mb-1 mr-75">subject,</p>
-        <p class="mb-1 mr-75">message,</p>
-        <p class="mb-1 mr-75">from,</p>
-        <p class="mb-1 mr-75">['to@example.com'],</p>
-        <p class="mb-1 mr-50">)</p>
-        <p class="mb-1 mr-50">email.send()</p>
-        <p class="mb-1 mr-50">return super().form_valid(form)</p>
-        <p class="mb-1 mr-25">def form_invalid(self, form):</p>
-        <p class="mb-1 mr-50"># This method is called when the form data is invalid.</p>
-        <p class="mb-1 mr-50"># The form will automatically include error messages for fields with errors.</p>
-        <p class="mb-1 mr-50"># Render the form on the same page with errors.</p>
-        <p class="mb-1 mr-50">return self.render_to_response(self.get_context_data(form=form))</p>
-    </div>
+    <div class="mt-3"></div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            from app.forms import ContactUsForm
+            from django.views.generic.edit import FormView
+            class ContactFormView(FormView):
+                template_name = 'contact_us.html'
+                form_class = ContactUsForm
+                # if form is valid. it will redirect user to success_url
+                success_url = '/successfully/'
+                def form_valid(self, form):
+                    # This method is called when valid form data has been POSTed.
+                    # It should return an HttpResponse.
+                    # get data entered by user by using self.cleaned_data
+                    subject = self.cleaned_data["subject"]
+                    message = self.cleaned_data["message"]
+                    from = self.cleaned_data["from"]
+                    email = EmailMessage(
+                        subject,
+                        message,
+                        from,
+                        ['to@example.com'],
+                    )
+                    email.send()
+                    return super().form_valid(form)
+                def form_invalid(self, form):
+                    # This method is called when the form data is invalid.
+                    # The form will automatically include error messages for fields with errors.
+                    # Render the form on the same page with errors.
+                    return self.render_to_response(self.get_context_data(form=form))
+            <span></span>
+        </code>
+    </pre>
 
     <hr />
     <h2 class="my-5 custom-title">Url</h2>
-    <div class="rounded p-4 mb-5 mt-3 custom-div">
-        <p class="mb-1">from django.urls import path</p>
-        <p class="mb-1">from app.views import ContactFormView</p>
-        <p class="mb-1">urlpatterns = [</p>
-        <p class="mb-1 mr-25">path('contact_us/', ContactFormView.as_view(), name='contact-us'),</p>
-        <p class="mb-1">]</p>
-    </div>
+    <div class="mt-3"></div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            from django.urls import path
+            from app.views import ContactFormView
+            urlpatterns = [
+                path('contact_us/', ContactFormView.as_view(), name='contact-us'),
+            ]
+            <span></span>
+        </code>
+    </pre>
 </div>

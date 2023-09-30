@@ -3,37 +3,48 @@
     <h4 class="text-center mt-3 mb-5">We use inheritance to reduce the replication.</h4>
     <hr />
     <h5 class="mb-3 mt-5">Example: assume we have 3 tables that use created at.</h5>
-    <div class="rounded p-4 my-4 custom-div">
-        <p class="mb-1">class Car(models.Model):</p>
-        <p class="mb-1 mr-25">...</p>
-        <p class="mb-1 mr-25">created_at = models.DateTimeField()</p>
-        <p class="mb-1">class Category(models.Model):</p>
-        <p class="mb-1 mr-25">...</p>
-        <p class="mb-1 mr-25">created_at = models.DateTimeField()</p>
-        <p class="mb-1">class Product(models.Model):</p>
-        <p class="mb-1 mr-25">...</p>
-        <p class="mb-1 mr-25">created_at = models.DateTimeField()</p>
-    </div>
+    <div class="mt-4"></div>
+    <pre class="mb-4">
+        <code class="language-Django">
+            class Car(models.Model):
+                ...
+                created_at = models.DateTimeField()
+            class Category(models.Model):
+                ...
+                created_at = models.DateTimeField()
+            class Product(models.Model):
+                ...
+                created_at = models.DateTimeField()
+            <span></span>
+        </code>
+    </pre>
     <h5 class="mb-5 mt-3">Instead of inserting created_at 3 times we can put it in separated models then we can inherit it.</h5>
 
     <hr />
     <h2 class="my-5 custom-title">Solution</h2>
-    <div class="rounded p-4 custom-div mt-3">
-        <p class="mb-1">class CreatedAt(models.Model):</p>
-        <p class="mb-1 mr-25">created_at = models.DateTimeField()</p>
-        <p class="mb-1">class Car(CreatedAt):</p>
-        <p class="mb-1 mr-25">...</p>
-        <p class="mb-1">class Category(CreatedAt):</p>
-        <p class="mb-1 mr-25">...</p>
-        <p class="mb-1">class Product(CreatedAt):</p>
-        <p class="mb-1 mr-25">...</p>
-    </div>
+    <div class="mt-3"></div>
+    <pre>
+        <code class="language-Django">
+            class CreatedAt(models.Model):
+                created_at = models.DateTimeField()
+            class Car(CreatedAt):
+                ...
+            class Category(CreatedAt):
+                ...
+            class Product(CreatedAt):
+                ...
+            <span></span>
+        </code>
+    </pre>
     <h5 class="mb-0 mt-4">Car, Category and Product still have created_at = models.DateTimeField() but instead of repeating the same code 3 times. We put it in separated Model then we inherit it.</h5>
     <h5 class="mb-4 mt-3">In previous example it doesn't make sense to create object from CreatedAt so, we can unable creating object from it by using abstraction.</h5>
-    <div class="rounded p-4 mb-5 custom-div">
-        <p class="mb-1">class CreatedAt(models.Model):</p>
-        <p class="mb-1 mr-25">created_at = models.DateTimeField()</p>
-        <p class="mb-1 mr-25">class Meta:</p>
-        <p class="mb-1 mr-50">abstract = True</p>
-    </div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            class CreatedAt(models.Model):
+                created_at = models.DateTimeField()
+                class Meta:
+                    abstract = True
+            <span></span>
+        </code>
+    </pre>
 </div>

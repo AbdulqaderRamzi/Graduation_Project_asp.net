@@ -4,36 +4,48 @@
 
     <hr />
     <h2 class="my-5 custom-title">First way</h2>
-    <div class="rounded p-4 mb-5 mt-3 custom-div">
-        <p class="mb-1">from django.urls import path</p>
-        <p class="mb-1">from django.views.generic import TemplateView</p>
-        <p class="mb-1">urlpatterns = [</p>
-        <p class="mb-1 mr-25">path('about_us/', TemplateView.as_view(template_name="about_us.html")),</p>
-        <p class="mb-1 mr-25">...</p>
-        <p class="mb-1">]</p>
-    </div>
+    <div class="mt-3"></div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            from django.urls import path
+            from django.views.generic import TemplateView
+            urlpatterns = [
+                path('about_us/', TemplateView.as_view(template_name="about_us.html")),
+                ...
+            ]
+            <span></span>
+        </code>
+    </pre>
     
     <hr />
     <h2 class="my-5 custom-title">Second way</h2>
     <h5 class="mt-3">Used to pass context data.</h5>
     <h5 class="mt-4">View</h5>
-    <div class="rounded p-4 mt-3 custom-div">
-        <p class="mb-1">from django.views.generic import TemplateView</p>
-        <p class="mb-1">class AboutUsView(TemplateView):</p>
-        <p class="mb-1 mr-25">template_name = "about.html"</p>
-        <p class="mb-1 mr-25"># built in function to customize your context</p>
-        <p class="mb-1 mr-25">def get_context_data(self, **kwargs):</p>
-        <p class="mb-1 mr-50">context = super().get_context_data(**kwargs)</p>
-        <p class="mb-1 mr-50"># Add context data here</p>
-        <p class="mb-1 mr-50">context['hi'] = 'Hello World'</p>
-        <p class="mb-1 mr-50">return context</p>
-    </div>
+    <div class="mt-3"></div>
+    <pre class="mb-1">
+        <code class="language-Django">
+            from django.views.generic import TemplateView
+            class AboutUsView(TemplateView):
+                template_name = "about.html"
+                # built in function to customize your context
+                def get_context_data(self, **kwargs):
+                    context = super().get_context_data(**kwargs)
+                    # Add context data here
+                    context['hi'] = 'Hello World'
+                    return context
+            <span></span>
+        </code>
+    </pre>
+    
     <h5 class="mt-5 mb-3">Url</h5>
-    <div class="rounded p-4 mb-5 custom-div">
-        <p class="mb-1">from django.urls import path</p>
-        <p class="mb-1">from app.views import AboutUsView</p>
-        <p class="mb-1">urlpatterns = [</p>
-        <p class="mb-1 mr-25">path('about_us/', AboutUsView.as_view()),</p>
-        <p class="mb-1">]</p>
-    </div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            from django.urls import path
+            from app.views import AboutUsView
+            urlpatterns = [
+                path('about_us/', AboutUsView.as_view()),
+            ]
+            <span></span>
+        </code>
+    </pre>
 </div>

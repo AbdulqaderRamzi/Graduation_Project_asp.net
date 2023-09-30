@@ -4,156 +4,232 @@
     <hr>
     <h5 class="mt-5">We will work on the following models.</h5>
     <h5 class="mb-3 mt-2">I will put this model in cars app.</h5>
-    <div class="rounded p-4 custom-div">
-        <p class="mb-1">class Person(models.Model):</p>
-        <p class="mb-1 mr-25">name = models.CharField(max_length=100)</p>
-        <p class="mb-1 mr-25">age = models.PositiveIntegerField()</p>
-        <p class="mb-1 mr-25">def __str__(self) -> str:</p>
-        <p class="mb-1 mr-50">return self.name</p>
-        <p class="mb-1"></p>
-        <p class="mb-1">class Car(models.Model):</p>
-        <p class="mb-1 mr-25">car_number = models.CharField(max_length=100, unique=True)</p>
-        <p class="mb-1 mr-25">person = models.ForeignKey(Person, on_delete=models.SET_NULL, null=True, blank=True)</p>
-        <p class="mb-1 mr-25">def __str__(self) -> str:</p>
-        <p class="mb-1 mr-50">return self.car_number</p>
-        <p class="mb-1"></p>
-        <p class="mb-1">class Cleaner(models.Model):</p>
-        <p class="mb-1 mr-25">cars = models.ManyToManyField(Car)</p>
-        <p class="mb-1 mr-25">name = models.CharField(max_length=100)</p>
-        <p class="mb-1 mr-25">def __str__(self) -> str:</p>
-        <p class="mb-1 mr-50">return self.name</p>
-    </div>
+    <pre>
+        <code class="language-Django">
+            class Person(models.Model):
+                name = models.CharField(max_length=100)
+                age = models.PositiveIntegerField()
+                def __str__(self) -> str:
+                    return self.name
+
+            class Car(models.Model):
+                car_number = models.CharField(max_length=100, unique=True)
+                person = models.ForeignKey(Person, on_delete=models.SET_NULL, null=True, blank=True)
+                def __str__(self) -> str:
+                    return self.car_number
+
+            class Cleaner(models.Model):
+                cars = models.ManyToManyField(Car)
+                name = models.CharField(max_length=100)
+                def __str__(self) -> str:
+                    return self.name
+            <span></span>
+        </code>
+    </pre>
     <h5 class="mb-3 mt-4">Open your terminal. Use the following command.</h5>
-    <div class="d-flex justify-content-start">
-        <h5 class="rounded p-3 custom-back">python manage.py shell</h5>
-    </div>
+    <pre>
+        <code class="language-Django">
+            python manage.py shell
+            <span></span>
+        </code>
+    </pre>
+
     <h5 class="mb-3 mt-4">Import classes</h5>
-    <div class="d-flex justify-content-start mb-5">
-        <h5 class="rounded p-3 custom-back">from cars.models import Person,Car,Cleaner</h5>
-    </div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            from cars.models import Person,Car,Cleaner
+            <span></span>
+        </code>
+    </pre>
 
     <hr>
     <h4 class="mb-3 mt-5">Creation</h4>
-    <div class="d-flex justify-content-start">
-        <h5 class="rounded p-3 custom-back">Person(define field data)</h5>
-    </div>
+    <pre>
+        <code class="language-Django">
+            Person(define field data)
+            <span></span>
+        </code>
+    </pre>
     <h4 class="mb-2 mt-5">Save it into database</h4>
     <h5 class="mb-3">If you don't implement save function, data will not be created in database.</h5>
-    <div class="rounded p-4 custom-div">
-        <p class="mb-1">person1 = Person(name="Khaled",age=21)    </p>
-        <p class="mb-1">person1.save()</p>
-    </div>
+    <pre>
+        <code class="language-Django">
+            person1 = Person(name="Khaled",age=21)
+            person1.save()
+            <span></span>
+        </code>
+    </pre>
     <h4 class="mt-5">Another way of creation</h4>
     <h4 class="mb-3 mt-3">Create Person object without defining the data. Then update the Person object</h4>
-    <div class="rounded p-4 custom-div">
-        <p class="mb-1">person2 = Person()</p>
-        <p class="mb-1">person2.name = "Zakaria"</p>
-        <p class="mb-1">person2.age = 68</p>
-        <p class="mb-1">person2.save()</p>
-    </div>
+    <pre>
+        <code class="language-Django">
+            person2 = Person()
+            person2.name = "Zakaria"
+            person2.age = 68
+            person2.save()
+            <span></span>
+        </code>
+    </pre>
     <h4 class="mb-3 mt-5">Create and Save at same time</h4>
-    <div class="d-flex justify-content-start">
-        <h5 class="rounded p-3 custom-back">Person.objects.create(name="Alshammi", age=25)</h5>
-    </div>
+    <pre>
+        <code class="language-Django">
+            Person.objects.create(name="Alshammi", age=25)
+            <span></span>
+        </code>
+    </pre>
     <h4 class="mb-3 mt-5">Retrieving single object</h4>
-    <div class="d-flex justify-content-start">
-        <h5 class="rounded p-3 custom-back">Person.objects.get(pk=1)</h5>
-    </div>
+    <pre>
+        <code class="language-Django">
+            Person.objects.get(pk=1)
+            <span></span>
+        </code>
+    </pre>
     <h4 class="mb-3 mt-5">Retrieving all objects</h4>
-    <div class="d-flex justify-content-start">
-        <h5 class="rounded p-3 custom-back">Person.objects.all()</h5>
-    </div>
+    <pre>
+        <code class="language-Django">
+            Person.objects.all()
+            <span></span>
+        </code>
+    </pre>
     <h4 class="mb-3 mt-5">Updating</h4>
-    <div class="rounded p-4 custom-div">
-        <p class="mb-1">person = Person.objects.get(pk=1)</p>
-        <p class="mb-1">person.name = "Khlaed Z"</p>
-        <p class="mb-1">person.save()</p>
-    </div>
+    <pre>
+        <code class="language-Django">
+            person = Person.objects.get(pk=1)
+            person.name = "Khlaed Z"
+            person.save()
+            <span></span>
+        </code>
+    </pre>
     <h4 class="mb-3 mt-5">Retrieve single object and update it</h4>
-    <div class="rounded p-4 custom-div">
-        <p class="mb-1">update_person1 = Person.objects.get(pk=1)</p>
-        <p class="mb-1">update_person1.age = 22</p>
-        <p class="mb-1">update_person1.save()</p>
-    </div>
+    <pre>
+        <code class="language-Django">
+            update_person1 = Person.objects.get(pk=1)
+            update_person1.age = 22
+            update_person1.save()
+            <span></span>
+        </code>
+    </pre>
     <h4 class="mb-3 mt-5">Deleting</h4>
-    <div class="rounded p-4 custom-div">
-        <p class="mb-1">person1.delete()</p>
-        <p class="mb-1">person2.delete()</p>
-    </div>
+    <pre>
+        <code class="language-Django">
+            person1.delete()
+            person2.delete()
+            <span></span>
+        </code>
+    </pre>
     <h4 class="mb-5 mt-5">Relationship</h4>
 
     <hr />
     <h2 class="my-5 custom-title">ForeignKey</h2>
     <h4 class="mb-3 mt-4">Creation</h4>
-    <div class="rounded p-4 custom-div">
-        <p class="mb-1">person = Person.objects.get(pk=1)</p>
-        <p class="mb-1">car = Car.objects.create(car_number="A1", person = person)</p>
-    </div>
+    <pre>
+        <code class="language-Django">
+            person = Person.objects.get(pk=1)
+            car = Car.objects.create(car_number="A1", person = person)
+            <span></span>
+        </code>
+    </pre>
     <h4 class="mb-3 mt-5">Updating</h4>
-    <div class="rounded p-4 custom-div">
-        <p class="mb-1">person = Person.objects.get(pk=1)</p>
-        <p class="mb-1">car = Car.objects.create(car_number="A1")</p>
-    </div>
+    <pre>
+        <code class="language-Django">
+            person = Person.objects.get(pk=1)
+            car = Car.objects.create(car_number="A1")
+            <span></span>
+        </code>
+    </pre>
     <h5 class="mb-3 mt-5">Bind car with person</h5>
-    <div class="rounded p-4 custom-div mb-4">
-        <p class="mb-1">car.person = person</p>
-        <p class="mb-1">person.save()</p>
-    </div>
+    <pre class="mb-4">
+        <code class="language-Django">
+            car.person = person
+            person.save()
+            <span></span>
+        </code>
+    </pre>
     <h4 class="mt-5">Retrieving</h4>
     <h5 class="mb-3 mt-5">Retrieve all cars related to user has car number equal to "A1"</h5>
-    <div class="d-flex justify-content-start">
-        <h5 class="rounded p-3 custom-back">Car.objects.filter(person__car_number="A1")</h5>
-    </div>
+    <pre>
+        <code class="language-Django">
+            Car.objects.filter(person__car_number="A1")
+            <span></span>
+        </code>
+    </pre>
     <h5 class="mb-3 mt-4">Retrieve all cars related to user name equal to "Khaled"</h5>
-    <div class="d-flex justify-content-start mb-3 mb-4">
-        <h5 class="rounded p-3 custom-back">Car.objects.filter(person__name="Khaled")</h5>
-    </div>
+    <pre class="mb-4">
+        <code class="language-Django">
+            Car.objects.filter(person__name="Khaled")
+            <span></span>
+        </code>
+    </pre>
     <h4 class="mb-3 mt-5">Removing related data</h4>
-    <div class="d-flex justify-content-start">
-        <h5 class="rounded p-3 custom-back">my_car = Car.objects.get(pk=1)</h5>
-    </div>
+    <pre>
+        <code class="language-Django">
+            my_car = Car.objects.get(pk=1)
+            <span></span>
+        </code>
+    </pre>
     <h5 class="mb-3 mt-4">Make car not related to user</h5>
-    <div class="rounded p-4 mb-5 custom-div">
-        <p class="mb-1">my_car.person = None</p>
-        <p class="mb-1">my_car.save()</p>
-    </div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            my_car.person = None
+            my_car.save()
+            <span></span>
+        </code>
+    </pre>
 
     <hr />
     <h2 class="my-5 custom-title">ManyToMany</h2>
     <h4 class="mb-3 mt-4">Creation:</h4>
-    <div class="rounded p-4 custom-div">
-        <p class="mb-1">me = Person.objects.create(name="Khaled Alshammi", age=22)</p>
-        <p class="mb-1">car1 = Car.objects.create(car_number="B1", person=me)</p>
-        <p class="mb-1">car2 = Car.objects.create(car_number="B2", person=me)</p>
-        <p class="mb-1">car3 = Car.objects.create(car_number="B3", person=me)</p>
-        <p class="mb-1">car4 = Car.objects.create(car_number="B4", person=me)</p>
-        <p class="mb-1">cleaner = Cleaner.objects.create(name="Ahmed")</p>
-        <p class="mb-1">cleaner.cars.add(car1,car2,car3,car4)</p>
-    </div>
+    <pre>
+        <code class="language-Django">
+            me = Person.objects.create(name="Khaled Alshammi", age=22)
+            car1 = Car.objects.create(car_number="B1", person=me)
+            car2 = Car.objects.create(car_number="B2", person=me)
+            car3 = Car.objects.create(car_number="B3", person=me)
+            car4 = Car.objects.create(car_number="B4", person=me)
+            cleaner = Cleaner.objects.create(name="Ahmed")
+            cleaner.cars.add(car1,car2,car3,car4)
+            <span></span>
+        </code>
+    </pre>
     <h4 class="mb-3 mt-5">Updating:</h4>
-    <div class="rounded p-4 custom-div mb-4">
-        <p class="mb-1">car6 = Car.objects.get(id=6)</p>
-        <p class="mb-1">cleaner3 = Cleaner.objects.get(id=3)</p>
-        <p class="mb-1">cleaner3.cars.add(car6)</p>
-        <p class="mb-1">cleaner3.save()</p>
-    </div>
+    <pre class="mb-4">
+        <code class="language-Django">
+            car6 = Car.objects.get(id=6)
+            cleaner3 = Cleaner.objects.get(id=3)
+            cleaner3.cars.add(car6)
+            cleaner3.save()
+            <span></span>
+        </code>
+    </pre>
     <h4 class="mt-5">Retrieving:</h4>
     <h5 class="mb-3 mt-5">Retrieve all cleaners related to the car has a car number equal to "A1":</h5>
-    <div class="d-flex justify-content-start">
-        <h5 class="rounded p-3 custom-back">Cleaner.objects.filter(cars__car_number="A1")</h5>
-    </div>
+    <pre>
+        <code class="language-Django">
+            Cleaner.objects.filter(cars__car_number="A1")
+            <span></span>
+        </code>
+    </pre>
     <h5 class="mb-3 mt-4">Retrieve all cleaners related to person car id equal to 1:</h5>
-    <div class="d-flex justify-content-start">
-        <h5 class="rounded p-3 custom-back">Cleaner.objects.filter(cars__person__id=1)</h5>
-    </div>
+    <pre>
+        <code class="language-Django">
+            Cleaner.objects.filter(cars__person__id=1)
+            <span></span>
+        </code>
+    </pre>
     <h4 class="mb-3 mt-5">Removing related data:</h4>
-    <div class="rounded p-4 custom-div mb-4">
-        <p class="mb-1">car6 = Car.objects.get(id=6)</p>
-        <p class="mb-1">cleaner3 = Cleaner.objects.get(id=3)</p>
-        <p class="mb-1">cleaner3.cars.remove(car6)</p>
-    </div>
+    <pre class="mb-4">
+        <code class="language-Django">
+            car6 = Car.objects.get(id=6)
+            cleaner3 = Cleaner.objects.get(id=3)
+            cleaner3.cars.remove(car6)
+            <span></span>
+        </code>
+    </pre>
     <h4 class="mb-3 mt-5">Remove all the associated cars:</h4>
-    <div class="d-flex justify-content-start">
-        <h5 class="rounded mb-5 p-3 custom-back">cleaner3.cars.clear()</h5>
-    </div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            cleaner3.cars.clear()
+            <span></span>
+        </code>
+    </pre>
 </div>

@@ -13,33 +13,42 @@
     <h5 class="mb-5 mt-2">Note: Insert {% csrf_token %} always when the method is post.</h5>
     <hr />
     <h2 class="my-5 custom-title">Example</h2>
-    <div class="rounded p-4 mb-5 mt-2 custom-div">
-        <p class="mb-1">&lt;form method="post" action=""&gt;</p>
-        <p class="mb-1 mr-25">{% csrf_token %}</p>
-        <p class="mb-1 mr-25">&lt;button type="submit"&gt;&lt;/button&gt;</p>
-        <p class="mb-1">&lt;/form&gt;</p>
-    </div>
+    <div class="mt-2"></div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            &lt;form method="post" action=""&gt;
+                {% csrf_token %}
+                &lt;button type="submit"&gt;&lt;/button&gt;
+            &lt;/form&gt;
+        </code>
+    </pre>
 
     <hr />
     <h2 class="my-5 custom-title">Pass hidden data</h2>
     <h4 class="mb-2 mt-4">Enables view function to access the data passed from html file. give it a name.</h4>
-    <div class="rounded p-4 mb-5 mt-2 custom-div">
-        <p class="mb-1">&lt;form method="post" action=""&gt;</p>
-        <p class="mb-1 mr-25">{% csrf_token %}</p>
-        <p class="mb-1 mr-25">&lt;input hidden name="id" value="1" /&gt;</p>
-        <p class="mb-1 mr-25">&lt;button type="submit"&gt;&lt;/button&gt;</p>
-        <p class="mb-1">&lt;/form&gt;</p>
-    </div>
+    <div class="mt-2"></div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            &lt;form method="post" action=""&gt;
+                {% csrf_token %}
+                &lt;input hidden name="id" value="1" /&gt;
+                &lt;button type="submit"&gt;&lt;/button&gt;
+            &lt;/form&gt;
+        </code>
+    </pre>
 
     <hr />
     <h2 class="my-5 custom-title">Display form from forms file</h2>
-    <div class="rounded p-4 mb-5 mt-2 custom-div">
-        <p class="mb-1">&lt;form method="post" action=""&gt;</p>
-        <p class="mb-1 mr-25">{% csrf_token %}</p>
-        <p class="mb-1 mr-25">{{ form.as_p }}</p>
-        <p class="mb-1 mr-25">&lt;button type="submit"&gt;&lt;/button&gt;</p>
-        <p class="mb-1">&lt;/form&gt;</p>
-    </div>
+    <div class="mt-2"></div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            &lt;form method="post" action=""&gt;
+                {% csrf_token %}
+                {{ form.as_p }}
+                &lt;button type="submit"&gt;&lt;/button&gt;
+            &lt;/form&gt;
+        </code>
+    </pre>
 
     <hr />
     <h2 class="my-5 custom-title">As div</h2>
@@ -75,68 +84,80 @@
     <h4 class="mb-4 mt-5">Display errors that come from forms.py</h4>
     <h3 class="custom-title text-start mb-0 mt-5">1</h3>
     <h4 class="mb-1 mt-4">Display all errors.</h4>
-    <div class="rounded p-4 mb-5 mt-2 custom-div">
-        <p class="mb-1">&lt;form method="post" action=""&gt;</p>
-        <p class="mb-1 mr-25">{% csrf_token %}</p>
-        <p class="mb-1 mr-25">{% if form.non_field_errors %}</p>
-        <p class="mb-1 mr-50">&lt;ul class="errorlist"&gt;</p>
-        <p class="mb-1 mr-75">{% for error in form.non_field_errors %}</p>
-        <p class="mb-1 mr-100">&lt;li&gt;{{ error }}&lt;/li&gt;</p>
-        <p class="mb-1 mr-75">{% endfor %}</p>
-        <p class="mb-1 mr-50">&lt;/ul&gt;</p>
-        <p class="mb-1 mr-25">{% endif %}</p>
-        <p class="mb-1 mr-25">{{ form.as_p }}</p>
-        <p class="mb-1 mr-25">&lt;button type="submit"&gt;&lt;/button&gt;</p>
-        <p class="mb-1">&lt;/form&gt;</p>
-    </div>
+    <div class="mt-2"></div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            &lt;form method="post" action=""&gt;
+                {% csrf_token %}
+                {% if form.non_field_errors %}
+                    &lt;ul class="errorlist"&gt;
+                        {% for error in form.non_field_errors %}
+                            &lt;li&gt;{{ error }}&lt;/li&gt;
+                        {% endfor %}
+                    &lt;/ul&gt;
+                {% endif %}
+                {{ form.as_p }}
+                &lt;button type="submit"&gt;&lt;/button&gt;
+            &lt;/form&gt;
+        </code>
+    </pre>
     <h3 class="custom-title text-start mb-0 mt-5">2</h3>
     <h4 class="mb-1 mt-4">Display each error individually.</h4>
-    <div class="rounded p-4 mb-5 mt-2 custom-div">
-        <p class="mb-1">&lt;form method="post" action=""&gt;</p>
-        <p class="mb-1 mr-25">{% csrf_token %}</p>
-        <p class="mb-1 mr-25">{{ form.field_name.label_tag }}</p>
-        <p class="mb-1 mr-25">{{ form.field_name }}</p>
-        <p class="mb-1 mr-25">{% if form.field_name.errors %}</p>
-        <p class="mb-1 mr-50">&lt;ul class="errorlist"&gt;</p>
-        <p class="mb-1 mr-50">{% for error in form.non_field_errors %}</p>
-        <p class="mb-1 mr-75">&lt;li&gt;{{ error }}&lt;/li&gt;</p>
-        <p class="mb-1 mr-50">{% endfor %}</p>
-        <p class="mb-1 mr-50">&lt;/ul&gt;</p>
-        <p class="mb-1 mr-25">{% endif %}</p>
-        <p class="mb-1 mr-25">...</p>
-        <p class="mb-1 mr-25">&lt;button type="submit"&gt;&lt;/button&gt;</p>
-        <p class="mb-1">&lt;/form&gt;</p>
-    </div>
+    <div class="mt-2"></div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            &lt;form method="post" action=""&gt;
+                {% csrf_token %}
+                {{ form.field_name.label_tag }}
+                {{ form.field_name }}
+                {% if form.field_name.errors %}
+                    &lt;ul class="errorlist"&gt;
+                    {% for error in form.non_field_errors %}
+                        &lt;li&gt;{{ error }}&lt;/li&gt;
+                    {% endfor %}
+                    &lt;/ul&gt;
+                {% endif %}
+                ...
+                &lt;button type="submit"&gt;&lt;/button&gt;
+            &lt;/form&gt;
+        </code>
+    </pre>
 
     <hr />
     <h2 class="my-5 custom-title">Example</h2>
-    <div class="rounded p-4 mb-5 mt-2 custom-div">
-        <p class="mb-1">class LoginForm(forms.Form):</p>
-        <p class="mb-1 mr-25">username = forms.CharField(label='Your username', max_length=150)</p>
-        <p class="mb-1 mr-25">password = forms.CharField(label='Your password', widget=forms.PasswordInput(attrs={'class': 'pt-2'}))</p>
-    </div>
-    <div class="rounded p-4 mb-5 mt-2 custom-div">
-        <p class="mb-1">&lt;form method="post" action=""&gt;</p>
-        <p class="mb-1 mr-25">{% csrf_token %}</p>
-        <p class="mb-1 mr-25">{{ form.username.label_tag }}</p>
-        <p class="mb-1 mr-25">{{ form.username }}</p>
-        <p class="mb-1 mr-25">{% if form.username.errors %}</p>
-        <p class="mb-1 mr-50">&lt;ul class="errorlist"&gt;</p>
-        <p class="mb-1 mr-50">{% for error in form.username.errors %}</p>
-        <p class="mb-1 mr-75">&lt;li&gt;{{ error }}&lt;/li&gt;</p>
-        <p class="mb-1 mr-50">{% endfor %}</p>
-        <p class="mb-1 mr-50">&lt;/ul&gt;</p>
-        <p class="mb-1 mr-25">{% endif %}</p>
-        <p class="mb-1 mr-25">{{ form.password.label_tag }}</p>
-        <p class="mb-1 mr-25">{{ form.password }}</p>
-        <p class="mb-1 mr-25">{% if form.password.errors %}</p>
-        <p class="mb-1 mr-50">&lt;ul class="errorlist"&gt;</p>
-        <p class="mb-1 mr-50">{% for error in form.password.errors %}</p>
-        <p class="mb-1 mr-75">&lt;li&gt;{{ error }}&lt;/li&gt;</p>
-        <p class="mb-1 mr-50">{% endfor %}</p>
-        <p class="mb-1 mr-50">&lt;/ul&gt;</p>
-        <p class="mb-1 mr-25">{% endif %}</p>
-        <p class="mb-1 mr-25">&lt;button type="submit"&gt;&lt;/button&gt;</p>
-        <p class="mb-1">&lt;/form&gt;</p>
-    </div>
+    <div class="mt-2"></div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            class LoginForm(forms.Form):
+                username = forms.CharField(label='Your username', max_length=150)
+                password = forms.CharField(label='Your password', widget=forms.PasswordInput(attrs={'class': 'pt-2'}))
+        </code>
+    </pre>
+    <div class="mt-2"></div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            &lt;form method="post" action=""&gt;
+                {% csrf_token %}
+                {{ form.username.label_tag }}
+                {{ form.username }}
+                {% if form.username.errors %}
+                    &lt;ul class="errorlist"&gt;
+                    {% for error in form.username.errors %}
+                        &lt;li&gt;{{ error }}&lt;/li&gt;
+                    {% endfor %}
+                    &lt;/ul&gt;
+                {% endif %}
+                {{ form.password.label_tag }}
+                {{ form.password }}
+                {% if form.password.errors %}
+                    &lt;ul class="errorlist"&gt;
+                    {% for error in form.password.errors %}
+                        &lt;li&gt;{{ error }}&lt;/li&gt;
+                    {% endfor %}
+                    &lt;/ul&gt;
+                {% endif %}
+                &lt;button type="submit"&gt;&lt;/button&gt;
+            &lt;/form&gt;
+        </code>
+    </pre>
 </div>

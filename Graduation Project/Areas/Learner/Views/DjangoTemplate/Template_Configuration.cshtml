@@ -7,7 +7,7 @@
     <hr />
     <h2 class="my-5 custom-title">First way</h2>
     <h5 class="mb-0 mt-3">Create templates folder in you app then create inside that templates folder. create folde by app name.</h5>
-    <h4 class="mb-1 mt-5">Example</h4>
+    <h3 class="mb-1 mt-5 custom-color">Example</h3>
     <h5 class="mb-0 mt-3">Return render(request, 'blogs/search_results.html', context)</h5>
     <h5 class="mb-5 mt-3">Search_results.html should exists in blogs/templates/blogs/search_results.html</h5>
 
@@ -15,45 +15,58 @@
     <h2 class="my-5 custom-title">Second</h2>
     <h5 class="mb-0 mt-3">Create folder in same level with project root.</h5>
     <h5 class="mb-1 mt-2">Structure should be like that.</h5>
-    <h4 class="mb-3 mt-4">Project root:</h4>
-    <div class="rounded p-4 custom-div mb-2">
-        <p class="mb-1">--urls.py</p>
-        <p class="mb-1">--settings.py</p>
-        <p class="mb-1">app</p>
-        <p class="mb-1">app</p>
-        <p class="mb-1">templates</p>
-    </div>
+    <h3 class="mb-3 mt-4 custom-color">Project root:</h3>
+    <pre class="mb-2">
+        <code class="language-Django">
+            --urls.py
+            --settings.py
+            app
+            app
+            templates
+            <span></span>
+        </code>
+    </pre>
     <h5 class="mb-0 mt-4">In project root > settings.py</h5>
     <h5 class="mb-3 mt-2">Change TEMPLATES list into that codes.</h5>
-    <div class="rounded p-4 mb-5 custom-div">
-        <p class="mb-1">import os</p>
-        <p class="mb-1">TEMPLATES = [</p>
-        <p class="mb-1 mr-25">{</p>
-        <p class="mb-1 mr-50">'BACKEND': 'django.template.backends.django.DjangoTemplates',</p>
-        <p class="mb-1 mr-50">'DIRS': [BASE_DIR / 'templates']</p>
-        <p class="mb-1 mr-50">,</p>
-        <p class="mb-1 mr-50">'APP_DIRS': True,</p>
-        <p class="mb-1 mr-50">'OPTIONS': {</p>
-        <p class="mb-1 mr-75">'context_processors': [</p>
-        <p class="mb-1 mr-100">'django.template.context_processors.i18n',</p>
-        <p class="mb-1 mr-100">'django.template.context_processors.debug',</p>
-        <p class="mb-1 mr-100">'django.template.context_processors.request',</p>
-        <p class="mb-1 mr-100">'django.contrib.auth.context_processors.auth',</p>
-        <p class="mb-1 mr-100">'django.contrib.messages.context_processors.messages',</p>
-        <p class="mb-1 mr-75">],</p>
-        <p class="mb-1 mr-50">},</p>
-        <p class="mb-1 mr-25">},</p>
-        <p class="mb-1">]</p>
-    </div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            import os
+            TEMPLATES = [
+                {
+                    'BACKEND': 'django.template.backends.django.DjangoTemplates',
+                    'DIRS': [BASE_DIR / 'templates']
+                    ,
+                    'APP_DIRS': True,
+                    'OPTIONS': {
+                        'context_processors': [
+                            'django.template.context_processors.i18n',
+                            'django.template.context_processors.debug',
+                            'django.template.context_processors.request',
+                            'django.contrib.auth.context_processors.auth',
+                            'django.contrib.messages.context_processors.messages',
+                        ],
+                    },
+                },
+            ]
+            <span></span>
+        </code>
+    </pre>
 
     <hr />
     <h2 class="my-5 custom-title">Example</h2>
-    <div class="d-flex justify-content-start mt-3">
-        <h5 class="rounded p-3 custom-back">return render(request, 'blogs/search_results.html', context)</h5>
-    </div>
+    <div class="mt-3"></div>
+    <pre>
+        <code class="language-Django">
+            return render(request, 'blogs/search_results.html', context)
+            <span></span>
+        </code>
+    </pre>
     <h5 class="mb-3 mt-3">search_results.html should exists in templates/blogs/search_results.html</h5>
-    <div class="d-flex justify-content-start">
-        <h5 class="rounded p-3 custom-back">return render(request, 'search_results.html', context)</h5>
-    </div>
+    <pre>
+        <code class="language-Django">
+            return render(request, 'search_results.html', context)
+            <span></span>
+        </code>
+    </pre>
     <h5 class="mb-5 mt-3">search_results.html should exists in templates/search_results.html</h5>
 </div>

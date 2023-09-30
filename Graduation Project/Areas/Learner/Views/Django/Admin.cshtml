@@ -4,9 +4,13 @@
     <br>
     <hr />
     <h2 class="my-5 custom-title">Create admin user</h2>
-    <div class="d-flex justify-content-start mt-5">
-        <h5 class="rounded my-4 p-3 custom-back">python manage.py createsuperuser</h5>
-    </div>
+    <div class="mt-5"></div>
+    <pre>
+        <code class="language-Django">
+            python manage.py createsuperuser
+            <span></span>
+        </code>
+    </pre>
     <h5 class="mb-1 mt-5">Navigate to localhost/admin/ to run the website.</h5>
     <h5 class="mb-2">for example: http://127.0.0.1:8000/admin/</h5>
     <br>
@@ -16,19 +20,25 @@
     </figure>
     <br>
     <h4 class="mb-1 mt-4">model</h4>
-    <div class="rounded p-4 my-4 custom-div">
-        <p class="mb-1">class Client(models.Model):</p>
-        <p class="mb-1 mr-25">name = models.CharField(max_length=100, verbose_name='Name')</p>
-        <p class="mb-1 mr-25">email = models.EmailField(unique=True)</p>
-        <p class="mb-1 mr-25">created_at = models.DateTimeField(auto_now_add=True)</p>
-    </div>
+    <pre>
+        <code class="language-Django">
+            class Client(models.Model):
+                name = models.CharField(max_length=100, verbose_name='Name')
+                email = models.EmailField(unique=True)
+                created_at = models.DateTimeField(auto_now_add=True)
+            <span></span>
+        </code>
+    </pre>
     <br>
     <h4 class="mb-1 mt-4">Create class in admin</h4>
-    <div class="rounded p-4 my-4 custom-div">
-        <p class="mb-1">class ClientAdmin(admin.ModelAdmin):</p>
-        <p class="mb-1 mr-25">list_display = ["name", "email"]</p>
-        <p class="mb-1 mr-25">admin.site.register(Client, ClientAdmin)</p>
-    </div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            class ClientAdmin(admin.ModelAdmin):
+                list_display = ["name", "email"]
+                admin.site.register(Client, ClientAdmin)
+            <span></span>
+        </code>
+    </pre>
 
     <br>
     <hr/>
@@ -146,30 +156,29 @@
             class Message(models.Model):
                 content = models.TextField()
                 read = models.BooleanField(default=False)
+            <span></span>
         </code>
     </pre>
-    <div class="rounded p-4 my-4 custom-div">
-        <p class="mb-1">class Message(models.Model):</p>
-        <p class="mb-1 mr-25">content = models.TextField()</p>
-        <p class="mb-1 mr-25">read = models.BooleanField(default=False)</p>
-    </div>
     
     <h4 class="mb-2 mt-5">Admin</h4>
-    <div class="rounded p-4 my-4 custom-div">
-        <p class="mb-1">from django.contrib import admin</p>
-        <p class="mb-1">from .models import Message</p>
-        <p class="mb-1">class MessageAdmin(admin.ModelAdmin):</p>
-        <p class="mb-1 mr-25">list_display = ["content", "read"]</p>
-        <p class="mb-1 mr-25">actions = ['close_message']</p>
-        <p class="mb-1 mr-25"># when click on action. all selected messages will be read</p>
-        <p class="mb-1 mr-25">def close_message(self, request, queryset):</p>
-        <p class="mb-1 mr-50">for obj in queryset:</p>
-        <p class="mb-1 mr-75">obj.read = True</p>
-        <p class="mb-1 mr-75">obj.save()</p>
-        <p class="mb-1 mr-25"># define how action will be display</p>
-        <p class="mb-1 mr-25">close_message.short_description = 'Close Message'</p>
-        <p class="mb-1">admin.site.register(Message, MessageAdmin)</p>
-    </div>
+        <pre class="mb-5">
+            <code class="language-Django">
+                from django.contrib import admin
+                from .models import Message
+                class MessageAdmin(admin.ModelAdmin):
+                    list_display = ["content", "read"]
+                    actions = ['close_message']
+                    # when click on action. all selected messages will be read
+                    def close_message(self, request, queryset):
+                        for obj in queryset:
+                            obj.read = True
+                            obj.save()
+                    # define how action will be display
+                    close_message.short_description = 'Close Message'
+                admin.site.register(Message, MessageAdmin)
+                <span></span>
+            </code>
+        </pre>
 
     <br>
     <hr />
@@ -177,23 +186,25 @@
 
     <h2 class="my-5 custom-title">Customize permissions</h2>
     <h5 class="mt-5 mb-1">Define who can add, remove, edit and view model.</h5>
-    <div class="rounded p-4 my-5 custom-div">
-        <p class="mb-1">class MessageAdmin(admin.ModelAdmin):</p>
-
-        <p class="mb-1 mr-25">def has_add_permission(self, request):</p>
-        <p class="mb-1 mr-50"># all super user can add message data.</p>
-        <p class="mb-1 mr-50">return True</p>
-
-        <p class="mb-1 mr-25">def has_delete_permission(self, request, obj=None):</p>
-        <p class="mb-1 mr-50"># no one can delete message data.</p>
-        <p class="mb-1 mr-50">return False</p>
-
-        <p class="mb-1 mr-25">def has_change_permission(self, request, obj=None):</p>
-        <p class="mb-1 mr-50"># all super user who has change permission can edit message data.</p>
-        <p class="mb-1 mr-50">return False if obj else super().has_change_permission(request, obj)</p>
-
-        <p class="mb-1 mr-25">def has_view_permission(self, request, obj=None):</p>
-        <p class="mb-1 mr-50"># all super user can view message data.</p>
-        <p class="mb-1 mr-50">return True</p>
-    </div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            class MessageAdmin(admin.ModelAdmin):
+                def has_add_permission(self, request):
+                    # all super user can add message data.
+                    return True
+            <br>
+                def has_delete_permission(self, request, obj=None):
+                    # no one can delete message data.
+                    return False
+            <br>
+                def has_change_permission(self, request, obj=None):
+                    # all super user who has change permission can edit message data.
+                    return False if obj else super().has_change_permission(request, obj)
+            <br>
+                def has_view_permission(self, request, obj=None):
+                    # all super user can view message data.
+                    return True
+            <span></span>
+        </code>
+    </pre>
 </div>

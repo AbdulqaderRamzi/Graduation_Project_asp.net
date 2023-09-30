@@ -2,64 +2,87 @@
     <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Commands</h1>
     <h4 class="text-center mt-4 mb-5">We use command to create data in database before run the website. sometimes you want to have dummy data to watch data in database, command acheive that.</h4>
     <hr>
-    <h5 class="my-5">If you delete your database, all data will be deleted. to create dummy data.
+    <h5 class="my-5">
+        If you delete your database, all data will be deleted. to create dummy data.
         you need to create it manually. if you build your command. you can run it again to have dummy data.
         you can create and run commands by using the manage file.
     </h5>
-    <h4 class="mt-4 mb-0">Model</h4>
-    <div class="rounded p-4 mt-4 custom-div">
-        <p class="mb-1">class Client(models.Model):</p>
-        <p class="mb-1 mr-25">name = models.CharField(max_length=100, verbose_name='Name')</p>
-        <p class="mb-1 mr-25">email = models.EmailField(unique=True)</p>
-    </div>
-    <div class="rounded p-4 my-3 custom-div">
-        <p class="mb-1">class Car(models.Model):</p>
-        <p class="mb-1 mr-25">title = models.CharField(max_length=100, verbose_name='Title')</p>
-        <p class="mb-1 mr-25">client = models.ForeignKey(Client, on_delete=models.CASCADE)</p>
-    </div>
+    <h4 class="mt-4 mb-0">Models</h4>
+    <div class="mt-4"></div>
+    <pre>
+        <code class="language-Django">
+            class Client(models.Model):
+                name = models.CharField(max_length=100, verbose_name='Name')
+                email = models.EmailField(unique=True)
+            <span></span>
+        </code>
+    </pre>
+    <div class="mt-3"></div>
+    <pre class="mb-3">
+        <code class="language-Django">
+            class Car(models.Model):
+                title = models.CharField(max_length=100, verbose_name='Title')
+                client = models.ForeignKey(Client, on_delete=models.CASCADE)
+            <span></span>
+        </code>
+    </pre>
     <h4 class="mt-4 mb-1">Create management folder then create commands folder.</h4>
     <h4 class="mt-2 mb-1">Create python file and name it whateven you want.</h4>
     <figure class="figure my-3">
         <img src="~/images/project_images/command/command.png" class="figure-img img-fluid rounded img-border">
     </figure>
     <h4 class="mt-4 mb-1">Insert the following codes in your command file.</h4>
-    <div class="rounded p-4 mb-5 mt-4 custom-div">
-        <p class="mb-1">from django.core.management import BaseCommand</p>
-        <p class="mb-1">from app.models import Car, Client</p>
-        <p class="mb-1">class Command(BaseCommand):</p>
-        <p class="mb-1 mr-25">help = "Generate Data"</p>
-        <p class="mb-1 mr-25"># help message indecate about command content</p>
-        <p class="mb-1 mr-25"># put your logic in handle function</p>
-        <p class="mb-1 mr-25">def handle(self, *args, **options):</p>
-        <p class="mb-1 mr-50"># Create Clients</p>
-        <p class="mb-1 mr-50">client1 = Client.objects.create(name='Mohammed', email="mohammed_alshammi@gmail.com")</p>
-        <p class="mb-1 mr-50">client2 = Client.objects.create(name='Ahmed', email="ahmed_laila@gmail.com")</p>
-        <p class="mb-1 mr-50">client3 = Client.objects.create(name='Amal', email="amal_sami@gmail.com")</p>
-        <p class="mb-1 mr-50">client4 = Client.objects.create(name='Maher', email="maher_hassan@gmail.com")</p>
-        <p class="mb-1 mr-50"># Create Cars</p>
-        <p class="mb-1 mr-50">Car.objects.create(title="BMW", client=client1)</p>
-        <p class="mb-1 mr-50">Car.objects.create(title="Hyundai", client=client1)</p>
-        <p class="mb-1 mr-50">Car.objects.create(title="Chevrolet", client=client2)</p>
-        <p class="mb-1 mr-50">Car.objects.create(title="Ford", client=client3)</p>
-        <p class="mb-1 mr-50">Car.objects.create(title="Toyota", client=client4)</p>
-        <p class="mb-1 mr-50"># If the command was executed successfully, the following message will appear.</p>
-        <p class="mb-1 mr-50">self.stdout.write("Done... We have generated the data")</p>
-    </div>
+    <div class="mt-4"></div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            from django.core.management import BaseCommand
+            from app.models import Car, Client
+            class Command(BaseCommand):
+                help = "Generate Data"
+                # help message indecate about command content
+                # put your logic in handle function
+                def handle(self, *args, **options):
+                    # Create Clients
+                    client1 = Client.objects.create(name='Mohammed', email="mohammed_alshammi@gmail.com")
+                    client2 = Client.objects.create(name='Ahmed', email="ahmed_laila@gmail.com")
+                    client3 = Client.objects.create(name='Amal', email="amal_sami@gmail.com")
+                    client4 = Client.objects.create(name='Maher', email="maher_hassan@gmail.com")
+                    # Create Cars
+                    Car.objects.create(title="BMW", client=client1)
+                    Car.objects.create(title="Hyundai", client=client1)
+                    Car.objects.create(title="Chevrolet", client=client2)
+                    Car.objects.create(title="Ford", client=client3)
+                    Car.objects.create(title="Toyota", client=client4)
+                    # If the command was executed successfully, the following message will appear.
+                    self.stdout.write("Done... We have generated the data")
+            <span></span>
+        </code>
+    </pre>
 
     <hr />
     <h2 class="my-5 custom-title">Display the help message</h2>
-    <div class="d-flex justify-content-start mt-3">
-        <h5 class="rounded p-3 mb-0 custom-back">python manage.py help</h5>
-    </div>
+    <div class="mt-3"></div>
+    <pre>
+        <code class="language-Django">
+            python manage.py help
+            <span></span>
+        </code>
+    </pre>
+
     <figure class="figure mb-5 mt-3">
         <img src="~/images/project_images/command/command2.png" class="figure-img img-fluid rounded img-border">
     </figure>
 
     <hr />
     <h2 class="my-5 custom-title">Run The command</h2>
-    <div class="d-flex justify-content-start mt-2">
-        <h5 class="rounded my-3 p-3 custom-back">python manage.py command name</h5>
-    </div>
+    <div class="mt-3"></div>
+    <div class="mt-2"></div>
+    <pre class="mb-3">
+        <code class="language-Django">
+            python manage.py command name
+            <span></span>
+        </code>
+    </pre>
     <h5 class="mt-1 mb-3">Successful message.</h5>
     <figure class="figure mb-5 mt-1">
         <img src="~/images/project_images/command/command3.png" class="figure-img img-fluid rounded img-border">

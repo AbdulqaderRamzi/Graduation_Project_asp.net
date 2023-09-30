@@ -4,42 +4,51 @@
     <br>
     <hr />
     <h2 class="my-5 custom-title">Install the package</h2>
-    <div class="d-flex justify-content-start mt-3">
-        <h5 class="rounded mt-4 mb-2 p-3 custom-back">pip install django-ckeditor</h5>
-    </div>
-    <div class="d-flex justify-content-start">
-        <h5 class="rounded mb-4 p-3 custom-back">pip install django-bleach</h5>
-    </div>
+    <div class="mt-4"></div>
+    <pre class="mb-4">
+        <code class="language-Django">
+            pip install django-ckeditor
+            pip install django-bleach
+            <span></span>
+        </code>
+    </pre>
+    <h4 class="mb-3 mt-4">Insert the package into INSTALLED_APPS list</h4>
+    <pre class="mb-5">
+        <code class="language-Django">
+            INSTALLED_APPS = [
+                ...
+                "ckeditor",
+                "bleach",
+            ]
+            <span></span>
+        </code>
+    </pre>
+    <h4 class="mb-3 mt-4">Use it in the model</h4>
+    <pre class="mb-5">
+        <code class="language-Django">
+            from ckeditor.fields import RichTextField as HTMLField
+            from bleach import clean
+            from django.utils.safestring import mark_safe
+            ALLOWED_TAGS = [
+                "a", "abbr", "acronym", "b", "em", "ol", "code", 'p', 'br',
+                "blockquote", "i", "li", "strong", "ul", 'u', 'hr', 'em',
+                'span', 'div', 'img', 'ol', 'h1', 'h2', 'h3', 'h4', 'h5',
+                'colgroup', 'table', 'col', 'th', 'td', 'tr', 'tbody', 'thead'
+            ]
+            ALLOWED_ATTRS = {
+                '*': ['style', 'class', 'dir'],
+                'a': ['href', 'title', 'target'],
+                'img': ['src', 'width', 'height', 'alt'],
+            }
+            class RichText(models.Model):
+                rich_text = HTMLField()
+                def save(self, *args, **kwargs):
+                    self.rich_text = bleach(self.rich_text)
+            <span></span>
+        </code>
+    </pre>
 
-    <h4 class="mb-1 mt-4">Insert the package into INSTALLED_APPS list</h4>
-    <div class="rounded p-4 mb-5 mt-2 custom-div">
-        <p class="mb-1">INSTALLED_APPS = [</p>
-        <p class="mb-1 mr-25">...</p>
-        <p class="mb-1 mr-25">"ckeditor",</p>
-        <p class="mb-1 mr-25">"bleach",</p>
-        <p class="mb-1">]</p>
-    </div>
-    <h4 class="mb-1 mt-4">Use it in the model</h4>
-    <div class="rounded p-4 mb-5 mt-2 custom-div">
-        <p class="mb-1">from ckeditor.fields import RichTextField as HTMLField</p>
-        <p class="mb-1">from bleach import clean</p>
-        <p class="mb-1">from django.utils.safestring import mark_safe</p>
-        <p class="mb-1">ALLOWED_TAGS = [</p>
-        <p class="mb-1 mr-25">"a", "abbr", "acronym", "b", "em", "ol", "code", 'p', 'br',</p>
-        <p class="mb-1 mr-25">"blockquote", "i", "li", "strong", "ul", 'u', 'hr', 'em',</p>
-        <p class="mb-1 mr-25">'span', 'div', 'img', 'ol', 'h1', 'h2', 'h3', 'h4', 'h5',</p>
-        <p class="mb-1 mr-25">'colgroup', 'table', 'col', 'th', 'td', 'tr', 'tbody', 'thead'</p>
-        <p class="mb-1">]</p>
-        <p class="mb-1">ALLOWED_ATTRS = {</p>
-        <p class="mb-1 mr-25">'*': ['style', 'class', 'dir'],</p>
-        <p class="mb-1 mr-25">'a': ['href', 'title', 'target'],</p>
-        <p class="mb-1 mr-25">'img': ['src', 'width', 'height', 'alt'],</p>
-        <p class="mb-1">}</p>
-        <p class="mb-1">class RichText(models.Model):</p>
-        <p class="mb-1 mr-25">rich_text = HTMLField()</p>
-        <p class="mb-1 mr-25">def save(self, *args, **kwargs):</p>
-        <p class="mb-1 mr-50">self.rich_text = bleach(self.rich_text)</p>
-    </div>
+
     <br>
     <hr />
     <h2 class="my-5 custom-title">Before</h2>

@@ -13,28 +13,40 @@
     <h5 class="mt-3 mb-0">Create includes folder inside templates folder.</h5>
     <h5 class="mt-3 mb-1">Create an html and name it whatever you want, for example hello.html</h5>
     <h5 class="mt-3 mb-4">Insert the following code in hello.html file.</h5>
-    <div class="d-flex justify-content-start mb-5">
-        <h5 class="rounded p-3 custom-back">&lt;h1&gt;Hello World&lt;/h1&gt;</h5>
-    </div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            &lt;h1&gt;Hello World&lt;/h1&gt;
+            <span></span>
+        </code>
+    </pre>
 
     <hr />
     <h5 class="mt-5 mb-0">To include this file in home, index and details files.</h5>
     <h5 class="mt-2 mb-3">Follow the following steps in each file:</h5>
-    <div class="d-flex justify-content-start">
-        <h5 class="rounded p-3 custom-back">{% include 'includes/hello.html' %}</h5>
-    </div>
+    <pre>
+        <code class="language-Django">
+            {% include 'includes/hello.html' %}
+            <span></span>
+        </code>
+    </pre>
 
     <hr />
     <h5 class="mt-5 mb-0">You can pass parameter with include.</h5>
     <h5 class="mt-2 mb-3">Let's change hello.html file content.</h5>
-    <div class="d-flex justify-content-start mb-5">
-        <h5 class="rounded p-3 custom-back">&lt;h1&gt;hello {{name}}&lt;/h1&gt;</h5>
-    </div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            &lt;h1&gt;hello {{name}}&lt;/h1&gt;
+            <span></span>
+        </code>
+    </pre>
 
     <hr />
     <h5 class="mt-5 mb-0">To include this file in home, index and details files.</h5>
     <h5 class="mt-2 mb-3">Follow the following steps in each file:</h5>
-    <div class="d-flex justify-content-start">
-        <h5 class="rounded mb-5 p-3 custom-back">{% include 'includes/hello.html' with name="khaled" %}</h5>
-    </div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            {% include 'includes/hello.html' with name="khaled" %}
+            <span></span>
+        </code>
+    </pre>
 </div>

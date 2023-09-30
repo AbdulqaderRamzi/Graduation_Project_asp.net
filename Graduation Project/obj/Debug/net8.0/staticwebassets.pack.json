@@ -5,24 +5,20 @@
       "PackagePath": "staticwebassets\\Graduation Project.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\css\\default.css",
-      "PackagePath": "staticwebassets\\css\\default.css"
+      "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\css\\community.css",
+      "PackagePath": "staticwebassets\\css\\community.css"
     },
     {
       "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\css\\ok.css",
       "PackagePath": "staticwebassets\\css\\ok.css"
     },
     {
+      "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\css\\sidebar.css",
+      "PackagePath": "staticwebassets\\css\\sidebar.css"
+    },
+    {
       "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
-    },
-    {
-      "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\css\\t1.css",
-      "PackagePath": "staticwebassets\\css\\t1.css"
-    },
-    {
-      "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\css\\twil.css",
-      "PackagePath": "staticwebassets\\css\\twil.css"
     },
     {
       "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\favicon.ico",
@@ -95,10 +91,6 @@
     {
       "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\images\\Community\\message\\1\\984a0c00-dd7e-436a-b9c0-a0bd9f9e8670.png",
       "PackagePath": "staticwebassets\\images\\Community\\message\\1\\984a0c00-dd7e-436a-b9c0-a0bd9f9e8670.png"
-    },
-    {
-      "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\images\\Community\\message\\1\\a29b847e-d09a-450d-8195-30b970464dc0.png",
-      "PackagePath": "staticwebassets\\images\\Community\\message\\1\\a29b847e-d09a-450d-8195-30b970464dc0.png"
     },
     {
       "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\images\\Community\\message\\1\\a7983b71-bb73-49a6-97c6-ab63110ee8b9.jpg",
@@ -297,24 +289,12 @@
       "PackagePath": "staticwebassets\\images\\project_images\\vid\\search.mp4"
     },
     {
-      "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\js\\default.js",
-      "PackagePath": "staticwebassets\\js\\default.js"
-    },
-    {
       "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\js\\ok.js",
       "PackagePath": "staticwebassets\\js\\ok.js"
     },
     {
       "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
-    },
-    {
-      "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\js\\t1.js",
-      "PackagePath": "staticwebassets\\js\\t1.js"
-    },
-    {
-      "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\js\\twil.js",
-      "PackagePath": "staticwebassets\\js\\twil.js"
     },
     {
       "Id": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\LICENSE",

@@ -11,79 +11,104 @@
     <hr />
     <h2 class="my-5 custom-title">Examples about Custom QuerySet</h2>
     <h4 class="mb-4 mt-2">First Example:</h4>
-    <div class="rounded p-4 custom-div">
-        <p class="mb-1">class BookQuerySet(models.QuerySet):</p>
-        <p class="mb-1 mr-25">def published_books(self):</p>
-        <p class="mb-1 mr-50">return self.filter(published=True)</p>
-        <br>
-        <p class="mb-1">class Book(models.Model):</p>
-        <p class="mb-1 mr-25">published = models.BooleanField(default=False)</p>
-        <p class="mb-1 mr-25">objects = BookQuerySet.as_manager()</p>
-    </div>
+    <pre>
+        <code class="language-Django">
+            class BookQuerySet(models.QuerySet):
+                def published_books(self):
+                    return self.filter(published=True)
+
+            class Book(models.Model):
+                published = models.BooleanField(default=False)
+                objects = BookQuerySet.as_manager()
+            <span></span>
+        </code>
+    </pre>
     <h4 class="mb-3 mt-3">How to call it?</h4>
-    <div class="rounded p-4 custom-inout">
-        <p class="mb-1">// Answer:</p>
-        <p class="mb-1">Book.objects.published_books()</p>
-    </div>
+    <pre>
+        <code class="language-Django">
+            // Answer:
+            Book.objects.published_books()
+            <span></span>
+        </code>
+    </pre>
     <h4 class="mb-4 mt-5">Second Example:</h4>
-    <div class="rounded p-4 custom-div">
-        <p class="mb-1">class ProductQuerySet(models.QuerySet):</p>
-        <p class="mb-1 mr-25">def price_sorted(self):</p>
-        <p class="mb-1 mr-50">return self.order_by('price')</p>
-        <p class="mb-1 mr-25">def expensive(self):</p>
-        <p class="mb-1 mr-50">return self.filter(price__gte=50)</p>
-        <br>
-        <p class="mb-1">class Product(models.Model):</p>
-        <p class="mb-1 mr-25">price = models.DecimalField(max_digits=10, decimal_places=2)</p>
-        <p class="mb-1 mr-25">objects = ProductQuerySet.as_manager()</p>
-    </div>
+    <pre>
+        <code class="language-Django">
+            class ProductQuerySet(models.QuerySet):
+                def price_sorted(self):
+                    return self.order_by('price')
+                def expensive(self):
+                    return self.filter(price__gte=50)
+
+            class Product(models.Model):
+                price = models.DecimalField(max_digits=10, decimal_places=2)
+                objects = ProductQuerySet.as_manager()
+            <span></span>
+        </code>
+    </pre>
     <h4 class="mb-3 mt-3">How to call them?</h4>
-    <div class="rounded p-4 mb-5 custom-inout">
-        <p class="mb-1">// Answer:</p>
-        <p class="mb-1">Product.objects.price_sorted()</p>
-        <p class="mb-1">Product.objects.expensive()</p>
-    </div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            // Answer:
+            Product.objects.price_sorted()
+            Product.objects.expensive()
+            <span></span>
+        </code>
+    </pre>
 
     <hr />
     <h2 class="my-5 custom-title">Examples about Custom Manager</h2>
     <h4 class="mb-4 mt-2">First Example:</h4>
-    <div class="rounded p-4 mb-3 custom-div">
-        <p class="mb-1">class PublishedBookManager(models.Manager):</p>
-        <p class="mb-1 mr-25">def published_books(self):</p>
-        <p class="mb-1 mr-50">return self.filter(published=True)</p>
-        <br>
-        <p class="mb-1">class Book(models.Model):</p>
-        <p class="mb-1 mr-25">published = models.BooleanField(default=False)</p>
-        <p class="mb-1 mr-25">published_objects = PublishedBookManager()</p>
-    </div>
+    <pre class="mb-3">
+        <code class="language-Django">
+            class PublishedBookManager(models.Manager):
+                def published_books(self):
+                    return self.filter(published=True)
+
+            class Book(models.Model):
+                published = models.BooleanField(default=False)
+                published_objects = PublishedBookManager()
+            <span></span>
+        </code>
+    </pre>
     <h4 class="mb-3">How to call it?</h4>
-    <div class="rounded p-4 mb-5 custom-inout">
-        <p class="mb-1">// Answer:</p>
-        <p class="mb-1">// To retrieve all books.</p>
-        <p class="mb-1">Book.published_objects.all()</p>
-        <br>
-        <p class="mb-1">// To retrive books depends on published_books function.</p>
-        <p class="mb-1">Book.published_objects.published_books()</p>
-    </div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            // Answer:
+            // To retrieve all books.
+            Book.published_objects.all()
+
+            // To retrive books depends on published_books function.
+            Book.published_objects.published_books()
+            <span></span>
+        </code>
+    </pre>
     <h4 class="mb-4">Second Example:</h4>
-    <div class="rounded p-4 mb-3 custom-div">
-        <p class="mb-1">class CustomFilterManager(models.Manager):</p>
-        <p class="mb-1 mr-25">def get_queryset(self):</p>
-        <p class="mb-1 mr-50">return super().get_queryset().order_by('price')</p>
-        <p class="mb-1 mr-25">def expensive_books(self):</p>
-        <p class="mb-1 mr-50">return self.filter(price__gte=50)</p>
-        <br>
-        <p class="mb-1">class Book(models.Model):</p>
-        <p class="mb-1 mr-25">price = models.DecimalField(max_digits=10, decimal_places=2)</p>
-        <p class="mb-1 mr-25">custom_filter = CustomFilterManager()</p>
-    </div>
+    <div class="mb-3"></div>
+    <pre class="mb-3">
+        <code class="language-Django">
+            class CustomFilterManager(models.Manager):
+                def get_queryset(self):
+                    return super().get_queryset().order_by('price')
+                def expensive_books(self):
+                    return self.filter(price__gte=50)
+
+            class Book(models.Model):
+                price = models.DecimalField(max_digits=10, decimal_places=2)
+                custom_filter = CustomFilterManager()
+            <span></span>
+        </code>
+    </pre>
     <h4 class="mb-3">How to call it?</h4>
-    <div class="rounded p-4 mb-5 custom-inout">
-        <p class="mb-1">// Answer:</p>
-        <p class="mb-1">// To retrieve all books order by price because we overridden get_queryset.</p>
-        <p class="mb-1">Book.custom_filter.all()</p>
-        <br>
-        <p class="mb-1">// To retrive books depends on expensive_books function.</p>
-        <p class="mb-1">Book.custom_filter.expensive_books()</p>
-    </div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            // Answer:
+            // To retrieve all books order by price because we overridden get_queryset.
+            Book.custom_filter.all()
+
+            // To retrive books depends on expensive_books function.
+            Book.custom_filter.expensive_books()
+            <span></span>
+        </code>
+    </pre>
 </div>

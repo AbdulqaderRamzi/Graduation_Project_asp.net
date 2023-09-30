@@ -4,57 +4,76 @@
         We use admin to customize admin layout, display data and accessability. 
         Use forms with user input. enables you to validate inputs. each app has its own forms.
     </h4>
+
     <br>
     <hr>
     <h2 class="my-5 custom-title">Creat app</h2>
     <h5 class="mt-4 mb-5">In your app create forms.py. Build your form logic.</h5>
+
     <br />
     <hr />
     <br />
     <h2 class="my-5 custom-title">Login Example</h2>
-    <div class="rounded p-4 my-4 custom-div">
-        <p class="mb-1">from django import forms</p>
-        <p class="mb-1">class LoginForm(forms.Form):</p>
-        <p class="mb-1 mr-25">username = forms.CharField(label='Your username', max_length=150)</p>
-        <p class="mb-1 mr-25">password = forms.CharField(label='Your password', widget=forms.PasswordInput(attrs={'class': 'pt-2'}))</p>
-    </div>
+    <div class="mt-4"></div>
+    <pre class="mb-4">
+        <code class="language-Django">
+            from django import forms
+            class LoginForm(forms.Form):
+                username = forms.CharField(label='Your username', max_length=150)
+                password = forms.CharField(label='Your password', widget=forms.PasswordInput(attrs={'class': 'pt-2'}))
+            <span></span>
+        </code>
+    </pre>
     <h5 class="mt-4 mb-5">In previous Example: username is text field that has label and max length. password is text field but we changed its widget to PasswordInput. to hide password content into stars (********). has its own class.</h5>
+
     <br />
     <hr />
     <br />
     <h2 class="my-5 custom-title">Contact Example</h2>
-    <div class="rounded p-4 my-4 custom-div">
-        <p class="mb-1">from django import forms</p>
-        <p class="mb-1">class ContactForm(forms.Form):</p>
-        <p class="mb-1 mr-25">subject = forms.CharField(max_length=100)</p>
-        <p class="mb-1 mr-25">message = forms.CharField(widget=forms.Textarea)</p>
-        <p class="mb-1 mr-25">sender = forms.EmailField()</p>
-        <p class="mb-1 mr-25">attachment = forms.FileField(required=False)</p>
-    </div>
+    <div class="mt-4"></div>
+    <pre class="mb-4">
+        <code class="language-Django">
+            from django import forms
+            class ContactForm(forms.Form):
+                subject = forms.CharField(max_length=100)
+                message = forms.CharField(widget=forms.Textarea)
+                sender = forms.EmailField()
+                attachment = forms.FileField(required=False)
+            <span></span>
+        </code>
+    </pre>
+
     <br />
     <hr />
     <br />
     <h2 class="my-5 custom-title">Register Example included validation</h2>
-    <div class="rounded p-4 my-4 custom-div">
-        <p class="mb-1">from django import forms</p>
-        <p class="mb-1">class RegisterForm(forms.Form):</p>
-        <p class="mb-1 mr-25">username = forms.CharField(label='Your username', max_length=150)</p>
-        <p class="mb-1 mr-25">email = forms.EmailField()</p>
-        <p class="mb-1 mr-25">password = forms.CharField(label='Your password', widget=forms.PasswordInput)</p>
-        <p class="mb-1 mr-25">confirm_password = forms.CharField(label='Confirm Your password', widget=forms.PasswordInput)</p>
-        <p class="mb-1 mr-25">def clean_email(self):</p>
-        <p class="mb-1 mr-50">email = self.cleaned_data['email']</p>
-        <p class="mb-1 mr-50">if User.objects.filter(email=email).exists():</p>
-        <p class="mb-1 mr-75">raise forms.ValidationError("This email is already associated with a user.")</p>
-        <p class="mb-1 mr-50">return email</p>
-        <p class="mb-1 mr-25">def clean(self):</p>
-        <p class="mb-1 mr-25">cleaned_data = super().clean()</p>
-        <p class="mb-1 mr-25">password = cleaned_data.get('password')</p>
-        <p class="mb-1 mr-25">confirm_password = cleaned_data.get('confirm_password')</p>
-        <p class="mb-1 mr-25">if password and confirm_password and password != confirm_password:</p>
-        <p class="mb-1 mr-50">raise forms.ValidationError("Passwords do not match.")</p>
-        <p class="mb-1 mr-25">return cleaned_data</p>
-    </div>
+    <div class="mt-4"></div>
+    <pre class="mb-4">
+        <code class="language-Django">
+            from django import forms
+            class RegisterForm(forms.Form):
+                username = forms.CharField(label='Your username', max_length=150)
+                email = forms.EmailField()
+                password = forms.CharField(label='Your password', widget=forms.PasswordInput)
+                confirm_password = forms.CharField(label='Confirm Your password', widget=forms.PasswordInput)
+
+                def clean_email(self):
+                    email = self.cleaned_data['email']
+                    if User.objects.filter(email=email).exists():
+                        raise forms.ValidationError("This email is already associated with a user.")
+                    return email
+
+                def clean(self):
+                cleaned_data = super().clean()
+                password = cleaned_data.get('password')
+                confirm_password = cleaned_data.get('confirm_password')
+                if password and confirm_password and password != confirm_password:
+                    raise forms.ValidationError("Passwords do not match.")
+                return cleaned_data
+            <span></span>
+        </code>
+    </pre>
+
     <br />
     <hr />
     <br />

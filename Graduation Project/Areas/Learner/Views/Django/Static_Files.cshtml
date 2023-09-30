@@ -1,13 +1,16 @@
 ﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
     <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Static Files</h1>
     <h5 class="mt-5 mb-3">In project root go to settings. Add those lines.</h5>
-    <div class="rounded p-4 custom-div mb-2">
-        <p class="mb-1">STATIC_URL = 'static/'</p>
-        <p class="mb-1">STATICFILES_DIRS = [</p>
-        <p class="mb-1 mr-25">BASE_DIR / "static",</p>
-        <p class="mb-1">]</p>
-        <p class="mb-1">STATIC_ROOT = BASE_DIR / "staticfiles"</p>
-    </div>
+    <pre class="mb-2">
+        <code class="language-Django">
+            STATIC_URL = 'static/'
+            STATICFILES_DIRS = [
+                BASE_DIR / "static",
+            ]
+            STATIC_ROOT = BASE_DIR / "staticfiles"
+            <span></span>
+        </code>
+    </pre>
     <figure class="figure mb-4">
         <img src="~/images/project_images/model/file.png" class="figure-img img-fluid rounded img-border">
     </figure>

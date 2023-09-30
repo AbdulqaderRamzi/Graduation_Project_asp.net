@@ -3,24 +3,29 @@
     <h4 class="text-center my-5">Ensuring that only authorized individuals can access sensitive data and perform specific actions.</h4>
     <hr />
     <h2 class="my-5 custom-title">Login view</h2>
-    <div class="rounded p-4 mt-4 mb-5 custom-div">
-        <p class="mb-1">from django.contrib.auth import authenticate, login</p>
-        <p class="mb-1">from django.shortcuts import render, redirect</p>
-        <p class="mb-1">from .forms import CustomLoginForm</p>
-        <p class="mb-1">def login_view(request):</p>
-        <p class="mb-1 mr-25">if request.method == 'POST':</p>
-        <p class="mb-1 mr-50">form = CustomLoginForm(request, data=request.POST)</p>
-        <p class="mb-1 mr-50">if form.is_valid():</p>
-        <p class="mb-1 mr-75"># Authenticate user</p>
-        <p class="mb-1 mr-75">user = authenticate(username=form.cleaned_data['username'], password=form.cleaned_data['password'])</p>
-        <p class="mb-1 mr-75">if user is not None:</p>
-        <p class="mb-1 mr-100"># Log in the user</p>
-        <p class="mb-1 mr-100">login(request, user)</p>
-        <p class="mb-1 mr-100">return redirect('dashboard')  # Redirect to a dashboard or any other page</p>
-        <p class="mb-1 mr-25">else:</p>
-        <p class="mb-1 mr-50">form = CustomLoginForm()</p>
-        <p class="mb-1 mr-25">return render(request, 'login.html', {'form': form})</p>
-    </div>
+    <div class="mt-4"></div>
+    <pre class="mb-5">
+        <code class="language-Django">
+            from django.contrib.auth import authenticate, login
+            from django.shortcuts import render, redirect
+            from .forms import CustomLoginForm
+            def login_view(request):
+                if request.method == 'POST':
+                    form = CustomLoginForm(request, data=request.POST)
+                    if form.is_valid():
+                        # Authenticate user
+                        user = authenticate(username=form.cleaned_data['username'], password=form.cleaned_data['password'])
+                        if user is not None:
+                            # Log in the user
+                            login(request, user)
+                            return redirect('dashboard')  # Redirect to a dashboard or any other page
+                else:
+                    form = CustomLoginForm()
+                return render(request, 'login.html', {'form': form})
+            <span></span>
+        </code>
+    </pre>
+
     <br>
     <hr />
     <h2 class="my-5 custom-title">Explanation</h2>
