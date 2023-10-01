@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wDGKagaUrQ9dzNk4P+7cJ7YtRgcPGHreRcjh7XryMOQ=",
+  "Hash": "iPjeVBU6bh/TI3ZGoN2WnLJtWdEhz+dudZ8zTZ32zqU=",
   "Source": "Graduation Project",
   "BasePath": "_content/Graduation Project",
   "Mode": "Default",
@@ -1556,6 +1556,25 @@
       "OriginalItemSpec": "wwwroot\\images\\ChatRoomMessage\\videos\\83382856-ebda-4329-b5bd-62b8df1d67a4.mp4"
     },
     {
+      "Identity": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\images\\Community\\message\\1\\195c336f-070c-405c-911d-6def38a52a17.png",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "images/Community/message/1/195c336f-070c-405c-911d-6def38a52a17.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Community\\message\\1\\195c336f-070c-405c-911d-6def38a52a17.png"
+    },
+    {
       "Identity": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\images\\Community\\message\\1\\38697ea8-dd77-42df-8849-ab2f7909088c.jpg",
       "SourceId": "Graduation Project",
       "SourceType": "Discovered",
@@ -1573,6 +1592,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Community\\message\\1\\38697ea8-dd77-42df-8849-ab2f7909088c.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\images\\Community\\message\\1\\6ada2ce0-22ba-47f2-90a0-17d4e89c96f2.png",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "images/Community/message/1/6ada2ce0-22ba-47f2-90a0-17d4e89c96f2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Community\\message\\1\\6ada2ce0-22ba-47f2-90a0-17d4e89c96f2.png"
     },
     {
       "Identity": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\wwwroot\\images\\Community\\message\\1\\7f64f5ed-9c70-4170-a2a9-2988afd4b42d.png",
