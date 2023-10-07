@@ -1,9 +1,9 @@
 ﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
     <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Url</h1>
-    <h5 class="mb-0 mt-4">In urls.py you will configure your url for each view.</h5>
-    <h5 class="mb-0 mt-2">Import following codes.</h5>
-    <h4 class="mb-3 mt-5 custom-color">Project root urls.py:</h4>
-    <pre>
+    <h4 class="mb-5 mt-4 text-center">In urls.py you will configure your url for each view.</h4>
+    <hr />
+    <h4 class="mb-3 mt-5">Project root urls.py</h4>
+    <pre class="mb-5">
         <code class="language-Django">
             from django.urls import path
             from . import views
@@ -14,7 +14,8 @@
             <span></span>
         </code>
     </pre>
-    <h4 class="mb-3 mt-5 custom-color">blogs app urls.py:</h4>
+    <hr />
+    <h4 class="mb-3 mt-5">blogs app urls.py</h4>
     <pre class="mb-5">
         <code class="language-Django">
             from django.urls import path
@@ -32,7 +33,7 @@
 
     <hr />
     <h2 class="my-5 custom-title">First path</h2>
-    <h4 class="mb-3 mt-3 custom-color">Example: blogs</h4>
+    <h4 class="mb-3 mt-4">Example: blogs</h4>
     <pre class="mb-5">
         <code class="language-Django">
             def blogs(request):
@@ -43,7 +44,7 @@
 
     <hr />
     <h2 class="my-5 custom-title">Second path</h2>
-    <h4 class="mb-3 mt-3 custom-color">Example: blog/1</h4>
+    <h4 class="mb-3 mt-4">Example: blog/1</h4>
     <pre class="mb-5">
         <code class="language-Django">
             def blog_by_id(request, id): # &lt;int:id&gt; parameter
@@ -54,7 +55,7 @@
 
     <hr />
     <h2 class="my-5 custom-title">Third path</h2>
-    <h4 class="mb-4 mt-3 custom-color">Example: blog/sport</h4>
+    <h4 class="mb-4 mt-4">Example: blog/sport</h4>
     <pre class="mb-5">
         <code class="language-Django">
             def blog_by_name(request, name): # &lt;str:name&gt; parameter
@@ -65,7 +66,7 @@
 
     <hr />
     <h2 class="my-5 custom-title">Fourth path</h2>
-    <h4 class="mb-3 mt-3 custom-color">Example: blog/sport-magazine</h4>
+    <h4 class="mb-3 mt-4">Example: blog/sport-magazine</h4>
     <pre class="mb-5">
         <code class="language-Django">
             def blog_by_slug_name(request, slug_name): # &lt;slug:slug_name&gt; parameter
@@ -76,14 +77,14 @@
 
     <hr>
     <h3 class="mb-0 mt-5 custom-color">Why to put name in the each path, what's its benefit?</h3>
-    <h5 class="mb-3 mt-5">Instead of using:</h5>
-    <pre>
+    <h5 class="mb-2 mt-5">Instead of using</h5>
+    <pre class="mb-3">
         <code class="language-Django">
             &lt;a href="blogs/blogs"&gt; &lt;/a&gt;
             <span></span>
         </code>
     </pre>
-    <h5 class="mb-3 mt-4">name will enable you to use the following logic:</h5>
+    <h5 class="mb-2 mt-4">name will enable you to use the following logic</h5>
     <pre class="mb-5">
         <code class="language-Django">
             &lt;a href="{% url 'path name' parameters %}"&gt; &lt;/a&gt;
@@ -107,9 +108,10 @@
     </pre>
 
     <hr />
-    <h3 class="mb-0 mt-5 custom-color">Why to insert app name before urlpatterns, what's its benefit?</h3>
-    <h5 class="mb-0 mt-5">To differentiate between same path name in different apps.</h5>
-    <h5 class="mb-2 mt-4">For examples:</h5>
+    <h3 class="mb-0 mt-5 custom-color">Why to insert the app name before urlpatterns, what's its benefit?</h3>
+    <h5 class="mb-5 mt-5">To differentiate between the same path names in different apps.</h5>
+    <hr />
+    <h5 class="mb-2 mt-5">Examples</h5>
     <pre>
         <code class="language-Django">
             // blogs app > urls
@@ -124,8 +126,9 @@
             <span></span>
         </code>
     </pre>
-    <h5 class="mb-0 mt-4">To prevent that error use app name before urlpatterns.</h5>
-    <h5 class="mb-3 mt-2">How to use app name with navigation.</h5>
+    <h5 class="mb-5 mt-4 custom-color">To prevent that error use app name before urlpatterns.</h5>
+    <hr />
+    <h5 class="mb-3 mt-5">Use the app name with navigation.</h5>
     <pre class="mb-5">
         <code class="language-Django">
             &lt;a href="{% url 'app name : path name' parameters %}"&gt; &lt;/a&gt;

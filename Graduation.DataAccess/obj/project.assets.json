@@ -9109,11 +9109,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.DataAccess\\Graduation.DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.DataAccess\\Graduation.DataAccess.csproj",
       "projectName": "Graduation.DataAccess",
-      "projectPath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.DataAccess\\Graduation.DataAccess.csproj",
+      "projectPath": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.DataAccess\\Graduation.DataAccess.csproj",
       "packagesPath": "C:\\Users\\khalo\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.DataAccess\\obj\\",
+      "outputPath": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -9135,8 +9135,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.Models\\Graduation.Models.csproj": {
-              "projectPath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.Models\\Graduation.Models.csproj"
+            "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.Models\\Graduation.Models.csproj": {
+              "projectPath": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.Models\\Graduation.Models.csproj"
             }
           }
         }
@@ -9145,9 +9145,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "default"
       }
     },
     "frameworks": {
@@ -9211,7 +9208,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-preview.7.23376.3\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-rc.1.23455.8/PortableRuntimeIdentifierGraph.json"
       }
     }
   },

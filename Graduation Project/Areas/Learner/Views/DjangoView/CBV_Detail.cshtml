@@ -40,12 +40,11 @@
             <span></span>
         </code>
     </pre>
-    <h5 class="mt-5 mb-5">It has 4 features.</h5>
+    <h5 class="mt-5 mb-5 custom-color">It has 4 features.</h5>
 
     <hr />
     <h2 class="my-5 custom-title">get_context_data</h2>
-    <h5 class="mt-3 mb-2">Used to add more context data and change default context name.</h5>
-    <h5 class="mt-4 mb-4">Example</h5>
+    <h4 class="mt-4 mb-3">Used to add more context data and change default context name.</h4>
     <pre class="mb-5">
         <code class="language-Django">
             def get_context_data(self, **kwargs):
@@ -58,8 +57,7 @@
 
     <hr />
     <h2 class="my-5 custom-title">queryset</h2>
-    <h5 class="mt-3 mb-2">Used to define which objects to return.</h5>
-    <h5 class="mt-4 mb-4">Example</h5>
+    <h4 class="mt-4 mb-3">Used to define which objects to return.</h4>
     <pre class="mb-5">
         <code class="language-Django">
             queryset = Book.objects.get(id=id, available=True)
@@ -69,8 +67,7 @@
 
     <hr />
     <h2 class="my-5 custom-title">template_name</h2>
-    <h5 class="mt-3 mb-2">Used to define template name that will be used to display the data.</h5>
-    <h5 class="mt-4 mb-4">Example</h5>
+    <h4 class="mt-4 mb-3">Used to define template name that will be used to display the data.</h4>
     <pre class="mb-5">
         <code class="language-Django">
             template_name = 'books/book.html'
@@ -80,8 +77,8 @@
 
     <hr />
     <h2 class="my-5 custom-title">get_object</h2>
-    <h5 class="mt-3 mb-2">Used to customize how to retrive an object.</h5>
-    <h5 class="mt-5 mb-4">Url</h5>
+    <h4 class="mt-4 mb-5">Used to customize how to retrive an object.</h4>
+    <h5 class="mt-5 mb-2">Url</h5>
     <pre class="mb-1">
         <code class="language-Django">
             path('book/&lt;int:bookid&gt;/', BookDetailView.as_view())
@@ -89,7 +86,7 @@
         </code>
     </pre>
     <h5 class="mt-5">View</h5>
-    <div class="mt-3"></div>
+    <div class="mt-2"></div>
     <pre class="mb-5">
         <code class="language-Django">
             class BookDetailView(DetailView):

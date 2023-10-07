@@ -11,12 +11,18 @@
         </div>
     </div>
     <br />
-
+    <form class="input-group mb-4 mt-5" style="width: 50%;">
+        <input name="user" type="search" class="form-control rounded border-b2" placeholder="Search" aria-label="Search" aria-describedby="search-addon" style="color: #417690;" />
+        <button type="submit" class="btn text-white" style="background-color: #417690; margin-left: -4px;">search</button>
+    </form>
     <table class="table table-bordered table-striped border-b" style="width:100%">
         <thead style="background: white; color: #417690;">
             <tr>
                 <th class="text-center">
-                    User
+                    Name
+                </th>
+                <th class="text-center">
+                    Email
                 </th>
             </tr>
         </thead>
@@ -27,6 +33,11 @@
                     <td class="text-center">
                         <a class="custom-botton" asp-route-id="@obj.Id" asp-controller="ReplyToChatRoom" asp-action="Details">
                             @obj.User.Name
+                        </a>
+                    </td>
+                    <td class="text-center">
+                        <a class="custom-botton" asp-route-id="@obj.Id" asp-controller="ReplyToChatRoom" asp-action="Details">
+                            @obj.User.Email
                         </a>
                     </td>
                 </tr>

@@ -44,14 +44,13 @@
 }
 @if (User.IsInRole("Supporter"))
 {
-    <li class="nav-item dropdown">
-        <a class="nav-link text-dark dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <li class="nav-item dropdown mx-2">
+        <a class="nav-link dropdown-toggle custom-color" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Content Managment
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="nav-link text-dark dropdown-item" asp-area="Admin" asp-controller="ReplyToChatRoom" asp-action="Index">Reply To Chats</a>
-            <div class="dropdown-divider"></div>
-            <a class="nav-link text-dark dropdown-item" asp-area="Admin" asp-controller="ReplyToInquiry" asp-action="Index">Reply To Inquiries</a>
+            <a class="nav-link dropdown-item" asp-area="Admin" asp-controller="ReplyToChatRoom" asp-action="Index">Reply To Chats</a>
+            <a class="nav-link dropdown-item" asp-area="Admin" asp-controller="ReplyToInquiry" asp-action="Index">Reply To Inquiries</a>
         </div>
     </li>
 }

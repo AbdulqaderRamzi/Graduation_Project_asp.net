@@ -36,8 +36,9 @@
             <span></span>
         </code>
     </pre>
-    <h5 class="mb-0 mt-4">Car, Category and Product still have created_at = models.DateTimeField() but instead of repeating the same code 3 times. We put it in separated Model then we inherit it.</h5>
-    <h5 class="mb-4 mt-3">In previous example it doesn't make sense to create object from CreatedAt so, we can unable creating object from it by using abstraction.</h5>
+    <h5 class="mb-5 mt-4">Car, Category and Product still have created_at = models.DateTimeField() but instead of repeating the same code 3 times. We put it in separated Model then we inherit it.</h5>
+    <hr />
+    <h5 class="mb-4 mt-5">In previous example it doesn't make sense to create object from CreatedAt so, we can unable creating object from it by using abstraction.</h5>
     <pre class="mb-5">
         <code class="language-Django">
             class CreatedAt(models.Model):

@@ -4,7 +4,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> *@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
-<div class="mt-4">
+<div class="mt-5">
     <section style="background-color: white; padding-top:5px;" class="rounded">
         <h1 class="text-center pt-3 mt-5 mb-5" style="color: #417690; font-weight:900;">
             Community
@@ -67,7 +67,7 @@
                                     }
                                     @if (message.Image != null)
                                     {
-                                        <img width="450px" class="img-responsive thumbnail mb-4 rounded" src="~/@message.Image" alt="Image">
+                                        <img width="450px" class="img-responsive thumbnail mb-4 rounded" src="~/@message.Image" alt="Image" style="cursor: pointer;" onclick="FullView(this.src)">
                                     }
                                     <hr>
                                 </div>
@@ -79,6 +79,54 @@
         </div>
     </section>
 </div>
+<style>
+    #FullImageView {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.9);
+        text-align: center;
+        z-index:999;
+    }
+    #FullImage {
+        padding: 80px 24px 24px 24px;
+        max-width: 90%;
+        max-height: 100%;
+    }
+    #CloseButton{
+        position: absolute;
+        top: 20px;
+        right: 55px;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+    }
+    #CloseButton:hover {
+        opacity: .9
+    }
+</style>
+<div id="FullImageView">
+    <img id="FullImage" />
+    <span id="CloseButton" onclick="CloseFullView()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-x-square-fill" viewBox="0 0 16 16">
+            <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z" />
+        </svg>
+    </span>
+</div>
+<script type="text/javascript">
+    function FullView(ImgLink) {
+        document.getElementById("FullImage").src = ImgLink;
+        document.getElementById("FullImageView").style.display = "block";
+        document.getElementById("bodymain").classList.add("b-m");
+    }
+    function CloseFullView() {
+        document.getElementById("FullImageView").style.display = "none";
+        document.getElementById("bodymain").classList.remove("b-m");
+    }
+</script>
 
 <script>
     // Function to update the button state

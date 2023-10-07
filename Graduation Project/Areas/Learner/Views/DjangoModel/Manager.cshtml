@@ -1,16 +1,17 @@
 ﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
     <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Manager</h1>
-    <h4 class="text-center mt-4 mb-5">Encapsulate database query at the model level that allows you to define methods that retrieve specific sets of data.</h4>
-    <hr />
-    <h5 class="mt-5 mb-0">- The most popular manager in django that's objects => Model_name.objects so, we can build more managers.</h5>
-    <h5 class="mt-2 mb-0">- Two types of managers that are Custom QuerySets and Managers.</h5>
-    <h5 class="mt-2 mb-0">- The Differences Between them are the way of calling (invoking).</h5>
-    <h5 class="mt-2 mb-0">- Custom Manager: querying and managing objects at the model level.</h5>
-    <h5 class="mt-2 mb-5">- Custom QuerySet: methods are accessible via the model's manager.</h5>
+    <h4 class="text-center mt-4 mb-5">Encapsulate the database query at the model level that allows you to define methods that retrieve specific sets of data.</h4>
 
     <hr />
-    <h2 class="my-5 custom-title">Examples about Custom QuerySet</h2>
-    <h4 class="mb-4 mt-2">First Example:</h4>
+    <h4 class="mt-5 mb-0">The most popular manager in django that's objects => Model_name.objects so, we can build more managers.</h4>
+    <h4 class="mt-4 mb-5">Two types of managers that are Custom QuerySets and Managers. The Differences Between them are the way of calling (invoking).</h4>
+
+    <hr />
+    <h2 class="my-5 custom-title">Custom QuerySet</h2>
+    <div class="mt-4"></div>
+    <h4 class="mb-5 mt-0">methods are accessible via the model's manager.</h4>
+
+    <h3 class="mb-5 mt-5 custom-color text-center">First Example</h3>
     <pre>
         <code class="language-Django">
             class BookQuerySet(models.QuerySet):
@@ -23,15 +24,17 @@
             <span></span>
         </code>
     </pre>
-    <h4 class="mb-3 mt-3">How to call it?</h4>
-    <pre>
+    <h4 class="mb-3 mt-5">How to call it?</h4>
+    <pre class="mb-5">
         <code class="language-Django">
             // Answer:
             Book.objects.published_books()
             <span></span>
         </code>
     </pre>
-    <h4 class="mb-4 mt-5">Second Example:</h4>
+
+    <hr />
+    <h3 class="mb-5 mt-5 custom-color text-center">Second Example</h3>
     <pre>
         <code class="language-Django">
             class ProductQuerySet(models.QuerySet):
@@ -46,7 +49,7 @@
             <span></span>
         </code>
     </pre>
-    <h4 class="mb-3 mt-3">How to call them?</h4>
+    <h4 class="mb-3 mt-5">How to call them?</h4>
     <pre class="mb-5">
         <code class="language-Django">
             // Answer:
@@ -57,9 +60,11 @@
     </pre>
 
     <hr />
-    <h2 class="my-5 custom-title">Examples about Custom Manager</h2>
-    <h4 class="mb-4 mt-2">First Example:</h4>
-    <pre class="mb-3">
+    <h2 class="my-5 custom-title">Custom Manager</h2>
+    <div class="mt-4"></div>
+    <h4 class="mb-5 mt-0">querying and managing objects at the model level.</h4>
+    <h3 class="mb-5 mt-5 custom-color text-center">First Example</h3>
+    <pre class="mb-5">
         <code class="language-Django">
             class PublishedBookManager(models.Manager):
                 def published_books(self):
@@ -83,9 +88,9 @@
             <span></span>
         </code>
     </pre>
-    <h4 class="mb-4">Second Example:</h4>
-    <div class="mb-3"></div>
-    <pre class="mb-3">
+    <hr />
+    <h3 class="mb-5 mt-5 custom-color text-center">Second Example</h3>
+    <pre class="mb-5">
         <code class="language-Django">
             class CustomFilterManager(models.Manager):
                 def get_queryset(self):

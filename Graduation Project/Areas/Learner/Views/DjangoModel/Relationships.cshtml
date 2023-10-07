@@ -10,8 +10,9 @@
             <span></span>
         </code>
     </pre>
-    <h5 class="mt-3 mb-2">Each instance of the model on one side of the relationship is associated with, at most, one instance on the other side.</h5>
-    <h4 class="mt-5 mb-3">Examples:</h4>
+    <h5 class="mt-3 mb-5">Each instance of the models on one side of the relationship is associated with at most one instance on the other side of relationship.</h5>
+    <hr />
+    <div class="mt-5"></div>
     <pre>
         <code class="language-Django">
             from django.contrib.auth.models import User
@@ -23,7 +24,9 @@
             <span></span>
         </code>
     </pre>
-    <h5 class="mt-3 mb-3">Each User can be related to one Profile otherwise, each Profile can be related to at most one User.</h5>
+    <h5 class="mt-3 mb-5">Each User can be related to one Profile otherwise, each Profile can be related to at most one User.</h5>
+    <hr />
+    <div class="mt-5"></div>
     <pre>
         <code class="language-Django">
             class Passport(models.Model):
@@ -38,7 +41,9 @@
             <span></span>
         </code>
     </pre>
-    <h5 class="mt-3 mb-3">Each Passport can be related to one Visa otherwise, each Visa can be related to at most one Passport.</h5>
+    <h5 class="mt-3 mb-5">Each Passport can be related to one Visa otherwise, each Visa can be related to at most one Passport.</h5>
+    <hr />
+    <div class="mt-5"></div>
     <pre>
         <code class="language-Django">
             class Student(models.Model):
@@ -57,14 +62,14 @@
 
     <hr />
     <h2 class="my-5 custom-title">ManyToOne</h2>
-    <div class="mt-3"></div>
-    <pre>
+    <div class="mt-4"></div>
+    <pre class="mb-5">
         <code class="language-Django">
             ForeignKey(Model Name, on_delete logic)
             <span></span>
         </code>
     </pre>
-    <div class="mt-2"></div>
+    <div class="mt-5"></div>
     <pre>
         <code class="language-Django">
             class Blog(models.Model):
@@ -78,7 +83,9 @@
             <span></span>
         </code>
     </pre>
-    <h5 class="mt-3 mb-3">Each Blog can be related to many Posts otherwise, each Post can be related to at most one Blog.</h5>
+    <h5 class="mt-3 mb-5">Each Blog can be related to many Posts otherwise, each Post can be related to at most one Blog.</h5>
+    <hr />
+    <div class="mt-5"></div>
     <pre>
         <code class="language-Django">
             class Category(models.Model):
@@ -92,7 +99,9 @@
             <span></span>
         </code>
     </pre>
-    <h5 class="mt-3 mb-3">Each Category can be related to many Products otherwise, each Product can be related to at most one Category.</h5>
+    <h5 class="mt-3 mb-5">Each Category can be related to many Products otherwise, each Product can be related to at most one Category.</h5>
+    <hr />
+    <div class="mt-5"></div>
     <pre>
         <code class="language-Django">
             class University(models.Model):
@@ -110,14 +119,14 @@
 
     <hr />
     <h2 class="my-5 custom-title">ManyToMany</h2>
-    <div class="mt-3"></div>
-    <pre>
+    <div class="mt-4"></div>
+    <pre class="mb-5">
         <code class="language-Django">
             ManyToManyField(Model Name)
             <span></span>
         </code>
     </pre>
-    <div class="mt-2"></div>
+    <div class="mt-5"></div>
     <pre>
         <code class="language-Django">
             class Playlist(models.Model):
@@ -131,7 +140,9 @@
             <span></span>
         </code>
     </pre>
-    <h5 class="mt-3 mb-3">Each Playlist can be related to many Songs otherwise, each Song can be related to many Playlists.</h5>
+    <h5 class="mt-3 mb-5">Each Playlist can be related to many Songs otherwise, each Song can be related to many Playlists.</h5>
+    <hr />
+    <div class="mt-5"></div>
     <pre>
         <code class="language-Django">
             class Author(models.Model):
@@ -145,7 +156,9 @@
             <span></span>
         </code>
     </pre>
-    <h5 class="mt-3 mb-3">Each Author can be related to many Books otherwise, each Book can be related to many Authors.</h5>
+    <h5 class="mt-3 mb-5">Each Author can be related to many Books otherwise, each Book can be related to many Authors.</h5>
+    <hr />
+    <div class="mt-5"></div>
     <pre>
         <code class="language-Django">
             class Actor(models.Model):

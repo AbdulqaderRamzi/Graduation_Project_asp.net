@@ -71,7 +71,7 @@
 
     <hr />
     <h2 class="my-5 custom-title">truncatewords</h2>
-    <h4 class="mt-3 mb-0">Display defined number of words.</h4>
+    <h4 class="mt-3 mb-3">Display defined number of words.</h4>
     <h5 class="mt-4 mb-4">Get the first 2 words.</h5>
     <pre class="mb-2">
         <code class="language-Django">
@@ -88,7 +88,7 @@
 
     <hr />
     <h2 class="my-5 custom-title">truncatechars</h2>
-    <h4 class="mt-3 mb-0">Display defined number of letters.</h4>
+    <h4 class="mt-3 mb-3">Display defined number of letters.</h4>
     <h5 class="mt-4 mb-4">Get the first 4 letters of khaled name.</h5>
     <pre>
         <code class="language-Django">
@@ -103,7 +103,7 @@
             <span></span>
         </code>
     </pre>
-    <h4 class="mt-5 mb-3">default: if the name is null, the default value will be displayed.</h4>
+    <h5 class="mt-5 mb-3">default: if the name is null, the default value will be displayed.</h5>
     <pre class="mb-5">
         <code class="language-Django">
             {{ name|default:"None" }}
@@ -113,7 +113,7 @@
 
     <hr />
     <h2 class="my-5 custom-title">length</h2>
-    <h4 class="mt-3 mb-4">Return length of string and list.</h4>
+    <h4 class="mt-3 mb-5">Return length of string and list.</h4>
     <pre>
         <code class="language-Django">
             {{ authors|length }} # [author1, author2, author3]
@@ -127,7 +127,7 @@
             <span></span>
         </code>
     </pre>
-    <pre class="mb-2">
+    <pre class="mb-2 mt-5">
         <code class="language-Django">
             {{ name|length }} # khaled
             <span></span>
@@ -207,7 +207,7 @@
 
     <hr />
     <h2 class="my-5 custom-title">join</h2>
-    <h4 class="mt-3 mb-4">Convert list to string by specific spacing.</h4>
+    <h4 class="mt-3 mb-5">Convert list to string by specific spacing.</h4>
     <pre class="mb-2">
         <code class="language-Django">
             {{ my_list|join:"..." }} ["hello", "world"]
@@ -220,7 +220,7 @@
             <span></span>
         </code>
     </pre>
-    <pre class="mb-2">
+    <pre class="mb-2 mt-3">
         <code class="language-Django">
             {{ my_list|join:" - " }}
             <span></span>
@@ -247,7 +247,7 @@
 
     <hr />
     <h2 class="my-5 custom-title">pluralize</h2>
-    <h4 class="mt-3 mb-4">Return a plural suffix if value is not single. plural suffix is s letter.</h4>
+    <h4 class="mt-5 mb-4">Return a plural suffix if value is not single. plural suffix is s letter.</h4>
     <pre>
         <code class="language-Django">
             You have {{ num_messages }} message{{ num_messages|pluralize }}.
@@ -255,7 +255,7 @@
         </code>
     </pre>
     <div class="mt-2"></div>
-    <pre>
+    <pre class="mb-3">
         <code class="language-Django">
             output: if messages > 1. the display value will be You have 3 messages
             <span></span>
@@ -277,8 +277,8 @@
 
     <hr />
     <h2 class="my-5 custom-title">slice</h2>
-    <h4 class="mt-3 mb-4">Get specific elements of list.</h4>
-    <pre>
+    <h4 class="mt-3 mb-5">Get specific elements of list.</h4>
+    <pre class="mb-3">
         <code class="language-Django">
             {{ names|slice:":3" }} # ["ahmed", "naser", "raghad", "ehsan"]
             <span></span>
@@ -294,7 +294,7 @@
 
     <hr />
     <h2 class="my-5 custom-title">slugify</h2>
-    <h5 class="mt-3 mb-4">Convert spaces in specific value into hyphens.</h5>
+    <h4 class="mt-4 mb-4">Convert spaces in specific value into hyphens.</h4>
     <pre>
         <code class="language-Django">
             {{ name|slugify }} # khaled zakaria alshammi
@@ -311,7 +311,7 @@
 
     <hr />
     <h2 class="my-5 custom-title">wordcount</h2>
-    <h5 class="mt-3 mb-4">Return how many words in specific value.</h5>
+    <h5 class="mt-4 mb-4">Return how many words in specific value.</h5>
     <pre class="mb-3">
         <code class="language-Django">
             {{ name|wordcount }} # khaled zakaria alshammi

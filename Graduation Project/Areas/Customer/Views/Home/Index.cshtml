@@ -1,8 +1,357 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿<link href="~/assets/img/favicon.png" rel="icon">
+<link href="~/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+@* <link href="~/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> *@
+<link href="~/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+<link href="~/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+<link href="~/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+<link href="~/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+<link href="~/assets/css/style.css" rel="stylesheet">
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<style>
+    .DN{
+        font-size: 120px;
+        -webkit-text-fill-color: white;
+        -webkit-text-stroke: 7px #417690;
+        letter-spacing: 10px;
+    }
+    body{
+        background: white;
+        margin-bottom: 0;
+    }
+</style>
+@* <div class="text-center mt-5">
+    <h1 class="DN">DJANGO.NET</h1>
 </div>
+ *@
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex align-items-center section-c" style="margin-left: 60px;">
+    <div class="container" data-aos="zoom-out" data-aos-delay="100">
+        <h1>Welcome to <span>Dot.Net</span></h1>
+        <h2>Learn Django Framework from senior developer.</h2>
+        <div class="d-flex">
+            <a asp-action="Install_python" asp-controller="Django" asp-area="Learner" class="btn-get-started scrollto" style="text-decoration: none;font-size: 18px;">Start Learning</a>
+        </div>
+    </div>
+</section><!-- End Hero -->
+
+<main id="main" style="margin-left: 60px;">
+
+    <!-- ======= Featured Services Section ======= -->
+    <section id="featured-services" class="featured-services section-c">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row">
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                    <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                        <h4 class="title" style="text-decoration: underline;">Easy</h4>
+                        <p class="description">Easy to learn Django framework. We inserted more examples of each topic instead of long letter.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                    <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon"><i class="bx bx-file"></i></div>
+                        <h4 class="title" style="text-decoration: underline;">Complete</h4>
+                        <p class="description">Complete website that contains all feature to be expert at Djagno framework.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                    <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icon"><i class="bx bx-tachometer"></i></div>
+                        <h4 class="title" style="text-decoration: underline;">Fast</h4>
+                        <p class="description">Fast reply to inquiries, emails and chat messages.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                    <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+                        <div class="icon"><i class="bx bx-world"></i></div>
+                        <h4 class="title" style="text-decoration: underline;">Community</h4>
+                        <p class="description">Chat with other people in community section to improve your knowledge.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Featured Services Section -->
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about section-bg section-c">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>About</h2>
+                <h3 class="mb-3">Find Out More <span>About Django.Net</span></h3>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+                    <img src="assets/img/about.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Django.Net has many features that distinguish it from other Django framework websites.</h3>
+                    <p class="fst-italic">
+                        Django.Net is complete educational website that covers most important topics in Django Framework.
+                    </p>
+                    <ul>
+                        <li>
+                            <i class="bx bx-store-alt"></i>
+                            <div>
+                                <h5>Documentation</h5>
+                                <p>Django.Net explained important all topics that you will need it in your real live work.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="bx bx-images"></i>
+                            <div>
+                                <h5>Interactive Website</h5>
+                                <p>Django.Net is not static website. It enables you to interact with other learners and Exploiting the experience of the developer team.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <p>
+                        Django.Net enables you to learn for free. Our team have explained each topics in details with fruitful examples that you will find it in your real work. If you have a bugs but you don't know how to solve it, you can subscribe with our package to get limited questions, you can use it to get answered from our developers. You can donate to our team to support us. You can apply your CV to become supporter with us. Community enables you to communicate and learn from other learners. You can cotact us whenever you want.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End About Section -->
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-c">
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <h2>Services</h2>
+                <h3>Check our <span>Services</span></h3>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="icon-box">
+                            <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                            <h4><a asp-area="Customer" asp-action="Create" asp-controller="Donation">Donation</a></h4>
+                            <p>Donate to our team to motivate us to keep improving. encourage us to provide best services to you.</p>
+                        </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bx-file"></i></div>
+                        <h4><a asp-area="Learner" asp-controller="Django" asp-action="Install_python">Documentation</a></h4>
+                        <p>Read our Documentation to learn each topic in Django framework.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bx-tachometer"></i></div>
+                        <h4><a asp-area="Customer" asp-controller="Community" asp-action="Index">Community</a></h4>
+                        <p>use Community to communicate with other learner to help you improve and solve your bugs.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bx-world"></i></div>
+                        <h4><a asp-area="Customer" asp-controller="Inquiry" asp-action="Create">Inquiry</a></h4>
+                        <p>You can use Inquiry section to ask whateven you want or to improve our website.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bx-slideshow"></i></div>
+                        <h4><a asp-area="Customer" asp-controller="Home" asp-action="ApplyTojob">Career</a></h4>
+                        <p>If you are a good Django developer you can become a supporter to help other people solve their problems</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bx-arch"></i></div>
+                        <h4><a asp-area="Customer" asp-controller="Subscription" asp-action="Subscriptions">Packages</a></h4>
+                        <p>Subscribe with our package to be able communicate with developers and supporters team to help you solve your bugs.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Services Section -->
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials section-c">
+        <div class="container" data-aos="zoom-in">
+
+            <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="testimonial-item">
+@*                             <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt=""> *@
+                            <img src="~/assets/img/khaled.jpeg" class="testimonial-img" />
+                            <h3>Khaled Zakaria Alshammi</h3>
+                            <h4>Ceo &amp; Founder</h4>
+                            <p>
+                                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                FullStack Software Developer who loves to work on web applications.
+                                I'm also passionate about learning new tech stacks.
+                                Use high tools as ASP.NET to develop the backend projects. HTML, Css, JavaScript, Bootstrap and React to develop the frontend projects.
+                                Able to manage and convert any idea to enterprise. Write a clean and clear code,
+                                Problem solver. My second classification in KCBC. Learnable and evolving.
+                                Extrovert to learn new techniques and programming languages.
+                                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </div>
+    </section><!-- End Testimonials Section -->
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq section-bg section-c">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title mb-3">
+                <h2>F.A.Q</h2>
+                <h3>Frequently Asked <span>Questions</span></h3>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-xl-10">
+                    <ul class="faq-list">
+                        <li>
+                            <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Is the website for beginners? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                            <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    Yes. it's perfect for all levels.
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">Can i communicate with developers team to help me? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                            <div id="faq2" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    Yes. by subscribe with our packages you will have a limited questions for our developers to help you solve your problems.
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">Why to Learn from Django.Net? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                            <div id="faq3" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    We have explain each part in django framework in details. we provided an examples from real life work.
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">What is the reason for giving the site this name? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                            <div id="faq4" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    Because we explained Django framework but we develop our backend in ASP.NET.
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">Do i have to subscribe to learn? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                            <div id="faq5" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    No, You can learn without subscription.
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div data-bs-toggle="collapse" href="#faq6" class="collapsed question">What time will you reply to our inquiries? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                            <div id="faq6" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    During 2 days at most.
+                                </p>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End Frequently Asked Questions Section -->
+</main><!-- End #main -->
+<!-- ======= Footer ======= -->
+<footer id="footer" style="margin-left: 60px;">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6 footer-contact">
+                    <h3>Django.Net</h3>
+                    <p>
+                        Kuwait<br>
+                        Hawally<br><br>
+                        <strong>Phone:</strong> +965 676 575 98<br>
+                        <strong>Email:</strong> khalod.zeko@gmail.com<br>
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="https://localhost:44335/Learner/DjangoModel/Introduction">Model</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="https://localhost:44335/Learner/DjangoTemplate/Template_Configuration">Template</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="https://localhost:44335/Learner/DjangoQuery/HowToQuery">Query</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="https://localhost:44335/Learner/DjangoView/FBV">View</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="https://localhost:44335/Learner/DjangoForm/Forms">Form</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="https://localhost:44335/Customer/Home/ApplyTojob">Become Supporter</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="https://localhost:44335/Customer/ContactUs/Contactus">Contact us</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="https://localhost:44335/Customer/Donation/Create">Donate to our team</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="https://localhost:44335/Customer/Subscription/Subscriptions">Ask for our help</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="https://localhost:44335/Customer/Community">Contact with other learners</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Our Social Networks</h4>
+                    <p>Follow us on Instagram, Facebook and linkedin to follow up the all updates.</p>
+                    <div class="social-links mt-3">
+                        <a href="https://www.facebook.com/khald.alshamy.9?mibextid=ZbWKwL" class="facebook"><i class="bx bxl-facebook"></i></a>
+                        <a href="https://instagram.com/k.h_755?igshid=NTc4MTIwNjQ2YQ==" class="instagram"><i class="bx bxl-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/khaled-alshammi-017108218?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-4">
+        <div class="copyright">
+            &copy; Copyright <strong><span>Django.Net</span></strong> All Rights Reserved
+        </div>
+        <div class="credits">
+            Created by <a href="https://www.linkedin.com/in/khaled-alshammi-017108218?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" style="color: #417690;">Khaled Zakaria Alshammi</a>
+        </div>
+    </div>
+</footer><!-- End Footer -->
+
+<script src="~/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="~/assets/vendor/aos/aos.js"></script>
+@* <script src="~/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>  *@
+<script src="~/assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="~/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="~/assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="~/assets/vendor/waypoints/noframework.waypoints.js"></script>
+<script src="~/assets/vendor/php-email-form/validate.js"></script>
+<script src="~/assets/js/main.js"></script>

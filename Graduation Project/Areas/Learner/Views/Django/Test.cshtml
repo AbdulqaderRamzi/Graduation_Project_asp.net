@@ -1,14 +1,16 @@
 ﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
     <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Test</h1>
     <h5 class="mt-4 mb-0">
-        Use test to test your app before run the app. test will help you to find the error before that error occur with user.
+        Use test to test your app before running the app. test will help you to find the errors before errors occur with user.
         helps to identify bugs, errors, and unexpected behavior in your code before it's deployed to a production environment.
         created data in test. will not be exists in database. it's dummy data.
     </h5>
-    <h5 class="mb-0 mt-5">- Create class for each test case. for example, view, url, template name, model etc.</h5>
-    <h5 class="mb-0 mt-2">- Each function has its data.</h5>
-    <h5 class="mb-0 mt-2">- Each test case could has multiple tests.</h5>
-    <h5 class="mb-5 mt-2">- Test should start with test word (test_).</h5>
+    <hr />
+    <h2 class="my-5 custom-title">Notes</h2>
+    <h5 class="mb-0 mt-5"><span style="font-size: 22px;font-weight: 700;" class="custom-color text-lg-start">1 </span> Create class for each test case. for example: view, url, template name, model etc.</h5>
+    <h5 class="mb-0 mt-2"><span style="font-size: 22px;font-weight: 700;" class="custom-color text-lg-start">2 </span> Each function has its own data.</h5>
+    <h5 class="mb-0 mt-2"><span style="font-size: 22px;font-weight: 700;" class="custom-color text-lg-start">3 </span> Each test case could has multiple tests.</h5>
+    <h5 class="mb-5 mt-2"><span style="font-size: 22px;font-weight: 700;" class="custom-color text-lg-start">4 </span> Each test function should start with test word (test_).</h5>
 
     <hr />
     <h2 class="my-5 custom-title">Model</h2>
@@ -60,14 +62,14 @@
 
     <hr />
     <h2 class="my-5 custom-title">Run your tests</h2>
-    <h5 class="mb-3 mt-4">Run all test files in your project:</h5>
-    <pre>
+    <h5 class="mb-3 mt-4">Run all the test files in your project:</h5>
+    <pre class="mb-2">
         <code class="language-Django">
             python manage.py test
             <span></span>
         </code>
     </pre>
-    <h5 class="mb-3 mt-5">Run specific test file:</h5>
+    <h5 class="mb-3 mt-5">Run a specific test file:</h5>
     <pre class="mb-5">
         <code class="language-Django">
             python manage.py test app name
@@ -78,7 +80,7 @@
     <hr />
     <h2 class="my-5 custom-title">Test view</h2>
     <div class="mt-4"></div>
-    <pre>
+    <pre class="mb-3">
         <code class="language-Django">
             from django.test import TestCase
             from django.template import TemplateDoesNotExist
@@ -102,7 +104,7 @@
     </pre>
 
     <h4 class="mb-3 mt-5">Test view context</h4>
-    <pre>
+    <pre class="mb-3">
         <code class="language-Django">
                 def test_view_context(self):
                     # Define the URL for the view you want to test

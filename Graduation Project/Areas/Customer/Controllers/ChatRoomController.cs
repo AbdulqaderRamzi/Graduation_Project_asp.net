@@ -27,11 +27,22 @@ namespace Graduation_Project.Areas.Customer.Controllers
             var userId = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier).Value;
             User user = _unitOfWork.User.Get(u => u.Id == userId);
             /*ChatRoom chatRoom = _unitOfWork.ChatRoom.Get(i => i.User == user, includeProperties: "User, ChatRoomMessage.Image");*/
-            ChatRoom chatRoom = _db.ChatRooms.Include(c => c.User).Include(c => c.ChatRoomMessages).ThenInclude(cm => cm.Images).FirstOrDefault(i => i.User == user);
+            ChatRoom chatRoom = _db.ChatRooms.
+                Include(c => c.User).
+                Include(c => c.ChatRoomMessages).
+                ThenInclude(cm => cm.Images).
+                Include(c => c.ChatRoomMessages).
+                ThenInclude(c => c.User).
+                FirstOrDefault(i => i.User == user);
+            foreach(ChatRoomMessage m in chatRoom.ChatRoomMessages)
+            {
+                m.Closed = true;
+                _unitOfWork.Save();
+            }
             return View(chatRoom);
         }
         [HttpPost]
-        public IActionResult Ask(string type, string content, List<IFormFile>? images, IFormFile? video)
+        public IActionResult Ask(string type, string content, List<IFormFile>? images)
         {
             if (type == "Explanation" || type == "Solution" || type == "Both")
             {
@@ -87,29 +98,6 @@ namespace Graduation_Project.Areas.Customer.Controllers
                         chatRoomMessage.Images.Add(image);
                         _unitOfWork.Save();
                     }
-                }
-                if (video != null)
-                {
-                    string fileName = Guid.NewGuid().ToString() + Path.GetExtension(video.FileName);
-                    string videoPath = Path.Combine(wwwRootPath, @"images/ChatRoomMessage/videos");
-                    if (!Directory.Exists(videoPath))
-                    {
-                        Directory.CreateDirectory(videoPath);
-                    }
-                    if (!string.IsNullOrEmpty(chatRoomMessage.Video))
-                    {
-                        var oldVideoPath = Path.Combine(wwwRootPath, chatRoomMessage.Video.TrimStart('\\'));
-                        if (System.IO.File.Exists(oldVideoPath))
-                        {
-                            System.IO.File.Delete(oldVideoPath);
-                        }
-                    }
-                    using (var fileStream = new FileStream(Path.Combine(videoPath, fileName), FileMode.Create))
-                    {
-                        video.CopyTo(fileStream);
-                    }
-                    chatRoomMessage.Video = @"images/ChatRoomMessage/videos/" + fileName;
-                    _unitOfWork.Save();
                 }
                 return RedirectToAction("UserChatRoom");
             }

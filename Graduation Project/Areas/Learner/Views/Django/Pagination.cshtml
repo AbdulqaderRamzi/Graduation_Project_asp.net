@@ -1,8 +1,9 @@
 ﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
     <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Pagination</h1>
-    <h4 class="mb-1 mt-4">You will follow always those steps:</h4>
-    <h5 class="mb-5 mt-2">Pagingation is fixed code you can just change the number of how many item in the paginator.</h5>
-    <pre class="mb-4">
+    <h5 class="text-center mb-5 mt-4">You will always follow those steps.</h5>
+    <hr />
+    <h5 class="mb-4 mt-5">Pagingation is fixed code you can just change the number of how many item in the paginator.</h5>
+    <pre class="mb-5">
         <code class="language-Django">
             from django.core.paginator import Paginator
             def products(request):
@@ -14,16 +15,17 @@
             <span></span>
         </code>
     </pre>
-    <h4 class="mb-3 mt-1">Add view to the app urls:</h4>
-    <pre class="mb-4">
+    <hr />
+    <h4 class="mb-3 mt-5">Add view to the app urls:</h4>
+    <pre class="mb-5">
         <code class="language-Django">
             path('products/', views.products, name='products'),
             <span></span>
         </code>
     </pre>
-    <h5 class="mb-1 mt-2">Enable and display paginator in products.html.</h5>
-    <h5 class="mb-4 mt-1">Insert the following codes in products.html:</h5>
-    <pre class="mb-4">
+    <hr />
+    <h4 class="mb-4 mt-5">Enable and display paginator in products.html, Insert the following code in products.html:</h4>
+    <pre class="mb-4 mt-3">
         <code class="language-html">
             {% if products.has_other_pages %}
                 &lt;ul class="pagination"&gt;

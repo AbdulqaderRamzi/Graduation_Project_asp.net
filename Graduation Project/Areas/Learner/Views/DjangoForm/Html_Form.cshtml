@@ -3,14 +3,14 @@
     <br>
     <hr />
     <h2 class="my-5 custom-title">Form parameters</h2>
-    <h5 class="mb-2 mt-5">Form has two main parameters.</h5>
-    <h3 class="custom-title text-start mb-0 mt-5">1</h3>
-    <h4 class="mb-1 mt-3">Method</h4>
-    <h5 class="mb-4 mt-2">post or get. post method used to delete, update and create data. get method used to get data and display it.</h5>
-    <h3 class="custom-title text-start mb-0 mt-5">2</h3>
-    <h4 class="mb-1 mt-3">Action</h4>
-    <h5 class="mb-1 mt-2">Define to which view url should form navigate when form submitted.</h5>
-    <h5 class="mb-5 mt-2">Note: Insert {% csrf_token %} always when the method is post.</h5>
+    <h5 class="mb-5 mt-5">Form has two main parameters.</h5>
+    <hr />
+    <h4 class="mb-1 mt-5"><span style="font-size: 24px;font-weight: 700;" class="custom-color text-lg-start">1 </span>Method</h4>
+    <h5 class="mb-5 mt-2">post or get. post method is used to delete, update and create data. get method is used to get data and display it.</h5>
+    <hr />
+    <h4 class="mb-1 mt-5"><span style="font-size: 24px;font-weight: 700;" class="custom-color text-lg-start">2 </span>Action</h4>
+    <h5 class="mb-4 mt-2">Define to which view url should form navigate when form submitted.</h5>
+    <h6 class="mb-5 mt-4 custom-color">Note: Insert {% csrf_token %} always when the method is post.</h6>
     <hr />
     <h2 class="my-5 custom-title">Example</h2>
     <div class="mt-2"></div>
@@ -25,8 +25,8 @@
 
     <hr />
     <h2 class="my-5 custom-title">Pass hidden data</h2>
-    <h4 class="mb-2 mt-4">Enables view function to access the data passed from html file. give it a name.</h4>
-    <div class="mt-2"></div>
+    <h4 class="mb-3 mt-4">Enables view function to access the data passed from html file. give it a name.</h4>
+    <div class="mt-3"></div>
     <pre class="mb-5">
         <code class="language-Django">
             &lt;form method="post" action=""&gt;
@@ -52,14 +52,14 @@
 
     <hr />
     <h2 class="my-5 custom-title">As div</h2>
-    <div class="d-flex justify-content-start mt-0">
+    <h5 class="mb-4 mt-5">Display form wrapped in &lt;div&gt; tags.</h5>
+    <div class="d-flex justify-content-start mt-0 mb-5">
         <h5 class="rounded mt-2 mb-4 p-3 custom-back">{{ form.as_div }}</h5>
     </div>
-    <h5 class="mb-5 mt-3">Display form wrapped in &lt;div&gt; tags.</h5>
 
     <hr />
     <h2 class="my-5 custom-title">As table</h2>
-    <h4 class="mb-2 mt-5">Display form wrapped in table cells wrapped in &lt;tr&gt; tags.</h4>
+    <h5 class="mb-4 mt-5">Display form wrapped in table cells wrapped in &lt;tr&gt; tags.</h5>
     <div class="d-flex justify-content-start mt-0 mb-5">
         <h5 class="rounded mt-2 mb-4 p-3 custom-back">{{ form.as_table }}</h5>
     </div>
@@ -67,23 +67,23 @@
 
     <hr />
     <h2 class="my-5 custom-title">As p</h2>
-    <div class="d-flex justify-content-start mt-0">
+    <h5 class="mb-4 mt-5">Display form wrapped in &lt;p&gt; tags.</h5>
+    <div class="d-flex justify-content-start mt-0 mb-5">
         <h5 class="rounded mt-2 mb-4 p-3 custom-back">{{ form.as_p }}</h5>
     </div>
-    <h4 class="mb-5 mt-3">Display form in wrapped in &lt;p&gt; tags.</h4>
 
     <hr />
     <h2 class="my-5 custom-title">As ul</h2>
-    <div class="d-flex justify-content-start mt-0">
+    <h5 class="mb-4 mt-5">Display form wrapped in &lt;li&gt; tags.</h5>
+    <div class="d-flex justify-content-start mt-0 mb-5">
         <h5 class="rounded mt-2 mb-4 p-3 custom-back">{{ form.as_ul }}</h5>
     </div>
-    <h4 class="mb-5 mt-3">Display form in wrapped in &lt;li&gt; tags.</h4>
 
     <hr />
     <h2 class="my-5 custom-title">Display errors</h2>
-    <h4 class="mb-4 mt-5">Display errors that come from forms.py</h4>
-    <h3 class="custom-title text-start mb-0 mt-5">1</h3>
-    <h4 class="mb-1 mt-4">Display all errors.</h4>
+    <h4 class="mb-5 mt-5">Display the errors come from forms.py</h4>
+    <hr />
+    <h4 class="mb-1 mt-5"><span style="font-size: 24px;font-weight: 700;" class="custom-color text-lg-start">1 </span>Display all errors.</h4>
     <div class="mt-2"></div>
     <pre class="mb-5">
         <code class="language-Django">
@@ -101,8 +101,8 @@
             &lt;/form&gt;
         </code>
     </pre>
-    <h3 class="custom-title text-start mb-0 mt-5">2</h3>
-    <h4 class="mb-1 mt-4">Display each error individually.</h4>
+    <hr />
+    <h4 class="mb-1 mt-5"><span style="font-size: 24px;font-weight: 700;" class="custom-color text-lg-start">2 </span>Display each error individually.</h4>
     <div class="mt-2"></div>
     <pre class="mb-5">
         <code class="language-Django">

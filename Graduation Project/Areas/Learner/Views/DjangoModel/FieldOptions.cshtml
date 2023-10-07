@@ -3,13 +3,13 @@
 
     <hr />
     <h2 class="my-5 custom-title">null and blank</h2>
-    <h4 class="mb-3 mt-4">By default all fields are required to make it nullable use null and blank together.</h4>
-    <pre class="mb-5">
+    <pre>
         <code class="language-Django">
             name = models.CharField(max_length=30, null=True, blank=True)
             <span></span>
         </code>
     </pre>
+    <h4 class="mb-5 mt-4">By default all fields are required, to make field nullable use null and blank together.</h4>
 
     <hr />
     <h2 class="my-5 custom-title">choices</h2>
@@ -33,7 +33,7 @@
         </code>
     </pre>
     <h4 class="mb-0 mt-4">The favorite_pizza is choices so, user have to choose from those 3 types.</h4>
-    <h4 class="mb-5 mt-2">(PEPPERONI, "Pepperoni") the display value is Pepperoni otherwise, the stored value in database is PEP.</h4>
+    <h4 class="mb-5 mt-2">(PEPPERONI, "Pepperoni") the display value is Pepperoni otherwise, the stored value in the database is PEP.</h4>
 
     <hr />
     <h2 class="my-5 custom-title">default</h2>
@@ -55,7 +55,7 @@
             <span></span>
         </code>
     </pre>
-    <h4 class="mb-5 mt-4">Default will give the column a initial value that can be changed.</h4>
+    <h4 class="mb-5 mt-4">Default will give the column an initial value that can be changed.</h4>
 
     <hr />
     <h2 class="my-5 custom-title">db_index</h2>
@@ -80,7 +80,7 @@
             <span></span>
         </code>
     </pre>
-    <h5 class="mb-5 mt-4">Help text will help user to understand the field or what should enter.</h5>
+    <h4 class="mb-5 mt-4">Help text will help user to understand the field or what should enter.</h4>
 
     <hr />
     <h2 class="my-5 custom-title">unique</h2>
@@ -91,10 +91,10 @@
             <span></span>
         </code>
     </pre>
-    <h5 class="mb-0 mt-4">Prevent data from being repeated.</h5>
-    <h5 class="mb-5 mt-3">
-        If user register with example@gmail.com then other user try to register with the same email.
-        it will appear error like email is already exists.
+    <h4 class="mb-0 mt-4">Prevent data from being repeated.</h4>
+    <h5 class="mb-5 mt-4">
+        If user register with example@gmail.com then if other users try to register with the same email.
+        it will appear an error like email is already exists.
     </h5>
 
     <hr />
@@ -106,7 +106,8 @@
             <span></span>
         </code>
     </pre>
-    <h5 class="mb-0 mt-4">How the field will be display for people and admin page.</h5>
+    <h4 class="mb-5 mt-4">How the field will be display for people and admin page.</h4>
+    <hr />
     <h4 class="mb-3 mt-5">Before</h4>
     <figure class="figure mb-4">
         <img src="~/images/project_images/model/verbose.png" class="figure-img img-fluid rounded img-border">

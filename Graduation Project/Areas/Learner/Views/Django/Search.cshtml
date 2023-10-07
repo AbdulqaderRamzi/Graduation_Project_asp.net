@@ -1,16 +1,17 @@
 ﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
     <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Search</h1>
     <h4 class="mb-3 mt-4">Create your model.</h4>
-    <pre>
+    <pre class="mb-5">
         <code class="language-Django">
             class Book(models.Model):
                 title = models.CharField(max_length=100)
             <span></span>
         </code>
     </pre>
-    <h5 class="mb-0 mt-5">Create forms.py in your app.</h5>
-    <h5 class="mb-3 mt-2">Give a name to your input to receive the input value by that name.</h5>
-    <pre>
+    <hr />
+    <h4 class="mb-0 mt-5">Create forms.py in your app.</h4>
+    <h5 class="mb-4 mt-3">Give a name to your input to receive the input value by that name.</h5>
+    <pre class="mb-5">
         <code class="language-Django">
             from django import forms
             class SearchForm(forms.Form):
@@ -18,8 +19,9 @@
             <span></span>
         </code>
     </pre>
+    <hr />
     <h5 class="mb-0 mt-5">Navigate to your view.</h5>
-    <h5 class="mb-3 mt-2">Add those lines in views file.</h5>
+    <h5 class="mb-3 mt-3">Add those lines in views file.</h5>
     <pre class="mb-5">
         <code class="language-Django">
             from django.shortcuts import render
@@ -43,17 +45,18 @@
 
     <hr>
     <h2 class="my-5 custom-title">Explanation</h2>
-    <h5 class="mb-0 mt-4">
+    <h5 class="mb-5 mt-4">
         Create an instance of the SearchForm. Check if the HTTP request method is a POST request.
         Get the input value by passing the input name between the get function.
         Check if the search query was provided (not empty).
-        If it provided will loop through the books object to check if book contains or match the search value.
+        If it provided will loop through the books object to check if the book contains or match the search value.
         render template search_results with context that contais the form and search results.
-        if not provided. render template search_results with context that contais just the form.
+        if not provided. render template search_results with context that contais just the form without other data.
     </h5>
-    <h5 class="mb-0 mt-5">Create urls.py in your app.</h5>
-    <h5 class="mb-3 mt-2">Add those lines in urls file.</h5>
-    <pre>
+    <hr />
+    <h4 class="mb-0 mt-5">Create urls.py in your app.</h4>
+    <h5 class="mb-4 mt-3">Add those lines in the urls file.</h5>
+    <pre class="mb-5">
         <code class="language-Django">
             from django.urls import path
             from . import views
@@ -63,8 +66,9 @@
             <span></span>
         </code>
     </pre>
-    <h5 class="mb-0 mt-5">In your app create a templates folder then create a app folder name then insert the search_results file.</h5>
-    <h5 class="mb-3 mt-2">Insert the following codes in the search_results file.</h5>
+    <hr />
+    <h4 class="mb-0 mt-5">In your app create a templates folder then create app folder name then insert the search_results file.</h4>
+    <h5 class="mb-4 mt-3">Insert the following code in the search_results file.</h5>
     <pre class="mb-3">
         <code class="language-html">
             &lt;form method="post" action="{% url 'search_view' %}"&gt;

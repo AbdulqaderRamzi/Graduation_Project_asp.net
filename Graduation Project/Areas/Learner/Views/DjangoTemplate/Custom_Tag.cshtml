@@ -1,8 +1,8 @@
 ﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
     <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Custom Tag</h1>
     <hr>
-    <h5 class="mt-5 mb-3">Create templatetags folder in your app.</h5>
-    <h5 class="mt-0 mb-5">Create file there and name it whatever you want.</h5>
+    <h4 class="mt-5 mb-3">Create templatetags folder in your app.</h4>
+    <h4 class="mt-0 mb-5">Create file there and name it whatever you want.</h4>
     <hr>
     <h4 class="mt-5 mb-3">For example: blog_tags.py</h4>
     <h5 class="mt-0 mb-4">Insert the following lines at the top.</h5>
@@ -17,15 +17,14 @@
     <hr />
     <h2 class="my-5 custom-title">First Tag</h2>
     <h3 class="custom-title text-start mb-0 mt-5">1</h3>
-    <h4 class="mt-4 mb-0">Register your filter name.</h4>
+    <h4 class="mt-4 mb-0">Register your tag name.</h4>
     <h3 class="custom-title text-start mb-0 mt-5">2</h3>
-    <h4 class="mt-4 mb-5">Add your filter function.</h4>
+    <h4 class="mt-4 mb-5">Add your tag function.</h4>
 
     <hr />
     <h2 class="my-5 custom-title">Examples</h2>
 
-    <h4 class="mb-5 mt-4">Calculates the sum of a list of numbers.</h4>
-    <div class="mt-3"></div>
+    <h4 class="mb-2 mt-4">Calculates the sum of a list of numbers.</h4>
     <pre>
         <code class="language-Django">
             @@register.simple_tag(name="sum_list")
@@ -34,9 +33,14 @@
             <span></span>
         </code>
     </pre>
-    <h4 class="mt-4 mb-0">Use it in your Templates.</h4>
-    <h4 class="mt-4 mb-0">{% load blog_tags %}</h4>
-    <h4 class="mt-2 mb-4">{% sum_list my_numbers_list %}</h4>
+    <h4 class="mt-5 mb-2">Use it in your Templates.</h4>
+    <pre class="mb-3">
+        <code class="language-Django">
+            {% load blog_tags %}
+            {% sum_list my_numbers_list %}
+            <span></span>
+        </code>
+    </pre>
     <pre class="mb-5">
         <code class="language-Django">
             input: [1, 3, 5, 7, 9] # 1+3+5+7+9
@@ -46,8 +50,7 @@
     </pre>
 
     <hr />
-    <h4 class="my-5">Multiplies two numbers.</h4>
-    <div class="mt-3"></div>
+    <h4 class="mt-5 mb-2">Multiplies two numbers.</h4>
     <pre>
         <code class="language-Django">
             @@register.simple_tag(name="multiply")
@@ -56,9 +59,14 @@
             <span></span>
         </code>
     </pre>
-    <h4 class="mt-4 mb-0">Use it in your Templates.</h4>
-    <h4 class="mt-4 mb-0">{% load blog_tags %}</h4>
-    <h4 class="mt-2 mb-4">{% multiply 5 3 %} # 5*3</h4>
+    <h4 class="mt-5 mb-2">Use it in your Templates.</h4>
+    <pre class="mb-3">
+        <code class="language-Django">
+            {% load blog_tags %}
+            {% multiply 5 3 %} # 5*3
+            <span></span>
+        </code>
+    </pre>
     <pre class="mb-5">
         <code class="language-Django">
             output: 15
@@ -67,8 +75,7 @@
     </pre>
 
     <hr />
-    <h4 class="my-5">Capitalizes the first letter of each word in a string.</h4>
-    <div class="mt-3"></div>
+    <h4 class="mt-5 mb-2">Capitalizes the first letter of each word in a string.</h4>
     <pre>
         <code class="language-Django">
             @@register.simple_tag(name="capitalize_words")
@@ -77,9 +84,14 @@
             <span></span>
         </code>
     </pre>
-    <h4 class="mt-4 mb-0">Use it in your Templates.</h4>
-    <h4 class="mt-4 mb-0">{% load blog_tags %}</h4>
-    <h4 class="mt-2 mb-4">{% capitalize_words "hello world" %}</h4>
+    <h4 class="mt-5 mb-2">Use it in your Templates.</h4>
+    <pre class="mb-3">
+        <code class="language-Django">
+            {% load blog_tags %}
+            {% capitalize_words "hello world" %}
+            <span></span>
+        </code>
+    </pre>
     <pre class="mb-5">
         <code class="language-Django">
             output: Hello World
@@ -88,8 +100,7 @@
     </pre>
 
     <hr />
-    <h4 class="my-5">Generates a random number within a specified range.</h4>
-    <div class="mt-3"></div>
+    <h4 class="mt-5 mb-2">Generates a random number within a specified range.</h4>
     <pre>
         <code class="language-Django">
             @@register.simple_tag(name="simple_tag")
@@ -98,9 +109,14 @@
             <span></span>
         </code>
     </pre>
-    <h4 class="mt-4 mb-0">Use it in your Templates.</h4>
-    <h4 class="mt-4 mb-0">{% load blog_tags %}</h4>
-    <h4 class="mt-2 mb-4">{% random_number 1 4 %} </h4>
+    <h4 class="mt-5 mb-2">Use it in your Templates.</h4>
+    <pre class="mb-3">
+        <code class="language-Django">
+            {% load blog_tags %}
+            {% random_number 1 4 %}
+            <span></span>
+        </code>
+    </pre>
     <pre class="mb-5">
         <code class="language-Django">
             output: could be 1, 2, 3, 4
@@ -109,8 +125,7 @@
     </pre>
 
     <hr />
-    <h4 class="my-5">Gets the full name of a user from their first and last names.</h4>
-    <div class="mt-3"></div>
+    <h4 class="mt-5 mb-2">Gets the full name of a user from their first and last names.</h4>
     <pre>
         <code class="language-Django">
             @@register.simple_tag(name="user_full_name")
@@ -119,13 +134,18 @@
             <span></span>
         </code>
     </pre>
-    <h4 class="mt-4 mb-0">Use it in your Templates.</h4>
-    <h4 class="mt-4 mb-0">{% load blog_tags %}</h4>
-    <h4 class="mt-2 mb-4">{% user_full_name user_object %}</h4>
-    <h4 class="mt-2 mb-0">For Example</h4>
-    <h5 class="mt-3 mb-0">user.first_name = khaled</h5>
-    <h5 class="mt-2 mb-4">user.last_name = alshami</h5>
-    <div class="mt-1"></div>
+    <h4 class="mt-5 mb-2">Use it in your Templates.</h4>
+    <pre class="mb-3">
+        <code class="language-Django">
+            {% load blog_tags %}
+            {% user_full_name user_object %}
+
+            //For Example
+            // user.first_name = khaled
+            // user.last_name = alshami
+            <span></span>
+        </code>
+    </pre>
     <pre class="mb-5">
         <code class="language-Django">
             output: khaled alshami

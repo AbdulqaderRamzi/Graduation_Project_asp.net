@@ -13,8 +13,8 @@
     </div>
     <br />
 
-    <table class="table table-bordered table-striped border-b" style="width:100%">
-        <thead style="background: gray; color: white;">
+    <table class="table table-bordered border-white" style="width:100%">
+        <thead style="background: white; color: #417690;">
             <tr>
                 <th class="text-center">
                     Title
@@ -32,10 +32,10 @@
                 <th></th>
             </tr>
         </thead>
-        <tbody style="background: white; color: #417690; vertical-align: middle;">
+        <tbody style="background: #417690; color: #417690; vertical-align: middle;">
             @foreach (var obj in Model.OrderBy(i => i.Price))
             {
-                <tr style="color: #417690; background: white;">
+                <tr style="color: white; background: #417690;">
                     <td class="text-center">
                         @obj.Title
                     </td>
@@ -51,7 +51,7 @@
                     <td class="text-center">
                         <div class="w-75 btn-group custom-opacity" role="group">
                             <a asp-route-id="@obj.Id" asp-controller="SubscriptionType" asp-action="Edit"
-                                class="btn mx-2" style="background: #417690; color: white;">
+                               class="btn mx-2" style="background: white; color: #417690;">
                                 <i class="bi bi-pencil-square"></i>Edit
                             </a>
                         </div>

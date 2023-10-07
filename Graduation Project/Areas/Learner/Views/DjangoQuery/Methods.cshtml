@@ -31,8 +31,8 @@
 
     <hr />
     <h2 class="my-5 custom-title">get</h2>
-    <h5 class="mb-0 mt-3">Used with unique or primary fields.</h5>
-    <h4 class="mb-3 mt-4">Get single book</h4>
+    <h4 class="mb-0 mt-3">Used with unique or primary fields.</h4>
+    <h5 class="mb-3 mt-5">Get single book</h5>
     <pre class="mb-5">
         <code class="language-Django">
             Book.objects.get(id=1)
@@ -77,27 +77,27 @@
     <hr />
     <h2 class="my-5 custom-title">values</h2>
     <h4 class="mb-3 mt-3">Retrieve Model with specific fields.</h4>
-    <h5 class="mb-3 mt-4">In the following example product_data will contains 2 products with their name and price without other fields like id description etc.</h5>
+    <h5 class="mb-2 mt-5">In the following example product_data will contains 2 products with their name and price without other fields like id description etc.</h5>
     <pre class="mb-3">
         <code class="language-Django">
             Product.objects.values('name', 'price')
             <span></span>
         </code>
     </pre>
-    <h4 class="mb-0 mt-4">Result will be a list of dictionary.</h4>
+    <h4 class="mb-0 mt-5">Result will be a list of dictionary.</h4>
     <h4 class="mb-5 mt-2">[{'name':'shirt', 'price':20.23}, {'name':'Tshirt', 'price':24.00}]</h4>
 
     <hr />
     <h2 class="my-5 custom-title">values_list</h2>
     <h4 class="mb-3 mt-3">Retrieve Model with specific fields.</h4>
-    <h5 class="mb-3 mt-4">In the following example product_data will contains 2 products with their name and price without other fields like id description etc.</h5>
+    <h5 class="mb-2 mt-5">In the following example product_data will contains 2 products with their name and price without other fields like id description etc.</h5>
     <pre class="mb-3">
         <code class="language-Django">
             Product.objects.values_list('name', 'price')
             <span></span>
         </code>
     </pre>
-    <h4 class="mb-0 mt-4">Result will be a list of tuples.</h4>
+    <h4 class="mb-0 mt-5">Result will be a list of tuples.</h4>
     <h4 class="mb-5 mt-2">[('name'='shirt', 'price'=20.23), ('name'='Tshirt', 'price'=24.00)]</h4>
 
     <hr />

@@ -1,20 +1,19 @@
 ﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
     <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Extend</h1>
+    <h5 class="mt-5 mb-5 text-center">Imagine that your homepage has a navbar and footer, but when you navigate to another page the navbar and footer are not displayed</h5>
     <hr />
-    <h5 class="mt-5 mb-5">Imagine that your homepage has navbar and footer, but when you navigate to another page navbar and footer are not displayed</h5>
-    <hr />
-    <h3 class="mt-5 mb-0 custom-color">how to solve that?</h3>
-    <h3 class="mt-2 mb-0 custom-color">Will you type your navbar and footer in each page?</h3>
-    <h3 class="mt-2 mb-0 custom-color">Is it make sense? No</h3>
-    <h5 class="mt-4 mb-5">
-        By retyping the navbar and footer codes you will need to imports required files.
+    <h3 class="mt-5 mb-0 custom-color">How to solve that?</h3>
+    <h3 class="mt-3 mb-0 custom-color">Will you type your navbar and footer in each page again?</h3>
+    <h5 class="mt-5 mb-5">
+        By retyping the navbar and footer codes you will waste your time and it is not the best way.
         to shorten these steps and all this effort we will use extend logic.
-        in extent file we will create a blocks for needed logic like content and title.
+        in extend file we will create a blocks for the needed logic like content and title.
     </h5>
+
     <hr />
-    <h5 class="mt-5 mb-0">Create base.html in templates that exists in the same level with project root.</h5>
+    <h4 class="mt-5 mb-0">Create base.html in templates that exists at the same level with project root.</h4>
     <div class="mt-3"></div>
-    <pre>
+    <pre class="mb-5">
         <code class="language-Django">
             &lt;html lang="en"&gt;
             &lt;head&gt;
@@ -32,8 +31,9 @@
             <span></span>
         </code>
     </pre>
-    <h5 class="mt-5 mb-2">Extend base.html file in wherever you want for example in home.html and in details.html</h5>
-    <h4 class="mt-3 mb-0">Home</h4>
+    <hr />
+    <h4 class="mt-5 mb-0">Extend base.html file in wherever you want for example in home.html and in details.html</h4>
+    <h5 class="mt-5 mb-0">Home</h5>
     <div class="mt-3"></div>
     <pre>
         <code class="language-Django">
@@ -48,7 +48,7 @@
         </code>
     </pre>
 
-    <h4 class="mt-3 mb-0">Details</h4>
+    <h5 class="mt-5 mb-0">Details</h5>
     <div class="mt-3"></div>
     <pre>
         <code class="language-Django">
@@ -62,5 +62,5 @@
             <span></span>
         </code>
     </pre>
-    <h5 class="mt-3 mb-5">In previous examples home and details will have nav and footer without retyping the code.</h5>
+    <h5 class="mt-5 mb-5 custom-color">In previous examples home and details will have the nav and footer without retyping the code.</h5>
 </div>

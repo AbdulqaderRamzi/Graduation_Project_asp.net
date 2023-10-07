@@ -2,9 +2,8 @@
     <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">How to Query</h1>
     <h4 class="text-center mt-4 mb-5">Learn how to implement CRUD, traverse, search and how to link models with each other.</h4>
     <hr>
-    <h5 class="mt-5">We will work on the following models.</h5>
-    <h5 class="mb-3 mt-2">I will put this model in cars app.</h5>
-    <pre>
+    <h5 class="mb-3 mt-5">Put the following code in cars app model.</h5>
+    <pre class="mb-5">
         <code class="language-Django">
             class Person(models.Model):
                 name = models.CharField(max_length=100)
@@ -26,15 +25,16 @@
             <span></span>
         </code>
     </pre>
-    <h5 class="mb-3 mt-4">Open your terminal. Use the following command.</h5>
-    <pre>
+    <hr />
+    <h5 class="mb-3 mt-5">Open your terminal. Use the following command.</h5>
+    <pre class="mb-5">
         <code class="language-Django">
             python manage.py shell
             <span></span>
         </code>
     </pre>
-
-    <h5 class="mb-3 mt-4">Import classes</h5>
+    <hr />
+    <h5 class="mb-3 mt-5">Import classes</h5>
     <pre class="mb-5">
         <code class="language-Django">
             from cars.models import Person,Car,Cleaner
@@ -43,24 +43,24 @@
     </pre>
 
     <hr>
-    <h4 class="mb-3 mt-5">Creation</h4>
+    <h4 class="mb-5 mt-5">Creation</h4>
     <pre>
         <code class="language-Django">
             Person(define field data)
             <span></span>
         </code>
     </pre>
-    <h4 class="mb-2 mt-5">Save it into database</h4>
-    <h5 class="mb-3">If you don't implement save function, data will not be created in database.</h5>
-    <pre>
+    <h5 class="mb-3 mt-4">If you didn't implement the save function, data will not be created in the database.</h5>
+    <pre class="mb-5">
         <code class="language-Django">
             person1 = Person(name="Khaled",age=21)
             person1.save()
             <span></span>
         </code>
     </pre>
+    <hr />
     <h4 class="mt-5">Another way of creation</h4>
-    <h4 class="mb-3 mt-3">Create Person object without defining the data. Then update the Person object</h4>
+    <h5 class="mb-3 mt-5">Create Person object without defining the data. Then update the Person object.</h5>
     <pre>
         <code class="language-Django">
             person2 = Person()
@@ -70,29 +70,33 @@
             <span></span>
         </code>
     </pre>
-    <h4 class="mb-3 mt-5">Create and Save at same time</h4>
-    <pre>
+    <hr />
+    <h4 class="mb-3 mt-5">Create and Save at the same time</h4>
+    <pre class="mb-5">
         <code class="language-Django">
             Person.objects.create(name="Alshammi", age=25)
             <span></span>
         </code>
     </pre>
+    <hr />
     <h4 class="mb-3 mt-5">Retrieving single object</h4>
-    <pre>
+    <pre class="mb-5">
         <code class="language-Django">
             Person.objects.get(pk=1)
             <span></span>
         </code>
     </pre>
+    <hr />
     <h4 class="mb-3 mt-5">Retrieving all objects</h4>
-    <pre>
+    <pre class="mb-5">
         <code class="language-Django">
             Person.objects.all()
             <span></span>
         </code>
     </pre>
+    <hr />
     <h4 class="mb-3 mt-5">Updating</h4>
-    <pre>
+    <pre class="mb-5">
         <code class="language-Django">
             person = Person.objects.get(pk=1)
             person.name = "Khlaed Z"
@@ -100,8 +104,9 @@
             <span></span>
         </code>
     </pre>
+    <hr />
     <h4 class="mb-3 mt-5">Retrieve single object and update it</h4>
-    <pre>
+    <pre class="mb-5">
         <code class="language-Django">
             update_person1 = Person.objects.get(pk=1)
             update_person1.age = 22
@@ -109,27 +114,28 @@
             <span></span>
         </code>
     </pre>
+    <hr />
     <h4 class="mb-3 mt-5">Deleting</h4>
-    <pre>
+    <pre class="mb-5">
         <code class="language-Django">
             person1.delete()
             person2.delete()
             <span></span>
         </code>
     </pre>
-    <h4 class="mb-5 mt-5">Relationship</h4>
 
     <hr />
     <h2 class="my-5 custom-title">ForeignKey</h2>
-    <h4 class="mb-3 mt-4">Creation</h4>
-    <pre>
+    <h3 class="mb-3 mt-5">Creation</h3>
+    <pre class="mb-5">
         <code class="language-Django">
             person = Person.objects.get(pk=1)
             car = Car.objects.create(car_number="A1", person = person)
             <span></span>
         </code>
     </pre>
-    <h4 class="mb-3 mt-5">Updating</h4>
+    <hr />
+    <h4 class="mb-5 mt-5">Updating</h4>
     <pre>
         <code class="language-Django">
             person = Person.objects.get(pk=1)
@@ -138,36 +144,39 @@
         </code>
     </pre>
     <h5 class="mb-3 mt-5">Bind car with person</h5>
-    <pre class="mb-4">
+    <pre class="mb-5">
         <code class="language-Django">
             car.person = person
             person.save()
             <span></span>
         </code>
     </pre>
-    <h4 class="mt-5">Retrieving</h4>
-    <h5 class="mb-3 mt-5">Retrieve all cars related to user has car number equal to "A1"</h5>
+    <hr />
+    <h4 class="mt-5 mb-5">Retrieving</h4>
+    <h5 class="mb-3 mt-3">Retrieve all cars related to the user has car number equal to "A1"</h5>
     <pre>
         <code class="language-Django">
             Car.objects.filter(person__car_number="A1")
             <span></span>
         </code>
     </pre>
-    <h5 class="mb-3 mt-4">Retrieve all cars related to user name equal to "Khaled"</h5>
-    <pre class="mb-4">
+    <h5 class="mb-3 mt-5">Retrieve all cars related to the user name equal to "Khaled"</h5>
+    <pre class="mb-5">
         <code class="language-Django">
             Car.objects.filter(person__name="Khaled")
             <span></span>
         </code>
     </pre>
-    <h4 class="mb-3 mt-5">Removing related data</h4>
+    <hr />
+    <h4 class="mt-5 mb-3">Removing</h4>
+    <h5 class="mb-3 mt-5">related data</h5>
     <pre>
         <code class="language-Django">
             my_car = Car.objects.get(pk=1)
             <span></span>
         </code>
     </pre>
-    <h5 class="mb-3 mt-4">Make car not related to user</h5>
+    <h5 class="mb-3 mt-5">Make car not related to user</h5>
     <pre class="mb-5">
         <code class="language-Django">
             my_car.person = None
@@ -178,8 +187,8 @@
 
     <hr />
     <h2 class="my-5 custom-title">ManyToMany</h2>
-    <h4 class="mb-3 mt-4">Creation:</h4>
-    <pre>
+    <h4 class="mb-5 mt-5">Creation</h4>
+    <pre class="mb-5">
         <code class="language-Django">
             me = Person.objects.create(name="Khaled Alshammi", age=22)
             car1 = Car.objects.create(car_number="B1", person=me)
@@ -191,8 +200,9 @@
             <span></span>
         </code>
     </pre>
-    <h4 class="mb-3 mt-5">Updating:</h4>
-    <pre class="mb-4">
+    <hr />
+    <h4 class="mb-5 mt-5">Updating</h4>
+    <pre class="mb-5">
         <code class="language-Django">
             car6 = Car.objects.get(id=6)
             cleaner3 = Cleaner.objects.get(id=3)
@@ -201,7 +211,8 @@
             <span></span>
         </code>
     </pre>
-    <h4 class="mt-5">Retrieving:</h4>
+    <hr />
+    <h4 class="mt-5 mb-3">Retrieving</h4>
     <h5 class="mb-3 mt-5">Retrieve all cleaners related to the car has a car number equal to "A1":</h5>
     <pre>
         <code class="language-Django">
@@ -210,13 +221,15 @@
         </code>
     </pre>
     <h5 class="mb-3 mt-4">Retrieve all cleaners related to person car id equal to 1:</h5>
-    <pre>
+    <pre class="mb-5">
         <code class="language-Django">
             Cleaner.objects.filter(cars__person__id=1)
             <span></span>
         </code>
     </pre>
-    <h4 class="mb-3 mt-5">Removing related data:</h4>
+    <hr />
+    <h4 class="mt-5 mb-3">Removing</h4>
+    <h5 class="mb-3 mt-5">Specific car</h5>
     <pre class="mb-4">
         <code class="language-Django">
             car6 = Car.objects.get(id=6)
@@ -225,7 +238,7 @@
             <span></span>
         </code>
     </pre>
-    <h4 class="mb-3 mt-5">Remove all the associated cars:</h4>
+    <h5 class="mb-3 mt-5">All the associated cars:</h5>
     <pre class="mb-5">
         <code class="language-Django">
             cleaner3.cars.clear()

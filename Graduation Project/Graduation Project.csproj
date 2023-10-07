@@ -83,4 +83,8 @@
 		<PackageReference Include="Rick.Docs.Samples.RouteInfo" Version="1.0.0.8" />
 		<PackageReference Include="Stripe.net" Version="42.1.0" />
 	</ItemGroup>
+	
+	<ItemGroup>
+	  <Folder Include="wwwroot\assets\" />
+	</ItemGroup>
 </Project>

@@ -1,14 +1,15 @@
 ﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
     <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Signal</h1>
-    <h5 class="mt-4 mb-0">Signals provide way to allow decoupled applications to get notified when certain actions occur elsewhere in the application.</h5>
-    <h5 class="mt-3 mb-0">Signal has pre and post save.</h5>
-    <h5 class="mt-3 mb-0">pre: signal will implement before saving the object</h5>
-    <h5 class="mt-3 mb-5">post: signal will implement after saving the object</h5>
+    <h4 class="mt-4 text-center mb-5">Signals provide way to allow decoupled applications to get notified when certain actions occur elsewhere in the application.</h4>
+    <hr />
+    <h4 class="mt-5 mb-5 custom-color text-center">Signal has pre and post save.</h4>
+    <h5 class="mt-3 mb-0"><span style="font-size: 22px;font-weight: 700;" class="custom-color text-lg-start">1 </span>pre: signal will implement before saving the object</h5>
+    <h5 class="mt-3 mb-5"><span style="font-size: 22px;font-weight: 700;" class="custom-color text-lg-start">2 </span>post: signal will implement after saving the object</h5>
 
     <hr />
     <h2 class="my-5 custom-title">Example</h2>
-    <h5 class="mt-3">In the following example, don't forget to configure your email in settings.</h5>
-    <div class="mt-3"></div>
+    <h6 class="mt-4 custom-color">In the following example, don't forget to configure your email in settings.</h6>
+    <div class="mt-4"></div>
     <pre>
         <code class="language-Django">
             from django.db import models
@@ -27,9 +28,9 @@
             <span></span>
         </code>
     </pre>
-    <h5 class="mt-3 mb-5">
+    <h5 class="mt-4 mb-5">
         Signal will send email to the users after they registered.
-        It doesn'is not suitable to make it pre_signal because it doesn't make sense to send email to users before they register.
+        It is not suitable to make it pre_signal because it doesn't make sense to send email to users before they register.
     </h5>
 
     <hr />
@@ -52,8 +53,8 @@
             <span></span>
         </code>
     </pre>
-    <h5 class="mt-3 mb-3">
-        Signal will be implemented after creating instance of UserActivityLog.
+    <h5 class="my-4">
+        Signal will be implemented after creating the instance of UserActivityLog.
         It's possible to use pre_save to modify the log entry just before it's saved.
     </h5>
     <pre class="mb-5">
@@ -86,8 +87,8 @@
             <span></span>
         </code>
     </pre>
-    <h5 class="mt-3 mb-5">
-        Automatically create a user profile when a new user registers.
+    <h5 class="mt-4 mb-5">
+        Automatically create a user profile when a new user register.
         pre_save is not suitable because it's generally used to modify the fields of the current instance being saved.
         To create a related profile automatically, post_save is more appropriate.
     </h5>
@@ -109,7 +110,7 @@
             <span></span>
         </code>
     </pre>
-    <h5 class="mt-3 mb-5">
+    <h4 class="mt-4 mb-5">
         Slugify the name before saving the instance.
-    </h5>
+    </h4>
 </div>

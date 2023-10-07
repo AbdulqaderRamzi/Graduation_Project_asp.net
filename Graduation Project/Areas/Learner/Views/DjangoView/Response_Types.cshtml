@@ -44,8 +44,7 @@
     <hr />
     <div class="my-5">
         <h2 class="mb-5 custom-title">render</h2>
-        <h5 class="mt-4 mb-3">Used to return template and its context.</h5>
-        <h5 class="mb-3">Context used to store data that we want to display in template.</h5>
+        <h5 class="mt-4 mb-3">Used to return template and its context. Context used to store data that we want to display in template.</h5>
         <pre>
             <code class="language-Django">
                 render(request, "blogs/blogs.html", {"name":"khaled"})
@@ -90,7 +89,7 @@
                 <span></span>
             </code>
         </pre>
-        <h4 class="mb-3 mt-5">Instead of</h4>
+        <h5 class="mb-3 mt-5">Instead of</h5>
         <pre>
             <code class="language-Django">
                 object = Blog.objects.get(pk=4)
@@ -111,7 +110,7 @@
                 <span></span>
             </code>
         </pre>
-        <h4 class="mb-3 mt-5">Instead of</h4>
+        <h5 class="mb-3 mt-5">Instead of</h5>
         <pre>
             <code class="language-Django">
                 objects = list(Blog.objects.filter(available=True))

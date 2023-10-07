@@ -1,13 +1,14 @@
 ﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
     <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Commands</h1>
-    <h4 class="text-center mt-4 mb-5">We use command to create data in database before run the website. sometimes you want to have dummy data to watch data in database, command acheive that.</h4>
+    <h4 class="text-center mt-4 mb-5">Use command to create data in database before running the website. sometimes you want to have dummy data to watch data in database, command achieve that.</h4>
     <hr>
     <h5 class="my-5">
         If you delete your database, all data will be deleted. to create dummy data.
-        you need to create it manually. if you build your command. you can run it again to have dummy data.
-        you can create and run commands by using the manage file.
+        you need to create it manually. if you build your command. you can run it again to have the same dummy data.
+        you can create and run a commands by using the manage file.
     </h5>
-    <h4 class="mt-4 mb-0">Models</h4>
+    <hr />
+    <h4 class="mt-5 mb-0">Models</h4>
     <div class="mt-4"></div>
     <pre>
         <code class="language-Django">
@@ -18,7 +19,7 @@
         </code>
     </pre>
     <div class="mt-3"></div>
-    <pre class="mb-3">
+    <pre class="mb-5">
         <code class="language-Django">
             class Car(models.Model):
                 title = models.CharField(max_length=100, verbose_name='Title')
@@ -26,12 +27,14 @@
             <span></span>
         </code>
     </pre>
-    <h4 class="mt-4 mb-1">Create management folder then create commands folder.</h4>
-    <h4 class="mt-2 mb-1">Create python file and name it whateven you want.</h4>
-    <figure class="figure my-3">
+    <hr />
+    <h5 class="mt-5 mb-1">Create management folder then create commands folder.</h5>
+    <h5 class="mt-2 mb-3">Create python file and name it whateven you want.</h5>
+    <figure class="figure mt-3 mb-5">
         <img src="~/images/project_images/command/command.png" class="figure-img img-fluid rounded img-border">
     </figure>
-    <h4 class="mt-4 mb-1">Insert the following codes in your command file.</h4>
+    <hr />
+    <h4 class="mt-5 mb-1">Insert the following code in your command file.</h4>
     <div class="mt-4"></div>
     <pre class="mb-5">
         <code class="language-Django">
@@ -75,15 +78,15 @@
 
     <hr />
     <h2 class="my-5 custom-title">Run The command</h2>
-    <div class="mt-3"></div>
-    <div class="mt-2"></div>
-    <pre class="mb-3">
+    <div class="mt-5"></div>
+    <pre class="mb-5">
         <code class="language-Django">
             python manage.py command name
             <span></span>
         </code>
     </pre>
-    <h5 class="mt-1 mb-3">Successful message.</h5>
+    <hr />
+    <h5 class="mt-5 mb-3 custom-color">Successful message</h5>
     <figure class="figure mb-5 mt-1">
         <img src="~/images/project_images/command/command3.png" class="figure-img img-fluid rounded img-border">
     </figure>

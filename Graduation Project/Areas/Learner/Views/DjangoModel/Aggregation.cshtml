@@ -3,7 +3,7 @@
 
     <hr />
     <h2 class="my-5 custom-title">Count</h2>
-    <h5 class="mb-3 mt-4">Calculates the number of records in a queryset.</h5>
+    <h4 class="mb-3 mt-4">Calculates the number of records in a queryset.</h4>
     <pre class="mb-2">
         <code class="language-Django">
             class Book(models.Model):
@@ -11,19 +11,19 @@
             <span></span>
         </code>
     </pre>
-    <pre>
+    <pre class="mb-3">
         <code class="language-Django">
             from django.db.models import Count
             num_books = Book.objects.aggregate(total_books=Count('id'))
             <span></span>
         </code>
     </pre>
-    <h5 class="mb-0 mt-3">Call it: num_books["total_books"]</h5>
-    <h5 class="mb-5 mt-2">It counts the records in id column.</h5>
+    <h5 class="mb-0 mt-5">Call it: num_books["total_books"]</h5>
+    <h5 class="mb-5 mt-3">It counts the records in the id column.</h5>
 
     <hr />
     <h2 class="my-5 custom-title">Sum</h2>
-    <h5 class="mb-3 mt-4">Calculates the sum of a numeric field in a queryset.</h5>
+    <h4 class="mb-3 mt-4">Calculates the sum of numeric field in a queryset.</h4>
     <pre class="mb-2">
         <code class="language-Django">
             class Order(models.Model):
@@ -31,19 +31,19 @@
             <span></span>
         </code>
     </pre>
-    <pre>
+    <pre class="mb-3">
         <code class="language-Django">
             from django.db.models import Sum
             total_order_amount = Order.objects.aggregate(total_amount=Sum('amount'))
             <span></span>
         </code>
     </pre>
-    <h5 class="mb-0 mt-3">Call it:total_order_amount["total_amount"]</h5>
-    <h5 class="mb-5 mt-2">It sum the records in amount column.</h5>
+    <h5 class="mb-0 mt-5">Call it:total_order_amount["total_amount"]</h5>
+    <h5 class="mb-5 mt-3">It sums the records in the amount column.</h5>
 
     <hr />
     <h2 class="my-5 custom-title">Avg</h2>
-    <h5 class="mb-3 mt-4">Calculates the average value of a numeric field in a queryset.</h5>
+    <h4 class="mb-3 mt-4">Calculates the average value of numeric field in a queryset.</h4>
     <pre class="mb-2">
         <code class="language-Django">
             class Review(models.Model):
@@ -51,19 +51,19 @@
             <span></span>
         </code>
     </pre>
-    <pre>
+    <pre class="mb-3">
         <code class="language-Django">
             from django.db.models import Avg
             average_rating = Review.objects.aggregate(avg_rating=Avg('rating'))
             <span></span>
         </code>
     </pre>
-    <h5 class="mb-0 mt-3">Call it: average_rating["avg_rating"]</h5>
-    <h5 class="mb-5 mt-2">It sum the records in rating column then divide it on records counts.</h5>
+    <h5 class="mb-0 mt-5">Call it: average_rating["avg_rating"]</h5>
+    <h5 class="mb-5 mt-3">It sums the records in the rating column then divide it on records counts.</h5>
 
     <hr />
     <h2 class="my-5 custom-title">Min</h2>
-    <h5 class="mb-3 mt-4">Calculates the minimum value of a field in a queryset.</h5>
+    <h4 class="mb-3 mt-4">Calculates the minimum value of field in a queryset.</h4>
     <pre class="mb-2">
         <code class="language-Django">
             class Product(models.Model):
@@ -71,19 +71,19 @@
             <span></span>
         </code>
     </pre>
-    <pre>
+    <pre class="mb-3">
         <code class="language-Django">
             from django.db.models import Min
             cheapest_product_price = Product.objects.aggregate(min_price=Min('price'))
             <span></span>
         </code>
     </pre>
-    <h5 class="mb-0 mt-3">Call it: cheapest_product_price["min_price"]</h5>
-    <h5 class="mb-5 mt-2">It search about minimum value in price column.</h5>
+    <h5 class="mb-0 mt-5">Call it: cheapest_product_price["min_price"]</h5>
+    <h5 class="mb-5 mt-3">It searches about the minimum value in the price column.</h5>
 
     <hr />
     <h2 class="my-5 custom-title">Max</h2>
-    <h5 class="mb-3 mt-4">Calculates the maximum value of a field in a queryset.</h5>
+    <h4 class="mb-3 mt-4">Calculates the maximum value of field in a queryset.</h4>
     <pre class="mb-2">
         <code class="language-Django">
             class Sale(models.Model):
@@ -91,21 +91,21 @@
             <span></span>
         </code>
     </pre>
-    <pre>
+    <pre class="mb-3">
         <code class="language-Django">
             from django.db.models import Max
             highest_sale_amount = Sale.objects.aggregate(max_amount=Max('amount'))
             <span></span>
         </code>
     </pre>
-    <h5 class="mb-0 mt-3">Call it: highest_sale_amount["max_amount"]</h5>
-    <h5 class="mb-5 mt-2">It search about maximum value in amount column.</h5>
+    <h5 class="mb-0 mt-5">Call it: highest_sale_amount["max_amount"]</h5>
+    <h5 class="mb-5 mt-3">It searches about the maximum value in the amount column.</h5>
 
     <hr />
     <h2 class="my-5 custom-title">Notes</h2>
-    <h5 class="mb-0 mt-4">- highest_sale_amount = Sale.objects.aggregate(max_amount=Max('amount'))</h5>
-    <h5 class="mb-0 mt-2">- highest_sale_amount = Sale.objects.aggregate(Max('amount'))</h5>
-    <h5 class="mb-0 mt-2">- If you didn't give it a name how you will call it in second example?</h5>
-    <h5 class="mb-0 mt-2">- By default Django will create the name in this convention:</h5>
-    <h5 class="mb-5 mt-2">- column__aggregation so, the answer will be amount__max.</h5>
+    <h5 class="mb-0 mt-4"><span style="font-size: 24px;font-weight: 700;" class="custom-color text-lg-start">1 </span> highest_sale_amount = Sale.objects.aggregate(max_amount=Max('amount'))</h5>
+    <h5 class="mb-5 mt-2"><span style="font-size: 24px;font-weight: 700;" class="custom-color text-lg-start">2 </span> highest_sale_amount = Sale.objects.aggregate(Max('amount'))</h5>
+    <h3 class="mb-0 mt-5 custom-color">If you didn't give it a name how you will call it in second example?</h3>
+    <h5 class="mb-0 mt-5">By default Django will create the name in this convention.</h5>
+    <h5 class="mb-5 mt-2">column__aggregation so, the answer will be amount__max.</h5>
 </div>

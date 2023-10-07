@@ -1,7 +1,6 @@
 ﻿using Graduation.DataAccess.Data;
 using Graduation.DataAccess.Repository.IRepository;
 using Graduation.Models;
-using Microsoft.AspNet.Identity;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -22,43 +21,63 @@ namespace Graduation_Project.Areas.Admin.Controllers
             _unitOfWork = unitOfWork;
             _webHostEnvironment = webHostEnvironment;
         }
-        public IActionResult Index()
+        public IActionResult Index(string? user)
         {
-            List<ChatRoom> chatRooms = _db.ChatRooms.Include(c => c.User).Include(c => c.ChatRoomMessages).Where(c => c.ChatRoomMessages.Any(cr => !cr.Closed)).ToList();
-            return View(chatRooms);
+            if (user == null)
+            {
+                List<ChatRoom> chatRooms = _db.ChatRooms.Include(c => c.User).Include(c => c.ChatRoomMessages).Where(i=>i.ChatRoomMessages.Any(u=>u.User.Role!="Supporter" && u.User.Role != "Admin")).ToList();
+                return View(chatRooms);
+            }
+            else
+            {
+                List<ChatRoom> chatRooms = _db.ChatRooms.Include(c => c.User).Include(c => c.ChatRoomMessages).Where(i => i.User.Name.Contains(user) || i.User.Email.Contains(user)).Where(i => i.ChatRoomMessages.Any(u => u.User.Role != "Supporter" && u.User.Role != "Admin")).ToList();
+                if (chatRooms.Count == 0)
+                {
+                    List<ChatRoom> chats = _db.ChatRooms.Include(c => c.User).Include(c => c.ChatRoomMessages).Where(i => i.ChatRoomMessages.Any(u => u.User.Role != "Supporter" && u.User.Role != "Admin")).ToList();
+                    return View(chats);
+                }
+                return View(chatRooms);
+            }
+
         }
         public IActionResult Details(int id)
         {
-            ChatRoom chatRoom = _db.ChatRooms.Include(c => c.User).Include(c => c.ChatRoomMessages).ThenInclude(i=> i.Images).FirstOrDefault();
+            ChatRoom chatRoom = _db.ChatRooms
+                .Include(c => c.User)
+                .Include(c => c.ChatRoomMessages)
+                .ThenInclude(i => i.Images)
+                .Include(c => c.ChatRoomMessages)
+                .ThenInclude(c=> c.User)
+                .FirstOrDefault(i=> i.Id == id);
             return View(chatRoom);
         }
-        public IActionResult Reply(int id, string content, List<IFormFile>? images, IFormFile? video)
+        public IActionResult Reply(int id, string content, List<IFormFile>? images)
         {
             if (id == 0)
             {
                 return NotFound();
             }
-            if (content != null || images.Count() > 0 || video != null)
+            if (content != null || images.Count() > 0)
             {
                 var claimsIdentity = (ClaimsIdentity)User.Identity;
                 var userId = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier).Value;
                 User user = _unitOfWork.User.Get(u => u.Id == userId);
                 ChatRoom chatRoom = _unitOfWork.ChatRoom.Get(i => i.Id == id, includeProperties: "ChatRoomMessages.Images");
-                ChatRoomMessage chatRoomMessage = new ChatRoomMessage()
-                {
-                    Content = content,
-                    User = user,
-                    ChatRoom = chatRoom,
-                    SendAt = DateTimeOffset.Now,
-                    Closed = true
-                };
-                _unitOfWork.ChatRoomMessage.Add(chatRoomMessage);
                 List<ChatRoomMessage> readMessage = _unitOfWork.ChatRoomMessage.GetAll(i=>i.ChatRoom==chatRoom).ToList();
                 foreach(ChatRoomMessage message in readMessage)
                 {
                     message.Closed = true;
                     _unitOfWork.Save();
                 }
+                ChatRoomMessage chatRoomMessage = new ChatRoomMessage()
+                {
+                    Content = content,
+                    User = user,
+                    ChatRoom = chatRoom,
+                    SendAt = DateTimeOffset.Now,
+                    Closed = false
+                };
+                _unitOfWork.ChatRoomMessage.Add(chatRoomMessage);
                 _unitOfWork.Save();
                 string wwwRootPath = _webHostEnvironment.WebRootPath;
                 if (images != null)
@@ -83,32 +102,9 @@ namespace Graduation_Project.Areas.Admin.Controllers
                         _unitOfWork.Save();
                     }
                 }
-                if (video != null)
-                {
-                    string fileName = Guid.NewGuid().ToString() + Path.GetExtension(video.FileName);
-                    string videoPath = Path.Combine(wwwRootPath, @"images/ChatRoomMessage/videos");
-                    if (!Directory.Exists(videoPath))
-                    {
-                        Directory.CreateDirectory(videoPath);
-                    }
-                    if (!string.IsNullOrEmpty(chatRoomMessage.Video))
-                    {
-                        var oldVideoPath = Path.Combine(wwwRootPath, chatRoomMessage.Video.TrimStart('\\'));
-                        if (System.IO.File.Exists(oldVideoPath))
-                        {
-                            System.IO.File.Delete(oldVideoPath);
-                        }
-                    }
-                    using (var fileStream = new FileStream(Path.Combine(videoPath, fileName), FileMode.Create))
-                    {
-                        video.CopyTo(fileStream);
-                    }
-                    chatRoomMessage.Video = @"images/ChatRoomMessage/videos/" + fileName;
-                    _unitOfWork.Save();
-                }
-                return RedirectToAction("Index");
+                return RedirectToAction("Details", new { id = id });
             }
-            return RedirectToAction("Details", new { id = id });
+            return RedirectToAction("Index");
         }
     }
 }

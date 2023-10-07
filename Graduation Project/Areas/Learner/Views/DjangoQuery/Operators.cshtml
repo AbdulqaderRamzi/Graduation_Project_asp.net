@@ -14,12 +14,12 @@
 
     <hr />
     <h2 class="my-5 custom-title">AND</h2>
-    <h5 class="mt-3 mb-0">2 conditions must be True.</h5>
-    <h5 class="mt-4 mb-4">
+    <h3 class="mt-3 mb-4 text-center">2 conditions must be True.</h3>
+    <h5 class="mt-5 mb-5">
         Looking for a person whose name is khaled and he is 22 years old. if there is a person whose name is khaled, but he is not 22 years old. otherwise If there is a person who is 22 years old but whose name is not Khaled. one of the two conditions is True and the other is False. that means the result will be, found 0.
         otherwise If there is a person who is 22 years old and whose name is Khaled. both conditions are True. that means the result will not be, found 0.
     </h5>
-    <div class="mt-3"></div>
+    <div class="mt-5"></div>
     <pre class="mb-5">
         <code class="language-Django">
             Person.objects.filter(name="khaled") & Person.objects.filter(age=22)
@@ -30,13 +30,13 @@
 
     <hr/>
     <h2 class="my-5 custom-title">OR</h2>
-    <h5 class="mt-3 mb-0">At least 1 of conditions must be True.</h5>
-    <h5 class="mt-4 mb-0">
+    <h3 class="mt-3 mb-4 text-center">At least 1 of conditions must be True.</h3>
+    <h5 class="mt-5 mb-5">
         Looking for a person whose name is khaled or he is 22 years old. If there is a person whose name is khaled, but he is not 22 years old Or vice versa.
         One of conditions is True. that means the result will not be, found 0. if there is no person named khaled and he is not 22 years old.
         Both conditions are False. that means the result will be, found 0.
     </h5>
-    <h5 class="mt-4 mb-3">Use Q when you want to use OR condition.</h5>
+    <h4 class="mt-5 mb-3">Use Q when you want to use OR condition.</h4>
     <pre class="mb-5">
         <code class="language-Django">
             from django.db.models import Q

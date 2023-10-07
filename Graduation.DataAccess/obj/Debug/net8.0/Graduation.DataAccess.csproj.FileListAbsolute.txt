@@ -318,3 +318,4 @@ C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduatio
 C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation.DataAccess\obj\Debug\net8.0\Graduation.DataAccess.pdb
 C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation.DataAccess\obj\Debug\net8.0\Graduation.DataAccess.genruntimeconfig.cache
 C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation.DataAccess\obj\Debug\net8.0\ref\Graduation.DataAccess.dll
+C:\Users\khalo\OneDrive\سطح المكتب\asp.net\Graduation Project\Graduation.DataAccess\bin\Debug\net8.0\refs\Microsoft.Extensions.Diagnostics.Abstractions.dll

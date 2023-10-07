@@ -2,21 +2,22 @@
     <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Template Configuration</h1>
     <hr />
     <h4 class="mt-5 mb-4">Template will consist of html files.</h4>
-    <h4 class="mb-5">To create a template for your view. you have tow ways</h4>
+    <h4 class="mb-5">To create a template for your view. you have two ways.</h4>
 
     <hr />
     <h2 class="my-5 custom-title">First way</h2>
-    <h5 class="mb-0 mt-3">Create templates folder in you app then create inside that templates folder. create folde by app name.</h5>
+    <h5 class="mb-5 mt-3">Create templates folder in you app then create inside that templates folder a folde by app name.</h5>
+    <hr />
     <h3 class="mb-1 mt-5 custom-color">Example</h3>
     <h5 class="mb-0 mt-3">Return render(request, 'blogs/search_results.html', context)</h5>
     <h5 class="mb-5 mt-3">Search_results.html should exists in blogs/templates/blogs/search_results.html</h5>
 
     <hr />
     <h2 class="my-5 custom-title">Second</h2>
-    <h5 class="mb-0 mt-3">Create folder in same level with project root.</h5>
-    <h5 class="mb-1 mt-2">Structure should be like that.</h5>
+    <h5 class="mb-0 mt-3">Create a folder at the same level with project root.</h5>
+    <h5 class="mb-1 mt-2">The structure should be like that.</h5>
     <h3 class="mb-3 mt-4 custom-color">Project root:</h3>
-    <pre class="mb-2">
+    <pre class="mb-5">
         <code class="language-Django">
             --urls.py
             --settings.py
@@ -26,8 +27,9 @@
             <span></span>
         </code>
     </pre>
-    <h5 class="mb-0 mt-4">In project root > settings.py</h5>
-    <h5 class="mb-3 mt-2">Change TEMPLATES list into that codes.</h5>
+    <hr />
+    <h5 class="mb-0 mt-5">In project root > settings.py</h5>
+    <h5 class="mb-4 mt-2">Change TEMPLATES list into that code.</h5>
     <pre class="mb-5">
         <code class="language-Django">
             import os
@@ -61,7 +63,7 @@
             <span></span>
         </code>
     </pre>
-    <h5 class="mb-3 mt-3">search_results.html should exists in templates/blogs/search_results.html</h5>
+    <h5 class="mb-5 mt-3">search_results.html should exists in templates/blogs/search_results.html</h5>
     <pre>
         <code class="language-Django">
             return render(request, 'search_results.html', context)

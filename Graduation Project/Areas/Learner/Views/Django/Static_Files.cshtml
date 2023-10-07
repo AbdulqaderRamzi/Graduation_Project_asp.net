@@ -1,7 +1,7 @@
 ﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
     <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Static Files</h1>
-    <h5 class="mt-5 mb-3">In project root go to settings. Add those lines.</h5>
-    <pre class="mb-2">
+    <h5 class="mt-5 mb-3">In project root go to the settings the insert the following lines.</h5>
+    <pre class="mb-3">
         <code class="language-Django">
             STATIC_URL = 'static/'
             STATICFILES_DIRS = [
@@ -11,14 +11,16 @@
             <span></span>
         </code>
     </pre>
-    <figure class="figure mb-4">
+    <figure class="figure mb-5">
         <img src="~/images/project_images/model/file.png" class="figure-img img-fluid rounded img-border">
     </figure>
-    <h5 class="mb-3">Create static folder that will contain your css, js, images and fonts. It should be in same level with project root.</h5>
-    <figure class="figure mb-4">
+    <hr />
+    <h5 class="mb-3 mt-5">Create static folder that will contain your css, js, images and fonts. It should be at the same level with the project root.</h5>
+    <figure class="figure mb-5">
         <img src="~/images/project_images/model/stativf.png" class="figure-img img-fluid rounded img-border">
     </figure>
-    <h5 class="mb-3">If you will use css, js, images or fonts you should insert the following line at the top of html file in each file that includes static stuff.</h5>
+    <hr />
+    <h5 class="mb-3 mt-5">If you will use css, js, images or fonts you should insert the following line at the top of html file in each file that includes static stuff.</h5>
     <div class="d-flex justify-content-start">
         <h5 class="rounded mb-5 p-3 custom-back">{% load static %}</h5>
     </div>

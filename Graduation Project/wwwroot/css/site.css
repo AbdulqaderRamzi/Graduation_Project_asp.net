@@ -136,3 +136,17 @@ body {
     padding-right: 100px;
     border-radius: 20px;
 }
+.dis-none{
+    display: none;
+}
+.cus-op{
+    color:black;
+}
+.cus-op:hover {
+    color: white;
+    background: #417690;
+}
+.b-m {
+    height: 1px;
+    overflow-y: hidden;
+}

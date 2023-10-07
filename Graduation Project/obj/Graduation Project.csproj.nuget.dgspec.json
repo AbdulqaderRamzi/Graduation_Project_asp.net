@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Graduation Project.csproj": {}
+    "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Graduation Project.csproj": {}
   },
   "projects": {
-    "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Graduation Project.csproj": {
+    "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Graduation Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Graduation Project.csproj",
+        "projectUniqueName": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Graduation Project.csproj",
         "projectName": "Graduation Project",
-        "projectPath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Graduation Project.csproj",
+        "projectPath": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\Graduation Project.csproj",
         "packagesPath": "C:\\Users\\khalo\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\obj\\",
+        "outputPath": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation Project\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,14 +33,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.DataAccess\\Graduation.DataAccess.csproj": {
-                "projectPath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.DataAccess\\Graduation.DataAccess.csproj"
+              "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.DataAccess\\Graduation.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.DataAccess\\Graduation.DataAccess.csproj"
               },
-              "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.Models\\Graduation.Models.csproj": {
-                "projectPath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.Models\\Graduation.Models.csproj"
+              "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.Models\\Graduation.Models.csproj": {
+                "projectPath": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.Models\\Graduation.Models.csproj"
               },
-              "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.Utility\\Graduation.Utility.csproj": {
-                "projectPath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.Utility\\Graduation.Utility.csproj"
+              "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.Utility\\Graduation.Utility.csproj": {
+                "projectPath": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.Utility\\Graduation.Utility.csproj"
               }
             }
           }
@@ -49,9 +49,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "default"
         }
       },
       "frameworks": {
@@ -152,18 +149,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-preview.7.23376.3\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-rc.1.23455.8/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.DataAccess\\Graduation.DataAccess.csproj": {
+    "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.DataAccess\\Graduation.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.DataAccess\\Graduation.DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.DataAccess\\Graduation.DataAccess.csproj",
         "projectName": "Graduation.DataAccess",
-        "projectPath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.DataAccess\\Graduation.DataAccess.csproj",
+        "projectPath": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.DataAccess\\Graduation.DataAccess.csproj",
         "packagesPath": "C:\\Users\\khalo\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -185,8 +182,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.Models\\Graduation.Models.csproj": {
-                "projectPath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.Models\\Graduation.Models.csproj"
+              "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.Models\\Graduation.Models.csproj": {
+                "projectPath": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.Models\\Graduation.Models.csproj"
               }
             }
           }
@@ -195,9 +192,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "default"
         }
       },
       "frameworks": {
@@ -261,18 +255,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-preview.7.23376.3\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-rc.1.23455.8/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.Models\\Graduation.Models.csproj": {
+    "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.Models\\Graduation.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.Models\\Graduation.Models.csproj",
+        "projectUniqueName": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.Models\\Graduation.Models.csproj",
         "projectName": "Graduation.Models",
-        "projectPath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.Models\\Graduation.Models.csproj",
+        "projectPath": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.Models\\Graduation.Models.csproj",
         "packagesPath": "C:\\Users\\khalo\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.Models\\obj\\",
+        "outputPath": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -300,9 +294,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "default"
         }
       },
       "frameworks": {
@@ -354,18 +345,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-preview.7.23376.3\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-rc.1.23455.8/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.Utility\\Graduation.Utility.csproj": {
+    "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.Utility\\Graduation.Utility.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.Utility\\Graduation.Utility.csproj",
+        "projectUniqueName": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.Utility\\Graduation.Utility.csproj",
         "projectName": "Graduation.Utility",
-        "projectPath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.Utility\\Graduation.Utility.csproj",
+        "projectPath": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.Utility\\Graduation.Utility.csproj",
         "packagesPath": "C:\\Users\\khalo\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.Utility\\obj\\",
+        "outputPath": "C:\\Users\\khalo\\OneDrive\\سطح المكتب\\asp.net\\Graduation Project\\Graduation.Utility\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -393,9 +384,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "default"
         }
       },
       "frameworks": {
@@ -423,7 +411,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-preview.7.23376.3\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-rc.1.23455.8/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

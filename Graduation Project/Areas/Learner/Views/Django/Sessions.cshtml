@@ -1,53 +1,58 @@
 ﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
     <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Sessions</h1>
     <h4 class="text-center mt-4 mb-5">Sessions are the way to store and retrieve user data on the server side between different requests.</h4>
-    <h4 class="mb-5 mt-4">
+    <hr />
+    <h4 class="mb-5 mt-5">
         You can use sessions to store user-specific information such as login credentials, shopping cart contents, and more.
-        when you store data in session. it will not be deleted until you deleted through clearing the session from browser or code logic.
+        when you store a data in session. it will not be deleted until you delete it through clearing the session from browser or programmatically.
         Even if you refresh or close the browser. session data will still there.
     </h4>
 
     <hr />
     <h2 class="my-5 custom-title">Examples</h2>
     <h4 class="mb-3 mt-4 custom-color">Create Session</h4>
-    <pre>
+    <pre class="mb-5">
         <code class="language-Django">
             request.session['username'] = 'example_user'
             request.session['cart'] = ['item1', 'item2', 'item3']
             <span></span>
         </code>
     </pre>
-    <h4 class="mb-3 mt-5 custom-color">Update Session</h4>
-    <h5 class="mb-2 mt-0">Adding a new item to the cart.</h5>
-    <pre>
+    <hr />
+    <h4 class="mb-4 mt-5 custom-color">Update Session</h4>
+    <h5 class="mb-2 mt-4">Adding a new item to the cart.</h5>
+    <pre class="mb-2">
         <code class="language-Django">
             request.session['cart'].append('item4')
             <span></span>
         </code>
     </pre>
-    <h5 class="mb-2 mt-3">Changing the username.</h5>
-    <pre>
+    <h5 class="mb-2 mt-4">Changing the username.</h5>
+    <pre class="mb-5">
         <code class="language-Django">
             request.session['username'] = 'new_username'
             <span></span>
         </code>
     </pre>
-    <h4 class="mb-3 mt-5 custom-color">Delete Session</h4>
-    <h5 class="mb-2 mt-0">Remove the cart from the session.</h5>
+    <hr />
+    <h4 class="mb-4 mt-5 custom-color">Delete Session</h4>
+    <h5 class="mb-2 mt-4">Remove the cart from the session.</h5>
     <pre>
         <code class="language-Django">
             del request.session['cart']
             <span></span>
         </code>
     </pre>
-    <h5 class="mb-2 mt-3 custom-color">Clear all session data.</h5>
-    <pre>
+    <h5 class="mb-2 mt-4">Clear all session data.</h5>
+    <pre class="mb-5">
         <code class="language-Django">
             request.session.clear()
             <span></span>
         </code>
     </pre>
-    <h4 class="mb-3 mt-5 custom-color">Get Session</h4>
+    <hr />
+    <h5 class="mb-4 mt-5 custom-color">Get Session</h5>
+    <div class="mt-3"></div>
     <pre>
         <code class="language-Django">
             username = request.session.get('username', 'default_username')
@@ -55,5 +60,5 @@
             <span></span>
         </code>
     </pre>
-    <h5 class="mt-3 mb-5">Note: second parameter is default value. that means if username is null or not exist, username will equal 'default_username'.</h5>
+    <h6 class="mt-4 mb-5 custom-color">Note: second parameter is default value. that means if username is null or not exist, username will equal 'default_username'.</h6>
 </div>

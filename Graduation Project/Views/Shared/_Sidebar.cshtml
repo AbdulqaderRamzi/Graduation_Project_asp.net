@@ -66,134 +66,556 @@
 <style>
     
 </style>
-<div class="flex-shrink-0 p-3 bg-white" style="width: 280px; height: 100vh; overflow-y: scroll; position:sticky;">
-    <ul class="list-unstyled ps-0">
+<div id="sidebar" class="flex-shrink-0 bg-white" style="width: 300px;height: 100vh;overflow-y: scroll;position: fixed;padding: 25px 10px 55px 28px;top:0; margin-top: 57px; left:0;">
+    <ul class="list-unstyled ps-0" style="font-size: 17px;">
         <li class="my-4">
-            <button class="mb-2 btn sidebar-btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#one" aria-expanded="false">
+            <button class="mb-2 btn sidebar-btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#one" aria-expanded="false" style="font-size: 19px;">
                 Main
             </button>
             <div class="collapse" id="one">
                 <ul class="sidebar-btn-toggle-nav list-unstyled pb-1 small">
-                    <li><a asp-area="Learner" asp-controller="Django" asp-action="Install_Python" class="custom-color rounded ahover">Install Python</a></li>
-                    <li><a asp-area="Learner" asp-controller="Django" asp-action="Install_Django" class="custom-color rounded ahover">Install Django</a></li>
-                    <li><a asp-area="Learner" asp-controller="Django" asp-action="Simple_Website" class="custom-color rounded ahover">Simple Website</a></li>
-                    <li><a asp-area="Learner" asp-controller="Django" asp-action="Admin" class="custom-color rounded ahover">Admin</a></li>
-                    <li><a asp-area="Learner" asp-controller="Django" asp-action="Check" class="custom-color rounded ahover">Check</a></li>
-                    <li><a asp-area="Learner" asp-controller="Django" asp-action="Command" class="custom-color rounded ahover">Command</a></li>
-                    <li><a asp-area="Learner" asp-controller="Django" asp-action="Database" class="custom-color rounded ahover">Database</a></li>
-                    <li><a asp-area="Learner" asp-controller="Django" asp-action="Email" class="custom-color rounded ahover">Email</a></li>
-                    <li><a asp-area="Learner" asp-controller="Django" asp-action="Pagination" class="custom-color rounded ahover">Pagination</a></li>
-                    <li><a asp-area="Learner" asp-controller="Django" asp-action="Search" class="custom-color rounded ahover">Search</a></li>
-                    <li><a asp-area="Learner" asp-controller="Django" asp-action="Sessions" class="custom-color rounded ahover">Session</a></li>
-                    <li><a asp-area="Learner" asp-controller="Django" asp-action="Static_Files" class="custom-color rounded ahover">Static Files</a></li>
-                    <li><a asp-area="Learner" asp-controller="Django" asp-action="Test" class="custom-color rounded ahover">Test</a></li>
-                    <li class="mb-4"><a asp-area="Learner" asp-controller="Django" asp-action="Url" class="custom-color rounded ahover">Url</a></li>
+                    <li><a id="d1" asp-area="Learner" asp-controller="Django" asp-action="Install_Python" class="custom-color rounded ahover">Install Python</a></li>
+                    <li><a id="d2" asp-area="Learner" asp-controller="Django" asp-action="Install_Django" class="custom-color rounded ahover">Install Django</a></li>
+                    <li><a id="d3" asp-area="Learner" asp-controller="Django" asp-action="Simple_Website" class="custom-color rounded ahover">Simple Website</a></li>
+                    <li><a id="d4" asp-area="Learner" asp-controller="Django" asp-action="Admin" class="custom-color rounded ahover">Admin</a></li>
+                    <li><a id="d5" asp-area="Learner" asp-controller="Django" asp-action="Check" class="custom-color rounded ahover">Check</a></li>
+                    <li><a id="d6" asp-area="Learner" asp-controller="Django" asp-action="Command" class="custom-color rounded ahover">Command</a></li>
+                    <li><a id="d7" asp-area="Learner" asp-controller="Django" asp-action="Database" class="custom-color rounded ahover">Database</a></li>
+                    <li><a id="d8" asp-area="Learner" asp-controller="Django" asp-action="Email" class="custom-color rounded ahover">Email</a></li>
+                    <li><a id="d9" asp-area="Learner" asp-controller="Django" asp-action="Pagination" class="custom-color rounded ahover">Pagination</a></li>
+                    <li><a id="d10" asp-area="Learner" asp-controller="Django" asp-action="Search" class="custom-color rounded ahover">Search</a></li>
+                    <li><a id="d11" asp-area="Learner" asp-controller="Django" asp-action="Sessions" class="custom-color rounded ahover">Session</a></li>
+                    <li><a id="d12" asp-area="Learner" asp-controller="Django" asp-action="Static_Files" class="custom-color rounded ahover">Static Files</a></li>
+                    <li><a id="d13" asp-area="Learner" asp-controller="Django" asp-action="Test" class="custom-color rounded ahover">Test</a></li>
+                    <li class="mb-4"><a id="d14" asp-area="Learner" asp-controller="Django" asp-action="Url" class="custom-color rounded ahover">Url</a></li>
                 </ul>
             </div>
         </li>
         <li class="mb-4">
-            <button class="mb-2 btn sidebar-btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#two" aria-expanded="false">
+            <button class="mb-2 btn sidebar-btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#two" aria-expanded="false" style="font-size: 19px;">
                 Authentication
             </button>
             <div class="collapse" id="two">
                 <ul class="sidebar-btn-toggle-nav list-unstyled pb-1 small">
-                    <li><a asp-area="Learner" asp-controller="DjangoAuthentication" asp-action="Register" class="custom-color rounded ahover">Register</a></li>
-                    <li><a asp-area="Learner" asp-controller="DjangoAuthentication" asp-action="Login" class="custom-color rounded ahover">Login</a></li>
-                    <li><a asp-area="Learner" asp-controller="DjangoAuthentication" asp-action="Change_Password" class="custom-color rounded ahover">Change Password</a></li>
-                    <li class="mb-4"><a asp-area="Learner" asp-controller="DjangoAuthentication" asp-action="Permissions_Authorization" class="custom-color rounded ahover">Permission - Authorization</a></li>
+                    <li><a id="da1" asp-area="Learner" asp-controller="DjangoAuthentication" asp-action="Register" class="custom-color rounded ahover">Register</a></li>
+                    <li><a id="da2" asp-area="Learner" asp-controller="DjangoAuthentication" asp-action="Login" class="custom-color rounded ahover">Login</a></li>
+                    <li><a id="da3" asp-area="Learner" asp-controller="DjangoAuthentication" asp-action="Change_Password" class="custom-color rounded ahover">Change Password</a></li>
+                    <li class="mb-4"><a id="da4" asp-area="Learner" asp-controller="DjangoAuthentication" asp-action="Permissions_Authorization" class="custom-color rounded ahover">Permission - Authorization</a></li>
                 </ul>
             </div>
         </li>
         <li class="mb-4">
-            <button class="mb-2 btn sidebar-btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#three" aria-expanded="false">
+            <button class="mb-2 btn sidebar-btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#three" aria-expanded="false" style="font-size: 19px;">
                 Form
             </button>
             <div class="collapse" id="three">
                 <ul class="sidebar-btn-toggle-nav list-unstyled pb-1 small">
-                    <li><a asp-area="Learner" asp-controller="DjangoForm" asp-action="Forms" class="custom-color rounded ahover">Forms</a></li>
-                    <li class="mb-4"><a asp-area="Learner" asp-controller="DjangoForm" asp-action="Html_Form" class="custom-color rounded ahover">Html Form</a></li>
+                    <li><a id="df1" asp-area="Learner" asp-controller="DjangoForm" asp-action="Forms" class="custom-color rounded ahover">Forms</a></li>
+                    <li class="mb-4"><a id="df2" asp-area="Learner" asp-controller="DjangoForm" asp-action="Html_Form" class="custom-color rounded ahover">Html Form</a></li>
                 </ul>
             </div>
         </li>
         <li class="mb-4">
-            <button class="mb-2 btn sidebar-btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#four" aria-expanded="false">
+            <button class="mb-2 btn sidebar-btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#four" aria-expanded="false" style="font-size: 19px;">
                 Model
             </button>
             <div class="collapse" id="four">
                 <ul class="sidebar-btn-toggle-nav list-unstyled pb-1 small">
-                    <li><a asp-area="Learner" asp-controller="DjangoModel" asp-action="Introduction" class="custom-color rounded ahover">Introduction</a></li>
-                    <li><a asp-area="Learner" asp-controller="DjangoModel" asp-action="Aggregation" class="custom-color rounded ahover">Aggregation</a></li>
-                    <li><a asp-area="Learner" asp-controller="DjangoModel" asp-action="FieldOptions" class="custom-color rounded ahover">Field Options</a></li>
-                    <li><a asp-area="Learner" asp-controller="DjangoModel" asp-action="FieldTypes" class="custom-color rounded ahover">Field Types</a></li>
-                    <li><a asp-area="Learner" asp-controller="DjangoModel" asp-action="File" class="custom-color rounded ahover">File</a></li>
-                    <li><a asp-area="Learner" asp-controller="DjangoModel" asp-action="Inheritance_Abstraction" class="custom-color rounded ahover">Inheritance - Abstraction</a></li>
-                    <li><a asp-area="Learner" asp-controller="DjangoModel" asp-action="Manager" class="custom-color rounded ahover">Manager</a></li>
-                    <li><a asp-area="Learner" asp-controller="DjangoModel" asp-action="Migration" class="custom-color rounded ahover">Migration</a></li>
-                    <li><a asp-area="Learner" asp-controller="DjangoModel" asp-action="On_Delete" class="custom-color rounded ahover">On Delete</a></li>
-                    <li><a asp-area="Learner" asp-controller="DjangoModel" asp-action="ProxyModel" class="custom-color rounded ahover">Proxy Model</a></li>
-                    <li><a asp-area="Learner" asp-controller="DjangoModel" asp-action="Relationships" class="custom-color rounded ahover">Relationships</a></li>
-                    <li class="mb-4"><a asp-area="Learner" asp-controller="DjangoModel" asp-action="Signal" class="custom-color rounded ahover">Signal</a></li>
+                    <li><a id="dm1" asp-area="Learner" asp-controller="DjangoModel" asp-action="Introduction" class="custom-color rounded ahover">Introduction</a></li>
+                    <li><a id="dm2" asp-area="Learner" asp-controller="DjangoModel" asp-action="Aggregation" class="custom-color rounded ahover">Aggregation</a></li>
+                    <li><a id="dm3" asp-area="Learner" asp-controller="DjangoModel" asp-action="FieldOptions" class="custom-color rounded ahover">Field Options</a></li>
+                    <li><a id="dm4" asp-area="Learner" asp-controller="DjangoModel" asp-action="FieldTypes" class="custom-color rounded ahover">Field Types</a></li>
+                    <li><a id="dm5" asp-area="Learner" asp-controller="DjangoModel" asp-action="File" class="custom-color rounded ahover">File</a></li>
+                    <li><a id="dm6" asp-area="Learner" asp-controller="DjangoModel" asp-action="Inheritance_Abstraction" class="custom-color rounded ahover">Inheritance - Abstraction</a></li>
+                    <li><a id="dm7" asp-area="Learner" asp-controller="DjangoModel" asp-action="Manager" class="custom-color rounded ahover">Manager</a></li>
+                    <li><a id="dm8" asp-area="Learner" asp-controller="DjangoModel" asp-action="Migration" class="custom-color rounded ahover">Migration</a></li>
+                    <li><a id="dm9" asp-area="Learner" asp-controller="DjangoModel" asp-action="On_Delete" class="custom-color rounded ahover">On Delete</a></li>
+                    <li><a id="dm10" asp-area="Learner" asp-controller="DjangoModel" asp-action="ProxyModel" class="custom-color rounded ahover">Proxy Model</a></li>
+                    <li><a id="dm11" asp-area="Learner" asp-controller="DjangoModel" asp-action="Relationships" class="custom-color rounded ahover">Relationships</a></li>
+                    <li class="mb-4"><a id="dm12" asp-area="Learner" asp-controller="DjangoModel" asp-action="Signal" class="custom-color rounded ahover">Signal</a></li>
                 </ul>
             </div>
         </li>
         <li class="mb-4">
-            <button class="mb-2 btn sidebar-btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#five" aria-expanded="false">
+            <button class="mb-2 btn sidebar-btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#five" aria-expanded="false" style="font-size: 19px;">
                 Query
             </button>
             <div class="collapse" id="five">
                 <ul class="sidebar-btn-toggle-nav list-unstyled pb-1 small">
-                    <li><a asp-area="Learner" asp-controller="DjangoQuery" asp-action="Field_lookups" class="custom-color rounded ahover">Field Lookups</a></li>
-                    <li><a asp-area="Learner" asp-controller="DjangoQuery" asp-action="HowToQuery" class="custom-color rounded ahover">How To Query</a></li>
-                    <li><a asp-area="Learner" asp-controller="DjangoQuery" asp-action="Methods" class="custom-color rounded ahover">Methods</a></li>
-                    <li class="mb-4"><a asp-area="Learner" asp-controller="DjangoQuery" asp-action="Operators" class="custom-color rounded ahover">Operators</a></li>
+                    <li><a id="dq2" asp-area="Learner" asp-controller="DjangoQuery" asp-action="HowToQuery" class="custom-color rounded ahover">How To Query</a></li>
+                    <li><a id="dq1" asp-area="Learner" asp-controller="DjangoQuery" asp-action="Field_lookups" class="custom-color rounded ahover">Field Lookups</a></li>
+                    <li><a id="dq3" asp-area="Learner" asp-controller="DjangoQuery" asp-action="Methods" class="custom-color rounded ahover">Methods</a></li>
+                    <li class="mb-4"><a id="dq4" asp-area="Learner" asp-controller="DjangoQuery" asp-action="Operators" class="custom-color rounded ahover">Operators</a></li>
                 </ul>
             </div>
         </li>
         <li class="mb-4">
-            <button class="mb-2 btn sidebar-btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#six" aria-expanded="false">
+            <button class="mb-2 btn sidebar-btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#six" aria-expanded="false" style="font-size: 19px;">
                 Template
             </button>
             <div class="collapse" id="six">
                 <ul class="mb-2 sidebar-btn-toggle-nav list-unstyled pb-1 small">
-                    <li><a asp-area="Learner" asp-controller="DjangoTemplate" asp-action="Template_Configuration" class="custom-color rounded ahover">Template Configuration</a></li>
-                    <li><a asp-area="Learner" asp-controller="DjangoTemplate" asp-action="Extend" class="custom-color rounded ahover">Extend</a></li>
-                    <li><a asp-area="Learner" asp-controller="DjangoTemplate" asp-action="Include" class="custom-color rounded ahover">Include</a></li>
-                    <li><a asp-area="Learner" asp-controller="DjangoTemplate" asp-action="Filter" class="custom-color rounded ahover">Filter</a></li>
-                    <li><a asp-area="Learner" asp-controller="DjangoTemplate" asp-action="Tag" class="custom-color rounded ahover">Tag</a></li>
-                    <li><a asp-area="Learner" asp-controller="DjangoTemplate" asp-action="Custom_Filter" class="custom-color rounded ahover">Custom Filter</a></li>
-                    <li class="mb-4"><a asp-area="Learner" asp-controller="DjangoTemplate" asp-action="Custom_Tag" class="custom-color rounded ahover">Custom Tag</a></li>
+                    <li><a id="dt1" asp-area="Learner" asp-controller="DjangoTemplate" asp-action="Template_Configuration" class="custom-color rounded ahover">Template Configuration</a></li>
+                    <li><a id="dt2" asp-area="Learner" asp-controller="DjangoTemplate" asp-action="Extend" class="custom-color rounded ahover">Extend</a></li>
+                    <li><a id="dt3" asp-area="Learner" asp-controller="DjangoTemplate" asp-action="Include" class="custom-color rounded ahover">Include</a></li>
+                    <li><a id="dt4" asp-area="Learner" asp-controller="DjangoTemplate" asp-action="Filter" class="custom-color rounded ahover">Filter</a></li>
+                    <li><a id="dt5" asp-area="Learner" asp-controller="DjangoTemplate" asp-action="Tag" class="custom-color rounded ahover">Tag</a></li>
+                    <li><a id="dt6" asp-area="Learner" asp-controller="DjangoTemplate" asp-action="Custom_Filter" class="custom-color rounded ahover">Custom Filter</a></li>
+                    <li class="mb-4"><a id="dt7" asp-area="Learner" asp-controller="DjangoTemplate" asp-action="Custom_Tag" class="custom-color rounded ahover">Custom Tag</a></li>
                 </ul>
             </div>
         </li>
         <li class="mb-4">
-            <button class="mb-2 btn sidebar-btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#seven" aria-expanded="false">
+            <button class="mb-2 btn sidebar-btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#seven" aria-expanded="false" style="font-size: 19px;">
                 Third Party
             </button>
             <div class="collapse" id="seven">
                 <ul class="sidebar-btn-toggle-nav list-unstyled pb-1 small">
-                    <li><a asp-area="Learner" asp-controller="DjangoThirdParty" asp-action="Jazzmin" class="custom-color rounded ahover">Jazzmin</a></li>
-                    <li><a asp-area="Learner" asp-controller="DjangoThirdParty" asp-action="Phonenumbers" class="custom-color rounded ahover">Phone Number</a></li>
-                    <li class="mb-4"><a asp-area="Learner" asp-controller="DjangoThirdParty" asp-action="RichText" class="custom-color rounded ahover">RichText</a></li>
+                    <li><a id="dtp1" asp-area="Learner" asp-controller="DjangoThirdParty" asp-action="Jazzmin" class="custom-color rounded ahover">Jazzmin</a></li>
+                    <li><a id="dtp2" asp-area="Learner" asp-controller="DjangoThirdParty" asp-action="Phonenumbers" class="custom-color rounded ahover">Phone Number</a></li>
+                    <li class="mb-4"><a id="dtp3" asp-area="Learner" asp-controller="DjangoThirdParty" asp-action="RichText" class="custom-color rounded ahover">RichText</a></li>
                 </ul>
             </div>
         </li>
         <li class="mb-4">
-            <button class="mb-2 btn sidebar-btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#eight" aria-expanded="false">
+            <button class="mb-2 btn sidebar-btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#eight" aria-expanded="false" style="font-size: 19px;">
                 View
             </button>
             <div class="collapse" id="eight">
                 <ul class="sidebar-btn-toggle-nav list-unstyled pb-1 small">
-                    <li><a asp-area="Learner" asp-controller="DjangoView" asp-action="CBV_Create" class="custom-color rounded ahover">CBV Create</a></li>
-                    <li><a asp-area="Learner" asp-controller="DjangoView" asp-action="CBV_Delete" class="custom-color rounded ahover">CBV Delete</a></li>
-                    <li><a asp-area="Learner" asp-controller="DjangoView" asp-action="CBV_Detail" class="link-dark rounded ahover">CBV Detail</a></li>
-                    <li><a asp-area="Learner" asp-controller="DjangoView" asp-action="CBV_Form" class="custom-color rounded ahover">CBV Form</a></li>
-                    <li><a asp-area="Learner" asp-controller="DjangoView" asp-action="CBV_List" class="custom-color rounded ahover">CBV List</a></li>
-                    <li><a asp-area="Learner" asp-controller="DjangoView" asp-action="CBV_Template" class="custom-color rounded ahover">CBV Template</a></li>
-                    <li><a asp-area="Learner" asp-controller="DjangoView" asp-action="CBV_Update" class="custom-color rounded ahover">CBV Update</a></li>
-                    <li><a asp-area="Learner" asp-controller="DjangoView" asp-action="FBV" class="custom-color rounded ahover">FBV</a></li>
-                    <li class="mb-4"><a asp-area="Learner" asp-controller="DjangoView" asp-action="Response_Types" class="link-dark rounded ahover">Response Types</a></li>
+                    <li><a id="dv8" asp-area="Learner" asp-controller="DjangoView" asp-action="FBV" class="custom-color rounded ahover">FBV</a></li>
+                    <li><a id="dv1" asp-area="Learner" asp-controller="DjangoView" asp-action="CBV_Create" class="custom-color rounded ahover">CBV Create</a></li>
+                    <li><a id="dv2" asp-area="Learner" asp-controller="DjangoView" asp-action="CBV_Delete" class="custom-color rounded ahover">CBV Delete</a></li>
+                    <li><a id="dv3" asp-area="Learner" asp-controller="DjangoView" asp-action="CBV_Detail" class="custom-color rounded ahover">CBV Detail</a></li>
+                    <li><a id="dv4" asp-area="Learner" asp-controller="DjangoView" asp-action="CBV_Form" class="custom-color rounded ahover">CBV Form</a></li>
+                    <li><a id="dv5" asp-area="Learner" asp-controller="DjangoView" asp-action="CBV_List" class="custom-color rounded ahover">CBV List</a></li>
+                    <li><a id="dv6" asp-area="Learner" asp-controller="DjangoView" asp-action="CBV_Template" class="custom-color rounded ahover">CBV Template</a></li>
+                    <li><a id="dv7" asp-area="Learner" asp-controller="DjangoView" asp-action="CBV_Update" class="custom-color rounded ahover">CBV Update</a></li>
+                    <li class="mb-4"><a id="dv9" asp-area="Learner" asp-controller="DjangoView" asp-action="Response_Types" class="custom-color rounded ahover">Response Types</a></li>
                 </ul>
             </div>
         </li>
     </ul>
 </div>
+
+<script>
+    var href = window.location.href;
+    var wordToCheck = "Identity";
+    var sidebar = document.getElementById("sidebar")
+    if (href.indexOf(wordToCheck) !== -1) {
+        sidebar.classList.add("dis-none");
+    }
+    if (href == "https://localhost:44335/Learner/Django/Install_Python") {
+        document.getElementById("one").classList.add("show");
+        document.getElementById("d1").style.fontSize = "16px";
+        document.getElementById("d1").style.fontWeight = "900";
+        document.getElementById("d1").style.background = "#417690";
+        document.getElementById("d1").style.color = "white";
+    }
+    if (href == "https://localhost:44335/Learner/Django/Install_Django") {
+        document.getElementById("one").classList.add("show");
+        document.getElementById("d2").style.fontSize = "16px";
+        document.getElementById("d2").style.fontWeight = "600";
+        document.getElementById("d2").style.background = "#417690";
+        document.getElementById("d2").style.color = "white";
+    }
+    if (href == "https://localhost:44335/Learner/Django/Simple_Website") {
+        document.getElementById("one").classList.add("show");
+        document.getElementById("d3").style.fontSize = "16px";
+        document.getElementById("d3").style.fontWeight = "600";
+        document.getElementById("d3").style.background = "#417690";
+        document.getElementById("d3").style.color = "white";
+    }
+    if (href == "https://localhost:44335/Learner/Django/Admin") {
+        document.getElementById("one").classList.add("show");
+        document.getElementById("d4").style.fontSize = "16px";
+        document.getElementById("d4").style.fontWeight = "600";
+        document.getElementById("d4").style.background = "#417690";
+        document.getElementById("d4").style.color = "white";
+    }
+    if (href == "https://localhost:44335/Learner/Django/Check") {
+        document.getElementById("one").classList.add("show");
+        document.getElementById("d5").style.fontSize = "16px";
+        document.getElementById("d5").style.fontWeight = "600";
+        document.getElementById("d5").style.background = "#417690";
+        document.getElementById("d5").style.color = "white";
+    }
+    if (href == "https://localhost:44335/Learner/Django/Command") {
+        document.getElementById("one").classList.add("show");
+        document.getElementById("d6").style.fontSize = "16px";
+        document.getElementById("d6").style.fontWeight = "600";
+        document.getElementById("d6").style.background = "#417690";
+        document.getElementById("d6").style.color = "white";
+    }
+    if (href == "https://localhost:44335/Learner/Django/Database") {
+        document.getElementById("one").classList.add("show");
+        document.getElementById("d7").style.fontSize = "16px";
+        document.getElementById("d7").style.fontWeight = "600";
+        document.getElementById("d7").style.background = "#417690";
+        document.getElementById("d7").style.color = "white";
+    }
+    if (href == "https://localhost:44335/Learner/Django/Email") {
+        document.getElementById("one").classList.add("show");
+        document.getElementById("d8").style.fontSize = "16px";
+        document.getElementById("d8").style.fontWeight = "600";
+        document.getElementById("d8").style.background = "#417690";
+        document.getElementById("d8").style.color = "white";
+    }
+    if (href == "https://localhost:44335/Learner/Django/Pagination") {
+        document.getElementById("one").classList.add("show");
+        document.getElementById("d9").style.fontSize = "16px";
+        document.getElementById("d9").style.fontWeight = "600";
+        document.getElementById("d9").style.background = "#417690";
+        document.getElementById("d9").style.color = "white";
+    }
+    if (href == "https://localhost:44335/Learner/Django/Search") {
+        document.getElementById("one").classList.add("show");
+        document.getElementById("d10").style.fontSize = "16px";
+        document.getElementById("d10").style.fontWeight = "600";
+        document.getElementById("d10").style.background = "#417690";
+        document.getElementById("d10").style.color = "white";
+    }
+    if (href == "https://localhost:44335/Learner/Django/Sessions") {
+        document.getElementById("one").classList.add("show");
+        document.getElementById("d11").style.fontSize = "16px";
+        document.getElementById("d11").style.fontWeight = "600";
+        document.getElementById("d11").style.background = "#417690";
+        document.getElementById("d11").style.color = "white";
+    }
+    if (href == "https://localhost:44335/Learner/Django/Static_Files") {
+        document.getElementById("one").classList.add("show");
+        document.getElementById("d12").style.fontSize = "16px";
+        document.getElementById("d12").style.fontWeight = "600";
+        document.getElementById("d12").style.background = "#417690";
+        document.getElementById("d12").style.color = "white";
+    }
+    if (href == "https://localhost:44335/Learner/Django/Test") {
+        document.getElementById("one").classList.add("show");
+        document.getElementById("d13").style.fontSize = "16px";
+        document.getElementById("d13").style.fontWeight = "600";
+        document.getElementById("d13").style.background = "#417690";
+        document.getElementById("d13").style.color = "white";
+    }
+    if (href == "https://localhost:44335/Learner/Django/Url") {
+        document.getElementById("one").classList.add("show");
+        document.getElementById("d14").style.fontSize = "16px";
+        document.getElementById("d14").style.fontWeight = "600";
+        document.getElementById("d14").style.background = "#417690";
+        document.getElementById("d14").style.color = "white";
+    }
+</script>
+
+<script>
+    var href = window.location.href;
+    if (href == "https://localhost:44335/Learner/DjangoAuthentication/Register") {
+        document.getElementById("two").classList.add("show");
+        document.getElementById("da1").style.fontSize = "16px";
+        document.getElementById("da1").style.fontWeight = "600";
+        document.getElementById("da1").style.background = "#417690";
+        document.getElementById("da1").style.color = "white";
+    }
+    if (href == "https://localhost:44335/Learner/DjangoAuthentication/Login") {
+        document.getElementById("two").classList.add("show");
+        document.getElementById("da2").style.fontSize = "16px";
+        document.getElementById("da2").style.fontWeight = "600";
+        document.getElementById("da2").style.background = "#417690";
+        document.getElementById("da2").style.color = "white";
+    }
+    if (href == "https://localhost:44335/Learner/DjangoAuthentication/Change_Password") {
+        document.getElementById("two").classList.add("show");
+        document.getElementById("da3").style.fontSize = "16px";
+        document.getElementById("da3").style.fontWeight = "600";
+        document.getElementById("da3").style.background = "#417690";
+        document.getElementById("da3").style.color = "white";
+    }
+    if (href == "https://localhost:44335/Learner/DjangoAuthentication/Permissions_Authorization") {
+        document.getElementById("two").classList.add("show");
+        document.getElementById("da4").style.fontSize = "16px";
+        document.getElementById("da4").style.fontWeight = "600";
+        document.getElementById("da4").style.background = "#417690";
+        document.getElementById("da4").style.color = "white";
+    }
+</script>
+
+<script>
+    var href = window.location.href;
+    if (href == "https://localhost:44335/Learner/DjangoForm/Forms") {
+        document.getElementById("three").classList.add("show");
+        document.getElementById("df1").style.fontSize = "16px";
+        document.getElementById("df1").style.fontWeight = "600";
+        document.getElementById("df1").style.background = "#417690"
+        document.getElementById("df1").style.color = "white"
+    }
+    if (href == "https://localhost:44335/Learner/DjangoForm/Html_Form") {
+        document.getElementById("three").classList.add("show");
+        document.getElementById("df2").style.fontSize = "16px";
+        document.getElementById("df2").style.fontWeight = "600";
+        document.getElementById("df2").style.background = "#417690"
+        document.getElementById("df2").style.color = "white"
+    }
+</script>
+
+<script>
+    var href = window.location.href;
+    if (href == "https://localhost:44335/Learner/DjangoModel/Introduction") {
+        document.getElementById("four").classList.add("show");
+        document.getElementById("dm1").style.fontSize = "16px";
+        document.getElementById("dm1").style.fontWeight = "600";
+        document.getElementById("dm1").style.background = "#417690"
+        document.getElementById("dm1").style.color = "white"
+    }
+    if (href == "https://localhost:44335/Learner/DjangoModel/Aggregation") {
+        document.getElementById("four").classList.add("show");
+        document.getElementById("dm2").style.fontSize = "16px";
+        document.getElementById("dm2").style.fontWeight = "600";
+        document.getElementById("dm2").style.background = "#417690"
+        document.getElementById("dm2").style.color = "white"
+    }
+    if (href == "https://localhost:44335/Learner/DjangoModel/FieldOptions") {
+        document.getElementById("four").classList.add("show");
+        document.getElementById("dm3").style.fontSize = "16px";
+        document.getElementById("dm3").style.fontWeight = "600";
+        document.getElementById("dm3").style.background = "#417690"
+        document.getElementById("dm3").style.color = "white"
+    }
+    if (href == "https://localhost:44335/Learner/DjangoModel/FieldTypes") {
+        document.getElementById("four").classList.add("show");
+        document.getElementById("dm4").style.fontSize = "16px";
+        document.getElementById("dm4").style.fontWeight = "600";
+        document.getElementById("dm4").style.background = "#417690"
+        document.getElementById("dm4").style.color = "white"
+    }
+    if (href == "https://localhost:44335/Learner/DjangoModel/File") {
+        document.getElementById("four").classList.add("show");
+        document.getElementById("dm5").style.fontSize = "16px";
+        document.getElementById("dm5").style.fontWeight = "600";
+        document.getElementById("dm5").style.background = "#417690"
+        document.getElementById("dm5").style.color = "white"
+    }
+    if (href == "https://localhost:44335/Learner/DjangoModel/Inheritance_Abstraction") {
+        document.getElementById("four").classList.add("show");
+        document.getElementById("dm6").style.fontSize = "16px";
+        document.getElementById("dm6").style.fontWeight = "600";
+        document.getElementById("dm6").style.background = "#417690"
+        document.getElementById("dm6").style.color = "white"
+    }
+    if (href == "https://localhost:44335/Learner/DjangoModel/Manager") {
+        document.getElementById("four").classList.add("show");
+        document.getElementById("dm7").style.fontSize = "16px";
+        document.getElementById("dm7").style.fontWeight = "600";
+        document.getElementById("dm7").style.background = "#417690"
+        document.getElementById("dm7").style.color = "white"
+    }
+    if (href == "https://localhost:44335/Learner/DjangoModel/Migration") {
+        document.getElementById("four").classList.add("show");
+        document.getElementById("dm8").style.fontSize = "16px";
+        document.getElementById("dm8").style.fontWeight = "600";
+        document.getElementById("dm8").style.background = "#417690"
+        document.getElementById("dm8").style.color = "white"
+    }
+    if (href == "https://localhost:44335/Learner/DjangoModel/On_Delete") {
+        document.getElementById("four").classList.add("show");
+        document.getElementById("dm9").style.fontSize = "16px";
+        document.getElementById("dm9").style.fontWeight = "600";
+        document.getElementById("dm9").style.background = "#417690"
+        document.getElementById("dm9").style.color = "white"
+    }
+    if (href == "https://localhost:44335/Learner/DjangoModel/ProxyModel") {
+        document.getElementById("four").classList.add("show");
+        document.getElementById("dm10").style.fontSize = "16px";
+        document.getElementById("dm10").style.fontWeight = "600";
+        document.getElementById("dm10").style.background = "#417690"
+        document.getElementById("dm10").style.color = "white"
+    }
+    if (href == "https://localhost:44335/Learner/DjangoModel/Relationships") {
+        document.getElementById("four").classList.add("show");
+        document.getElementById("dm11").style.fontSize = "16px";
+        document.getElementById("dm11").style.fontWeight = "600";
+        document.getElementById("dm11").style.background = "#417690"
+        document.getElementById("dm11").style.color = "white"
+    }
+    if (href == "https://localhost:44335/Learner/DjangoModel/Signal") {
+        document.getElementById("four").classList.add("show");
+        document.getElementById("dm12").style.fontSize = "16px";
+        document.getElementById("dm12").style.fontWeight = "600";
+        document.getElementById("dm12").style.background = "#417690"
+        document.getElementById("dm12").style.color = "white"
+    }
+</script>
+
+<script>
+    var href = window.location.href;
+    if (href == "https://localhost:44335/Learner/DjangoQuery/Field_lookups") {
+        document.getElementById("five").classList.add("show");
+        document.getElementById("dq1").style.fontSize = "16px";
+        document.getElementById("dq1").style.fontWeight = "600";
+        document.getElementById("dq1").style.background = "#417690"
+        document.getElementById("dq1").style.color = "white"
+    }
+    if (href == "https://localhost:44335/Learner/DjangoQuery/HowToQuery") {
+        document.getElementById("five").classList.add("show");
+        document.getElementById("dq2").style.fontSize = "16px";
+        document.getElementById("dq2").style.fontWeight = "600";
+        document.getElementById("dq2").style.background = "#417690"
+        document.getElementById("dq2").style.color = "white"
+    }
+    if (href == "https://localhost:44335/Learner/DjangoQuery/Methods") {
+        document.getElementById("five").classList.add("show");
+        document.getElementById("dq3").style.fontSize = "16px";
+        document.getElementById("dq3").style.fontWeight = "600";
+        document.getElementById("dq3").style.background = "#417690"
+        document.getElementById("dq3").style.color = "white"
+    }
+    if (href == "https://localhost:44335/Learner/DjangoQuery/Operators") {
+        document.getElementById("five").classList.add("show");
+        document.getElementById("dq4").style.fontSize = "16px";
+        document.getElementById("dq4").style.fontWeight = "600";
+        document.getElementById("dq4").style.background = "#417690"
+        document.getElementById("dq4").style.color = "white"
+    }
+</script>
+
+<script>
+    var href = window.location.href;
+    if (href == "https://localhost:44335/Learner/DjangoTemplate/Template_Configuration") {
+        document.getElementById("six").classList.add("show");
+        document.getElementById("dt1").style.fontSize = "16px";
+        document.getElementById("dt1").style.fontWeight = "600";
+        document.getElementById("dt1").style.background = "#417690"
+        document.getElementById("dt1").style.color = "white"
+    }
+    if (href == "https://localhost:44335/Learner/DjangoTemplate/Extend") {
+        document.getElementById("six").classList.add("show");
+        document.getElementById("dt2").style.fontSize = "16px";
+        document.getElementById("dt2").style.fontWeight = "600";
+        document.getElementById("dt2").style.background = "#417690"
+        document.getElementById("dt2").style.color = "white"
+    }
+    if (href == "https://localhost:44335/Learner/DjangoTemplate/Include") {
+        document.getElementById("six").classList.add("show");
+        document.getElementById("dt3").style.fontSize = "16px";
+        document.getElementById("dt3").style.fontWeight = "600";
+        document.getElementById("dt3").style.background = "#417690"
+        document.getElementById("dt3").style.color = "white"
+    }
+    if (href == "https://localhost:44335/Learner/DjangoTemplate/Filter") {
+        document.getElementById("six").classList.add("show");
+        document.getElementById("dt4").style.fontSize = "16px";
+        document.getElementById("dt4").style.fontWeight = "600";
+        document.getElementById("dt4").style.background = "#417690"
+        document.getElementById("dt4").style.color = "white"
+    }
+    if (href == "https://localhost:44335/Learner/DjangoTemplate/Tag") {
+        document.getElementById("six").classList.add("show");
+        document.getElementById("dt5").style.fontSize = "16px";
+        document.getElementById("dt5").style.fontWeight = "600";
+        document.getElementById("dt5").style.background = "#417690"
+        document.getElementById("dt5").style.color = "white"
+    }
+    if (href == "https://localhost:44335/Learner/DjangoTemplate/Custom_Filter") {
+        document.getElementById("six").classList.add("show");
+        document.getElementById("dt6").style.fontSize = "16px";
+        document.getElementById("dt6").style.fontWeight = "600";
+        document.getElementById("dt6").style.background = "#417690"
+        document.getElementById("dt6").style.color = "white"
+    }
+    if (href == "https://localhost:44335/Learner/DjangoTemplate/Custom_Tag") {
+        document.getElementById("six").classList.add("show");
+        document.getElementById("dt7").style.fontSize = "16px";
+        document.getElementById("dt7").style.fontWeight = "600";
+        document.getElementById("dt7").style.background = "#417690"
+        document.getElementById("dt7").style.color = "white"
+    }
+</script>
+
+<script>
+    var href = window.location.href;
+    if (href == "https://localhost:44335/Learner/DjangoThirdParty/Jazzmin") {
+        document.getElementById("seven").classList.add("show");
+        document.getElementById("dtp1").style.fontSize = "16px";
+        document.getElementById("dtp1").style.fontWeight = "600";
+        document.getElementById("dtp1").style.background = "#417690"
+        document.getElementById("dtp1").style.color = "white"
+    }
+    if (href == "https://localhost:44335/Learner/DjangoThirdParty/Phonenumbers") {
+        document.getElementById("seven").classList.add("show");
+        document.getElementById("dtp2").style.fontSize = "16px";
+        document.getElementById("dtp2").style.fontWeight = "600";
+        document.getElementById("dtp2").style.background = "#417690"
+        document.getElementById("dtp2").style.color = "white"
+    }
+    if (href == "https://localhost:44335/Learner/DjangoThirdParty/RichText") {
+        document.getElementById("seven").classList.add("show");
+        document.getElementById("dtp3").style.fontSize = "16px";
+        document.getElementById("dtp3").style.fontWeight = "600";
+        document.getElementById("dtp3").style.background = "#417690"
+        document.getElementById("dtp3").style.color = "white"
+    }
+</script>
+
+<script>
+    var href = window.location.href;
+    if (href == "https://localhost:44335/Learner/DjangoView/CBV_Create") {
+        document.getElementById("eight").classList.add("show");
+        document.getElementById("dv1").style.fontSize = "16px";
+        document.getElementById("dv1").style.fontWeight = "600";
+        document.getElementById("dv1").style.background = "#417690"
+        document.getElementById("dv1").style.color = "white"
+    }
+    if (href == "https://localhost:44335/Learner/DjangoView/CBV_Delete") {
+        document.getElementById("eight").classList.add("show");
+        document.getElementById("dv2").style.fontSize = "16px";
+        document.getElementById("dv2").style.fontWeight = "600";
+        document.getElementById("dv2").style.background = "#417690"
+        document.getElementById("dv2").style.color = "white"
+    }
+    if (href == "https://localhost:44335/Learner/DjangoView/CBV_Detail") {
+        document.getElementById("eight").classList.add("show");
+        document.getElementById("dv3").style.fontSize = "16px";
+        document.getElementById("dv3").style.fontWeight = "600";
+        document.getElementById("dv3").style.background = "#417690"
+        document.getElementById("dv3").style.color = "white"
+    }
+    if (href == "https://localhost:44335/Learner/DjangoView/CBV_Form") {
+        document.getElementById("eight").classList.add("show");
+        document.getElementById("dv4").style.fontSize = "16px";
+        document.getElementById("dv4").style.fontWeight = "600";
+        document.getElementById("dv4").style.background = "#417690"
+        document.getElementById("dv4").style.color = "white"
+    }
+    if (href == "https://localhost:44335/Learner/DjangoView/CBV_List") {
+        document.getElementById("eight").classList.add("show");
+        document.getElementById("dv5").style.fontSize = "16px";
+        document.getElementById("dv5").style.fontWeight = "600";
+        document.getElementById("dv5").style.background = "#417690"
+        document.getElementById("dv5").style.color = "white"
+    }
+    if (href == "https://localhost:44335/Learner/DjangoView/CBV_Template") {
+        document.getElementById("eight").classList.add("show");
+        document.getElementById("dv6").style.fontSize = "16px";
+        document.getElementById("dv6").style.fontWeight = "600";
+        document.getElementById("dv6").style.background = "#417690"
+        document.getElementById("dv6").style.color = "white"
+    }
+    if (href == "https://localhost:44335/Learner/DjangoView/CBV_Update") {
+        document.getElementById("eight").classList.add("show");
+        document.getElementById("dv7").style.fontSize = "16px";
+        document.getElementById("dv7").style.fontWeight = "600";
+        document.getElementById("dv7").style.background = "#417690"
+        document.getElementById("dv7").style.color = "white"
+    }
+    if (href == "https://localhost:44335/Learner/DjangoView/FBV") {
+        document.getElementById("eight").classList.add("show");
+        document.getElementById("dv8").style.fontSize = "16px";
+        document.getElementById("dv8").style.fontWeight = "600";
+        document.getElementById("dv8").style.background = "#417690"
+        document.getElementById("dv8").style.color = "white"
+    }
+    if (href == "https://localhost:44335/Learner/DjangoView/Response_Types") {
+        document.getElementById("eight").classList.add("show");
+        document.getElementById("dv9").style.fontSize = "16px";
+        document.getElementById("dv9").style.fontWeight = "600";
+        document.getElementById("dv9").style.background = "#417690"
+        document.getElementById("dv9").style.color = "white"
+    }
+</script>

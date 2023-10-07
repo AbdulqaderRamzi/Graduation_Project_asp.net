@@ -1,30 +1,30 @@
 ﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
     <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Introduction</h1>
-    <h4 class="mt-4">
+    <h4 class="mt-4 text-center mb-5">
         In the models file you will be able to design your database tables.
-        Instead of typying row database code. Django facilitate that by using models.
-        Models file will take your code then it will interpret it to database language.
+        Instead of typying a row database code. Django facilitates that by using the models.
+        The models file will take your code then it will interpret it into database language.
     </h4>
-    <h4 class="mt-3 mb-0">We will explain this process in Migration section.</h4>
-    <h4 class="mt-3 mb-5">To build your model you will need to implement the following steps always.</h4>
+    <hr />
+    <h4 class="mt-5 mb-5">We will explain this process in Migration section. To build your model you will need to implement the following steps always.</h4>
 
     <hr />
     <h2 class="my-5 custom-title">First step</h2>
-    <h5 class="mt-3 mb-3">Give your table name and invoke the Model package to enable django read it and interpret it into database Table.</h5>
+    <h5 class="mt-5 mb-4">Give a name for the table and invoke the Model package to enable django reading it to interpret it into database Table.</h5>
     <div class="d-flex justify-content-start mb-5">
         <h5 class="rounded p-3 custom-back">Class Table name (models.Model)</h5>
     </div>
 
     <hr />
     <h2 class="my-5 custom-title">Second step</h2>
-    <h5 class="mt-3 mb-3">Insert your field name, define its type and restrict it (validation).</h5>
+    <h5 class="mt-5 mb-4">Insert your field name, define its type and restrict it (validation).</h5>
     <div class="d-flex justify-content-start mb-5">
         <h5 class="rounded p-3 custom-back">field name = models.type(validation)</h5>
     </div>
 
     <hr />
     <h4 class="mt-5 mb-3">Example</h4>
-    <pre class="mb-1">
+    <pre class="mb-5">
         <code class="language-Django">
             class Person(models.Model):
                 first_name = models.CharField(max_length=30)
@@ -32,10 +32,12 @@
             <span></span>
         </code>
     </pre>
-    <h4 class="mt-4 mb-3">Explanation</h4>
-    <h5 class="mt-0 mb-5">
-        first_name and last_name will be string for that we used CharField type. we want it to be at most 30 letters.
-        Users can't exceed the max length. if that happen they will get an error.
+    <h5 class="mt-2 mb-5">
+        Explanation: 
+        <span style="font-size: 17px;">
+            first_name and last_name will be string for that we used CharField type. we want it to be at most 30 letters.
+            Users can't exceed the max length. if that happen they will get an error.
+        </span>
     </h5>
 
     <hr />
@@ -48,11 +50,11 @@
             <span></span>
         </code>
     </pre>
-    <h5 class="mt-3 mb-5">Note: we will explain field types and validation in separated section.</h5>
+    <h6 class="mt-4 mb-5 custom-color">Note: we will explain field types and validation in separated section.</h6>
 
     <hr />
     <h4 class="mt-5 mb-4">Example</h4>
-    <pre>
+    <pre class="mb-5">
         <code class="language-Django">
             class Product(models.Model):
                 name = models.CharField(max_length=200)
@@ -63,15 +65,17 @@
             <span></span>
         </code>
     </pre>
-    <h4 class="mt-3 mb-0">Why some fields have validation and required restriction?</h4>
-    <h5 class="mt-3 mb-5">The answer will be in field types section.</h5>
+    <hr />
+    <h3 class="mt-5 mb-4 custom-color">Why some fields have validation and required restriction?</h3>
+    <h5 class="mt-3 mb-5">The answer will be in the field types section.</h5>
 
     <hr />
     <h2 class="my-5 custom-title">__str__ function</h2>
-    <h5 class="mt-3 mb-0">
+    <h5 class="mt-3 mb-5">
         When you create an object the display result will be Model name object(number).
-        To change it, you can use __str__ function that enables you to change display format.
+        To change it, you can use __str__ function that enables you to change the display format.
     </h5>
+    <hr />
     <h4 class="mt-5 mb-4">Before</h4>
     <pre class="mb-3">
         <code class="language-Django">
@@ -80,9 +84,10 @@
             <span></span>
         </code>
     </pre>
-    <figure class="figure">
+    <figure class="figure mb-5">
         <img src="~/images/project_images/model/__str__.png" class="figure-img img-fluid rounded img-border">
     </figure>
+    <hr />
     <h4 class="mt-5 mb-4">After</h4>
     <pre>
         <code class="language-Django">

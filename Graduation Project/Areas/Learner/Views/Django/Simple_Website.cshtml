@@ -1,6 +1,6 @@
 ﻿<div style="max-width:75%; text-align:center; margin-left:auto; margin-right:auto;" class="d-flex flex-column justify-content-center align-content-center text-start">
     <h1 class="p-4 my-5 custom-title" style="font-size: 80px; font-weight: 700;">Simple Website</h1>
-    <h5 class="text-center mb-5 mt-4">The webiste will be about displaying magazines with its blogs. blogs will be created by author.</h5>
+    <h5 class="text-center mb-5 mt-4">The website will be about displaying magazines with its blogs. blogs will be created by the author.</h5>
     <hr />
     <h4 class="mb-3 mt-5">Create the virtual environment.</h4>
     <pre>
@@ -23,29 +23,30 @@
             <span></span>
         </code>
     </pre>
-    <h4 class="mb-3 mt-5">Create magazine project.</h4>
+    <h4 class="mb-3 mt-5">Create the magazine project.</h4>
     <pre>
         <code class="language-Django">
             django-admin startproject magazine
             <span></span>
         </code>
     </pre>
-    <h4 class="mb-3 mt-5">Create blogs app.</h4>
+    <h4 class="mb-3 mt-5">Create the blogs app.</h4>
     <pre>
         <code class="language-Django">
             python manage.py startapp blogs
             <span></span>
         </code>
     </pre>
-    <h4 class="mb-3 mt-5">Download jazzmin package.</h4>
+    <h4 class="mb-3 mt-5">Download the jazzmin package.</h4>
     <pre>
         <code class="language-Django">
             pip install -U django-jazzmin
             <span></span>
         </code>
     </pre>
-    <h5 class="mb-0 mt-5">Create urls file in blogs app.</h5>
-    <h5 class="mb-3 mt-2">Add blogs and jazzmin into INSTALLED_APPS.</h5>
+    <h6 class="mb-5 mt-5 custom-color">Note: Create urls file in blogs app.</h6>
+    <hr />
+    <h5 class="mb-3 mt-5">Add blogs and jazzmin into INSTALLED_APPS.</h5>
     <pre>
         <code class="language-Django">
             INSTALLED_APPS = [
@@ -57,15 +58,15 @@
             <span></span>
         </code>
     </pre>
-    <h5 class="mb-3 mt-5">Configure the templates by change DIRS in TEMPLATES list into:</h5>
+    <h5 class="mb-3 mt-5">Configure the templates by changing the DIRS in TEMPLATES list into:</h5>
     <pre>
         <code class="language-Django">
             'DIRS': [BASE_DIR / 'templates']
             <span></span>
         </code>
     </pre>
-    <h5 class="mb-3 mt-5">Configure static and media files.</h5>
-    <pre>
+    <h5 class="mb-3 mt-5">Configure the static and media files.</h5>
+    <pre class="mb-5">
         <code class="language-Django">
             STATIC_URL = 'static/'
             STATICFILES_DIRS = [
@@ -77,7 +78,8 @@
             <span></span>
         </code>
     </pre>
-    <h5 class="mb-3 mt-5">Change magazine urls into following code to include blogs urls, configure static and media files.</h5>
+    <hr />
+    <h5 class="mb-4 mt-5">Change the magazine urls into the following code to include blogs urls. Configure the static and media files.</h5>
     <pre class="mb-5">
         <code class="language-Django">
             from django.contrib import admin
@@ -132,8 +134,9 @@
             <span></span>
         </code>
     </pre>
-    <h5 class="mb-0 mt-3">Author will have unique email, could have multiple blogs. magazine could have multiple blogs. blog should be binded with magazine and author.</h5>
-    <h4 class="mb-3 mt-5">Run:</h4>
+    <h5 class="mb-5 mt-4">Author will have unique email, could have multiple blogs. magazine could have multiple blogs. blog should be binded with magazine and author.</h5>
+    <hr />
+    <h4 class="mb-3 mt-5">Run</h4>
     <pre>
         <code class="language-Django">
             python manage.py migrate
@@ -153,7 +156,7 @@
             <span></span>
         </code>
     </pre>
-    <h4 class="mb-3 mt-5">Run:</h4>
+    <h4 class="mb-3 mt-5">Run</h4>
     <pre>
         <code class="language-Django">
             python manage.py createsuperuser
@@ -161,12 +164,12 @@
             <span></span>
         </code>
     </pre>
-    <h5 class="mb-0 mt-3">Navigate to /admin/</h5>
-    <h5 class="mb-5 mt-2">Example: http://127.0.0.1:8000/admin/</h5>
+    <h6 class="mb-0 mt-3">Navigate to the /admin/</h6>
+    <h6 class="mb-5 mt-2">Example: http://127.0.0.1:8000/admin/</h6>
 
     <hr />
     <h2 class="my-5 custom-title">View</h2>
-    <h5 class="mb-2 mt-4">Get all magazines ordered from the latest magazines to the old ones.</h5>
+    <h5 class="mb-2 mt-4">Get all magazines ordered from the latest magazines to the oldest one.</h5>
     <pre>
         <code class="language-Django">
             from django.shortcuts import render
@@ -177,7 +180,7 @@
             <span></span>
         </code>
     </pre>
-    <h5 class="mb-2 mt-4">Get magazine by its id. get all published blogs related to that magazine.</h5>
+    <h5 class="mb-2 mt-5">Get a magazine by its id. Get all published blogs related to that magazine.</h5>
     <pre>
         <code class="language-Django">
             def magazine(request, pk):
@@ -187,7 +190,7 @@
             <span></span>
         </code>
     </pre>
-    <h5 class="mb-2 mt-4">Get blog by its id.</h5>
+    <h5 class="mb-2 mt-5">Get blog by its id.</h5>
     <pre>
         <code class="language-Django">
             def blog(request, pk):
@@ -196,7 +199,7 @@
             <span></span>
         </code>
     </pre>
-    <h5 class="mb-2 mt-4">Get author by its id. get all published blogs related to that author.</h5>
+    <h5 class="mb-2 mt-5">Get author by its id. get all published blogs related to that author.</h5>
     <pre class="mb-5">
         <code class="language-Django">
             def author(request, pk):
@@ -209,7 +212,7 @@
 
     <hr />
     <h2 class="my-5 custom-title">URL</h2>
-    <h5 class="mb-3 mt-4">Add previous views into urls file:</h5>
+    <h5 class="mb-4 mt-4">Add previous views into the urls file:</h5>
     <pre class="mb-5">
         <code class="language-Django">
             from django.urls import path
@@ -227,10 +230,11 @@
 
     <hr />
     <h2 class="my-5 custom-title">Template</h2>
-    <h5 class="mb-0 mt-4">Base view used as shared view for all views.</h5>
-    <h5 class="mb-5 mt-2">Create templates folder inside blogs app. Create blogs folder inside templates folder. Add base.html, homepage.html, magazine_details.html, blog_details.html, author.html</h5>
-    <h4 class="mb-3 mt-0">base.html:</h4>
-    <pre>
+    <h5 class="mb-0 mt-4">Base view is used as shared view for all views.</h5>
+    <h5 class="mb-5 mt-4">Create templates folder inside the blogs app. Create a blogs folder inside the templates folder. Add base.html, homepage.html, magazine_details.html, blog_details.html, author.html</h5>
+    <hr />
+    <h4 class="mb-3 mt-5 custom-color">base.html</h4>
+    <pre class="mb-5">
         <code class="language-html">
             &lt;html lang="en"&gt;
             &lt;head&gt;
@@ -251,9 +255,9 @@
             &lt;/html&gt;
         </code>
     </pre>
-
-    <h4 class="mb-3 mt-5">homepage.html:</h4>
-    <pre>
+    <hr />
+    <h4 class="mb-3 mt-5 custom-color">homepage.html</h4>
+    <pre class="mb-5">
         <code class="language-html">
             {% include "blogs/base.html" %}
             {% block content %}
@@ -267,9 +271,9 @@
             {% endblock %}
         </code>
     </pre>
-
-    <h4 class="mb-3 mt-5">magazine_details.html:</h4>
-    <pre>
+    <hr />
+    <h4 class="mb-3 mt-5 custom-color">magazine_details.html</h4>
+    <pre class="mb-5">
         <code class="language-html">
             {% include "blogs/base.html" %}
             {% block content %}
@@ -299,9 +303,9 @@
             {% endblock %}
         </code>
     </pre>
-
-    <h4 class="mb-3 mt-5">blog_details.html:</h4>
-    <pre>
+    <hr />
+    <h4 class="mb-3 mt-5 custom-color">blog_details.html</h4>
+    <pre class="mb-5">
         <code class="language-html">
             {% include "blogs/base.html" %}
             {% block content %}
@@ -324,7 +328,8 @@
             {% endblock %}
         </code>
     </pre>
-    <h4 class="mb-3 mt-5">author.html:</h4>
+    <hr />
+    <h4 class="mb-3 mt-5 custom-color">author.html</h4>
     <pre class="mb-5">
         <code class="language-html">
             {% include "blogs/base.html" %}
