@@ -25,15 +25,15 @@ namespace Graduation_Project.Areas.Admin.Controllers
         {
             if (user == null)
             {
-                List<ChatRoom> chatRooms = _db.ChatRooms.Include(c => c.User).Include(c => c.ChatRoomMessages).Where(i=>i.ChatRoomMessages.Any(u=>u.User.Role!="Supporter" && u.User.Role != "Admin")).ToList();
+                List<ChatRoom> chatRooms = _db.ChatRooms.Include(c => c.User).Include(c => c.ChatRoomMessages).ThenInclude(c=>c.User).Where(i=>i.ChatRoomMessages.Any(u=>u.User.Role!="Supporter" && u.User.Role != "Admin")).ToList();
                 return View(chatRooms);
             }
             else
             {
-                List<ChatRoom> chatRooms = _db.ChatRooms.Include(c => c.User).Include(c => c.ChatRoomMessages).Where(i => i.User.Name.Contains(user) || i.User.Email.Contains(user)).Where(i => i.ChatRoomMessages.Any(u => u.User.Role != "Supporter" && u.User.Role != "Admin")).ToList();
+                List<ChatRoom> chatRooms = _db.ChatRooms.Include(c => c.User).Include(c => c.ChatRoomMessages).ThenInclude(c => c.User).Where(i => i.User.Name.Contains(user) || i.User.Email.Contains(user)).Where(i => i.ChatRoomMessages.Any(u => u.User.Role != "Supporter" && u.User.Role != "Admin")).ToList();
                 if (chatRooms.Count == 0)
                 {
-                    List<ChatRoom> chats = _db.ChatRooms.Include(c => c.User).Include(c => c.ChatRoomMessages).Where(i => i.ChatRoomMessages.Any(u => u.User.Role != "Supporter" && u.User.Role != "Admin")).ToList();
+                    List<ChatRoom> chats = _db.ChatRooms.Include(c => c.User).Include(c => c.ChatRoomMessages).ThenInclude(c => c.User).Where(i => i.ChatRoomMessages.Any(u => u.User.Role != "Supporter" && u.User.Role != "Admin")).ToList();
                     return View(chats);
                 }
                 return View(chatRooms);
@@ -63,11 +63,14 @@ namespace Graduation_Project.Areas.Admin.Controllers
                 var userId = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier).Value;
                 User user = _unitOfWork.User.Get(u => u.Id == userId);
                 ChatRoom chatRoom = _unitOfWork.ChatRoom.Get(i => i.Id == id, includeProperties: "ChatRoomMessages.Images");
-                List<ChatRoomMessage> readMessage = _unitOfWork.ChatRoomMessage.GetAll(i=>i.ChatRoom==chatRoom).ToList();
+                List<ChatRoomMessage> readMessage = _unitOfWork.ChatRoomMessage.GetAll(i=>i.ChatRoom==chatRoom, includeProperties:"User").ToList();
                 foreach(ChatRoomMessage message in readMessage)
                 {
-                    message.Closed = true;
-                    _unitOfWork.Save();
+                    if (message.User.Role != "Supporter" && message.User.Role != "Admin")
+                    {
+                        message.Closed = true;
+                        _unitOfWork.Save();
+                    }
                 }
                 ChatRoomMessage chatRoomMessage = new ChatRoomMessage()
                 {
